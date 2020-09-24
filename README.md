@@ -1,1 +1,1 @@
-# mas-thesis
+# tiny-teachable-instruments
