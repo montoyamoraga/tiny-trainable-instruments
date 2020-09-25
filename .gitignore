@@ -14,6 +14,7 @@
 *.bbl
 *.blg
 *.dvi
+*.fdb_latexmk
 *.glg
 *.gls
 *.ilg
