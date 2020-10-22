@@ -1,8 +1,12 @@
 # Mac computers
 .DS_Store
 
-# Python virtual environment
+# Python
+*/__pycache__/
 */env/
+
+# Jupyter
+*/.ipynb_checkpoints
 
 # LaTeX projects
 *.aux
