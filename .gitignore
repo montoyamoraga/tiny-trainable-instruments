@@ -1,7 +1,10 @@
-# for Mac computers
+# Mac computers
 .DS_Store
 
-# for LaTeX projects
+# Python virtual environment
+*/env/
+
+# LaTeX projects
 *.aux
 *.glo
 *.idx
