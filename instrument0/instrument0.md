@@ -14,6 +14,8 @@ The instrument0 gathers data from its sensors, uses it to train the k-NN algorit
   * 1x Arduino Nano 33 BLE Sense
   * 1x Micro USB cable
 * Optional:
+  * 1x solderless breadboard
+  * 10x breadboard jumper cables
   * 1x piezo buzzer
   * 1x 220 Ohm resistor
   * 1x MIDI instrument
