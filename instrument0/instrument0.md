@@ -6,20 +6,26 @@ The instrument0 is based on the k-NN algorithm.
 
 k-NN stands for K-nearest neighbors.
 
-The instrument0 gathers data from its sensors, uses it to train the k-NN algorithm, and then allows you to contorl audiovisuals.
+The instrument0 gathers data from its sensors, uses it to train the k-NN algorithm, and then allows you to control audiovisuals.
+
+The instrument can run on batteries and only needs the computer to upload the code to it.
+
+All the training happens on the instrument, and it can be easily retrained by turning on and off the microcontroller.
 
 ## Bill of materials
 
 * Necessary:
-  * 1x Arduino Nano 33 BLE Sense
+  * 1x microcontroller, Arduino Nano 33 BLE Sense
   * 1x Micro USB cable
+  * 1x USB power supply or battery
+  * 1x computer for uploading the code to the microcontroller
 * Optional:
   * 1x solderless breadboard
   * 10x breadboard jumper cables
   * 1x piezo buzzer
   * 1x 220 Ohm resistor
-  * 1x MIDI instrument
-  * 1x MIDI cable
+  * 1x audiovisual instrument with MIDI input
+  * 1x MIDI DIN cable
   * 1x MIDI breadboard jack
 
 ## Software
