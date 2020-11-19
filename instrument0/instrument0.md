@@ -14,6 +14,8 @@ The instrument0 gathers data from its sensors, uses it to train the k-NN algorit
   * 1x Arduino Nano 33 BLE Sense
   * 1x Micro USB cable
 * Optional:
+  * 1x piezo buzzer
+  * 1x 220 Ohm resistor
   * 1x MIDI instrument
   * 1x MIDI cable
   * 1x MIDI breadboard jack
@@ -30,6 +32,10 @@ The instrument0 gathers data from its sensors, uses it to train the k-NN algorit
 Upload this sketch to check that your Arduino is working correctly.
 
 This sketch cycles between all the different LED lights available on the microcontroller.
+
+### inst0GyroscopeMidi
+
+Upload this sketch to control the pitch of a piezo buzzer with your gyroscope.
 
 ### inst0GyroscopeMidi
 
