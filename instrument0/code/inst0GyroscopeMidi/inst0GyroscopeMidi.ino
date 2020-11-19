@@ -1,4 +1,5 @@
 // instrument0
+// knn + gyroscope + midi
 // v0.0.1
 // november 2020
 
