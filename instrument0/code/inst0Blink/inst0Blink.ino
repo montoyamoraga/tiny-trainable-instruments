@@ -1,7 +1,22 @@
-/*
-  Built on example code from:
-  http://www.arduino.cc/en/Tutorial/Blink
-*/
+// inst0Blink
+// blinking lights
+// v0.0.1
+// november 2020
+
+// code by aaron montoya-moraga
+// part of tiny trainable instruments
+// with assistance by peter tone
+
+// this code is based on the Blink example
+// http://www.arduino.cc/en/Tutorial/Blink
+
+// technology
+// programmed using arduino ide 1.8.13
+// on a macbook air with macos catalina 10.15.7
+// for an arduino nano 33 ble sense
+
+// this sketch cycles through all the lights
+// on the arduino nano 33 ble sense
 
 int timeOn = 500;
 int timeOff = 250;

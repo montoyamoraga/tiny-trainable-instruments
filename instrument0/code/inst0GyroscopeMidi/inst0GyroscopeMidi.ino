@@ -1,4 +1,4 @@
-// instrument0
+// inst0GyroscopeMidi
 // knn + gyroscope + midi
 // v0.0.1
 // november 2020
@@ -6,7 +6,8 @@
 // code by aaron montoya-moraga
 // part of tiny trainable instruments
 // with assistance by peter tone
-// based on examples on the Arduino KNN library
+
+// this code is based on examples on the Arduino KNN library
 
 // technology
 // programmed using arduino ide 1.8.13
