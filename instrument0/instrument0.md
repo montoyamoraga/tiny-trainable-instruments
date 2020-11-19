@@ -1,8 +1,6 @@
-# tiny-trainable instruments
+# tiny-trainable instruments / instrument0
 
-## instrument0
-
-### About
+## About
 
 The instrument0 is based on the k-NN algorithm.
 
@@ -10,7 +8,7 @@ k-NN stands for K-nearest neighbors.
 
 The instrument0 gathers data from its sensors, uses it to train the k-NN algorithm, and then allows you to contorl audiovisuals.
 
-### Bill of materials
+## Bill of materials
 
 * Necessary:
   * 1x Arduino Nano 33 BLE Sense
@@ -20,9 +18,19 @@ The instrument0 gathers data from its sensors, uses it to train the k-NN algorit
   * 1x MIDI cable
   * 1x MIDI breadboard jack
 
-### Software
+## Software
 
 * Download the Arduino IDE to your computer
 * Install the neccesary drivers for the Arduino Nano 33 BLE Sense, more info here [https://www.arduino.cc/en/Guide/NANO33BLESense]()
 
-### First example
+## Code
+
+### inst0Blink
+
+Upload this sketch to check that your Arduino is working correctly.
+
+This sketch cycles between all the different LED lights available on the microcontroller.
+
+### inst0GyroscopeMidi
+
+Upload this sketch to control a MIDI instrument with your gyroscope.
