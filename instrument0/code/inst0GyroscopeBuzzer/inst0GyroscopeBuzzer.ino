@@ -47,7 +47,7 @@ const int EXAMPLES_PER_CLASS = 10; // Number of times user needs to show example
 
 const int K = 5;
 
-boolean isPrintingConsole = true;
+boolean isPrintingConsole = false;
 
 int previousClassification = -1;
 

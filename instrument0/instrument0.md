@@ -8,6 +8,8 @@ k-NN stands for K-nearest neighbors.
 
 The instrument0 gathers data from its sensors, uses it to train the k-NN algorithm, and then allows you to control audiovisuals.
 
+This instrument currently uses k-NN for classification, not regression.
+
 The instrument can run on batteries and only needs the computer to upload the code to it.
 
 All the training happens on the instrument, and it can be easily retrained by turning on and off the microcontroller.
