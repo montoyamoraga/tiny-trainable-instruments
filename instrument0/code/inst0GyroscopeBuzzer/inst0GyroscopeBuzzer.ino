@@ -1,18 +1,9 @@
 // inst0GyroscopeBuzzer
 // knn + gyroscope + Buzzer
 // v0.0.2
-// november 2020
-
-// code by aaron montoya-moraga
-// part of tiny trainable instruments
-// with assistance by peter tone
+// december 2020
 
 // this code is based on examples on the Arduino KNN library
-
-// technology
-// programmed using arduino ide 1.8.13
-// on a macbook air with macos catalina 10.15.7
-// for an arduino nano 33 ble sense
 
 // this sketch records 3 positions
 // and emits different frequencies
@@ -22,27 +13,14 @@
 // in order red, green, blue, one for each category
 // and then after training it signals with the corresponding color
 
-// tip:
-// if you are having trouble uploading the sketch,
-// press fast twice the reset button on the arduino
-
 #include "TinyTrainable.h"
 
-// include Arduino KNN library
-#include <Arduino_KNN.h>
-
-// include Arduino library for IMU sensor
-// more information at
-// https://www.arduino.cc/en/Reference/ArduinoLSM9DS1
-#include <Arduino_LSM9DS1.h>
-
-// include Arduino library for proximity sensor
-// more information at
-// https://www.arduino.cc/en/Reference/ArduinoAPDS9960
-#include <Arduino_APDS9960.h>
-
-// variables being measured
-const int INPUTS = 3;
+// instance of TinyTrainable
+// arguments are
+// 0 for instrument type 0
+// 3 for 3 inputs
+// 5 for K
+TinyTrainable myTinyTrainable(0, 3, 5);
 
 // number of objects to classify
 const int CLASSES = 3;
@@ -50,33 +28,13 @@ const int CLASSES = 3;
 // number of examples per object
 const int EXAMPLES_PER_CLASS = 10;
 
-const int K = 5;
-
-// this boolean is for turning on/off 
-// the output of KNN classes via hardware (pins of the Arduino)
-boolean outputHardware = true;
-
-// this boolean is for turning on/off 
-// the output of KNN classes via USB Serial port
-boolean outputUSB = false;
-
-// this boolean is for turning on/off 
-// the output of debugging messages USB Serial port
-boolean outputDebug = false;
-
 int previousClassification = -1;
 
-// instance of instrument0
-TinyTrainable myTinyTrainable();
-
 // Create a new KNNClassifier
-KNNClassifier myKNN(INPUTS);
+// KNNClassifier myKNN(3);
 
 // Names for each class (object type)
 String label[CLASSES] = {"Up", "Down", "Sideways"};
-
-// Array to store data to pass to the KNN library
-float inertia[INPUTS];
 
 // frequencies for buzzer
 int drumNotes[3] = {100, 250, 450};
@@ -85,17 +43,10 @@ const int buzzerPin = 9;
 
 void setup() {
 
-  if (outputDebug) {
-    Serial.begin(9600);
-    while (!Serial);
-  }
-
   pinMode(buzzerPin, OUTPUT);
 
-  if (outputHardware) {
-    setupSerial1();
-  }
-  
+  myTinyTrainable.setupSerial1();
+
   myTinyTrainable.setupBuiltInLED();
 
   if (!APDS.begin()) {
@@ -106,29 +57,20 @@ void setup() {
     while (1);
   }
 
-  if (outputDebug) {
-    Serial.println("myInstrumentZero");
-  }
-
-
   // Ask user for the name of each object
   for (int currentClass = 0; currentClass < CLASSES; currentClass++) {
 
-    myInstrumentZero.setColorBuiltInLED(currentClass);
+    myTinyTrainable.setColorBuiltInLED(currentClass);
 
     // Ask user to show examples of each object
     for (int currentExample = 0; currentExample < EXAMPLES_PER_CLASS; currentExample++) {
 
-      if (outputDebug) {
-        Serial.print("Show me an example ");
-        Serial.println(label[currentClass]);
-      }
-
       // Wait for an object then read its inertia
-      readInertia(inertia);
+      myTinyTrainable.readInertia();
 
       // Add current inertia to the k-NN model
-      myKNN.addExample(inertia, currentClass);
+      // myKNN.addExample(inertia, currentClass);
+      myTinyTrainable.addNewExample(currentClass);
     }
     // Wait for the object to move away again
     while (!APDS.proximityAvailable() || APDS.readProximity() == 0) {}
@@ -142,21 +84,12 @@ void loop() {
   // Wait for the object to move away again
   while (!APDS.proximityAvailable() || APDS.readProximity() == 0) {}
 
-  if (outputDebug) {
-    Serial.println("Let me guess your object");
-  }
-
   // Wait for an object then read its inertia
-  readInertia(inertia);
+  myTinyTrainable.readInertia();
 
   // Classify the object
-  classification = myKNN.classify(inertia, K);
-
-  // Print the classification
-  if (outputDebug) {
-    Serial.print("classification: ");
-    Serial.println(label[classification]);
-  }
+  //  classification = myKNN.classify(myTinyTrainable._inertia, K);
+  classification = myTinyTrainable.classifyInput();
 
   myTinyTrainable.setColorBuiltInLED(classification);
 
@@ -165,45 +98,4 @@ void loop() {
     previousClassification = classification;
   }
 
-}
-
-void readInertia(float inertia[]) {
-  float inertiaX, inertiaY, inertiaZ, proximity, inertiaTotal = 0.0;
-
-  // Wait for the object to move close
-  while (!APDS.proximityAvailable() || APDS.readProximity() > 0) {}
-
-  // Sample if color is available and object is close
-  while (!IMU.accelerationAvailable());
-
-  // Read color and proximity
-  IMU.readAcceleration(inertiaX, inertiaY, inertiaZ);
-  inertiaTotal = (inertiaX + inertiaY + inertiaZ);
-
-  inertia[0] = inertiaX;
-  inertia[1] = inertiaY;
-  inertia[2] = inertiaZ;
-
-  if (outputDebug) {
-    Serial.println(inertiaTotal);
-    Serial.print(inertia[0]);
-    Serial.print(",");
-    Serial.print(inertia[1]);
-    Serial.print(",");
-    Serial.println(inertia[2]);
-  }
-
-}
-
-void setupSerial1() {
-  Serial1.begin(9600);
-
-  // desired baudrate
-  uint32_t baudrate = 0x800000;
-
-  // pointer to the memory address that stores the baudrate
-  uint32_t *pointerBaudrate = ( uint32_t * )0x40002524;
-
-  // replace the value at the pointer with the desired baudrate
-  *pointerBaudrate = baudrate;
 }

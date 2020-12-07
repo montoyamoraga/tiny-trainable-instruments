@@ -1,9 +1,31 @@
-#include "Arduino.h"
+#include <Arduino.h>
+#include <Arduino_KNN.h>
 #include "TinyTrainable.h"
 
+
 // constructor function
-TinyTrainable::TinyTrainable() {
-  int x = 5;
+TinyTrainable::TinyTrainable(int number, int inputs, int K) {
+  _number = number;
+  _inputs = inputs;
+  _K = K;
+}
+
+void TinyTrainable::setupSerial() {
+  Serial.begin(9600);
+  while (!Serial);
+}
+
+void TinyTrainable::setupSerial1() {
+  Serial1.begin(9600);
+
+  // desired baudrate
+  uint32_t baudrate = 0x800000;
+
+  // pointer to the memory address that stores the baudrate
+  uint32_t *pointerBaudrate = ( uint32_t * )0x40002524;
+
+  // replace the value at the pointer with the desired baudrate
+  *pointerBaudrate = baudrate;
 }
 
 void TinyTrainable::setupBuiltInLED() {
@@ -53,4 +75,41 @@ void TinyTrainable::setColorBuiltInLED(int color) {
     digitalWrite(LEDG, LOW);
     digitalWrite(LEDB, LOW);
   }
+}
+
+void TinyTrainable::readInertia() {
+  float inertiaX, inertiaY, inertiaZ, proximity, inertiaTotal = 0.0;
+
+  // Wait for the object to move close
+  while (!APDS.proximityAvailable() || APDS.readProximity() > 0) {}
+
+  // Sample if color is available and object is close
+  while (!IMU.accelerationAvailable());
+
+  // Read color and proximity
+  IMU.readAcceleration(inertiaX, inertiaY, inertiaZ);
+  inertiaTotal = (inertiaX + inertiaY + inertiaZ);
+
+  _inertia[0] = inertiaX;
+  _inertia[1] = inertiaY;
+  _inertia[2] = inertiaZ;
+
+  if (_outputDebug) {
+    Serial.println(inertiaTotal);
+    Serial.print(_inertia[0]);
+    Serial.print(",");
+    Serial.print(_inertia[1]);
+    Serial.print(",");
+    Serial.println(_inertia[2]);
+  }
+}
+
+void TinyTrainable::addNewExample(int currentClass) {
+  _myKNN.addExample(_inertia, currentClass);
+}
+
+int TinyTrainable::classifyInput() {
+  // TODO: why does this line not work :(
+  //  return _myKNN.classify(_inertia, _K);
+  return 0;
 }
