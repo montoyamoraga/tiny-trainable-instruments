@@ -27,7 +27,7 @@
 // if you are having trouble uploading the sketch,
 // press fast twice the reset button on the arduino
 
-
+ 
 // include Arduino KNN library
 #include <Arduino_KNN.h>
 
