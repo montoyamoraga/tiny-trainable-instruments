@@ -41,12 +41,12 @@ TinyTrainable::TinyTrainable(bool serialDebugging, int outputPin, long noteDurat
     setupInstrument();
 }
 
-template<typename T>  // allows debugPrint() to take in any data type
-void TinyTrainable::debugPrint(T message) {
-    if (_serialDebugging) {
-        Serial.println(message);
-    }
-}
+// template <typename T>  // allows debugPrint() to take in any data type
+// void TinyTrainable::debugPrint(T message) {
+//     if (_serialDebugging) {
+//         Serial.println(message);
+//     }
+// }
 
 void TinyTrainable::setupInstrument() {
     if (_serialDebugging || _outputMode == usb) {
