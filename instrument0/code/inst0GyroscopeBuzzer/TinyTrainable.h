@@ -33,16 +33,52 @@ enum OutputMode {usb, midi, pin};
 
 class TinyTrainable {
   public:
-    TinyTrainable(int number, int inputs, int K);
-    void setupSerial();
-    void setupSerial1();
-    void setupBuiltInLED();
-    void setColorBuiltInLED(int color);
-    void readInertia();
-    void addNewExample(int currentClass);
-    int classifyInput();
+
+    TinyTrainable(bool serialDebugging);
+    TinyTrainable(bool serialDebugging, byte midiChannelHex, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3);
+    TinyTrainable(bool serialDebugging, int outputPin, long noteDuration, int noteFreq1, int noteFreq2, int noteFreq3);
+
+    template <typename T> void debugPrint(T message) {
+      if (_serialDebugging) {
+        Serial.println(message);
+      }
+    };
+
+    void setLabels(String object1, String object2, String object3);
+    void trainKNN(int k, int examplesPerClass, float colorThreshold);
+    void identify();
 
   private:
+
+    void setupInstrument();
+    void setupSerial1();
+    void readColor(float color[]);
+    void setColorBuiltInLED(int color);
+    void midiCommand(byte cmd, byte data1, byte data2);
+
+    byte _midiChannelHex;
+    byte _midiVelocity;
+    int _outputPin;
+    long _noteDuration;
+    int _notes[3];
+
+    bool _serialDebugging;
+    OutputMode _outputMode;
+    KNNClassifier _myKNN;
+    float _colorReading[3];
+    // K number for KNN classifier
+    int _k;
+    String _label[3];
+    int _previousClassification;
+    float _colorThreshold;
+
+
+
+
+
+
+
+
     // integer to choose what type of instrument is it
     int _number;
     // integer to choose how many inputs to the KNN algorithm
@@ -52,8 +88,6 @@ class TinyTrainable {
     float _inertia[3];
     // KNN classifier TODO: make the length of _inertia be dependent on inputs
     KNNClassifier _myKNN;
-    // K number for KNN classifier
-    int _K;
     // integer for current class
     int _currentClass;
     // this boolean is for turning on/off
