@@ -9,18 +9,11 @@
 // https://www.arduino.cc/en/Reference/ArduinoAPDS9960
 #include <Arduino_APDS9960.h>
 
-// constructor mode for the instrument
-// the only parameter is a boolean to turn on / off serial debugging
-// myKNN(3) is a initializer list for instancing a KNN classifier with 3 inputs
 TinyTrainable::TinyTrainable(bool serialDebugging) : _myKNN(3)
 {
-  // set the serialDebugging
   _serialDebugging = serialDebugging;
-  
-  // default output is usb
   _outputMode = usb;
-  
-  //    setupInstrument();
+//  setupInstrument();
 }
 
 //TinyTrainable::TinyTrainable(bool serialDebugging, byte midiChannelHex, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3)  : _myKNN(3)
@@ -48,33 +41,35 @@ TinyTrainable::TinyTrainable(bool serialDebugging) : _myKNN(3)
 //    setupInstrument();
 //}
 
+// template <typename T>  // allows debugPrint() to take in any data type
+// void TinyTrainable::debugPrint(T message) {
+//     if (_serialDebugging) {
+//         Serial.println(message);
+//     }
+// }
 
 void TinyTrainable::setupInstrument() {
-  // open the usb serial port if we are debugging or if the output mode is usb
   if (_serialDebugging || _outputMode == usb) {
     Serial.begin(9600);
     while (!Serial);
   }
-
-  // turn on the sensor
-  if (!APDS.begin()) {
-    while (1);
-  }
-
-  // set the pins on output mode
-  pinMode(LED_BUILTIN, OUTPUT);
-  pinMode(LEDR, OUTPUT);
-  pinMode(LEDG, OUTPUT);
-  pinMode(LEDB, OUTPUT);
-
-  // start with everything off
-  digitalWrite(LED_BUILTIN, LOW);
-  digitalWrite(LEDR, HIGH);
-  digitalWrite(LEDG, HIGH);
-  digitalWrite(LEDB, HIGH);
-
-  // initialie previous classification to -1
-  _previousClassification = -1;
+//
+//  if (!APDS.begin()) {
+//    while (1);
+//  }
+//
+//  pinMode(LED_BUILTIN, OUTPUT);
+//  pinMode(LEDR, OUTPUT);
+//  pinMode(LEDG, OUTPUT);
+//  pinMode(LEDB, OUTPUT);
+//
+//  // start with everything off
+//  digitalWrite(LED_BUILTIN, LOW);
+//  digitalWrite(LEDR, HIGH);
+//  digitalWrite(LEDG, HIGH);
+//  digitalWrite(LEDB, HIGH);
+//
+//  _previousClassification = -1;
 }
 
 //void TinyTrainable::setupSerial1() {

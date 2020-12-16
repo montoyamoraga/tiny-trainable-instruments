@@ -7,9 +7,10 @@ TinyTrainable myInst(true);
 
 void setup() {
   // put your setup code here, to run once:
+  myInst.setupInstrument();
   myInst.debugPrint("Arduino k-NN color classifier");
-  //  myInst.setLabels("Object 1", "Object 2", "Object 3");
-  //  myInst.trainKNN(5, 10, 0.5);  // TODO make these constants at the top
+//  myInst.setLabels("Object 1", "Object 2", "Object 3");
+//  myInst.trainKNN(5, 10, 0.5);  // TODO make these constants at the top
 
 }
 
