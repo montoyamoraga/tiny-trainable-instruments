@@ -2,9 +2,6 @@
 // code by aaron montoya-moraga
 // with assistance by peter tone
 // for Arduino Nano 33 BLE Sense
-// programmed using Arduino IDE 1.8.13
-// on a Macbook Air with MacOS Catalina 10.15.7
-// started in november 2020
 // MIT License
 
 // tip:
@@ -29,6 +26,10 @@
 // more information at
 // https://www.arduino.cc/en/Reference/ArduinoAPDS9960
 #include <Arduino_APDS9960.h>
+
+// TODO fix the input things and classes (3)
+
+enum OutputMode {usb, midi, pin};
 
 class TinyTrainable {
   public:
