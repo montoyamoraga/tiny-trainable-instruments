@@ -2,12 +2,15 @@
 #include <Arduino_KNN.h>
 #include "TinyTrainable.h"
 
-
 // constructor function
-TinyTrainable::TinyTrainable(int number, int inputs, int K) {
+// peter proposed the syntax for this constructor
+// where the myKNN is initialized here
+// TODO: add docs for what initialization lists are
+TinyTrainable::TinyTrainable(int number, int inputs, int K): _myKNN(3)  {
   _number = number;
   _inputs = inputs;
   _K = K;
+  //  _myKNN.KNNClassifier(3);
 }
 
 void TinyTrainable::setupSerial() {

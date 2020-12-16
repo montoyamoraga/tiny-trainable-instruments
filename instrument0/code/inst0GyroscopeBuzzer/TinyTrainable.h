@@ -50,7 +50,7 @@ class TinyTrainable {
     // TODO: make the length of _inertia be dependent on inputs
     float _inertia[3];
     // KNN classifier TODO: make the length of _inertia be dependent on inputs
-    KNNClassifier _myKNN(3);
+    KNNClassifier _myKNN;
     // K number for KNN classifier
     int _K;
     // integer for current class
