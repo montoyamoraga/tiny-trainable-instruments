@@ -1,4 +1,4 @@
-#include "Arduino.h"
+//#include "Arduino.h"
 #include "TinyTrainable.h"
 
 TinyTrainable myInst(true);
@@ -7,13 +7,13 @@ TinyTrainable myInst(true);
 
 void setup() {
   // put your setup code here, to run once:
-  myInst.debugPrint("Arduino k-NN color classifier");
-  myInst.setLabels("Object 1", "Object 2", "Object 3");
-  myInst.trainKNN(5, 10, 0.5);  // TODO make these constants at the top
+//  myInst.debugPrint("Arduino k-NN color classifier");
+//  myInst.setLabels("Object 1", "Object 2", "Object 3");
+//  myInst.trainKNN(5, 10, 0.5);  // TODO make these constants at the top
 
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  myInst.identify();
+  //  myInst.identify();
 }
