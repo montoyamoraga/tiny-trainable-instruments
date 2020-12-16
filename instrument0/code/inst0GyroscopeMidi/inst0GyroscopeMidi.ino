@@ -1,7 +1,7 @@
-// inst0GyroscopeMidi
+ // inst0GyroscopeMidi
 // knn + gyroscope + midi
 // v0.0.1
-// november 2020
+// novembe r 2020
 
 // code by aaron montoya-moraga
 // part of tiny trainable instruments
@@ -154,6 +154,7 @@ void setColorBuiltInLED(int color) {
   }
 
 }
+
 void loop() {
 
   int classification;
