@@ -19,16 +19,17 @@ class TinyTrainable
     //        TinyTrainable(bool serialDebugging, byte midiChannelHex, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3);
     //        TinyTrainable(bool serialDebugging, int outputPin, long noteDuration, int noteFreq1, int noteFreq2, int noteFreq3);
 
-    //    template <typename T> void debugPrint(T message) {
-    //      if (_serialDebugging) {
-    //        Serial.println(message);
-    //      }
-    //    };
+        template <typename T> void debugPrint(T message) {
+          if (_serialDebugging) {
+            Serial.println(message);
+          }
+        };
     //    void setLabels(String object1, String object2, String object3);
     //    void trainKNN(int k, int examplesPerClass, float colorThreshold);
     //    void identify();
+    void setupInstrument();
   private:
-    //    void setupInstrument();
+    
     //    void setupSerial1();
     //    void readColor(float color[]);
     //    void setColorBuiltInLED(int color);

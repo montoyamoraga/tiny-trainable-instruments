@@ -13,7 +13,7 @@ TinyTrainable::TinyTrainable(bool serialDebugging) : _myKNN(3)
 {
   _serialDebugging = serialDebugging;
   _outputMode = usb;
-  //    setupInstrument();
+//  setupInstrument();
 }
 
 //TinyTrainable::TinyTrainable(bool serialDebugging, byte midiChannelHex, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3)  : _myKNN(3)
@@ -48,11 +48,11 @@ TinyTrainable::TinyTrainable(bool serialDebugging) : _myKNN(3)
 //     }
 // }
 
-//void TinyTrainable::setupInstrument() {
-//  if (_serialDebugging || _outputMode == usb) {
-//    Serial.begin(9600);
-//    while (!Serial);
-//  }
+void TinyTrainable::setupInstrument() {
+  if (_serialDebugging || _outputMode == usb) {
+    Serial.begin(9600);
+    while (!Serial);
+  }
 //
 //  if (!APDS.begin()) {
 //    while (1);
@@ -70,7 +70,7 @@ TinyTrainable::TinyTrainable(bool serialDebugging) : _myKNN(3)
 //  digitalWrite(LEDB, HIGH);
 //
 //  _previousClassification = -1;
-//}
+}
 
 //void TinyTrainable::setupSerial1() {
 //  Serial1.begin(9600);
