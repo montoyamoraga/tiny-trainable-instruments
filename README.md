@@ -10,6 +10,8 @@ The advisor of this thesis project is Tod Machover, and the thesis readers are Z
 
 This thesis project features contributions by undergrad researchers Peter Tone and Maxwell Wang.
 
+This repository contains the thesis PDF document and the tutorials. The companion Arduino library is on the repository [https://github.com/montoyamoraga/TinyTrainable]().
+
 ## License
 
 MIT
