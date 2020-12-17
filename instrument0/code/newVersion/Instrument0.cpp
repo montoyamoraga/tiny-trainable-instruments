@@ -1,5 +1,5 @@
-#include "Arduino.h"
-#include "TinyTrainable.h"
+// #include "Arduino.h"
+#include "Instrument0.h"
 
 // include Arduino KNN library
 #include <Arduino_KNN.h>
@@ -9,14 +9,14 @@
 // https://www.arduino.cc/en/Reference/ArduinoAPDS9960
 #include <Arduino_APDS9960.h>
 
-TinyTrainable::TinyTrainable(bool serialDebugging) : _myKNN(3)
+Instrument0::Instrument0(bool serialDebugging) : _myKNN(3)
 {
   _serialDebugging = serialDebugging;
   _outputMode = usb;
 //  setupInstrument();
 }
 
-//TinyTrainable::TinyTrainable(bool serialDebugging, byte midiChannelHex, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3)  : _myKNN(3)
+//Instrument0::Instrument0(bool serialDebugging, byte midiChannelHex, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3)  : _myKNN(3)
 //{
 //    _serialDebugging = serialDebugging;
 //    _outputMode = midiOut;
@@ -28,8 +28,8 @@ TinyTrainable::TinyTrainable(bool serialDebugging) : _myKNN(3)
 //    setupInstrument();
 //    setupSerial1();
 //}
-//
-//TinyTrainable::TinyTrainable(bool serialDebugging, int outputPin, long noteDuration, int noteFreq1, int noteFreq2, int noteFreq3)  : _myKNN(3)
+
+//Instrument0::Instrument0(bool serialDebugging, int outputPin, long noteDuration, int noteFreq1, int noteFreq2, int noteFreq3)  : _myKNN(3)
 //{
 //    _serialDebugging = serialDebugging;
 //    _outputMode = pin;
@@ -41,14 +41,7 @@ TinyTrainable::TinyTrainable(bool serialDebugging) : _myKNN(3)
 //    setupInstrument();
 //}
 
-// template <typename T>  // allows debugPrint() to take in any data type
-// void TinyTrainable::debugPrint(T message) {
-//     if (_serialDebugging) {
-//         Serial.println(message);
-//     }
-// }
-
-void TinyTrainable::setupInstrument() {
+void Instrument0::setupInstrument() {
   if (_serialDebugging || _outputMode == usb) {
     Serial.begin(9600);
     while (!Serial);
@@ -72,7 +65,7 @@ void TinyTrainable::setupInstrument() {
 //  _previousClassification = -1;
 }
 
-//void TinyTrainable::setupSerial1() {
+//void Instrument0::setupSerial1() {
 //  Serial1.begin(9600);
 //
 //  // desired baudrate
@@ -85,13 +78,13 @@ void TinyTrainable::setupInstrument() {
 //  *pointerBaudrate = baudrate;
 //}
 //
-//void TinyTrainable::setLabels(String object1, String object2, String object3) {
+//void Instrument0::setLabels(String object1, String object2, String object3) {
 //  _label[0] = object1;
 //  _label[1] = object2;
 //  _label[2] = object3;
 //}
 
-//void TinyTrainable::trainKNN(int k, int examplesPerClass, float colorThreshold) {
+//void Instrument0::trainKNN(int k, int examplesPerClass, float colorThreshold) {
 //  _k = k;
 //  _colorThreshold = colorThreshold;
 //
@@ -116,7 +109,7 @@ void TinyTrainable::setupInstrument() {
 //  }
 //}
 
-//void TinyTrainable::setColorBuiltInLED(int color) {
+//void Instrument0::setColorBuiltInLED(int color) {
 //  // turn everything off
 //  digitalWrite(LEDR, HIGH);
 //  digitalWrite(LEDG, HIGH);
@@ -131,7 +124,7 @@ void TinyTrainable::setupInstrument() {
 //  }
 //}
 
-//void TinyTrainable::identify() {
+//void Instrument0::identify() {
 //  // Wait for the object to move away again
 //  while (!APDS.proximityAvailable() || APDS.readProximity() == 0) {}
 //
@@ -165,7 +158,7 @@ void TinyTrainable::setupInstrument() {
 //  }
 //}
 
-//void TinyTrainable::readColor(float colorReading[]) {
+//void Instrument0::readColor(float colorReading[]) {
 //  int red, green, blue, proximity, colorTotal = 0;
 //
 //  // Wait for the object to move close
@@ -196,7 +189,7 @@ void TinyTrainable::setupInstrument() {
 //}
 
 // send 3 byte midi message
-//void TinyTrainable::midiCommand(byte cmd, byte data1, byte data2) {
+//void Instrument0::midiCommand(byte cmd, byte data1, byte data2) {
 //  Serial1.write(cmd);
 //  Serial1.write(data1);
 //  Serial1.write(data2);

@@ -1,8 +1,10 @@
-#ifndef TinyTrainable_h
-#define TinyTrainable_h
+#ifndef Instrument0_h
+#define Instrument0_h
 
 // TODO explain on docs/ why some .h files are imported with "" and others with <>
-#include "Arduino.h"
+// #include "Arduino.h"
+
+#include "TinyTrainableInstrument.h"
 
 // include Arduino KNN library
 #include <Arduino_KNN.h>
@@ -12,12 +14,13 @@
 // TODO explain this
 enum OutputMode {usb, midiOut, pin};
 
-class TinyTrainable
+// here is where we say that Instrument0 is a subclass of TinyTrainableInstrument
+class Instrument0 : public TinyTrainableInstrument
 {
   public:
-    TinyTrainable(bool serialDebugging);
-    //        TinyTrainable(bool serialDebugging, byte midiChannelHex, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3);
-    //        TinyTrainable(bool serialDebugging, int outputPin, long noteDuration, int noteFreq1, int noteFreq2, int noteFreq3);
+    Instrument0(bool serialDebugging);
+    //        Instrument0(bool serialDebugging, byte midiChannelHex, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3);
+    //        Instrument0(bool serialDebugging, int outputPin, long noteDuration, int noteFreq1, int noteFreq2, int noteFreq3);
 
         template <typename T> void debugPrint(T message) {
           if (_serialDebugging) {
