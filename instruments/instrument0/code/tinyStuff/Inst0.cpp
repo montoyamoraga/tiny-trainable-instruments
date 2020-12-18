@@ -7,12 +7,15 @@
 // local libraries included with ""
 #include "Inst0.h"
 
+// constructor for the Inst0 class, using USB serial output
+// if 'serialDebugging' is true, debugPrint() statements will be printed over Serial
 Inst0::Inst0(bool serialDebugging) : _myKNN(3)
 {
   _serialDebugging = serialDebugging;
   _outputMode = usbOut;
 }
 
+// sets up Serial
 void Inst0::setupInstrument() {
   if (_serialDebugging || _outputMode == usbOut) {
     Serial.begin(9600);
