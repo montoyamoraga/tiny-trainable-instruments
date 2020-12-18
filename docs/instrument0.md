@@ -1,4 +1,4 @@
-# tiny-trainable instruments / instrument0
+# Instrument0
 
 ## About
 
