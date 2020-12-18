@@ -1,4 +1,4 @@
-# tiny-trainable instruments / instrument0
+# Instrument0
 
 ## About
 
@@ -30,10 +30,9 @@ All the training happens on the instrument, and it can be easily retrained by tu
   * 1x MIDI DIN cable
   * 1x MIDI breadboard jack
 
-## Software
+## Installation
 
-* Download the Arduino IDE to your computer
-* Install the neccesary drivers for the Arduino Nano 33 BLE Sense, more info here [https://www.arduino.cc/en/Guide/NANO33BLESense]()
+Follow the instructions on [installation.md]
 
 ## Code
 
