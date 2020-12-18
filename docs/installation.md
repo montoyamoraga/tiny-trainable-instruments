@@ -12,6 +12,10 @@ We are using the Arduino Nano BLE 33 Sense.
 * TODO
 * TODO
 
+# TinyTrainable Arduino library
+
+To install the TinyTrainable Arduino library, download the latest release from the repository [https://github.com/montoyamoraga/TinyTrainable].
+
 ## Debugging
 
 Tip:
