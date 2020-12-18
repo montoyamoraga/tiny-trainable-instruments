@@ -13,7 +13,6 @@ If you want to contribute to this repository, here are some instructions:
 
 * Stage and make a commit to your repository on your computer
 
-
 ```bash
 git add .
 ```
