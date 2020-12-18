@@ -1,22 +1,22 @@
+// local libraries included with ""
 #include "TinyLibrary.h"
 #include "Inst0.h"
 #include "Inst1.h"
 
 TinyTrainable myTiny;
-Inst0 myInst0;
+Inst0 myInst0(true);
 Inst1 myInst1;
 
 void setup() {
   // put your setup code here, to run once:
 
-  myTiny.debugPrint();
+  myInst0.setupInstrument();  // moved to top of setup because it sets up Serial
+  myInst0.debugPrint("instrument 0");
 
-  myInst0.debugPrint();
-  myInst0.print0();
+  myTiny.debugPrint("tiny trainable");
 
-  myInst1.debugPrint();
+  myInst1.debugPrint("instrument 1");
   myInst1.print1();
-
 }
 
 void loop() {
