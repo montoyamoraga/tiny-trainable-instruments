@@ -1,5 +1,5 @@
 // #include "Arduino.h"
-#include "Instrument0.h"
+#include "TinyTrainable.h"
 
 // include Arduino KNN library
 #include <Arduino_KNN.h>

@@ -4,11 +4,12 @@
 // installed libraries included with <>
 #include <Arduino.h>
 
+// colors for setting the LED
+enum Colors {red, green, blue};
+
 class TinyTrainable {
   public:
     TinyTrainable();
-
-    void setupInstrument();
     
     // using a template datatype allows debugPrint to take in any datatype, like 
     // Serial.println(). it needs to be defined here in the header file so it 
@@ -18,8 +19,17 @@ class TinyTrainable {
         Serial.println(message);
       }
     };
+
   protected:
+    static void setupLED();
+    // void setupSerial1();
+    void setColorBuiltInLED(Colors color);
+    //    void midiCommand(byte cmd, byte data1, byte data2);
+
     bool _serialDebugging;
+    //    byte _midiChannelHex;
+    //    byte _midiVelocity;
+    //    int _outputPin;
 };
 
 #endif
