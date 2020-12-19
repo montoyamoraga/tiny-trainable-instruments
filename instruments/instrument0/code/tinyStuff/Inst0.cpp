@@ -98,42 +98,43 @@ void Inst0::trainKNN(int k, int examplesPerClass, float colorThreshold) {
     // wait for the object to move away again
     while (!APDS.proximityAvailable() || APDS.readProximity() == 0) {}
   }
-  // debugPrint("Finished training");
+  debugPrint("Finished training");
 }
 
-//void Instrument0::identify() {
-//  // Wait for the object to move away again
-//  while (!APDS.proximityAvailable() || APDS.readProximity() == 0) {}
-//
-//  debugPrint("Let me guess your object");
-//
-//  // Wait for an object then read its color
-//  readColor(_colorReading);
-//
-//  // Classify the object
-//  int classification = _myKNN.classify(_colorReading, _k);
-//
-//  debugPrint("You showed me:");
-//  debugPrint(_labels[classification]);
-//
-//  setColorBuiltInLED(classification);
-//
-//  if (classification != _previousClassification) {
-//    switch (_outputMode) {
-//      case usb:
-//        debugPrint(classification);
-//        break;
-//      case midiOut:
-//        midiCommand(_midiChannelHex, _notes[classification], _midiVelocity);
-//        break;
-//      case pin:
-//        tone(_outputPin, _notes[classification], _noteDuration);
-//        break;
-//    }
-//
-//    _previousClassification = classification;
-//  }
-//}
+// uses the trained KNN algorithm to identify objects the user shows
+void Inst0::identify() {
+  // wait for the object to move away again
+  while (!APDS.proximityAvailable() || APDS.readProximity() == 0) {}
+
+  debugPrint("Let me guess your object");
+
+  // wait for an object then read its color
+  readColor(_colorReading);
+
+  // classify the object
+  int classification = _myKNN.classify(_colorReading, _k);
+
+  debugPrint("You showed me:");
+  debugPrint(_labels[classification]);
+
+  setColorBuiltInLED(Colors(classification));
+
+  if (classification != _previousClassification) {
+    switch (_outputMode) {
+      case usbOut:
+        Serial.println(classification);
+        break;
+      // case midiOut:
+      //   midiCommand(_midiChannelHex, _notes[classification], _midiVelocity);
+      //   break;
+      // case pinOut:
+      //   tone(_outputPin, _notes[classification], _noteDuration);
+      //   break;
+    }
+
+    _previousClassification = classification;
+  }
+}
 
 // reads the color from the color sensor
 // stores the rgb values in 'colorReading[]'

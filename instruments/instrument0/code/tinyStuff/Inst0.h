@@ -25,7 +25,7 @@ class Inst0 : public TinyTrainable
     void setupInstrument();
     void setLabels(String object1, String object2, String object3);
     void trainKNN(int k, int examplesPerClass, float colorThreshold);
-    //    void identify();
+    void identify();
   private:
     void readColor(float color[]);
 
