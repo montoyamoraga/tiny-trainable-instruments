@@ -1,5 +1,5 @@
-// inst0GyroscopeMidi
-// knn + gyroscope + midi
+// inst0GyroscopeBuzzer
+// knn + gyroscope + Buzzer
 // v0.0.1
 // november 2020
 
@@ -27,7 +27,7 @@
 // if you are having trouble uploading the sketch,
 // press fast twice the reset button on the arduino
 
-
+ 
 // include Arduino KNN library
 #include <Arduino_KNN.h>
 
@@ -47,7 +47,7 @@ const int EXAMPLES_PER_CLASS = 10; // Number of times user needs to show example
 
 const int K = 5;
 
-boolean isPrintingConsole = false;
+boolean isPrintingConsole = true;
 
 int previousClassification = -1;
 
@@ -61,14 +61,12 @@ String label[CLASSES] = {"Up", "Down", "Sideways"};
 float color[INPUTS];
 
 // Threshold for color brightness
-//const int THRESHOLD = 5;
 const float THRESHOLD = 0.5;
 
-// MIDI notes for drum machine
-// 38 snare drum
-// 39 hand clap
-// 42 closed hihat
-int drumNotes[3] = {38, 39, 42};
+// frequencies for buzzer
+int drumNotes[3] = {100, 250, 450};
+
+const int buzzerPin = 9;
 
 void setup() {
 
@@ -76,6 +74,8 @@ void setup() {
     Serial.begin(9600);
     while (!Serial);
   }
+
+  pinMode(buzzerPin, OUTPUT);
 
   setupSerial1();
 
@@ -180,7 +180,8 @@ void loop() {
   setColorBuiltInLED(classification);
 
   if (classification != previousClassification) {
-    midiCommand(0x99, drumNotes[classification], 127);
+    tone(buzzerPin, drumNotes[classification], 100);
+    //    midiCommand(0x99, drumNotes[classification], 127);
     previousClassification = classification;
   }
 

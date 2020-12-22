@@ -2,14 +2,9 @@
 // code by aaron montoya-moraga
 // with assistance by peter tone
 // for Arduino Nano 33 BLE Sense
-// programmed using Arduino IDE 1.8.13
-// on a Macbook Air with MacOS Catalina 10.15.7
 // started in november 2020
 // MIT License
 
-// tip:
-// if you are having trouble uploading the sketch,
-// press fast twice the reset button on the arduino
 
 #ifndef TinyTrainable_h
 #define TinyTrainable_h
@@ -50,7 +45,7 @@ class TinyTrainable {
     // TODO: make the length of _inertia be dependent on inputs
     float _inertia[3];
     // KNN classifier TODO: make the length of _inertia be dependent on inputs
-    KNNClassifier _myKNN(3);
+    KNNClassifier _myKNN;
     // K number for KNN classifier
     int _K;
     // integer for current class
