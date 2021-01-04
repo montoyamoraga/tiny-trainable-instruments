@@ -7,8 +7,13 @@ If you find an error or have a comment, submit a pull request.
 If you want to contribute to this repository, here are some instructions:
 
 * Create a free GitHub account
-* Fork this repository
+* Fork the repository
 * Clone your repository to your computer
+
+```bash
+git clone https://github.com/your_username/tiny-trainable-instruments.git
+```
+
 * Make some changes
 
 * Stage and make a commit to your repository on your computer
