@@ -4,7 +4,7 @@
 
 The instrument0 is based on the k-NN algorithm.
 
-k-NN stands for K-nearest neighbors.
+k-NN stands for k-nearest neighbors.
 
 The instrument0 gathers data from its sensors, uses it to train the k-NN algorithm, and then allows you to control audiovisuals.
 
