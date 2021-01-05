@@ -22,18 +22,20 @@ void TinyTrainable::setupLED()
   digitalWrite(LEDB, HIGH);
 }
 
-//void Instrument0::setupSerial1() {
-//  Serial1.begin(9600);
-//
-//  // desired baudrate
-//  uint32_t baudrate = 0x800000;
-//
-//  // pointer to the memory address that stores the baudrate
-//  uint32_t *pointerBaudrate = ( uint32_t * )0x40002524;
-//
-//  // replace the value at the pointer with the desired baudrate
-//  *pointerBaudrate = baudrate;
-//}
+// TODO - note which pins
+// sets up Serial1 (serial output over pins)
+void TinyTrainable::setupSerial1() {
+  Serial1.begin(9600);
+
+  // desired baudrate
+  uint32_t baudrate = 0x800000;
+
+  // pointer to the memory address that stores the baudrate
+  uint32_t *pointerBaudrate = ( uint32_t * )0x40002524;
+
+  // replace the value at the pointer with the desired baudrate
+  *pointerBaudrate = baudrate;
+}
 
 // sets the color of the built in LED on the Arduino Nano 33 BLE Sense
 void TinyTrainable::setColorBuiltInLED(Colors color) {
@@ -51,9 +53,11 @@ void TinyTrainable::setColorBuiltInLED(Colors color) {
   }
 }
 
-// send 3 byte midi message
-//void Instrument0::midiCommand(byte cmd, byte data1, byte data2) {
-//  Serial1.write(cmd);
-//  Serial1.write(data1);
-//  Serial1.write(data2);
-//}
+// send 3 byte midi message over Serial1 (pins)
+// 'midiNote' is the midi note number in decimal
+// midi channel and note velocity are preset
+void TinyTrainable::midiCommand(byte midiNote) {
+  Serial1.write(_midiChannelDec);
+  Serial1.write(midiNote);
+  Serial1.write(_midiVelocity);
+}

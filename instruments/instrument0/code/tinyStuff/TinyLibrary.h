@@ -22,13 +22,13 @@ class TinyTrainable {
 
   protected:
     static void setupLED();
-    // void setupSerial1();
+    void setupSerial1();
     void setColorBuiltInLED(Colors color);
-    //    void midiCommand(byte cmd, byte data1, byte data2);
+    void midiCommand(byte midiNote);
 
     bool _serialDebugging;
-    //    byte _midiChannelHex;
-    //    byte _midiVelocity;
+    byte _midiChannelDec;
+    byte _midiVelocity;
     //    int _outputPin;
 };
 

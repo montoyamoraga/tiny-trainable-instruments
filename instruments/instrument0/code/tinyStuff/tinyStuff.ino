@@ -10,7 +10,8 @@ float COLOR_THRESHOLD = 0.5;  // threshold for the color sensor
 
 // instantiate the instruments
 TinyTrainable myTiny;
-Inst0 myInst0(true);
+// Inst0 myInst0(true);
+Inst0 myInst0(true, 153, 127, 49, 28, 38);
 Inst1 myInst1;
 
 void setup() {

@@ -18,8 +18,8 @@ class Inst0 : public TinyTrainable
 {
   public:
     Inst0(bool serialDebugging);
+    Inst0(bool serialDebugging, byte midiChannelDec, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3);
 
-    //    Instrument0(bool serialDebugging, byte midiChannelHex, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3);
     //    Instrument0(bool serialDebugging, int outputPin, long noteDuration, int noteFreq1, int noteFreq2, int noteFreq3);
     
     void setupInstrument();
@@ -32,7 +32,7 @@ class Inst0 : public TinyTrainable
     OutputMode _outputMode;
     KNNClassifier _myKNN;
     //    long _noteDuration;
-    //    int _notes[3];
+    int _notes[3];
     int _previousClassification;
     String _labels[3];
     int _k;

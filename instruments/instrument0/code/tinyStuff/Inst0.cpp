@@ -16,17 +16,23 @@ Inst0::Inst0(bool serialDebugging) : _myKNN(3)
   _outputMode = usbOut;
 }
 
-//Inst0::Inst0(bool serialDebugging, byte midiChannelHex, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3)  : _myKNN(3)
-//{
-//    _serialDebugging = serialDebugging;
-//    _outputMode = midiOut;
-//    _midiChannelHex = midiChannelHex;
-//    _midiVelocity = midiVelocity;
-//    _notes[0] = midiNote1;
-//    _notes[1] = midiNote2;
-//    _notes[2] = midiNote3;
-//    setupSerial1();
-//}
+// constructor for the Inst0 class, using MIDI output over Serial1
+// if 'serialDebugging' is true, debugPrint() statements will be printed over Serial
+// 'midiChannelDec' is the decimal representation of the note-on command
+// 'midiVelocity' is the velocity of the note
+// midiNotes are the midi note numbers corresponding to the sounds for each 
+// object classified by the KNN algorithm (in decimal)
+Inst0::Inst0(bool serialDebugging, byte midiChannelDec, byte midiVelocity, int midiNote1, int midiNote2, int midiNote3)  : _myKNN(3)
+{
+  _serialDebugging = serialDebugging;
+  _outputMode = midiOut;
+  _midiChannelDec = midiChannelDec;
+  _midiVelocity = midiVelocity;
+  _notes[0] = midiNote1;
+  _notes[1] = midiNote2;
+  _notes[2] = midiNote3;
+  setupSerial1();
+}
 
 //Inst0::Inst0(bool serialDebugging, int outputPin, long noteDuration, int noteFreq1, int noteFreq2, int noteFreq3)  : _myKNN(3)
 //{
@@ -124,9 +130,9 @@ void Inst0::identify() {
       case usbOut:
         Serial.println(classification);
         break;
-      // case midiOut:
-      //   midiCommand(_midiChannelHex, _notes[classification], _midiVelocity);
-      //   break;
+      case midiOut:
+        midiCommand(_notes[classification]);
+        break;
       // case pinOut:
       //   tone(_outputPin, _notes[classification], _noteDuration);
       //   break;
