@@ -1,4 +1,4 @@
-# Installing
+# Installation
 
 ## Arduino dependencies
 
