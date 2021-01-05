@@ -31,5 +31,5 @@ We can use the MIDI protocol, and a MIDI DIN connector to output information ove
 
 Here is more information:
 
-[https://www.arduino.cc/en/Tutorial/BuiltInExamples/Midi]()
-[https://www.midi.org/articles/arduino-midi-output-basics]()
+* [](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Midi)
+* [](https://www.midi.org/articles/arduino-midi-output-basics)
