@@ -132,6 +132,7 @@ void Inst0::identify() {
         break;
       case midiOut:
         midiCommand(_notes[classification]);
+        delay(1000);
         break;
       // case pinOut:
       //   tone(_outputPin, _notes[classification], _noteDuration);
