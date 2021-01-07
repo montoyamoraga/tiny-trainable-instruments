@@ -28,3 +28,9 @@ template <typename T> void debugPrint(T message) {
     };
 
 ```
+
+## C++
+
+We have a class called TinyTrainable, and subclasses for each of the other instruments.
+
+We declare certain methods as protected instead of private, because if they were private, all the instrument classes that inherit TinyTrainable wouldn't have access to these anymore. If we want to make them private we'd have to make public getter/setter methods.
