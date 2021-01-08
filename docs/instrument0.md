@@ -55,6 +55,9 @@ Upload this sketch to control the pitch of a piezo buzzer with your gyroscope.
 Upload this sketch to control a MIDI instrument with your gyroscope.
 
 ## Documentation
+
+### Public
+
 `enum OutputMode {usbOut, midiOut, pinOut}`
 
 `Inst0();`
@@ -72,3 +75,27 @@ Upload this sketch to control a MIDI instrument with your gyroscope.
 `void trainKNN(int k, int examplesPerClass, float colorThreshold);`
 
 `void identify();`
+
+### Private
+
+Note: Though you won't have access to these variables and methods as a normal user, the documentation is included here in case users wish to fork and edit the library themselves.
+
+`void readColor(float color[]);`
+
+`OutputMode _outputMode;`
+
+`KNNClassifier _myKNN;`
+
+`long _noteDuration;`
+
+`int _notes[3];`
+
+`int _previousClassification;`
+
+`String _labels[3];`
+
+`int _k;`
+
+`float _colorThreshold;`
+
+`float _colorReading[3];`
