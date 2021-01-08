@@ -53,3 +53,22 @@ Upload this sketch to control the pitch of a piezo buzzer with your gyroscope.
 ### inst0GyroscopeMidi
 
 Upload this sketch to control a MIDI instrument with your gyroscope.
+
+## Documentation
+`enum OutputMode {usbOut, midiOut, pinOut}`
+
+`Inst0();`
+
+`void setupInstrument(OutputMode mode, bool serialDebugging);`
+
+`void setupMidi(byte midiChannelDec, byte midiVelocity);`
+
+`void setupPin(int outputPin, long noteDuration);`
+
+`void setNotes(int note1, int note2, int note3);`
+
+`void setLabels(String object1, String object2, String object3);`
+
+`void trainKNN(int k, int examplesPerClass, float colorThreshold);`
+
+`void identify();`
