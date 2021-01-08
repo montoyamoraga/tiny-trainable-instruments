@@ -20,7 +20,7 @@ All the training happens on the instrument, and it can be easily retrained by tu
   * 1x microcontroller, Arduino Nano 33 BLE Sense
   * 1x Micro USB cable
   * 1x USB power supply or battery
-  * 1x computer for uploading the code to the microcontroller
+  * 1x computer with the Arduino IDE installed, for uploading the code to the microcontroller
 * Optional:
   * 1x solderless breadboard
   * 10x breadboard jumper cables
@@ -33,6 +33,10 @@ All the training happens on the instrument, and it can be easily retrained by tu
 ## Installation
 
 Follow the instructions on [installation.md]
+
+## Wiring
+
+Follow the instructions on [wiring.md]
 
 ## Code
 
