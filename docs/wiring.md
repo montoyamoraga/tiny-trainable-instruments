@@ -1,12 +1,10 @@
 # Wiring
 
-
 For the construction of a Tiny Trainable Instrument, we will be using breadboards.
 
 ## Inputs
 
 In terms of input, we will be using the included sensors on the Arduino microcontroller.
-
 
 ## Outputs
 
