@@ -2,6 +2,8 @@
 
 Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext. This markdown guide is itself written using markdown!
 
+This guide is heavily based off of the [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/).
+
 ## Headers
 To create a header, place a `#` before the header text. You can include from one `#` to six `######`, which progressively makes the text smaller. For example the header to this section is written as `## Headers`, and the header to this guide is `# Markdown Guide`!
 
