@@ -2,23 +2,15 @@
 
 ## About
 
-The instrument0 is based on the k-NN algorithm.
+instrument0 is based on the k-NN (k-nearest neighbors) algorithm. It gathers data from its sensors and uses it to train the k-NN model, which then allows you to control audiovisuals. Currently, it uses k-NN for classification rather than regression.
 
-k-NN stands for k-nearest neighbors.
-
-The instrument0 gathers data from its sensors, uses it to train the k-NN algorithm, and then allows you to control audiovisuals.
-
-This instrument currently uses k-NN for classification, not regression.
-
-The instrument can run on batteries and only needs the computer to upload the code to it.
-
-All the training happens on the instrument, and it can be easily retrained by turning on and off the microcontroller.
+The instrument can run on batteries and only needs the computer to upload code to it. All the training happens on the instrument, and it can be easily retrained by restarting it (press the button once).
 
 ## Bill of materials
 
-* Necessary:
-  * 1x microcontroller, Arduino Nano 33 BLE Sense
-  * 1x Micro USB cable
+* Required:
+  * 1x [Arduino Nano 33 BLE Sense](https://store.arduino.cc/usa/nano-33-ble-sense)
+  * 1x Micro USB to USB cable
   * 1x USB power supply or battery
   * 1x computer with the Arduino IDE installed, for uploading the code to the microcontroller
 * Optional:
