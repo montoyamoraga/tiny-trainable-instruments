@@ -2,7 +2,7 @@
 
 ## About
 
-instrument0 is based on the k-NN (k-nearest neighbors) algorithm. It gathers data from its sensors and uses it to train the k-NN model, which then allows you to control audiovisuals. Currently, it uses k-NN for classification rather than regression.
+Instrument0 is based on the k-NN (k-nearest neighbors) algorithm. It gathers data from its sensors and uses it to train a k-NN model, which then allows you to control audiovisuals. Currently, it uses k-NN for classification rather than regression.
 
 The instrument can run on batteries and only needs the computer to upload code to it. All the training happens on the instrument, and it can be easily retrained by restarting it (press the button once).
 
@@ -24,11 +24,11 @@ The instrument can run on batteries and only needs the computer to upload code t
 
 ## Installation
 
-Follow the instructions on [installation.md]
+Follow the instructions on [installation.md]()
 
 ## Wiring
 
-Follow the instructions on [wiring.md]
+Follow the instructions on [wiring.md](wiring.md)
 
 ## Code
 
