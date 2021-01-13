@@ -24,7 +24,7 @@ The instrument can run on batteries and only needs the computer to upload code t
 
 ## Installation
 
-Follow the instructions on [installation.md]()
+Follow the instructions on [installation.md](installation.md)
 
 ## Wiring
 
@@ -44,7 +44,7 @@ Upload this sketch to control the pitch of a piezo buzzer with your gyroscope.
 
 ### inst0GyroscopeMidi
 
-Upload this sketch to control a MIDI instrument with your gyroscope.
+Upload this sketch to control an external MIDI instrument with your gyroscope.
 
 ## Documentation
 
