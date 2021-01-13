@@ -2,23 +2,17 @@
 
 ## About
 
-The instrument0 is based on the k-NN algorithm.
+Instrument0 is an instrument that uses its sensors for measuring gestures, color, light intensity and proximity, to train a k-NN (k-nearest neighbors) algorithm. This allows you to control different multimedia outputs.
 
-k-NN stands for k-nearest neighbors.
+The instrument can be programmed with a computer and then run as a standalone instrument, or you can use its serial port to communicate with your computer for debugging or interfacing with other software.
 
-The instrument0 gathers data from its sensors, uses it to train the k-NN algorithm, and then allows you to control audiovisuals.
-
-This instrument currently uses k-NN for classification, not regression.
-
-The instrument can run on batteries and only needs the computer to upload the code to it.
-
-All the training happens on the instrument, and it can be easily retrained by turning on and off the microcontroller.
+All the training happens on the instrument, and it can be easily retrained by restarting it (press the button once).
 
 ## Bill of materials
 
-* Necessary:
-  * 1x microcontroller, Arduino Nano 33 BLE Sense
-  * 1x Micro USB cable
+* Required:
+  * 1x [Arduino Nano 33 BLE Sense](https://store.arduino.cc/usa/nano-33-ble-sense)
+  * 1x Micro USB to USB cable
   * 1x USB power supply or battery
   * 1x computer with the Arduino IDE installed, for uploading the code to the microcontroller
 * Optional:
@@ -32,11 +26,11 @@ All the training happens on the instrument, and it can be easily retrained by tu
 
 ## Installation
 
-Follow the instructions on [installation.md]
+Follow the instructions on [installation.md](installation.md)
 
 ## Wiring
 
-Follow the instructions on [wiring.md]
+Follow the instructions on [wiring.md](wiring.md)
 
 ## Code
 
@@ -52,7 +46,7 @@ Upload this sketch to control the pitch of a piezo buzzer with your gyroscope.
 
 ### inst0GyroscopeMidi
 
-Upload this sketch to control a MIDI instrument with your gyroscope.
+Upload this sketch to control an external MIDI instrument with your gyroscope.
 
 ## Documentation
 

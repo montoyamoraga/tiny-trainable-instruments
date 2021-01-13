@@ -1,8 +1,11 @@
 # Contributing
 
-If you find an error or have a comment, please submit a pull request!
+If you find an error or have a comment, please start a discussion by submitting an issue on our repositories!
 
-## GitHub Instructions
+* https://github.com/montoyamoraga/tiny-trainable-instruments/issues
+* https://github.com/montoyamoraga/TinyTrainable/issues
+
+## GitHub instructions
 
 ### To contribute to this repository, follow these steps:
 
@@ -14,9 +17,15 @@ If you find an error or have a comment, please submit a pull request!
 git clone https://github.com/your_username/tiny-trainable-instruments.git
 ```
 
-4. Make some changes
+4. Change directory (cd) into the project folder
 
-5. Stage and make a commit to your repository on your computer
+```bash
+cd tiny-trainable-instruments
+```
+
+5. Make some changes
+
+6. Stage and make a commit to your repository on your computer
 
 ```bash
 git add .
@@ -26,15 +35,15 @@ git add .
 git commit -m "your comment"
 ```
 
-6. Push your commit to the cloud
+7. Push your commit to your personal fork on GitHub
 
 ```bash
 git push
 ```
 
-7. Open your repository online
+8. Open your repository online
 
-8. Open a pull request and wait for comments or approval
+9. Open a pull request and wait for comments or approval
 
 ### For subsequent pull requests:
 
@@ -51,3 +60,6 @@ git pull
 ```
 
 4. Continue from step 4 above
+
+## Contributing documentation
+
