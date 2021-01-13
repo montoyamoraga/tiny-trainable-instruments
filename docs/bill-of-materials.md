@@ -11,6 +11,8 @@ This project is intended to be cheap and accesible, but still requires a few mat
 | [Piezo buzzer](https://www.adafruit.com/product/160) | 1 | 1.50 | https://www.adafruit.com/ | Output sound |
 | [Micro servo](https://www.adafruit.com/product/169) | 1 | 5.95 | https://www.adafruit.com/ | Output movement |
 | [LED](https://www.adafruit.com/product/754) | 1 | 6.95 | https://www.adafruit.com/ | Output light |
-
+| [Thermal printer](https://www.adafruit.com/product/600) | 1 | 61.95 | https://www.adafruit.com/ | Output printed text |
+| [LCD screen](https://www.adafruit.com/product/181) | 1 | 9.95 |  https://www.adafruit.com/ | Output screen text |
+| placeholder | placeholder | placeholder | placeholder | placeholder |
 
 NOTE: Make sure you purchase the Arduino Nano 33 BLE ***Sense***! Arduino also sells a similary named board called Arduino Nano 33 BLE. Also, both are sold with and without holders. We recommend getting the one with headers, in order to start using it on a breadboard without needing to solder.
