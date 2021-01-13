@@ -2,9 +2,9 @@
 
 This project is intended to be cheap and accesible, but still requires a few materials:
 
- Item | Quantity | Cost (USD) | Comment
-------|----------|------------|--------
-[Arduino Nano 33 BLE Sense with headers](https://store.arduino.cc/usa/nano-33-ble-sense-with-headers) | 1 | 33.40 | Microcontroller
+| Item | Quantity | Cost (USD) | Retailer | Comment |
+|------|----------|------------|----------|---------|
+[Arduino Nano 33 BLE Sense with headers](https://store.arduino.cc/usa/nano-33-ble-sense-with-headers) | 1 | 33.40 | https://www.arduino.cc/ |Microcontroller
 Breadboard | 1 | 5.95 | For making connections
 placeholder | placeholder | placeholder | placeholder
 placeholder | placeholder | placeholder | placeholder
