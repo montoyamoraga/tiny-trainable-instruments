@@ -32,64 +32,8 @@ Follow the instructions on [installation.md](installation.md)
 
 Follow the instructions on [wiring.md](wiring.md)
 
-## Code
-
-### inst0Blink
-
-Upload this sketch to check that your Arduino is working correctly.
-
-This sketch cycles between all the different LED lights available on the microcontroller.
-
-### inst0GyroscopeMidi
-
-Upload this sketch to control the pitch of a piezo buzzer with your gyroscope.
-
-### inst0GyroscopeMidi
-
-Upload this sketch to control an external MIDI instrument with your gyroscope.
+## Code examples
 
 ## Documentation
 
-### Public
-
-`enum OutputMode {usbOut, midiOut, pinOut}`
-
-`Inst0();`
-
-`void setupInstrument(OutputMode mode, bool serialDebugging);`
-
-`void setupMidi(byte midiChannelDec, byte midiVelocity);`
-
-`void setupPin(int outputPin, long noteDuration);`
-
-`void setNotes(int note1, int note2, int note3);`
-
-`void setLabels(String object1, String object2, String object3);`
-
-`void trainKNN(int k, int examplesPerClass, float colorThreshold);`
-
-`void identify();`
-
-### Private
-
-Note: Though you won't have access to these variables and methods as a normal user, the documentation is included here in case users wish to fork and edit the library themselves.
-
-`void readColor(float color[]);`
-
-`OutputMode _outputMode;`
-
-`KNNClassifier _myKNN;`
-
-`long _noteDuration;`
-
-`int _notes[3];`
-
-`int _previousClassification;`
-
-`String _labels[3];`
-
-`int _k;`
-
-`float _colorThreshold;`
-
-`float _colorReading[3];`
+The library has public and private and protected methods. Even though you won't have access to some of them, users can fork and edit the library themselves.
