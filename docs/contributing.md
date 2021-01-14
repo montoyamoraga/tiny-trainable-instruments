@@ -1,8 +1,11 @@
 # Contributing
 
-If you find an error or have a comment, please submit a pull request!
+If you find an error or have a comment, please start a discussion by submitting an issue on our repositories!
 
-## GitHub Instructions
+* https://github.com/montoyamoraga/tiny-trainable-instruments/issues
+* https://github.com/montoyamoraga/TinyTrainable/issues
+
+## GitHub instructions
 
 ### To contribute to this repository, follow these steps:
 
@@ -58,5 +61,5 @@ git pull
 
 4. Continue from step 4 above
 
-## Contributing Documentation
+## Contributing documentation
 

@@ -2,9 +2,11 @@
 
 ## About
 
-instrument0 is based on the k-NN (k-nearest neighbors) algorithm. It gathers data from its sensors and uses it to train the k-NN model, which then allows you to control audiovisuals. Currently, it uses k-NN for classification rather than regression.
+Instrument0 is an instrument that uses its sensors for measuring gestures, color, light intensity and proximity, to train a k-NN (k-nearest neighbors) algorithm. This allows you to control different multimedia outputs.
 
-The instrument can run on batteries and only needs the computer to upload code to it. All the training happens on the instrument, and it can be easily retrained by restarting it (press the button once).
+The instrument can be programmed with a computer and then run as a standalone instrument, or you can use its serial port to communicate with your computer for debugging or interfacing with other software.
+
+All the training happens on the instrument, and it can be easily retrained by restarting it (press the button once).
 
 ## Bill of materials
 
@@ -24,11 +26,11 @@ The instrument can run on batteries and only needs the computer to upload code t
 
 ## Installation
 
-Follow the instructions on [installation.md]
+Follow the instructions on [installation.md](installation.md)
 
 ## Wiring
 
-Follow the instructions on [wiring.md]
+Follow the instructions on [wiring.md](wiring.md)
 
 ## Code
 
@@ -44,7 +46,7 @@ Upload this sketch to control the pitch of a piezo buzzer with your gyroscope.
 
 ### inst0GyroscopeMidi
 
-Upload this sketch to control a MIDI instrument with your gyroscope.
+Upload this sketch to control an external MIDI instrument with your gyroscope.
 
 ## Documentation
 
