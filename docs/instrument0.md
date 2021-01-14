@@ -35,5 +35,3 @@ Follow the instructions on [wiring.md](wiring.md)
 ## Code examples
 
 ## Documentation
-
-The library has public and private and protected methods. Even though you won't have access to some of them, users can fork and edit the library themselves.
