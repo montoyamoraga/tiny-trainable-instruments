@@ -17,7 +17,15 @@ Next, go to `Tools > Manage Libraries...` and install the custom library for thi
     * `Arduino_LSM9DS1` acceleration, magnetic field, gyroscope orientation
 * Libraries for machine learning:
     * `Arduino_KNN`: k-nearest neighbor algorithm.
-    * `Arduino_TensorFlowLite`: microcontroller version of the TensorFlow machine learning library.
+    * `Arduino_TensorFlowLite`: microcontroller version of the TensorFlow machine learning library. As of January 2021, there are 5 different versions of the library available to be installed from the Arduino IDE, which are:
+      * 1.14.0-ALPHA
+      * 1.15.0-ALPHA
+      * 1.15.0-ALPHA-precompiled
+      * 2.1.0-ALPHA
+      * 2.1.0-ALPHA-precompiled
+      We suggest installing the latest 2.1.0 but not precompiled, which would be: 2.1.0-ALPHA.
+
+
 
 If you still have questions about setting up the microcontroller, the full startup guide is available [here](https://www.arduino.cc/en/Guide/NANO33BLESense).
 
