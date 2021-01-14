@@ -18,10 +18,7 @@ Follow the instructions on [wiring.md](wiring.md)
 
 ## Code examples
 
-
-inst1_blink
-
-inst1_buzzer
+hello_tiny_world: this is an example that cycles through all the LEDs and their colors.
 
 ## Data collection
 
