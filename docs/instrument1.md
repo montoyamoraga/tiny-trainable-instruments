@@ -22,3 +22,9 @@ Follow the instructions on [wiring.md](wiring.md)
 inst1_blink
 
 inst1_buzzer
+
+## Data collection
+
+## Training
+
+## Deploying
