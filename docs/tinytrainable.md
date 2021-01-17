@@ -6,27 +6,12 @@ Though we don't expect an instance of the parent library Tiny Trainable to be of
 
 ## Documentation
 
-### Public
-`TinyTrainable();`
+### LEDs
 
-`template <typename T> void debugPrint(T message);`
+The microcontroller we are using has 3 LEDs:
 
-`static void setupLED();`
+* Power LED: color green, it is always on.
+* Built-in LED: color orange
+* RGB LED: it has 3 channels, red, green and blue. It can output 6 different colors: red, green, blue, yellow, magenta, cyan.
 
-`void setColorBuiltInLED(Colors color);`
-
-`void turnOffBuiltInLED();`
-
-`void setupSerial1();`
-
-`void midiCommand(byte midiNote);`
-
-### Protected
-
-`bool _serialDebugging;`
-
-`byte _midiChannelDec;`
-
-`byte _midiVelocity;`
-
-`int _outputPin;`
+We use the orange built-in LED for signalling if the instruments have been trained or not. When they are turned on, the LED is on, after the algorithm is trained, it blinks twice, and then goes off.
