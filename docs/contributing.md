@@ -7,7 +7,7 @@ If you find an error or have a comment, please start a discussion by submitting 
 
 ## GitHub instructions
 
-### To contribute to this repository, follow these steps:
+### To contribute to this repository:
 
 1. Create a free GitHub account
 2. Fork the repository

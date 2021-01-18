@@ -1,4 +1,4 @@
-# Markdown Guide
+# Markdown guide
 
 Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext. This markdown guide is itself written using markdown!
 
