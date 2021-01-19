@@ -22,6 +22,33 @@ hello_tiny_world: this is an example that cycles through all the LEDs and their 
 
 ## Data collection
 
+Open the Arduino sketch
+
 ## Training
 
+Open your terminal and go to the instruments/instrument1 folder.
+
+```bash
+cd instruments/instrument1
+```
+
+Activate the virtual environment
+
+
+```bash
+source env/bin/activate
+```
+
+Run Jupyter lab
+
+```bash
+jupyter-lab
+```
+
+Open the window on your web browser, and navigate to the notebook Instrument1.ipynb
+
+
+
 ## Deploying
+
+Open the Arduino sketch
