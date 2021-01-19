@@ -36,11 +36,44 @@ For Instrument0, you only need Arduino libraries. For Instrument1 and Instrument
 
 Your computer might have Python already installed, and it might be one that is not compatible with the TensorFlow version we are using.
 
-In order to be able to manage different versions of Python, we suggest installing the tool pyenv https://github.com/pyenv/pyenv, and the virtual environment tool pyenv-virtualenv https://github.com/pyenv/pyenv-virtualenv.
+These are the versions we will be using, as of January 2021:
 
-### Linux
+* Python 3.8.6
+* TensorFlow 2.3.2
+* Jupyter Notebook 6.2.0
 
-### Mac
+In order to be able to manage different versions of Python, we suggest installing the tool pyenv https://github.com/pyenv/pyenv.
 
+After both tools are installed, go to the folder instruments/instrument1/
 
-## Windows
+```bash
+cd instruments/instrument1/
+```
+
+Check that pyenv is able to read the .python-version file
+
+```bash
+pyenv --versions
+```
+
+You should see a list, with the version we are using and an asterisk, to highlight that this is the Python version we will use.
+
+Create a virtual environment called env, with the python package venv.
+
+```bash
+python3 -m venv env
+```
+
+Activate this virtual environment
+
+```bash
+source env/bin/activate
+```
+
+Now your terminal should have every new line starting with (env)
+
+Install the TensorFlow and Jupyter notebooks packages, along with their dependencies, with the command
+
+```
+python3 install -r requirements.txt
+```
