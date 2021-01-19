@@ -26,7 +26,22 @@ Next, go to `Tools > Manage Libraries...` and install the custom library for thi
       We suggest installing the latest 2.1.0 but not precompiled, which would be: 2.1.0-ALPHA.
 
 
-
 If you still have questions about setting up the microcontroller, the full startup guide is available [here](https://www.arduino.cc/en/Guide/NANO33BLESense).
 
-If you've made it this far, welcome to our little project! We're super happy to have you here :)
+If you've made it this far, welcome to our project! We're super happy to have you here :)
+
+## Python and TensorFlow
+
+For Instrument0, you only need Arduino libraries. For Instrument1 and Instrument2, you also need to have Python and TensorFlow installed on your computer.
+
+Your computer might have Python already installed, and it might be one that is not compatible with the TensorFlow version we are using.
+
+In order to be able to manage different versions of Python, we suggest installing the tool pyenv https://github.com/pyenv/pyenv.
+
+
+### Linux
+
+### Mac
+
+
+## Windows
