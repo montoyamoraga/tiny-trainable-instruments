@@ -26,7 +26,54 @@ Next, go to `Tools > Manage Libraries...` and install the custom library for thi
     * We suggest installing `2.1.0-ALPHA` (the latest version, but not the precompiled one).
 
 
-
 If you still have questions about setting up the microcontroller, the full startup guide is available [here](https://www.arduino.cc/en/Guide/NANO33BLESense).
 
-If you've made it this far, welcome to our little project! We're super glad to have you here :)
+If you've made it this far, welcome to our project! We're super glad to have you here :)
+
+## TensorFlow, Python, Jupyter
+
+For Instrument0, you only need Arduino libraries. For Instrument1 and Instrument2, you also need to have Python, in order to train with TensorFlow and Jupyter on your computer.
+
+Your computer might have Python already installed, and it might be one that is not compatible with the TensorFlow version we are using.
+
+These are the versions we will be using, as of January 2021:
+
+* Python 3.8.6
+* TensorFlow 2.3.2
+* Jupyter Lab 3.0.5
+
+In order to be able to manage different versions of Python, we suggest installing the tool pyenv https://github.com/pyenv/pyenv.
+
+After both tools are installed, go to the folder instruments/instrument1/
+
+```bash
+cd instruments/instrument1/
+```
+
+Check that pyenv is able to read the .python-version file
+
+```bash
+pyenv --versions
+```
+
+You should see a list, with the version we are using and an asterisk, to highlight that this is the Python version we will use.
+
+Create a virtual environment called env, with the python package venv.
+
+```bash
+python3 -m venv env
+```
+
+Activate this virtual environment
+
+```bash
+source env/bin/activate
+```
+
+Now your terminal should have every new line starting with (env)
+
+Install the TensorFlow and Jupyter packages, along with their dependencies, with the command
+
+```
+python3 install -r requirements.txt
+```
