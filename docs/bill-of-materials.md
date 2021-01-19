@@ -15,4 +15,4 @@ This project is intended to be cheap and accesible, but still requires a few mat
 | [LCD screen](https://www.adafruit.com/product/181) | 1 | 9.95 |  https://www.adafruit.com/ | Output screen text |
 | placeholder | placeholder | placeholder | placeholder | placeholder |
 
-NOTE: Make sure you purchase the Arduino Nano 33 BLE ***Sense***! Arduino also sells a similary named board called Arduino Nano 33 BLE. Also, both are sold with and without holders. We recommend getting the one with headers, in order to start using it on a breadboard without needing to solder.
+NOTE: Make sure you purchase the Arduino Nano 33 BLE ***Sense***! Arduino also sells a similarly named board called Arduino Nano 33 BLE. In addition, both are sold with and without headers. We recommend getting the one with headers so you can immediately start using it on a breadboard without needing to solder headers on.
