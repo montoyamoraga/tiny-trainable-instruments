@@ -5,8 +5,8 @@
 .DS_Store
 
 # Python
-*/__pycache__/
-*/env/
+__pycache__/
+env/
 
 
 
