@@ -7,7 +7,7 @@ If you find an error or have a comment, please start a discussion by submitting 
 
 ## GitHub instructions
 
-### To contribute to this repository, follow these steps:
+### To contribute to this repository:
 
 1. Create a free GitHub account
 2. Fork the repository
@@ -47,11 +47,11 @@ git push
 
 ### For subsequent pull requests:
 
-If your fork is behind main:
+If your fork is behind [origin](https://github.com/montoyamoraga/tiny-trainable-instruments.git):
 
-1. Open a pull request, but reverse order (merge main into your fork)
+1. Open a pull request, but reverse the order (merge main into your fork)
 
-2. Approve the pull request to update your fork
+2. Approve the merge to update your fork
 
 3. Pull your repository to your computer
 
