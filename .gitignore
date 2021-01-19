@@ -1,4 +1,5 @@
-.vscode/
+# Jupyter
+*/.ipynb_checkpoints/
 
 # Mac computers
 .DS_Store
@@ -7,8 +8,7 @@
 */__pycache__/
 */env/
 
-# Jupyter
-*/.ipynb_checkpoints
+
 
 # LaTeX projects
 *.aux
@@ -35,3 +35,6 @@
 *.mtc1
 *.out
 *.synctex.gz
+
+# Visual Studio Code
+.vscode/
