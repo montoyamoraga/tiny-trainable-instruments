@@ -63,3 +63,4 @@ git pull
 
 ## Contributing documentation
 
+For more information about how to contribute documentation to an open source artistic project, we recommend looking at the documentation by the p5.js project, available at https://github.com/processing/p5.js/blob/main/contributor_docs/contributing_documentation.md
