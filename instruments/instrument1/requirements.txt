@@ -1,0 +1,5 @@
+# Jupyter notebook
+notebook>=6.2.0
+
+# Tensorflow
+tensorflow>=2.3.2
