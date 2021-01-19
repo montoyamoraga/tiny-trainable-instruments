@@ -40,7 +40,7 @@ These are the versions we will be using, as of January 2021:
 
 * Python 3.8.6
 * TensorFlow 2.3.2
-* Jupyter Notebook 6.2.0
+* Jupyter Lab 3.0.5
 
 In order to be able to manage different versions of Python, we suggest installing the tool pyenv https://github.com/pyenv/pyenv.
 
@@ -72,7 +72,7 @@ source env/bin/activate
 
 Now your terminal should have every new line starting with (env)
 
-Install the TensorFlow and Jupyter notebooks packages, along with their dependencies, with the command
+Install the TensorFlow and Jupyter packages, along with their dependencies, with the command
 
 ```
 python3 install -r requirements.txt
