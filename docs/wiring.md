@@ -16,14 +16,11 @@ We can output data over the USB cable, using the serial port.
 
 This output can range from debugging information, to data for controlling software. In this repository we include some open source audiovisual scripts and examples that you can expand on.
 
-### Internal LED output
+### LED output
 
-The Arduino has lights that we can use for debugging and output purposes.
+The Arduino has LEDs that we use for showing the internal status of the microcontroller. For LED output we will wire additional LEDs to the Arduino.
 
-### External LED output
-
-
-### MIDI DIN output
+### MIDI output
 
 We can use the MIDI protocol, and a MIDI DIN connector to output information over the MIDI protocol.
 
