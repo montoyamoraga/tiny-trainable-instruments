@@ -36,7 +36,7 @@ For Instrument0, you only need Arduino libraries. For Instrument1 and Instrument
 
 Your computer might have Python already installed, and it might be one that is not compatible with the TensorFlow version we are using.
 
-In order to be able to manage different versions of Python, we suggest installing the tool pyenv https://github.com/pyenv/pyenv.
+In order to be able to manage different versions of Python, we suggest installing the tool pyenv https://github.com/pyenv/pyenv, and the virtual environment tool pyenv-virtualenv https://github.com/pyenv/pyenv-virtualenv.
 
 ### Linux
 
