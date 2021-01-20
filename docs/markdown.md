@@ -29,7 +29,7 @@ To link to a website, surround the clickable text with square brackets, and the 
 Inserting images has a very similar syntax to linking, only with a ! preceding the open square bracket: ![image](https://upload.wikimedia.org/wikipedia/commons/c/ce/Mit_medialab_logo.png)
 ```
 
-Inserting images has a very similar syntax to linking, only with a ! preceding the open square bracket: ![image](https://upload.wikimedia.org/wikipedia/commons/c/ce/Mit_medialab_logo.png)
+Inserting images has a very similar syntax to linking, only with a ! preceding the open square bracket: ![Example image](docs/images/MIT_Media_Lab_Logo.png "MIT Media Lab Logo")
 
 ## Quotes
 
