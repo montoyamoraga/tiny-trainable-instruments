@@ -26,10 +26,10 @@ To link to a website, surround the clickable text with square brackets, and the 
 ## Images
 
 ```
-Inserting images has a very similar syntax to linking, only with a ! preceding the open square bracket: ![image](https://upload.wikimedia.org/wikipedia/commons/c/ce/Mit_medialab_logo.png)
+Inserting images has a very similar syntax to linking, only with a ! preceding the open square bracket: ![Example image](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/MIT_Media_Lab_Logo.png "MIT Media Lab Logo")
 ```
 
-Inserting images has a very similar syntax to linking, only with a ! preceding the open square bracket: ![image](https://upload.wikimedia.org/wikipedia/commons/c/ce/Mit_medialab_logo.png)
+Inserting images has a very similar syntax to linking, only with a ! preceding the open square bracket: ![Example image](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/MIT_Media_Lab_Logo.png "MIT Media Lab Logo")
 
 ## Quotes
 

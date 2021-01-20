@@ -1,6 +1,6 @@
 # Wiring
 
-For the construction of a Tiny Trainable Instrument, we will be using breadboards.
+For the construction of a Tiny Trainable Instrument, we will be using breadboards. Breadboards are built so that within each of the rows of the 10 labeled columns a-j, every 5 are electrically connected with a wire inside the board. That is, for each row, a-e act as a single electrical node, as do f-j.
 
 ## Inputs
 
