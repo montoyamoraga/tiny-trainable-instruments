@@ -1,5 +1,0 @@
-# Jupyter lab
-jupyterlab>=3.0.5
-
-# Tensorflow
-tensorflow>=2.3.2
