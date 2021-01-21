@@ -72,8 +72,14 @@ source env/bin/activate
 
 Now your terminal should have every new line starting with (env)
 
-Install the TensorFlow and Jupyter packages, along with their dependencies, with the command
+The pip of your Python virtual environment might need updating, you can update to the latest version with this command
 
+```bash
+pip install --upgrade pip
 ```
-python install -r requirements.txt
+
+Use pip to install the TensorFlow and Jupyter packages, along with their dependencies, with the command
+
+```bash
+pip install -r requirements.txt
 ```
