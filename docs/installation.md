@@ -53,7 +53,7 @@ cd instruments/instrument1/
 Check that pyenv is able to read the .python-version file
 
 ```bash
-pyenv --versions
+pyenv versions
 ```
 
 You should see a list, with the version we are using and an asterisk, to highlight that this is the Python version we will use.
