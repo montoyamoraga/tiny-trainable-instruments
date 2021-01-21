@@ -61,7 +61,7 @@ You should see a list, with the version we are using and an asterisk, to highlig
 Create a virtual environment called env, with the python package venv.
 
 ```bash
-python3 -m venv env
+python -m venv env
 ```
 
 Activate this virtual environment
@@ -75,5 +75,5 @@ Now your terminal should have every new line starting with (env)
 Install the TensorFlow and Jupyter packages, along with their dependencies, with the command
 
 ```
-python3 install -r requirements.txt
+python install -r requirements.txt
 ```
