@@ -58,21 +58,21 @@ Create a virtual environment called env, with the python package venv.
 python -m venv env
 ```
 
-Activate this virtual environment
+Activate the virtual environment:
 
 ```bash
 source env/bin/activate
 ```
 
-Now your terminal should have every new line starting with (env)
+Now your terminal should have every new line starting with (env).
 
-The pip of your Python virtual environment might need updating, you can update to the latest version with this command
+The pip of your Python virtual environment might need updating; you can update to the latest version with the command
 
 ```bash
 pip install --upgrade pip
 ```
 
-Use pip to install the Jupyter packages, along with their dependencies, with the command
+Then use pip to install the Jupyter packages, along with their dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -84,4 +84,4 @@ Now you can run the Jupyter Lab tool with
 jupyter-lab
 ```
 
-This will open a tab on your browser to navigate through the files in your computer, and let you run the code in the Jupyter notebooks for Instrument1 and Instrument2, which have extension .ipynb
+This will open a tab on your browser to navigate through the files in your computer and allow you run the code in the Jupyter notebooks for Instrument1 and Instrument2, which have extension .ipynb .
