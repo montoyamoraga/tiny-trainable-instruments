@@ -38,16 +38,16 @@ These are the versions we will be using, as of January 2021:
 
 In order to be able to manage different versions of Python, we suggest installing the tool pyenv https://github.com/pyenv/pyenv.
 
-After both tools are installed, go to the folder instruments/instrument1/
+After installing pyenv, go to the folder instruments/
 
 ```bash
-cd instruments/instrument1/
+cd instruments/
 ```
 
 Check that pyenv is able to read the .python-version file
 
 ```bash
-pyenv --versions
+pyenv versions
 ```
 
 You should see a list, with the version we are using and an asterisk, to highlight that this is the Python version we will use.
@@ -55,7 +55,7 @@ You should see a list, with the version we are using and an asterisk, to highlig
 Create a virtual environment called env, with the python package venv.
 
 ```bash
-python3 -m venv env
+python -m venv env
 ```
 
 Activate this virtual environment
@@ -66,8 +66,22 @@ source env/bin/activate
 
 Now your terminal should have every new line starting with (env)
 
-Install the TensorFlow and Jupyter packages, along with their dependencies, with the command
+The pip of your Python virtual environment might need updating, you can update to the latest version with this command
 
+```bash
+pip install --upgrade pip
 ```
-python3 install -r requirements.txt
+
+Use pip to install the Jupyter packages, along with their dependencies, with the command
+
+```bash
+pip install -r requirements.txt
 ```
+
+Now you can run the Jupyter Lab tool with
+
+```bash
+jupyter-lab
+```
+
+This will open a tab on your browser to navigate through the files in your computer, and let you run the code in the Jupyter notebooks for Instrument1 and Instrument2, which have extension .ipynb
