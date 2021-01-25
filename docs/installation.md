@@ -50,38 +50,40 @@ Check that pyenv is able to read the .python-version file
 pyenv versions
 ```
 
-You should see a list, with the version we are using and an asterisk, to highlight that this is the Python version we will use.
+You should see a list, with the version we are using and an asterisk, to highlight that this is the Python version we will use. If there is no asterisk and it says that the required version of python is not installed, use the command
 
-Create a virtual environment called env, with the python package venv.
+```bash
+pyenv install <python version number>
+```
+
+If you are using an old version of pyenv, there's a chance that the install won't work; copy the entire command pyenv gives you (including the &&'s) and enter it into the terminal. Then once pyenv is updated, try the above command again.
+
+Now that you have the correct version of python, create a virtual environment (which we will name env) using the python package venv.
 
 ```bash
 python -m venv env
 ```
 
-Activate this virtual environment
+Activate the virtual environment:
 
 ```bash
 source env/bin/activate
 ```
 
-Now your terminal should have every new line starting with (env)
+Now your terminal should have every new line starting with (env).
 
-The pip of your Python virtual environment might need updating, you can update to the latest version with this command
+The pip of your Python virtual environment might need updating; you can update to the latest version with the command
 
 ```bash
 pip install --upgrade pip
 ```
 
-Use pip to install the Jupyter packages, along with their dependencies, with the command
+Then use pip to install the Jupyter packages, along with their dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Now you can run the Jupyter Lab tool with
+Now you can run the Jupyter Lab tool with `jupyter-lab`. This will open a tab on your browser to navigate through the files in your computer and allow you run the code in the Jupyter notebooks for Instrument1 and Instrument2, which have extension .ipynb . To close the Jupyter notebook server, press `Ctrl+C` in the terminal (even on OSX; it's not `Cmd`) and confirm with `y`.
 
-```bash
-jupyter-lab
-```
-
-This will open a tab on your browser to navigate through the files in your computer, and let you run the code in the Jupyter notebooks for Instrument1 and Instrument2, which have extension .ipynb
+To exit the virtual environment once you're done, simply use the command `deactivate`. Note that the command `jupyter-lab` will not work until you reenter the venv.
