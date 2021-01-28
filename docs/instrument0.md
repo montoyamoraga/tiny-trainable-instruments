@@ -34,8 +34,8 @@ Follow the instructions on [wiring.md](wiring.md)
 
 ## Code examples
 
-hello_tiny_world: this is an example that cycles through all the LEDs and their colors.
+hello_tiny_world: Cycles through all the LEDs and their colors.
 
-inst0_buzzer: this is an example that outputs sounds with a buzzer.
+inst0_buzzer: Outputs sounds using a buzzer.
 
 ## Documentation

@@ -1,4 +1,4 @@
-# Markdown Guide
+# Markdown guide
 
 Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext. This markdown guide is itself written using markdown!
 
@@ -26,10 +26,10 @@ To link to a website, surround the clickable text with square brackets, and the 
 ## Images
 
 ```
-Inserting images has a very similar syntax to linking, only with a ! preceding the open square bracket: ![image](https://upload.wikimedia.org/wikipedia/commons/c/ce/Mit_medialab_logo.png)
+Inserting images has a very similar syntax to linking, but with a ! preceding the open square bracket: ![Example image](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/arduino_placement.png "Arduino on breadboard")
 ```
 
-Inserting images has a very similar syntax to linking, only with a ! preceding the open square bracket: ![image](https://upload.wikimedia.org/wikipedia/commons/c/ce/Mit_medialab_logo.png)
+Inserting images has a very similar syntax to linking, but with a ! preceding the open square bracket: ![Example image](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/arduino_placement.png "Arduino on breadboard")
 
 ## Quotes
 

@@ -6,8 +6,6 @@ Instrument1 is an instrument that uses its sensors for measuring gestures, to tr
 
 The instrument can be programmed with a computer and then run as a standalone instrument, or you can use its serial port to communicate with your computer for debugging or interfacing with other software.
 
-All the training happens on the instrument, and it can be easily retrained by restarting it (press the button once).
-
 ## Installation
 
 Follow the instructions on [installation.md](installation.md)
@@ -22,6 +20,32 @@ hello_tiny_world: this is an example that cycles through all the LEDs and their 
 
 ## Data collection
 
+Open the Arduino sketch
+
 ## Training
 
+Open your terminal and go to the instruments folder.
+
+```bash
+cd instruments
+```
+
+Activate the virtual environment
+
+
+```bash
+source env/bin/activate
+```
+
+Run Jupyter lab
+
+```bash
+jupyter-lab
+```
+
+Open the window on your web browser, and navigate to the notebook Instrument1.ipynb
+
+
 ## Deploying
+
+Open the Arduino sketch

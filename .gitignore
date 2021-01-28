@@ -1,14 +1,5 @@
-.vscode/
-
-# Mac computers
-.DS_Store
-
-# Python
-*/__pycache__/
-*/env/
-
 # Jupyter
-*/.ipynb_checkpoints
+.ipynb_checkpoints
 
 # LaTeX projects
 *.aux
@@ -35,3 +26,21 @@
 *.mtc1
 *.out
 *.synctex.gz
+
+# Mac computers
+.DS_Store
+
+# Python
+__pycache__/
+env/
+
+# TensorFlow training of Instrument2
+# TODO: check that this list is ok
+dataset/
+logs/
+models/
+tensorflow/
+train/
+
+# Visual Studio Code
+.vscode/
