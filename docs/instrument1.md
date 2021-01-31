@@ -8,11 +8,11 @@ The instrument can be programmed with a computer and then run as a standalone in
 
 ## Installation
 
-Follow the instructions on [installation.md](installation.md)
+Follow the instructions on [installation.md](installation.md).
 
 ## Wiring
 
-Follow the instructions on [wiring.md](wiring.md)
+Follow the instructions on [wiring.md](wiring.md).
 
 ## Code examples
 

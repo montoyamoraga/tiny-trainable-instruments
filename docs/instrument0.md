@@ -26,11 +26,11 @@ All the training happens on the instrument, and it can be easily retrained by re
 
 ## Installation
 
-Follow the instructions on [installation.md](installation.md)
+Follow the instructions on [installation.md](installation.md).
 
 ## Wiring
 
-Follow the instructions on [wiring.md](wiring.md)
+Follow the instructions on [wiring.md](wiring.md).
 
 ## Code examples
 

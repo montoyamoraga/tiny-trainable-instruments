@@ -64,13 +64,15 @@ Now that you have the correct version of python, create a virtual environment (w
 python -m venv env
 ```
 
-Activate the virtual environment:
+Activate the virtual environment with this command, which you will use every time you want to enter the venv:
 
 ```bash
 source env/bin/activate
 ```
 
-Now your terminal should have every new line starting with (env).
+Now your terminal should have every new line starting with (env). Your command prompt should look something like this:
+
+![Virtual environment command prompt](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/venv_activation.png "Activating virtual environment")
 
 The pip of your Python virtual environment might need updating; you can update to the latest version with the command
 
