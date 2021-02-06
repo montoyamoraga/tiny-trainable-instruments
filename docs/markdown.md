@@ -7,41 +7,27 @@ Markdown is a lightweight markup language with simple, intuitive syntax. Aside f
 This guide is heavily based off of the [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/).
 
 ## Headers
-To create a header, place a `#` before the header text. You can include from one `#` to six `######`, which progressively makes the text smaller. For example the header to this section is written as `## Headers`, and the header to this guide is `# Markdown`!
+
+To create a header, use a `#` before the header text. You can include from one `#` to six `######`, which progressively makes the text smaller. For example the header to this section is written as `## Headers`, and the header to this guide is `# Markdown`!
 
 ## Text
 
-```
-You can italicize text by surrounding it with *asterisks* or with _underscores_! Bolded text is the same, but with **double asterisks** or __double underscores__. You can combine the two, _**like this**_! Also, you can strikethrough text using ~~double tildes~~.
-```
+You can italicize text by surrounding it with *asterisks*, or you can make it bold with, or do both with three asterisks ***like this***!
 
-You can italicize text by surrounding it with *asterisks* or with _underscores_! Bolded text is the same, but with **double asterisks** or __double underscores__. You can combine the two, ***like this***! Also, you can strikethrough text using ~~double tildes~~.
-
-## Linking
-
-```
-To link to a website, surround the clickable text with square brackets, and the link with parentheses, [like this](https://github.com/montoyamoraga/tiny-trainable-instruments)!
-```
+## Links
 
 To link to a website, surround the clickable text with square brackets, and the link with parentheses, [like this](https://github.com/montoyamoraga/tiny-trainable-instruments)!
 
 ## Images
 
-```
-Inserting images has a very similar syntax to linking, but with a ! preceding the open square bracket: ![Example image](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/arduino_placement.png "Arduino on breadboard")
-```
-
 Inserting images has a very similar syntax to linking, but with a ! preceding the open square bracket: ![Example image](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/arduino_placement.png "Arduino on breadboard")
 
 ## Quotes
 
-```
-> To quote someone, place a > before the quote. - Maxwell Wang
-```
-
 > To quote someone, place a > before the quote. - Maxwell Wang
 
 ## Lists
+
 ```
 * You can add a bullet points by putting an asterisk and a space before each item.
   * You can indent points by putting a two-space indent before the asterisk.
