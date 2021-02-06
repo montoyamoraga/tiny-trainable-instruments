@@ -28,17 +28,6 @@ Inserting images has a very similar syntax to linking, but with a ! preceding th
 
 ## Lists
 
-```
-* You can add a bullet points by putting an asterisk and a space before each item.
-  * You can indent points by putting a two-space indent before the asterisk.
-- Dashes work too, if you prefer.
-
-Numbered lists are preceded by:
-1. A number
-2. A period
-3. A space
-```
-
 * You can add a bullet points by putting an asterisk and a space before each item.
   * You can indent points by putting a two-space indent before the asterisk.
 - Dashes work too, if you prefer.
