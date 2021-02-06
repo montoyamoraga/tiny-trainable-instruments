@@ -58,7 +58,7 @@ pyenv install <python version number>
 
 If you are using an old version of pyenv, there's a chance that the install won't work; copy the entire command pyenv gives you (including the &&'s) and enter it into the terminal. Then once pyenv is updated, try the above command again.
 
-Now that you have the correct version of Python, create a virtual environment (which we will name env) using the Python package venv.
+Now that you have the correct version of python, create a virtual environment (which we will name env) using the python package venv. (Most dependency problems can be solved by using a virtualenv; we can’t support issues not using a virtualenv due to the huge variety of system configurations.)
 
 ```bash
 python -m venv env
