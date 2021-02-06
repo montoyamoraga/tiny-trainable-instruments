@@ -1,11 +1,13 @@
-# Markdown guide
+# Markdown
 
-Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext. This markdown guide is itself written using markdown!
+The documentation of this project is written using Markdown, including this document!
+
+Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext.
 
 This guide is heavily based off of the [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/).
 
 ## Headers
-To create a header, place a `#` before the header text. You can include from one `#` to six `######`, which progressively makes the text smaller. For example the header to this section is written as `## Headers`, and the header to this guide is `# Markdown Guide`!
+To create a header, place a `#` before the header text. You can include from one `#` to six `######`, which progressively makes the text smaller. For example the header to this section is written as `## Headers`, and the header to this guide is `# Markdown`!
 
 ## Text
 
@@ -62,37 +64,12 @@ Numbered lists are preceded by:
 
 ## Code
 
-    You can insert inline code like `print("Hello World!")` by surrounding it with backticks.
-
-    Surround block code with triple backticks:
-
-    ```
-    print("Hello World!")
-    ```
-
-    or by indenting it:
-
-        print("Hello World!")
-
-    And you can get syntax highlighting by specifying the language!
-
-    ```python
-    print("Hello World!")
-    ```
-
-You can insert inline code like `print("Hello World!")` by surrounding it with backticks.
-
-Surround block code with triple backticks:
+You can insert inline code like `print("Hello World!")` by surrounding it with backticks, and you can also surround a block code with triple backticks:
 
 ```
 print("Hello World!")
 ```
-
-or by indenting it:
-
-    print("Hello World!")
-
-And you can get syntax highlighting by specifying the language!
+You can get syntax highlighting by specifying the language!
 
 ```python
 print("Hello World!")
