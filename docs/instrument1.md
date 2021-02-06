@@ -45,7 +45,6 @@ jupyter-lab
 
 Open the window on your web browser, and navigate to the notebook Instrument1.ipynb
 
-
 ## Deploying
 
 Open the Arduino sketch
