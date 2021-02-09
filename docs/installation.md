@@ -38,10 +38,10 @@ These are the versions we will be using, as of January 2021:
 
 In order to be able to manage different versions of Python, we suggest installing the tool pyenv https://github.com/pyenv/pyenv.
 
-After installing pyenv, go to the folder instruments/
+After installing pyenv, on the terminal go to this repository
 
 ```bash
-cd instruments/
+cd tiny-trainable-instruments/
 ```
 
 Check that pyenv is able to read the .python-version file
@@ -58,7 +58,7 @@ pyenv install <python version number>
 
 If you are using an old version of pyenv, there's a chance that the install won't work; copy the entire command pyenv gives you (including the &&'s) and enter it into the terminal. Then once pyenv is updated, try the above command again.
 
-Now that you have the correct version of python, create a virtual environment (which we will name env) using the python package venv. (Most dependency problems can be solved by using a virtualenv; we can’t support issues not using a virtualenv due to the huge variety of system configurations.)
+Now that you have the correct version of Python, create a virtual environment (which we will name env) using the Python package venv. Most dependency problems can be solved by using a virtualenv; we can’t support issues not using a virtualenv due to the huge variety of system configurations.
 
 ```bash
 python -m venv env
@@ -86,6 +86,16 @@ Then use pip to install the Jupyter packages, along with their dependencies:
 pip install -r requirements.txt
 ```
 
-Now you can run the Jupyter Lab tool with `jupyter-lab`. This will open a tab on your browser to navigate through the files in your computer and allow you run the code in the Jupyter notebooks for Instrument1 and Instrument2, which have extension .ipynb . To close the Jupyter notebook server, press `Ctrl+C` in the terminal (even on OSX; it's not `Cmd`) and confirm with `y`.
+Now you can run the Jupyter Lab tool with `jupyter-lab`. This will open a tab on your browser to navigate through the files in your computer and allow you run code and read the documentation.
+
+The code for Instrument1 and Instrument 2 is written using Jupyter notebooks, which have the extension .ipynb, and are located on the folder instruments/.
+
+The documentation is written in several Markdown files with extension .md. These files are on the folder docs/, which includes an index on README.md.
+
+If you double click on a Markdown file, it will open an Editor window with the Markdown code. To view the rendered text you can right click and select "Open with Markdown Preview".
+
+If you have internet connection, it might be more convenient to access the online documentation on the online repository.
+
+To close the Jupyter notebook server, press `ctrl+c` in the terminal (even on OSX; it's not `cmd`) and confirm with `y`.
 
 To exit the virtual environment once you're done, simply use the command `deactivate`. Note that the command `jupyter-lab` will not work until you reenter the venv.
