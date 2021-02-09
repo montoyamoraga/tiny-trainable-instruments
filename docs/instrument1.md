@@ -6,6 +6,11 @@ Instrument1 is an instrument that uses its sensors for measuring gestures, to tr
 
 The instrument can be programmed with a computer and then run as a standalone instrument, or you can use its serial port to communicate with your computer for debugging or interfacing with other software.
 
+Training Instrument1 is done in three steps:
+* *Data collection*, where the Arduino takes in environmental input from its sensors and writes it as a .csv (spreadsheet) file, which is then copied over to your computer
+* *Training*, where your computer analyzes the collected data and builds a model to interpret the data using machine learning
+* *Deploying*, where the now-trained model is uploaded to the Arduino and executed!
+
 ## Installation
 
 Follow the instructions on [installation.md](installation.md).
@@ -20,7 +25,7 @@ hello_tiny_world: this is an example that cycles through all the LEDs and their 
 
 ## Data collection
 
-Open the Arduino sketch
+Open the Arduino sketch and 
 
 ## Training
 
@@ -43,7 +48,7 @@ Run Jupyter lab
 jupyter-lab
 ```
 
-Open the window on your web browser, and navigate to the notebook Instrument1.ipynb
+Open the window on your web browser, and navigate to the notebook instrument1.ipynb. Then, simply execute the code blocks in order to train your model!
 
 ## Deploying
 
