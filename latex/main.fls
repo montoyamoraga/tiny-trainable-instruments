@@ -93,6 +93,8 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm
 OUTPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap2.aux
+INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap2.tex
+INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap2.tex
 OUTPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appa.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appa.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appa.tex
