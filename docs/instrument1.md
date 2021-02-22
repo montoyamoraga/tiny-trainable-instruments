@@ -23,6 +23,10 @@ Follow the instructions on [wiring.md](wiring.md).
 
 hello_tiny_world: this is an example that cycles through all the LEDs and their colors.
 
+## Data collection
+
+
+
 ## Training
 
 Open your terminal and go to the repository folder
