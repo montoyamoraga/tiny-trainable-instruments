@@ -42,6 +42,8 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap4.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap5.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap5.aux
+INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap6.aux
+INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap6.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appa.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appa.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appb.aux
@@ -110,6 +112,9 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex
 OUTPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap5.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap5.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap5.tex
+OUTPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap6.aux
+INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap6.tex
+INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap6.tex
 OUTPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appa.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appa.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appa.tex
@@ -137,6 +142,8 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap4.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap5.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap5.aux
+INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap6.aux
+INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/chap6.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appa.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appa.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/latex/appb.aux
