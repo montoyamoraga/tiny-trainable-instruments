@@ -2,6 +2,18 @@
 
 In this section of the documentation, we explain the main tools we are using for this project.
 
+## clang-format
+
+Tool for automation of formatting to source code. https://clang.llvm.org/docs/ClangFormat.html
+
+## Doxygen
+
+Tool for generating documentation from the source code, for more information please visit https://www.doxygen.nl/.
+
+## GitHub Actions
+
+Every time we push code to the TinyTrainable repositories, a GitHub action creates a virtual machine, and runs a script to generate the Doxygen documentation and push it to the gh-pages branch.
+
 ## Jupyter
 
 Jupyter is a free, open-source browser application that allows users to easily read and write code in a clean, accessible environment. Code is segmented into cells, which users can execute individually by clicking into and selecting the triangle "play" button at the top. Subsequent code executes based on operations done in previous cells. Basically, Jupyter notebooks allow programmers to create clean, step-by-step interactive walkthroughs through their code.
