@@ -227,6 +227,8 @@
 \setlength{\textheight}{9in}		% Body ht for 1in margins
 \addtolength{\topmargin}{-\headheight}	% No header, so compensate
 \addtolength{\topmargin}{-\headsep}	% for header height and separation
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.2in}
 
 % The next two macros compensate page style for headers and footers
 % We only need them in page styles that USE headers and footers.
@@ -532,4 +534,3 @@ requirements for the \@degreeword\ of \\
 
 \def\abstract{\subsection*{Abstract}\small\def\baselinestretch{1}\@normalsize}
 \def\endabstract{\par}
-

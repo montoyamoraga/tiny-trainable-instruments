@@ -1,0 +1,3 @@
+[submodule "TinyTrainable"]
+	path = TinyTrainable
+	url = https://github.com/montoyamoraga/TinyTrainable
