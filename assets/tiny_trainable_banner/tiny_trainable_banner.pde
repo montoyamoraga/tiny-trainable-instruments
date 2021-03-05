@@ -3,12 +3,11 @@
 ////////
 
 // tiny-trainable-instruments
-// a project by aaron montoya-moraga
-// available at 
+// a project by @montoyamoraga
 // github.com/montoyamoraga/tiny-trainable-instruments
 
-// tiny_trainable_instruments.pde
-// this is a Processing sketch for graphic identity
+// tiny_trainable_banner.pde
+// this is a Processing sketch for banner
 // started in December 2020
 // v0.0.1
 
