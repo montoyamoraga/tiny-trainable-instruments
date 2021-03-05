@@ -28,6 +28,14 @@ Command for downloading the contents of the submodules
 git submodule update --init --recursive
 ```
 
+## Adding submodules
+
+cd to TinyTrainable and:
+
+```bash
+git submodule add GIT_PATH libraries/FOLDERNAME 
+```
+
 ## Formatting
 
 ```bash
