@@ -10,8 +10,8 @@ This folder docs/ contains the following files and folders:
 
 
 * [images/](images/)contains the images used in this documentation.
-* [markdown/](markdown/): 
-* [pdf/](pdf/): 
+* [markdown/](md/): documentation in Markdown format. 
+* [pdf/](pdf/): documentation in PDF format.
 * [README.md](README.md): this file that you are reading right now.
 
 The files in this documentation are as follows:
