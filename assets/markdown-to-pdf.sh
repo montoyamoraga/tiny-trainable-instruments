@@ -1,6 +1,9 @@
 echo "markdown to pdf with pandoc"
-find ./src ./examples -iname "*.cpp" -o -iname "*.h" -o -iname "*.ino" | while read f
+# iterate through all files in docs/md
+find "$PWD/../docs/md" -iname "*.md" | while read f
 do
-  clang-format -i "$f"
-  echo "formatted $f"
+  # retrieve basename
+  base=$(basename "$f" .md)
+  # pandoc for md to pdf
+  pandoc -s -o "$PWD/../docs/pdf/$base.pdf" "$f"
 done
