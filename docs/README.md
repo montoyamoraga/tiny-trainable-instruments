@@ -21,8 +21,8 @@ All Markdown files (.md extension) can be read as a rendered text, or you can ex
 ## Navigation
 
 Setup:
-* installation [md](md/installation.md) / [pdf](pdf/installation.pdf): how to install software prerequisites.
-* [wiring.md](wiring.md): where to place circuit elements on the breadboard.
+* installation [md](md/installation.md) [pdf](pdf/installation.pdf): how to install software prerequisites.
+* wiring [md](md/wiring.md)  [pdf](pdf/wiring.pdf): where to place circuit elements on the breadboard.
 
 Reference:
 * [instrument0.md](instrument0.md), [instrument1.md](instrument1.md), [instrument2.md](instrument2.md): detailed information on each instrument and its capabilities.
