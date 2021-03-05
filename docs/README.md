@@ -12,7 +12,7 @@ This folder docs/ contains the following files and folders:
 * [images/](images/)contains the images used in this documentation.
 * [markdown/](markdown/): 
 * [pdf/](pdf/): 
-* README.md: this file that you are reading right now.
+* [README.md](README.md): this file that you are reading right now.
 
 The files in this documentation are as follows:
 
