@@ -30,7 +30,11 @@ git submodule update --init --recursive
 
 ## Adding submodules
 
-cd to TinyTrainable and:
+cd to TinyTrainable
+
+```bash
+cd TinyTrainable/
+```
 
 ```bash
 git submodule add GIT_PATH libraries/FOLDERNAME 
