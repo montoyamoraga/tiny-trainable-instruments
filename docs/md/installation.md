@@ -1,6 +1,6 @@
 # Installation
 
-We will be using the Arduino Nano BLE 33 Sense microcontroller for this project.
+This project is based on the Arduino Nano BLE 33 Sense microcontroller.
 
 ## Arduino dependencies
 

@@ -1,4 +1,12 @@
 echo "markdown to pdf with pandoc"
+
+# iterate through all .pdf files in docs/pdf
+find "$PWD/../docs/pdf" -iname "*.pdf" | while read f
+do
+  # delete original pdf dile
+  rm "$f"
+done
+
 # iterate through all files in docs/md
 find "$PWD/../docs/md" -iname "*.md" | while read f
 do
