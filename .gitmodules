@@ -1,3 +1,6 @@
 [submodule "TinyTrainable"]
 	path = TinyTrainable
 	url = https://github.com/montoyamoraga/TinyTrainable
+[submodule "libraries/Servo"]
+	path = libraries/Servo
+	url = https://github.com/arduino-libraries/Servo
