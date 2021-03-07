@@ -30,7 +30,7 @@ git submodule update --init --recursive
 
 ## Adding submodules
 
-cd to TinyTrainable
+cd to TinyTrainable/
 
 ```bash
 cd TinyTrainable/
@@ -41,6 +41,14 @@ git submodule add GIT_PATH libraries/FOLDERNAME
 ```
 
 ## Formatting
+
+cd to assets/
+
+```bash
+cd assets/
+```
+
+Run the format.sh script to format the code with the tool clang-format
 
 ```bash
 sh format.sh
