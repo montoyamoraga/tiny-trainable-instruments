@@ -8,7 +8,6 @@ This document lists and explains all the available documentation for the Tiny Tr
 
 This folder docs/ contains the following files and folders:
 
-
 * [images/](images/)contains the images used in this documentation.
 * [markdown/](md/): documentation in Markdown format. 
 * [pdf/](pdf/): documentation in PDF format.
