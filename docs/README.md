@@ -27,7 +27,7 @@ Reference:
 * instrument0 [md](md/instrument0.md) [pdf](pdf/instrument0.pdf): instructions for operating this instrument
 * instrument1 [md](md/instrument1.md) [pdf](pdf/instrument1.pdf): instructions for operating this instrument
 * instrument2 [md](md/instrument2.md) [pdf](pdf/instrument2.pdf): instructions for operating this instrument
-* contributing: how to contribute to this project.
+* contributing [md](md/contributing.md) [pdf](pdf/contributing.pdf): how to contribute to this project.
 * outputs [md](md/outputs.md) [pdf](pdf/outputs.pdf): outputs the instruments.
 * bill-of-materials [md](md/bill-of-materials.md) [pdf](pdf/bill-of-materials.pdf): list of materials necessary to construct instruments.
 * tinytrainable [md](md/tinytrainable.md) [pdf](pdf/tinytrainable.pdf): TODO

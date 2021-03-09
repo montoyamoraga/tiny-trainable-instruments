@@ -9,7 +9,7 @@ If you find an error or have a comment, please start a discussion by submitting 
 
 ## clang-format
 
-Tool for automation of formatting to source code. https://clang.llvm.org/docs/ClangFormat.html
+Tool for automation of formatting to source code. More information here: https://clang.llvm.org/docs/ClangFormat.html
 
 ### Doxygen
 
