@@ -17,7 +17,6 @@ Next, go to `Tools > Manage Libraries...` and install the custom library for thi
     * `Arduino_KNN`: k-nearest neighbor algorithm.
     * `Arduino_TensorFlowLite`: microcontroller version of the TensorFlow machine learning library. Please download the latest non-precompiled version.
 
-
 If you still have questions about setting up the microcontroller, the full startup guide is available [here](https://www.arduino.cc/en/Guide/NANO33BLESense).
 
 If you've made it this far, welcome to our project! We're super glad to have you here :)

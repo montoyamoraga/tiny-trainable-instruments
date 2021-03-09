@@ -1,10 +1,4 @@
-# Input/Output
-
-## Inputs
-
-In terms of input, we will be using the included sensors on the Arduino microcontroller.
-
-## Outputs
+# Outputs
 
 In terms of output, here are some of the configurations we will use, sorted from simpler and cheap to complex and expensive.
 
