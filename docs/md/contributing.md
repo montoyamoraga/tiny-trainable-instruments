@@ -9,11 +9,11 @@ If you find an error or have a comment, please start a discussion by submitting 
 
 ## clang-format
 
-Tool for automation of formatting to source code. More information here: https://clang.llvm.org/docs/ClangFormat.html
+Tool for automation of formatting to source code. More information here: https://clang.llvm.org/docs/.ClangFormat.html
 
 ### Doxygen
 
-Tool for generating documentation from the source code, for more information please visit https://www.doxygen.nl/.
+Tool for generating documentation from the source code. More information: https://www.doxygen.nl/.
 
 ### GitHub Actions
 
@@ -21,9 +21,7 @@ Every time we push code to the TinyTrainable repositories, a GitHub action creat
 
 ### Jupyter
 
-Jupyter is a free, open-source browser application that allows users to easily read and write code in a clean, accessible environment. Code is segmented into cells, which users can execute individually by clicking into and selecting the triangle "play" button at the top. Subsequent code executes based on operations done in previous cells. Basically, Jupyter notebooks allow programmers to create clean, step-by-step interactive walkthroughs through their code.
-
-For more details, please read the official quick start guide at [https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html).
+Jupyter is a free, open-source browser application that allows users to easily read and write code in a clean, accessible environment. Code is segmented into cells, which users can execute individually by clicking into and selecting the triangle "play" button at the top. Subsequent code executes based on operations done in previous cells. Basically, Jupyter notebooks allow programmers to create clean, step-by-step interactive walkthroughs through their code. More information: https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html.
 
 ### Markdown
 
