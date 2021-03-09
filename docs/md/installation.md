@@ -72,7 +72,7 @@ source env/bin/activate
 
 Now your terminal should have every new line starting with (env). Your command prompt should look something like this:
 
-![Virtual environment command prompt](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/venv_activation.png "Activating virtual environment")
+![Virtual environment command prompt](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/venv-activation.png "Activating virtual environment")
 
 The pip of your Python virtual environment might need updating; you can update to the latest version with the command
 
