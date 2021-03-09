@@ -1,7 +1,5 @@
 # Installation
 
-This project is based on the Arduino Nano BLE 33 Sense microcontroller.
-
 ## Arduino dependencies
 
 First, download the Arduino Desktop IDE, available at [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software). Select the stable release corresponding to your computer's operating system.
