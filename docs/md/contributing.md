@@ -25,11 +25,7 @@ Jupyter is a free, open-source browser application that allows users to easily r
 
 ### Markdown
 
-The documentation of this project is written using Markdown, including this document!
-
-Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext.
-
-This guide is heavily based off of the [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/).
+Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext. The documentation of this project is written using Markdown, including this document! More info: https://guides.github.com/features/mastering-markdown/.
 
 ## GitHub instructions
 
