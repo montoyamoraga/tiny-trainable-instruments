@@ -41,7 +41,6 @@ git clone https://github.com/your_username/tiny-trainable-instruments.git
 
 Optionally, you can also clone the submodules of this repository, with the command 
 
-
 ```bash
 git submodule update --init --recursive
 ```
@@ -97,7 +96,6 @@ For more information about how to contribute documentation to an open source art
 ## Adding submodules
 
 If you think there are more repositories we should include as submodules for archival purposes, use the following command, replacing GITPATH with the location of the repository you want to include, and FOLDERPATH with the destination.
-
 
 ```bash
 git submodule add GITPATH FOLDERPATH 
