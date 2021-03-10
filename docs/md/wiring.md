@@ -35,3 +35,8 @@ Next, connect one of the legs of the piezo buzzer to the node labelled D8 on the
 ![Installing the piezo buzzer](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/piezo_buzzer-placement.png "Piezo buzzer on breadboard")
 
 Now you're good to go! Upload inst0_buzzer to the microcontroller, open the serial monitor (top right button in the Arduino IDE), and follow the instructions from there!
+
+### LED
+
+
+### MIDI
