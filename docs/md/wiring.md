@@ -40,3 +40,19 @@ Now you're good to go! Upload inst0_buzzer to the microcontroller, open the seri
 
 
 ### MIDI
+
+### Printer
+
+We are using a thermal printer from Adafruit.
+
+https://www.adafruit.com/product/2753
+
+It has 5 cables:
+
+VH - red - connect to the power supply 5V - 9V
+DTR - yellow - connect to GND on the Arduino
+TX - green - data out of the printer
+RX - blue - data in to the printer
+GND - black - connect to GND on the Arduino
+
+We use a power supply, whose ground  is connected to the one on the Arduino.
