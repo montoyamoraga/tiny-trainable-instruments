@@ -24,6 +24,13 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/cmap/t1.cmap
 OUTPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/main.pdf
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/cmap/t1.cmap
+INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/babel/switch.def
+INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/main.aux
@@ -46,8 +53,6 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesi
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap6.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appa.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appa.aux
-INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appb.aux
-INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appb.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/biblio.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/biblio.aux
 OUTPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/main.aux
@@ -119,9 +124,6 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesi
 OUTPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appa.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appa.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appa.tex
-OUTPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appb.aux
-INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appb.tex
-INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appb.tex
 OUTPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/biblio.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/biblio.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/biblio.tex
@@ -147,8 +149,6 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesi
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap6.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appa.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appa.aux
-INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appb.aux
-INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/appb.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/biblio.aux
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/biblio.aux
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
