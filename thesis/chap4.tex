@@ -9,7 +9,7 @@
 
 \section{Technology}
 
-Arduino microcontoller
+Arduino microcontroller
 
 Arduino library KNN
 
@@ -21,7 +21,25 @@ TensorFlow Lite Micro
 
 \section{Inputs}
 
-Enumerate sensors from the Arduino Nano 33 BLE Sense
+Enumerate sensors from the Arduino Nano 33 BLE Sense.
+
+\subsection{Color}
+
+This approach uses the RGB color sensor from the microcontroller, with the auxiliary help from the proximity sensor, that is used to capture color information at a certain distance threshold.
+
+The data is passed to a k-Nearest-Neighbor algorithm, programmed using the Arduino KNN library.
+
+\subsection{Gesture}
+
+This input uses the information from the Inertial Measurument Unit (IMU) of the microcontroller, including a gyroscope and accelerometer. It captures data after a certain threshold of movement is detected.
+
+The data is passed to a TensorFlow neural network, programmed using the Arduino TensorFlow Lite library, and based on the included magic_wand example.
+
+\subsection{Speech}
+
+This input uses the information from the microphone of the microcontroller.
+
+The data is passed to a TensorFlow neural network, programmed using the Arduino TensorFlow Lite library, and based on the included micro_speech example.
 
 \section{Outputs}
 
@@ -53,7 +71,21 @@ Peter Tone has helped with research in data structures, library writing, and we 
 
 Maxwell Wang has proofread our code, has ran the examples, and has helped with the writing of the documentation for self-learners and for the workshops.
 
-We all share Google Drive folder, where we all share notes about our research and development of the library and the educational material.
+We all share a Google Drive folder, where we all share notes about our research and development of the library and the educational material.
+
+\section{Code}
+
+This thesis is distributed as a repository, hosted on the GitHub platform, and available at https://github.com/montoyamoraga/tiny-trainable-instruments.
+
+
+
+The auxiliary files, such as the LaTeX project for this document, and the auxiliary Jupyter notebooks, and documentation and tutorials are on the repository .
+
+
+The code of this thesis is written in C++, and is packaged as an Arduino library.
+
+It is distributed through the repository https://github.com/montoyamoraga/TinyTrainable and also available through the Arduino IDE.
+
 
 \section{Opera of the Future projects}
 
