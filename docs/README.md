@@ -8,7 +8,6 @@ This document lists and explains all the available documentation for the Tiny Tr
 
 This folder docs/ contains the following files and folders:
 
-
 * [images/](images/)contains the images used in this documentation.
 * [markdown/](md/): documentation in Markdown format. 
 * [pdf/](pdf/): documentation in PDF format.
@@ -22,15 +21,14 @@ All Markdown files (.md extension) can be read as a rendered text, or you can ex
 
 Setup:
 * installation [md](md/installation.md) [pdf](pdf/installation.pdf): how to install software prerequisites.
-* wiring [md](md/wiring.md)  [pdf](pdf/wiring.pdf): where to place circuit elements on the breadboard.
+* wiring [md](md/wiring.md)  [pdf](pdf/wiring.pdf): how to wire the circuit elements on the breadboard.
 
 Reference:
 * instrument0 [md](md/instrument0.md) [pdf](pdf/instrument0.pdf): instructions for operating this instrument
 * instrument1 [md](md/instrument1.md) [pdf](pdf/instrument1.pdf): instructions for operating this instrument
 * instrument2 [md](md/instrument2.md) [pdf](pdf/instrument2.pdf): instructions for operating this instrument
-* contributing: how to contribute to this project.
-* making-of [md](md/making-of.md) [pdf](pdf/making-of.pdf): additional information about the tools used to build this tutorial and project.
-* input-output [md](md/input-output.md) [pdf](pdf/input-output.pdf): what information goes in and out of the instrument.
+* contributing [md](md/contributing.md) [pdf](pdf/contributing.pdf): how to contribute to this project.
+* outputs [md](md/outputs.md) [pdf](pdf/outputs.pdf): outputs the instruments.
 * bill-of-materials [md](md/bill-of-materials.md) [pdf](pdf/bill-of-materials.pdf): list of materials necessary to construct instruments.
 * tinytrainable [md](md/tinytrainable.md) [pdf](pdf/tinytrainable.pdf): TODO
 * software.md [md](md/software.md) [pdf](pdf/software.pdf): TODO

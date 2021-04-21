@@ -20,7 +20,11 @@ hello_tiny_world: this is an example that cycles through all the LEDs and their 
 
 ## Data collection
 
-Open the Arduino sketch
+Record .wav files with this format:
+
+* 1 audio channel (mono)
+* 16 kHZ sample rate
+* 16 bits per sample: 16 bits
 
 ## Training
 

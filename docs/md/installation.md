@@ -1,24 +1,19 @@
 # Installation
 
-We will be using the Arduino Nano BLE 33 Sense microcontroller for this project.
-
 ## Arduino dependencies
 
 First, download the Arduino Desktop IDE, available at [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software). Select the stable release corresponding to your computer's operating system.
 
 Now we need to install the core and necessary libraries for the Arduino Nano 33 BLE Sense. Open the Arduino IDE and navigate to `Tools => Board: "board_name" => Boards Manager...`, then search for `Arduino nRF528x mbed Core`. It is a large download, and it might take a few minutes to install.
 
-Next, go to `Tools > Manage Libraries...` and install the custom library for this project, called `TinyTrainable`. This installation will give you the option to also install its dependencies, select `Install all` to additionally download these six following libraries:
+Next, go to `Tools > Manage Libraries...` and install the custom library for this project, called `TinyTrainable`. This installation will give you the option to also install its dependencies, select `Install all` to additionally download these libraries:
 
 * Libraries for using the embedded sensors of our microcontroller:
     * `Arduino_APDS9960`: color, proximity
-    * `Arduino_HTS221`: temperature, humidity
-    * `Arduino_LPS22HB`: pressure
     * `Arduino_LSM9DS1` acceleration, magnetic field, gyroscope orientation
 * Libraries for machine learning:
     * `Arduino_KNN`: k-nearest neighbor algorithm.
     * `Arduino_TensorFlowLite`: microcontroller version of the TensorFlow machine learning library. Please download the latest non-precompiled version.
-
 
 If you still have questions about setting up the microcontroller, the full startup guide is available [here](https://www.arduino.cc/en/Guide/NANO33BLESense).
 
@@ -72,7 +67,7 @@ source env/bin/activate
 
 Now your terminal should have every new line starting with (env). Your command prompt should look something like this:
 
-![Virtual environment command prompt](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/venv_activation.png "Activating virtual environment")
+![Virtual environment command prompt](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/venv-activation.png "Activating virtual environment")
 
 The pip of your Python virtual environment might need updating; you can update to the latest version with the command
 
