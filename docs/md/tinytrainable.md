@@ -1,8 +1,8 @@
-# Tiny Trainable Instrument
+# TinyTrainable
 
 ## About
 
-Though we don't expect an instance of the parent library Tiny Trainable to be of much use on its own, documentation is included here in case users wish to fork and edit the library themselves.
+Though we don't expect an instance of the parent library TinyTrainable to be of much use on its own, documentation is included here in case users wish to fork and edit the library themselves.
 
 ## Documentation
 
