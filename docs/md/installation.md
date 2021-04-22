@@ -4,7 +4,7 @@
 
 First, download the Arduino Desktop IDE, available at [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software). Select the stable release corresponding to your computer's operating system.
 
-Now we need to install the core and necessary libraries for the Arduino Nano 33 BLE Sense. Open the Arduino IDE and navigate to `Tools => Board: "board_name" => Boards Manager...`, then search for `Arduino nRF528x mbed Core`. It is a large download, and it might take a few minutes to install.
+Now we need to install the core and necessary libraries for the Arduino Nano 33 BLE Sense. Open the Arduino IDE and navigate to `Tools > Board: "<board_name>" > Boards Manager...`, then search for `Arduino Mbed OS Nano Boards`. It is a large download, and it might take a few minutes to install. Finally, navigate to `Tools > Board: "<board_name>" > Arduino Mbed OS Nano Boards` and select `"Arduino Nano 33 BLE"`.
 
 Next, go to `Tools > Manage Libraries...` and install the custom library for this project, called `TinyTrainable`. This installation will give you the option to also install its dependencies, select `Install all` to additionally download these libraries:
 
@@ -15,13 +15,15 @@ Next, go to `Tools > Manage Libraries...` and install the custom library for thi
     * `Arduino_KNN`: k-nearest neighbor algorithm.
     * `Arduino_TensorFlowLite`: microcontroller version of the TensorFlow machine learning library. Please download the latest non-precompiled version.
 
+To test if all dependencies were installed successfully, plug in your Arduino, navigate to `File > Examples > TinyTrainable > hello_none`, then press the upload button to send the code to the Arduino (Note that this is the procedure for running all examples). After it's done compiling, you should see it light up and cycle between its LEDs.
+
 If you still have questions about setting up the microcontroller, the full startup guide is available [here](https://www.arduino.cc/en/Guide/NANO33BLESense).
 
 If you've made it this far, welcome to our project! We're super glad to have you here :)
 
 ## TensorFlow, Python, Jupyter
 
-For Instrument0, you only need Arduino libraries. For Instrument1 and Instrument2, you also need to have Python, in order to train with TensorFlow and Jupyter on your computer.
+For input-color, you only need Arduino libraries. For input-gesture and input-speech, you also need to have Python, in order to train with TensorFlow and Jupyter on your computer.
 
 Your computer might have Python already installed, and it might be one that is not compatible with the TensorFlow version we are using.
 
@@ -83,7 +85,7 @@ pip install -r requirements.txt
 
 Now you can run the Jupyter Lab tool with `jupyter-lab`. This will open a tab on your browser to navigate through the files in your computer and allow you run code and read the documentation.
 
-The code for Instrument1 and Instrument 2 is written using Jupyter notebooks, which have the extension .ipynb, and are located on the folder instruments/.
+The code for input-gesture and input-speech is written using Jupyter notebooks, which have the extension .ipynb, and are located on the folder instruments/.
 
 The documentation is written in several Markdown files with extension .md. These files are on the folder docs/, which includes an index on README.md.
 

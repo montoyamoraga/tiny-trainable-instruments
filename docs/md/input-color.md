@@ -1,8 +1,8 @@
-# Instrument0
+# Input-color
 
 ## About
 
-Instrument0 is an instrument that uses its sensors for measuring gestures, color, light intensity and proximity, to train a k-NN (k-nearest neighbors) algorithm. This allows you to control different multimedia outputs.
+Input-color is an instrument that uses its sensors for measuring gestures, color, light intensity and proximity, to train a k-NN (k-nearest neighbors) algorithm. This allows you to control different multimedia outputs.
 
 The instrument can be programmed with a computer and then run as a standalone instrument, or you can use its serial port to communicate with your computer for debugging or interfacing with other software.
 
@@ -36,6 +36,6 @@ Follow the instructions on [wiring.md](wiring.md).
 
 hello_tiny_world: Cycles through all the LEDs and their colors.
 
-inst0_buzzer: Outputs sounds using a buzzer.
+color_buzzer: Outputs sounds using a buzzer.
 
 ## Documentation
