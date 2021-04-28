@@ -1,10 +1,18 @@
 # Workshop
 
+## About
+
+This workshop has been written and designed by Aarón Montoya-Moraga in 2021, as a research assistant and master's student at MIT Media Lab's Opera of the Future and Future Sketches research groups. Additional code, examples, and documentation by MIT undergraduate researchers Peter Tone and Maxwell Wang.
+
+## Context
+
 ## Key concepts
 
-Machine learning, media arts, Arduino
+Machine learning, media arts, Arduino microcontroller, tiny machine learning.
 
 ## Materials
+
+The materials 
 
 ## Previous knowledge
 

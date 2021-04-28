@@ -1,6 +1,6 @@
 # Wiring
 
-For the construction of a Tiny Trainable Instrument, we will be using breadboards.
+For the construction of a Tiny Trainable Instrument, we will use breadboards.
 
 Breadboards are built so that within each of the rows, the 5 tie points in the columns labelled "a-e" are electrically connected inside the board and act as a single electrical node, and same with f-j. In addition, there are two columns to each side of the breadboard; for a fullsize breadboard like we recommend, the top 25 tie points of each column are connected, and the bottom 25 tie points of each column are connected. Conventionally, we connect the positive terminal to the columns labelled `+`, and the ground to the columns labelled `-`.
 
@@ -14,7 +14,7 @@ The Nano BLE 33 Sense has 30 pins in total, 15 on each side. The official pinout
 
 ### Getting started
 
-We recommend placing the microcontroller at the top of the breadboard (C1 to G15) with the USB Micro B port facing up, like so:
+We recommend placing the microcontroller at the top of the breadboard (C1 to G15) with the USB Micro B port facing up, like this:
 
 ![Arduino placement](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/arduino-placement.png "Arduino on breadboard")
 
