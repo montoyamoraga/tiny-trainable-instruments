@@ -10,11 +10,16 @@ This workshop has been written and designed by Aarón Montoya-Moraga in 2021, as
 
 Machine learning, media arts, Arduino microcontroller, tiny machine learning.
 
+## Code of conduct
+
+* [Berlin Code of Conduct](https://berlincodeofconduct.org/)
+* [p5.sj community statement](https://p5js.org/community/)
+
 ## Materials
 
-The materials 
+You would need to bring a computer, with Linux, Mac or Windows operating systems.
 
-## Previous knowledge
+This workshop is taught online over teleconferencing.
 
 ## Session 0
 
