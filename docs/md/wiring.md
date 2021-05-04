@@ -61,3 +61,7 @@ RX - blue - data in to the printer
 GND - black - connect to GND on the Arduino
 
 We use a power supply, whose ground  is connected to the one on the Arduino.
+
+The power supply is 9V, center positive.
+Here is one available:
+https://www.adafruit.com/product/276
