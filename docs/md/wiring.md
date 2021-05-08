@@ -3,8 +3,8 @@
 ## Conventions
 
 Wires:
-* Red = 3.3 V power
-* Black = Ground
+* Red = 3.3 V power from Arduino
+* Green = Ground from Arduino
 
 ## Breadboard
 
