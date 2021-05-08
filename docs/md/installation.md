@@ -95,4 +95,4 @@ If you have internet connection, it might be more convenient to access the onlin
 
 To close the Jupyter notebook server, press `ctrl+c` in the terminal (even on OSX; it's not `cmd`) and confirm with `y`.
 
-To exit the virtual environment once you're done, simply use the command `deactivate`. Note that the command `jupyter-lab` will not work until you reenter the venv.
+To exit the virtual environment once you're done, use the command `deactivate`. Note that the command `jupyter-lab` will not work until you reactive the virtual environment.
