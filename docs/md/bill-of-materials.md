@@ -12,7 +12,7 @@ This project is intended to be cheap and accesible, but still requires a few mat
 | [Micro servo](https://www.adafruit.com/product/169) | 1 | 5.95 | https://www.adafruit.com/ | Output movement |
 | [LED](https://www.adafruit.com/product/754) | 1 | 6.95 | https://www.adafruit.com/ | Output light |
 | [Thermal printer](https://www.adafruit.com/product/600) | 1 | 61.95 | https://www.adafruit.com/ | Output printed text |
-| [LCD screen](https://www.adafruit.com/product/4440) | 1 | 12.50 |  https://www.adafruit.com/ | Output screen text |
+| [128x32 screen](https://www.adafruit.com/product/4440) | 1 | 12.50 |  https://www.adafruit.com/ | Output screen text |
 | placeholder | placeholder | placeholder | placeholder | placeholder |
 
 NOTE: Make sure you purchase the correct board, Arduino Nano 33 BLE ***Sense***! Please don't confuse it with the similarly named Arduino Nano 33 BLE.
