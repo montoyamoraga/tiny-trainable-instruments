@@ -1,5 +1,7 @@
 \chapter{Tiny trainable instruments}
 
+This chapter focuses on the project, explaining the whole stack, and the way it is organized and its scope, this is super early draft, it still feels too technical.
+
 \section{Design principles}
 
 \begin{enumerate}
@@ -11,13 +13,7 @@
 
 \section{Technology}
 
-This project is based on an Arduino Nano 33 BLE Sense.
-
-Arduino microcontroller
-
-Arduino library KNN
-
-TensorFlow Lite Micro
+This project is based on the Arduino Nano 33 BLE Sense microcontroller, and its software depedencies include the Arduino KNN library, the Arduino TensorFlow Lite Micro library, and Adafruit software libraries.
 
 \section{Programmable / remix}
 
@@ -26,9 +22,7 @@ All examples included with this library were written with the aim of showing the
 \section{Philosophy and experience}
 
 \section{Inputs}
-
-Enumerate sensors from the Arduino Nano 33 BLE Sense.
-
+.
 We are using the RGB color, proximity, gyroscope, accelerometer, and microphone sensors on the microcontroller, in order to capture the Inputs
 
 \begin{enumerate}
@@ -128,6 +122,6 @@ Auxiliary files, copied from the examples from the Arduino TensorFlow Lite that 
 
 During the development of this thesis, I have been fortunate to collaborate on different capacities with other thesis by classmates at Opera of the Future, which has directly informed my work.
 
-Squishies, Hannah Lienhard's master's thesis, novel squishable interfaces for musical expression. We shared discussions about low-level sound design, code reusability, sound art education, digital instruments. We were part of a master's thesis working group, facilitated by Roya Moussapour with two other Media LAb classmates, where we workshopped drafts of our thesis. This practice and feedback has been critical in shaping the language and discourse of my thesis document.
+Squishies, Hannah Lienhard's master's thesis, novel squishable interfaces for musical expression. We shared discussions about low-level sound design, code reusability, sound art education, digital instruments. We were part of a master's thesis working group, facilitated by Roya Moussapour with two other Media LAb classmates, where we workshopped drafts of our thesis. This practice and feedback has been critical in shaping the language and discourse of this thesis document.
 
-Fluid Music, Charles Holbrow's PhD thesis, library design, documentation for contributors. The design of the interface, documentation, and scope of the thesis were a direct influence on my documentation and API coding style.
+Fluid Music, Charles Holbrow's PhD thesis, library design, documentation for contributors. The design of the interface, documentation, and scope of the thesis were a direct influence on the documentation and API coding style of this project.
