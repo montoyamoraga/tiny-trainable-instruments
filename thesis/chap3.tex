@@ -1,19 +1,40 @@
 \chapter{Early experiments}
 
+Thinking of having the names of each chapter be excerpts from song lyrics, for example, this chapter could be titled "And you may ask yourself, "Well... how did I get here?", Talking Heads - Once In A Lifetime.
+
+In this chapter I want to explain my experience, pitfalls, breakthroughs and what led me to this particular thesis, being open but not bragging, being detailed and praising without boring, being informal while still being academic, being inviting and celebrating, while still being critical.
+
 \section{Microcontrollers}
 
-My first exposure to Arduino was as an undergraduate student of electrical engineering back home in Chile. The Arduino Uno was a very powerful device, and I saw its applications to arts, when with a friend we created a rudimentary automatic tuner for guitar, that performed pitch detection and then controlled a motor to move the tuning machine on the guitar to achieve the desired tuning, with a PID controller.
+My first exposure to microcontrollers was as an undergraduate student of electrical engineering back home in Chile, around 2006. We learned PIC microcontrollers, which we programmed using C\# on Windows machines, for implementing different projects.
 
-I didn't use it too much, because they were relatively hard to obtain, and I was more interested in software at the time.
+Around the same time, With other classmates we discovered the rising trend of Arduino microcontrollers, which were open source and with a strong hobbyist community sharing examples on the internet. One of the first projects we did with it was an automatic guitar tuner, where an Arduino board detected the pitch of the string, and then moved a motor that moves the tuning gear to match the desired pitch, using a PID controller.
 
-Fast forward to 2015, I became a graduate student at New York University's Interactive Telecommunications Program, where on my first semester I took the amazing class Introduction to Physical Computing, with one of Arduino's co-creators Tom Igoe.
+I was really impressed with the workflow of the Arduino, which could be flashed with an USB cable instead of a dedicated bootloader device, and even more with the passion for sharing of the whole community behind it.
 
-While freelancing in New York, I was introduced to an Arduino off-shoot, the Teensy, which captivated me by its USB MIDI capabilities, which allowed for standalone operation without a host computer, and by its audio library, which allowed me to create interactive standalone experiences, triggering samples and applying audio effects on device.
+In electrical engineering we were supposed to learn many low-level programming techniques, and Arduino was deemed as too much of a shortcut or high-level programming, so for our capstone undergraduate thesis project we were not allowed to use them, so for thesis I had to implement my robotic project using a cumbersome setup, where I used an Apple machine, with a disk partition to also have Windows installed on it, to write and compile C\#, and writing code that was very specific to that particular chip, without a clear way to make it useful to other people, and missing the Arduino workflow.
 
-While at MIT Media Lab, I was delighted by the newer versions of Teensy, which are even faster and more powerful, and which led me to start designing handheld samplers for field recordings.
+Staring in 2010, and particularly after graduating from electrical engineering in 2013 I focused on software, learning computer protocols and networks, and wrote custom software for live multimedia performance, theater and music, and software deployed on iPads and cellphones. I discovered Processing, a project that Arduino was based on, and continued learnign code on my own.
 
-This in turn led me to review the current NYU ITP materials for physical computing, where they currently stopped using the now classic Arduino Uno, and have incorporated 
+Realizing that I needed a bigger community of people to learn media arts from, I researched communities where I thought I could learn this craft in an focused and immersive way, so I applied to New York University's Interactive Telecommunications Program, where I joined as a graduate student in 2015.
 
+On my first semester I took the amazing class Introduction to Physical Computing, with one of Arduino's co-creators Tom Igoe, and I learned about haptic design, open source hardware and software, and physical computing education.
+
+I was introduced to a wider ecosystem of microcontrollers beyond Arduino, like the Teensy by PJRC, which captivated me by its USB MIDI capabilities, which allowed for standalone MIDI operation, and by its audio library, which allowed me to create interactive standalone experiences, triggering samples and applying audio effects on device, and also for creating plug and play devices that needed no additional setup or scripting.
+
+At NYU ITP I slowly learned about hardware,  but mostly about web and scripting, and my thesis concentrated on open source, performance art, with only a small hardware component in the form of a Raspberry Pi computer with a countdown timer to my projected death time, according to data by the United Nations, based on my assigned-at-birth-gender and my birth place.
+
+After graduating from NYU ITP I focused on media arts education, writing tutorials, teaching introduction to programming workshops for artists.
+
+When I joined MIT Media Lab in 2019, I made the conscious decision of focusing on hardware, to give my creations a life outside of my computer, also inspired by newer developments by Apple. On my first semester, which ended up being the only on-campus semester I had, I was introduced by my friend Will Freudenheim to the Shbobo synthesizers by Peter Blasser.
+
+I was partially aware of the instruments made by Peter Blasser, in particular the analog ones.
+
+While at MIT Media Lab, I was delighted by the newer versions of Teensy, which are even faster and more powerful, and which led me to start designing handheld samplers for field recordings, and other standalone devices.
+
+This in turn led me to review the current NYU ITP materials for physical computing, where they currently stopped using the now classic Arduino Uno, and have incorporated in their teaching the new series of Arduino Nano microcontrollers, which I based my thesis on.
+
+In particular, the Arduino Nano 33 BLE SEnse I am using, comes with 9 sensors, to measure and detect acceleration, movement, distance, color, and a microphone. This is an amazing breakthrough, since now we can use all this data without having to purchase, install, or calibrate the sensors.
 
 \section{Machine learning}
 
@@ -26,3 +47,7 @@ At NYU ITP I also saw the first experiments with deeplearn.js, later TensorFlow.
 I decided I wanted to dip my toes in machine learning, so I took a month-long intensive class at the School of Machines in Berlin, Germany, facilitated by Gene Kogan and Andreas Refsgaard, and organized by Rachel Uwa.
 
 Casey Reas' book for GANs published by Anteism, as of 2021 on its second edition.
+
+Since many machine learning projects rely on propietary hardware, such as NVIDIA GPUs, or rely on the cloud for faster compilation times, for this thesis I decided to make open source machine learning projects that people could read and understand and remix and hack.
+
+TODO: mention the impact of the documentary Coded Bias, and how these researchers impacted my desire to make my thesis. Also mention how right before pandemic I had started a pottery class, with the intention of making clay-based instruments for thesis, as a metaphor of making code and hardware and software feel fluid and not static, I want to empower people to program, in particular machine learning because of its dangerous implementations by oppresive governments and corporations, and in particular for arts, for making artists dream come true.
