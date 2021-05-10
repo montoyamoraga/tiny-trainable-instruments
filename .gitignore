@@ -35,7 +35,6 @@ __pycache__/
 env/
 
 # TensorFlow
-# TODO: check that this list is ok
 dataset/
 logs/
 models/
