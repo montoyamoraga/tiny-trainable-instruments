@@ -18,7 +18,7 @@ Tools > Board: "<board_name>" > Boards Manager...
 
 ![Arduino Boards Manager](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/1-arduino-boards-manager.png "Arduino Boards Manager")
 
-![Arduino Boards Manager](../images/1-arduino-boards-manager.png "Arduino Boards Manager")
+![Arduino Boards Manager](../docs/images/1-arduino-boards-manager.png "Arduino Boards Manager")
 
 Now we will install the corresponding core for our board manager. This might take a while to install. Look for this and install it:
 
