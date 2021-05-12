@@ -13,11 +13,11 @@ This chapter focuses on the project, explaining the whole stack, and the way it 
 
 \section{Technology}
 
-This project is based on the Arduino Nano 33 BLE Sense microcontroller, and its software depedencies include the Arduino KNN library, the Arduino TensorFlow Lite Micro library, and Adafruit software libraries.
+This project is based on the Arduino Nano 33 BLE Sense microcontroller, and its software dependencies include the Arduino KNN library, the Arduino TensorFlow Lite Micro library, and Adafruit software libraries.
 
-\section{Programmable / remix}
+\section{Oopen}
 
-All examples included with this library were written with the aim of showing the fundamentals of how to build the instruments and different machine learning enabled manipulation of multimedia material, so that people could build on top of it and make it it their own, by changing the values of variables and adding more functionalities.
+All examples included with this library were written with the aim of showing the fundamentals of how to build the instruments and different machine learning enabled manipulation of multimedia material, so that people could build on top of it and make it their own, by changing the values of variables and adding more functionalities.
 
 \section{Philosophy and experience}
 
@@ -39,7 +39,7 @@ The data is passed to a k-Nearest-Neighbor algorithm, programmed using the Ardui
 
 \subsection{Gesture}
 
-This input uses the information from the Inertial Measurument Unit (IMU) of the microcontroller, including a gyroscope and accelerometer. It captures data after a certain threshold of movement is detected. 
+This input uses the information from the Inertial Measurement Unit (IMU) of the microcontroller, including a gyroscope and accelerometer. It captures data after a certain threshold of movement is detected.
 
 The data is passed to a TensorFlow neural network, programmed using the Arduino TensorFlow Lite library, and based on the included magic$\_$wand example.
 
@@ -59,13 +59,13 @@ This output creates pitched sound, by using a PWM output.
 
 \subsection{Servo motor}
 
-This output creates movement and through that, rhytmic sounds.
+This output creates movement and through that, rhythmic sounds.
 
 The main inspiration for this output was the emerging use of motor-activated percussive instruments, such as the Polyend Perc.
 
 \subsection{MIDI}
 
-We wrote functionalities to manipulate MIDI innstruments, and included examples to interface with some popular and cheap MIDI instruments, such as the Korg volca beats.
+We wrote functionalities to manipulate MIDI instruments, and included examples to interface with some popular and cheap MIDI instruments, such as the Korg volca beats.
 
 We included examples for rhythmic and melodic elements, using two very ubiquitous and inexpensive MIDI musical instruments, which are the Korg volca beats, and the Korg volca keys.
 
@@ -120,8 +120,10 @@ Auxiliary files, copied from the examples from the Arduino TensorFlow Lite that 
 
 \section{Opera of the Future projects}
 
-During the development of this thesis, I have been fortunate to collaborate on different capacities with other thesis by classmates at Opera of the Future, which has directly informed my work.
+During the development of this thesis, I have been fortunate to collaborate on different capacities with other thesis projects by classmates at Opera of the Future, which has directly inspired my work.
 
 Squishies, Hannah Lienhard's master's thesis, novel squishable interfaces for musical expression. We shared discussions about low-level sound design, code reusability, sound art education, digital instruments. We were part of a master's thesis working group, facilitated by Roya Moussapour with two other Media LAb classmates, where we workshopped drafts of our thesis. This practice and feedback has been critical in shaping the language and discourse of this thesis document.
 
 Fluid Music, Charles Holbrow's PhD thesis, library design, documentation for contributors. The design of the interface, documentation, and scope of the thesis were a direct influence on the documentation and API coding style of this project.
+
+Overall thoughts: I think it would be great if your Chapter 3 clearly led you to the design principles you lay out in Chapter 4. So, why is “open” important -> because of the collaborations or arduino libraries you used. Why is “cheap”/”privacy” -> coded bias and ability to tinker, etc.
