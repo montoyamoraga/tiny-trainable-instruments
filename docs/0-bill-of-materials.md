@@ -31,7 +31,6 @@ Outputs, more expensive or more complex
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|
-| [MIDI DIN](https://www.adafruit.com/product/1134) | 1 | 1.75 | Adafruit | Output printed text |
+| [MIDI DIN](https://www.adafruit.com/product/1134) | 1 | 1.75 | Adafruit | Output MIDI data |
 | [Thermal printer](https://www.adafruit.com/product/600) | 1 | 61.95 | Adafruit | Output printed text |
-| [128x32 screen](https://www.adafruit.com/product/4440) | 1 | 12.50 |  Adafruit | Output screen text |
-| placeholder | placeholder | placeholder | placeholder | placeholder |
+| [128x32 OLED screen](https://www.adafruit.com/product/4440) | 1 | 12.50 |  Adafruit | Output screen |
