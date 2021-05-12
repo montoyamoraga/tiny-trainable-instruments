@@ -14,7 +14,7 @@ These materials are necessary for all Tiny Trainable Instruments
 |------|----------|------------|----------|---------|
 | [Arduino Nano 33 BLE Sense with headers](https://store.arduino.cc/usa/nano-33-ble-sense-with-headers) | 1 | 33.40 | https://www.arduino.cc/ | Microcontroller |
 | [Breadboard](https://www.adafruit.com/product/239) | 1 | 5.95 | Adafruit | Prototyping |
-| [Jumper wires](https://www.adafruit.com/product/758) | 1 | 3.95 | Adafruit | Making connections |
+| [Jumper wires](https://www.adafruit.com/product/758) | 1 | 3.95 | Adafruit | Connections |
 | [Micro USB cable](https://www.adafruit.com/product/592)  |  1 | 2.95 | Adafruit |Power |
 
 ## Cheaper and easier materials for output
