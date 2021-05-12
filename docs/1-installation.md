@@ -1,8 +1,10 @@
 # Installation
 
-## Arduino dependencies
+Hi! Welcome to our installation guide, we're super glad to have you here :)
 
-First, download the Arduino Desktop IDE, available at [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software). Select the stable release corresponding to your computer's operating system.
+## Arduino board
+
+First, download the Arduino Desktop IDE, available at https://www.arduino.cc/en/software. Select the stable release corresponding to your computer's operating system.
 
 Now we need to install the core and necessary libraries for the Arduino Nano 33 BLE Sense. Open the Arduino IDE and navigate on the menu to:
 
@@ -10,9 +12,32 @@ Now we need to install the core and necessary libraries for the Arduino Nano 33 
 Tools > Board: "<board_name>" > Boards Manager...
 ```
 
-Tthen search for `Arduino Mbed OS Nano Boards`. It is a large download, and it might take a few minutes to install. Finally, navigate to `Tools > Board: "<board_name>" > Arduino Mbed OS Nano Boards` and select `"Arduino Nano 33 BLE"`.
+![Arduino Boards Manager](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/1-arduino-boards-manager.png "Arduino Boards Manager")
 
-Next, go to `Tools > Manage Libraries...` and install the custom library for this project, called `TinyTrainable`. This installation will give you the option to also install its dependencies, select `Install all` to additionally download these libraries:
+Now we will install the corresponding core for our board manager. This might take a while to install. Look for this and install it:
+
+```
+Arduino Mbed OS Nano Boards
+```
+
+As of May 2021, we are using version 2.0.0. After this installation is complete, now you can select the Arduino with this option:
+
+```
+Tools > Board: "<board_name>" > Boards Manager... > Arduino Mbed OS Nano Boards > Arduino Nano 33 BLE
+```
+
+This option is valid for both Arduino Nano 33 BLE, and for the board we are using, the Arduino Nano 33 BLE Sense.
+
+## Arduino libraries
+
+Next we will install all the libraries needed for this project. On the Arduino IDE, navigate on the menu to
+
+```
+Tools > Manage Libraries... >
+```
+
+
+Next, go to and install the custom library for this project, called `TinyTrainable`. This installation will give you the option to also install its dependencies, select `Install all` to additionally download these libraries:
 
 * Libraries for using the embedded sensors of our microcontroller:
     * `Arduino_APDS9960`: color, proximity
@@ -25,9 +50,7 @@ To test if all dependencies were installed successfully, plug in your Arduino, n
 
 If you still have questions about setting up the microcontroller, the full startup guide is available [here](https://www.arduino.cc/en/Guide/NANO33BLESense).
 
-If you've made it this far, welcome to our project! We're super glad to have you here :)
-
-## TensorFlow, Python, Jupyter
+## Python, Jupyter, TensorFlow
 
 For input-color, you only need Arduino libraries. For input-gesture and input-speech, you also need to have Python, in order to train with TensorFlow and Jupyter on your computer.
 
