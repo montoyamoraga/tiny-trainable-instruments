@@ -1,8 +1,14 @@
 # Bill of materials
 
-This project is intended to be cheap and accesible, but still requires a few materials:
+## Notes about the microcontroller
 
-Minimum materials: necessary for any Tiny Trainable instrument
+This project is intended to be cheap and accesible, and it is based on the microcontroller Arduino Nano 33 BLE Sense. Please don't confuse it with the similarly named Arduino Nano 33 BLE :)
+
+In addition, it is sold with and without headers. We recommend acquiring the one ***with headers*** so you can immediately start using it on a breadboard without needing to solder the headers on it.
+
+## Minimum materials
+
+These materials are necessary for all Tiny Trainable Instruments
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|
@@ -11,17 +17,15 @@ Minimum materials: necessary for any Tiny Trainable instrument
 | [Jumper wires](https://www.adafruit.com/product/758) | 1 | 3.95 | Adafruit | Making connections |
 | [Micro USB cable](https://www.adafruit.com/product/592)  |  1 | 2.95 | Adafruit |Power |
 
-NOTE: Make sure you purchase the correct board, Arduino Nano 33 BLE ***Sense***! Please don't confuse it with the similarly named Arduino Nano 33 BLE.
-
-In addition, this board is sold with and without headers. We recommend acquiring the one ***with headers*** so you can immediately start using it on a breadboard without needing to solder the headers on it.
-
-Outputs, cheaper:
+## Cheaper and easier materials for output
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|
 | [Piezo buzzer](https://www.adafruit.com/product/160) | 1 | 1.50 | Adafruit | Output sound |
 | [Micro servo](https://www.adafruit.com/product/169) | 1 | 5.95 | Adafruit | Output movement |
 | [LED](https://www.adafruit.com/product/754) | 1 | 6.95 | Adafruit | Output light |
+
+## More complex or expensive materials for output
 
 Outputs, more expensive or more complex
 
