@@ -4,7 +4,13 @@
 
 First, download the Arduino Desktop IDE, available at [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software). Select the stable release corresponding to your computer's operating system.
 
-Now we need to install the core and necessary libraries for the Arduino Nano 33 BLE Sense. Open the Arduino IDE and navigate to `Tools > Board: "<board_name>" > Boards Manager...`, then search for `Arduino Mbed OS Nano Boards`. It is a large download, and it might take a few minutes to install. Finally, navigate to `Tools > Board: "<board_name>" > Arduino Mbed OS Nano Boards` and select `"Arduino Nano 33 BLE"`.
+Now we need to install the core and necessary libraries for the Arduino Nano 33 BLE Sense. Open the Arduino IDE and navigate on the menu to:
+
+```
+Tools > Board: "<board_name>" > Boards Manager...
+```
+
+Tthen search for `Arduino Mbed OS Nano Boards`. It is a large download, and it might take a few minutes to install. Finally, navigate to `Tools > Board: "<board_name>" > Arduino Mbed OS Nano Boards` and select `"Arduino Nano 33 BLE"`.
 
 Next, go to `Tools > Manage Libraries...` and install the custom library for this project, called `TinyTrainable`. This installation will give you the option to also install its dependencies, select `Install all` to additionally download these libraries:
 

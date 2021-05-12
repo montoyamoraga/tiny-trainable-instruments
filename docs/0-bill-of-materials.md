@@ -17,7 +17,9 @@ These materials are necessary for all Tiny Trainable Instruments
 | [Jumper wires](https://www.adafruit.com/product/758) | 1 | 3.95 | Adafruit | Connections |
 | [Micro USB cable](https://www.adafruit.com/product/592)  |  1 | 2.95 | Adafruit |Power |
 
-## Cheaper and easier materials for output
+## Simple outputs
+
+These are the recommended materials for starters, and are the ones covered in the proposed beginner workshop.
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|
@@ -25,9 +27,9 @@ These materials are necessary for all Tiny Trainable Instruments
 | [Micro servo](https://www.adafruit.com/product/169) | 1 | 5.95 | Adafruit | Output movement |
 | [LED](https://www.adafruit.com/product/754) | 1 | 6.95 | Adafruit | Output light |
 
-## More complex or expensive materials for output
+## Complex outputs
 
-Outputs, more expensive or more complex
+These materials are either more expensive, or more complex, and they are recommended for more advanced users. These are not covered on the proposed beginner workshop.
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|
