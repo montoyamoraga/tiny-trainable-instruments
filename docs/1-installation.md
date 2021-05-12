@@ -16,8 +16,6 @@ Now we need to install the core and necessary libraries for the Arduino Nano 33 
 Tools > Board: "<board_name>" > Boards Manager...
 ```
 
-![Arduino Boards Manager](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/1-arduino-boards-manager.png "Arduino Boards Manager")
-
 ![Arduino Boards Manager](../docs/images/1-arduino-boards-manager.png "Arduino Boards Manager")
 
 Now we will install the corresponding core for our board manager. This might take a while to install. Look for this and install it:
@@ -26,7 +24,7 @@ Now we will install the corresponding core for our board manager. This might tak
 Arduino Mbed OS Nano Boards
 ```
 
-![Arduino Mbed OS Nano](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/1-arduino-mbed-os-nano.png "Arduino Mbed OS Nano")
+![Arduino Mbed OS Nano](../docs/images/1-arduino-mbed-os-nano.png "Arduino Mbed OS Nano")
 
 As of May 2021, we are using version 2.0.0. After this installation is complete, now you can select the Arduino with this option:
 
@@ -44,7 +42,7 @@ Next we will install all the libraries needed for this project. On the Arduino I
 Tools > Manage Libraries... >
 ```
 
-![Arduino Manage Libraries](https://github.com/montoyamoraga/tiny-trainable-instruments/blob/main/docs/images/1-arduino-manage-libraries.png "Arduino Manage Libraries")
+![Arduino Manage Libraries](../docs/images/1-arduino-manage-libraries.png "Arduino Manage Libraries")
 
 Next, go to and install the custom library for this project, called `TinyTrainable`. This installation will give you the option to also install its dependencies, select `Install all` to additionally download these libraries:
 
