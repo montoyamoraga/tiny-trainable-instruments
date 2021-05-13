@@ -58,10 +58,9 @@ Next, search for `TinyTrainable` library for this project.This installation will
     * `Adafruit Thermal Printer Library`: for outputs with Adafruit Thermal Printer.
     * `Servo`: output with servo motors.
 
-
 ## Test Arduino installation
 
-To test if all dependencies were installed successfully, plug in your Arduino, navigate to `File > Examples > TinyTrainable > hello_none`, then press the upload button to send the code to the Arduino (Note that this is the procedure for running all examples). After it's done compiling, you should see it light up and cycle between its LEDs.
+To test if all dependencies were installed successfully, connect your Arduino to your computer with a USB cable, and navigate to `File > Examples > TinyTrainable > hello_none`, then press the upload button to send the code to the Arduino (Note that this is the procedure for running all examples). After it's done compiling, you should see it light up and cycle between its LEDs.
 
 If you still have questions about setting up the microcontroller, the full startup guide is available [here](https://www.arduino.cc/en/Guide/NANO33BLESense).
 
