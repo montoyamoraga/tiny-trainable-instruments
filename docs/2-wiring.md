@@ -69,3 +69,7 @@ We use a power supply, whose ground  is connected to the one on the Arduino.
 The power supply is 9V, center positive.
 Here is one available:
 https://www.adafruit.com/product/276
+
+### Serial
+
+With a serial cable into a computer.
