@@ -1,10 +1,10 @@
-# Workshop
+# Taller
 
 ## About
 
 This workshop has been written and designed by Aarón Montoya-Moraga in 2021, as a research assistant and master's student at MIT Media Lab's Opera of the Future and Future Sketches research groups. Additional code, examples, and documentation by MIT undergraduate researchers Peter Tone and Maxwell Wang.
 
-## Context
+## Contexto
 
 ## Key concepts
 
@@ -15,7 +15,7 @@ Machine learning, media arts, Arduino microcontroller, tiny machine learning.
 * [Berlin Code of Conduct](https://berlincodeofconduct.org/)
 * [p5.sj community statement](https://p5js.org/community/)
 
-## Materials
+## Materiales
 
 You would need to bring a computer, with Linux, Mac or Windows operating systems.
 
