@@ -2,7 +2,7 @@
 
 ## About
 
-Input-color is an instrument that uses its sensors for measuring gestures, color, light intensity and proximity, to train a k-NN (k-nearest neighbors) algorithm. This allows you to control different multimedia outputs.
+input-color is an instrument that uses its sensors for measuring gestures, color, light intensity and proximity, to train a k-NN (k-nearest neighbors) algorithm. This allows you to control different multimedia outputs.
 
 The instrument can be programmed with a computer and then run as a standalone instrument, or you can use its serial port to communicate with your computer for debugging or interfacing with other software.
 
@@ -10,19 +10,6 @@ All the training happens on the instrument, and it can be easily retrained by re
 
 ## Bill of materials
 
-* Required:
-  * 1x [Arduino Nano 33 BLE Sense](https://store.arduino.cc/usa/nano-33-ble-sense)
-  * 1x Micro USB to USB cable
-  * 1x USB power supply or battery
-  * 1x computer with the Arduino IDE installed, for uploading the code to the microcontroller
-* Optional:
-  * 1x solderless breadboard
-  * 10x breadboard jumper cables
-  * 1x piezo buzzer
-  * 1x 220 Ohm resistor
-  * 1x audiovisual instrument with MIDI input
-  * 1x MIDI DIN cable
-  * 1x MIDI breadboard jack
 
 ## Installation
 
@@ -37,5 +24,10 @@ Follow the instructions on [wiring.md](wiring.md).
 hello_tiny_world: Cycles through all the LEDs and their colors.
 
 color_buzzer: Outputs sounds using a buzzer.
+
+color_printer
+
+color_serial
+
 
 ## Documentation

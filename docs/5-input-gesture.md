@@ -34,6 +34,7 @@ gesture_database: collects accelerometer data to prepare for training a model.
 Open the Arduino IDE and select `File > Examples > TinyTrainable > gesture_database`, then execute the sketch. Open the serial monitor, which should list six values that the Arduino is measuring: a for (linear) acceleration, and g for gyroscope (angle). Hold the breadboard and perform one of three gestures, *with the end with the wire facing towards you*:
 
 (TODO: change gestures? None of the g values are used in these, I think; can we do something that rotates the Arduino? :D)
+
 * Gesture 0: diagonal up-left 
 * Gesture 1: counterclockwise circle
 * Gesture 2: thrust forwards
