@@ -55,8 +55,8 @@ Next, search for `TinyTrainable` library for this project.This installation will
 * Libraries for multimedia output:
     * `Adafruit GFX Library`: for output with screen.
     * `Adafruit SSD1306`: for output with screen.
-    * `Adafruit Thermal Printer Library`: for outputs with Adafruit Thermal Printer.
-    * `Servo`: output with servo motors.
+    * `Adafruit Thermal Printer Library`: for outputs with thermal printer.
+    * `Servo`: for output with servo motors.
 
 ## Test Arduino installation
 
@@ -64,13 +64,15 @@ To test if all dependencies were installed successfully, connect your Arduino to
 
 If you still have questions about setting up the microcontroller, the full startup guide is available [here](https://www.arduino.cc/en/Guide/NANO33BLESense).
 
-## Python, Jupyter, TensorFlow
+## Python for training models
 
-For input-color, you only need Arduino libraries. For input-gesture and input-speech, you also need to have Python, in order to train with TensorFlow and Jupyter on your computer.
+For input-color, you only need Arduino libraries. For input-gesture and input-speech, we need to create databases and train algothitms on a computer. For that, you can choose between using the cloud service Google Colab, or you can also use your own machine.
+
+In your machine, the software we will need inlcudes Python, TensorFlow and Jupyter.
 
 Your computer might have Python already installed, and it might be one that is not compatible with the TensorFlow version we are using.
 
-These are the versions we will be using, as of January 2021:
+These are the versions we will be using, as of May 2021:
 
 * Python 3.8.6
 * TensorFlow 2.3.2
