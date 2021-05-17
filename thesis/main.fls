@@ -736,6 +736,8 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesi
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap2.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap2.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap2.tex
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap3.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap3.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap3.tex
@@ -764,8 +766,6 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesi
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap4.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap4.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap4.tex
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap5.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap5.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap5.tex

@@ -1,198 +1,129 @@
-\chapter{Background}
+\chapter{Tiny trainable instruments}
 
-As part of the research that directly informed this thesis, I want to highlight the courses, projects and studies I have undertaken while at MIT Media Lab.
+This chapter focuses on the project, explaining the whole stack, and the way it is organized and its scope, this is super early draft, it still feels too technical.
 
-COMMENT ABOUT CLASSES: it may be better to do a lit review of sorts and discuss the material that informs your work here rather than specific classes
-
-\subsection{Classes}
+\section{Design principles}
 
 \begin{enumerate}
-        \item Comparative Media Studies, by Sasha Costanza-Chock
-        \item Recreating The Past, by Zach Lieberman
-    \item Sound: Past and Future, by Tod Machover
+  \item Cheap
+  \item Private
+  \item Open
+  \item Hackable
 \end{enumerate}
 
-\subsection{Projects}
+\section{Technology}
 
-Some other projects I created during these years include:
+This project is based on the Arduino Nano 33 BLE Sense microcontroller, and its software dependencies include the Arduino KNN library, the Arduino TensorFlow Lite Micro library, and Adafruit software libraries. 
+
+\section{Oopen}
+
+All examples included with this library were written with the aim of showing the fundamentals of how to build the instruments and different machine learning enabled manipulation of multimedia material, so that people could build on top of it and make it their own, by changing the values of variables and adding more functionalities.
+
+\section{Philosophy and experience}
+
+\section{Inputs}
+
+We are using the RGB color, proximity, gyroscope, accelerometer, and microphone sensors on the microcontroller, in order to capture the Inputs
 
 \begin{enumerate}
-        \item SiguesAhi: an instrument to detect when oppressive institutions have ceased to exist. It is achieved with microcontrollers with Internet connectivity.
-        \item Open Drawing Machine, with Gaurav Patekar: an open source low cost programmable drawing machine
-        \item Introduction to networks for artists: a series of tutorials for beginners, to learn how to set up their own networks and collaborate in peer-to-peer ways for making art.
+  \item Color
+  \item Gesture
+  \item Speech
 \end{enumerate}
 
+\subsection{Color}
 
-\section{Media arts instruments}
+This approach uses the RGB color sensor from the microcontroller, with the auxiliary help from the proximity sensor, that is used to capture color information at a certain distance threshold.
 
-In particular, here I will highlight some media arts instruments that have inspired my research, because of their use and promotion of open source software and hardware, scripting capabilities, and other design considerations.
+The data is passed to a k-Nearest-Neighbor algorithm, programmed using the Arduino KNN library.
 
-TODO: maybe add my own personal experience with these instruments.
+\subsection{Gesture}
 
-\subsection{Bast}
+This input uses the information from the Inertial Measurement Unit (IMU) of the microcontroller, including a gyroscope and accelerometer. It captures data after a certain threshold of movement is detected.
 
-The Czech company Bastl Instruments have released the Kastle series of instruments based on the Arduino Uno’s chip ATMEGA 328P, and their source code is released on GitHub, with alternate firmware for different behaviors.
+The data is passed to a TensorFlow neural network, programmed using the Arduino TensorFlow Lite library, and based on the included magic$\_$wand example.
 
-Currently they offer the Kastle v1.5, a melodic and drone synthesizer, and the Kastle Drum, for rhythmic work. The only difference between these synthesizers is the firmware and the faceplate, and it is encouraged to write new firmware to modify their behavior. Also they are forgiving instruments, its inputs and outputs are robust enough to allow for mistakes in connections, in an electrical and mechanical way.
+\subsection{Speech}
 
-This instrument inspired many characteristics present in Tiny Trainable Instruments, including 
- the use of breadboard jumper cables for making connections, their low cost (90 USD), and their portability by use of batteries.
+This input uses the information from the microphone of the microcontroller.
 
-Add an example of how Moog synthesizers in the 1970s were as expensive as a house!
-And then as a car.
+The data is passed to a TensorFlow neural network, programmed using the Arduino TensorFlow Lite library, and based on the included micro$\_$speech example.
 
-Mention how accessible the different components of the instruments are, how you can get everything from adafruit for not that much money, etc.
+\section{Outputs}
 
-Add explanation about how this is not just on GitHub, but also published on the arduino IDE library, and how examples are worked already, and how things are precompiled.
+The different outputs were picked, because of their low cost, ubiquity, and possibilities of expansion and combining them.
 
-Lower barriers include releasing a Bill of Materials, on Adafruit, inspired by the Drawdio project, which can be bought as a kit from Adafruit. TODO: explain why Adafruit is cool and easier to use than Digikey etc.
+\subsection{Buzzer}
 
-\subsection{Critter \& Guitari}
+This output creates pitched sound, by using a PWM output.
 
-This company has released standalone scriptable computers for arts, which run Linux operating system + Pure Data software.
+\subsection{Servo motor}
 
-ETC and EYESY computers for visuals, scriptable, Linux operating system + Python / pygame environment or openFrameworks.
+This output creates movement and through that, rhythmic sounds.
 
-They can run on power supplies, and are also portable by the use of batteries.
+The main inspiration for this output was the emerging use of motor-activated percussive instruments, such as the Polyend Perc.
 
-\subsection{monome}
+\subsection{MIDI}
 
-Aleph: earlier sound computer.
+We wrote functionalities to manipulate MIDI instruments, and included examples to interface with some popular and cheap MIDI instruments, such as the Korg volca beats.
 
-Norns: sound computer, currently on its second iteration, with expanded hard drive. Also there is a DIY version which is cheaper and runs on a Raspberry Pi.
+We included examples for rhythmic and melodic elements, using two very ubiquitous and inexpensive MIDI musical instruments, which are the Korg volca beats, and the Korg volca keys.
 
-Norns is a Linux machine, running SuperCollider for the sound engine, and Lua scripts. It has spawned a community that continually releases new scripts and software updates.
+\subsection{Thermal printer}
 
-\subsection{Shbobo}
+A thermal printer is the basis for creating written and literary output, inspired by the field of computational poetry.
 
-Peter Blasser has released several collections / companies of musical instruments, the most famous one being Ciat-Lonbarde. Peter also runs Shbobo, which to date has two different instruments, the Shnth and the Shtar.
+We used the popular Adafruit Thermal printer kit, which is documented on their website and includes a software library, distributed over GitHub and Arduino IDE, and also as a submodule on this project's TinyTrainable software library.
 
-Both run on microcontrollers, and they use a new proposed language called Shlisp, based on Lisp, and also they can be programmed using the Fish IDE.
+\section{Development}
 
-As of 2021, they became open source, which is available at github.com/pblasser/shbobo.
+This thesis has been developed with the invaluable help of undergrad researchers Peter Tone and Maxwell Wang.
 
-COMMENT ON OPEN SOURCE: something being open source doesn't necessarily mean it is accessible to a wider audience. is one of the goals of your work to create instruments that are accessible to a wider audience?
+They have cloned both repositories, the main one and the Arduino library one, and have continuously submitted pull requests with their contributions.
 
-They promote computer-centric approaches to making sound, such as the use of integers and metaphors of finite state machines, and also allow for different ways of playing and sensing, such as the use of antennas for detecting hand distance, a microphone for detecting speech and whistling, and wooden bars with piezos for detecting pressure.
+Peter Tone has helped with research in data structures, library writing, and we have shared back and forth code, going from experimental proofs of concepts, and has also helped with the design of the user-facing library.
 
-TODO: write how this inspired the new interactions i am inventing or appropiating for Tiny Trainable Instruments, such as a drum machine you can talk to, Alexa spinoff.
+Maxwell Wang has proofread the code, has ran the examples, and has helped with the writing of the documentation for self-learners and for the workshops.
 
-\section{Education}
+We all share a Google Drive folder, where we all share notes about our research and development of the library and the educational material.
 
-This thesis is inspired by the work of the research group Lifelong Kindergarten at MIT Media Lab, led by professor Mitchel Resnick. On the book with the same title, he builds on Seymour Papert’s work, and proposes that educational projects should have “Low floor, wide walls, high ceilings”, and that learners thrive when they engage in the 4 Ps: “Peers, projects, passion, play”
-TODO: add how this project addresses the 4Ps
+\section{Code}
 
-\section{Creative Machine learning}
+This thesis is distributed as a repository, hosted on the GitHub platform, and available at https://github.com/montoyamoraga/tiny-trainable-instruments.
 
-COMMENT: what is the main argument of the whole piece and how does each independent part connect to that? you should start with a story from previous experiences that is particularly relevant as to why you were inspired to do this work. think "papert and the gears"
+The auxiliary files, such as the LaTeX project for this document, and the auxiliary Jupyter notebooks, and documentation and tutorials are included on this repository.
 
-While being a graduate student and research resident at NYU ITP I saw how quick things changed in terms of machine learning. I saw how the project deeplearn.js allowed for people to train and deploy machine learning on their browsers, and how this library was acquired by Google and repurposed as TensorFlow.js, a JavaScript version of their machine learning framework TensorFlow.
+The main software component of this project is the TinyTrainable library, available at https://github.com/montoyamoraga/TinyTrainable and also through the Arduino IDE.
 
-In turn, at NYU ITP a team of artists and programmers built the library and community of ml5.js, with the 5 being an homage to p5.js. Technically, ml5.js is a wrapper for TensorFlow.js, in the same spirit that p5.js is a wrapper for HTML5 elements such as the canvas.
+The code included on this library is distributed on the folders:
 
-Another huge contribution to the landscape of machine learning for arts has been the release of the app Runway, which started as Cristóbal Valenzuela’s thesis, and is now a company with Alejandro Matamala and Anastasis Germanidis.
+\begin{enumerate}
+  \item examples/
+  \item src/
+\end{enumerate}
 
-After leaving NYU ITP, I was a student at the month-long workshop “Autonomous Generative Spirit” taught by Gene Kogan and Andreas Refsgaard at the School of Machines, Make and Make Believe in Berlin 2018. We experimented with quick and cheap methods for machine learning, such as the k-nearest neighbors algorithm using the artist and beginner-friendly app Wekinator by Rebecca Fiebrink, and also more computer-intensive algorithms, which sometimes required proprietary hardware such as NVIDIA graphics cards to be trained in a matter of hours, instead of days or weeks using our computers.
+\subsection{src/}
 
-TODO: add what does the speed enable you to do on a personal level? why is it important to share that speed with others?
+The source code for where there is a TinyTrainable.h and TinyTrainable.cpp file where we included all the basic functionality of the library. Additional subfolders include
 
-The last spark that led me to this thesis was the release of two libraries for machine learning on the Arduino platform: The currently beta version Arduino KNN, which allows for on-device training and resembles my earlier studies with Wekinator, in a more portable and private way, no data leaves the microcontroller, and the whole neural network can be wiped with one click of a button.
+\subsubsection{inputs/}
 
-At a more complex level, I am also working with the TensorFlow Lite Micro, which I learned from Arduino blogs, and which currently is supported by the hardware Arduino Nano 33 BLE Sense.
+Base class Input and inherited classes for each one of the other inputs.
 
-COMMENT TO THE ABOVE PARAGRAPH: you may not even need to include the specific details here, but just highlight in larger overviews the types of projects you've worked on or the educational fields that influence your work
+\subsubsection{outputs/}
 
-In late 2020 and early 2021 I completed the just released series of 3 courses of the TinyML Professional Certificate by Harvard at the online platform edx.org
+Base class Output and inherited classes for each one of the other outputs.
 
-Newer books and references that this thesis was inspired by include the books “You Look Like a Thing and I Love You: How Artificial Intelligence Works and Why It's Making the World a Weirder Place” by Janelle Shane (2019), and the book “Making Pictures with Generative Adversarial Networks” by Casey Reas (2019).
+\subsubsection{tensorflow/}
 
-Also Yining Shi created a new class at NYU ITP in 2020, at the intersection of machine learning and physical computing.
+Auxiliary files, copied from the examples from the Arduino TensorFlow Lite that we are building on top of, and also from the newer TinyML library by the EdX team. These, unless otherwise noted, are included without modifications and distributed through the Apache License included on each file's headers.
 
-\section{Digital rights}
+\section{Opera of the Future projects}
 
-Machine learning algorithms need data to be trained on. I think it’s a human right to not be surveilled, and I hope my thesis can put a positive spin on the gathering of data, by letting users perform auto surveillance, like the Ai Weiwei piece WeiweiCam, a 2021 project where the artist installed cameras for self surveillance as a protest against the Chinese government.
+During the development of this thesis, I have been fortunate to collaborate on different capacities with other thesis projects by classmates at Opera of the Future, which has directly inspired my work.
 
-A huge inspiration for my thesis has been the Guardian Project by the Electronic Frontier Foundation, and the Design Justice Network and the book Design Justice by Sasha Costanza-Chock.
+Squishies, Hannah Lienhard's master's thesis, novel squishable interfaces for musical expression. We shared discussions about low-level sound design, code reusability, sound art education, digital instruments. We were part of a master's thesis working group, facilitated by Roya Moussapour with two other Media LAb classmates, where we workshopped drafts of our thesis. This practice and feedback has been critical in shaping the language and discourse of this thesis document.
 
-TODO QUESTION: is any of the methodology you use to develop all of this work specifically related to either of these? you might connect specific aspects of the EFF project and Sasha's work that are connected
+Fluid Music, Charles Holbrow's PhD thesis, library design, documentation for contributors. The design of the interface, documentation, and scope of the thesis were a direct influence on the documentation and API coding style of this project.
 
-
-\section{Instruments}
-
-The table \ref{table:media-arts-scriptable-instruments} is an example of media arts instruments that are scriptable.
-
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{ | l | l | l | l | l | }
-        Maker & Instrument & Year & Computing & Software \\ 
-        \hline 
-        BASTL & microGranny 2 & YEAR & microcontroller & Arduino \\
-        BASTL & Kastle v1.5 & YEAR &microcontroller  & Arduino \\
-        Critter \& Guitari & Organelle & YEAR & computer & Linux? \\
-        Critter \& Guitari & EYESY & YEAR & computer & Linux? \\
-        monome & aleph & YEAR & computer & Linux? \\
-        monome & norns & YEAR & computer & Linux \\
-        Shbobo & Shnth & YEAR & microcontroller & ARM Cortex \\
-        Shbobo & Shtar & YEAR & microcontroller & ARM Cortex 
-    \end{tabular}
-    \caption{Table of media arts scriptable instruments}
-    \label{table:media-arts-scriptable-instruments}
-\end{table}
-
-
-\subsection{BASTL}
-
-BASTL Kastle, two iterations and a spinoff: Kastle, Kastle v1.5, Kastle Drum. 
-
-Based on Arduino, GitHub repository with alternate firmware.
-
-Breadboard patching with jumper cables, inputs and outputs robust enough to allow for mistakes in connections.
-
-\subsection{Critter \& Guitari}
-
-Organelle computer for sound, scriptable, Linux operating system + Pure Data software.
-
-ETC and EYESY computers for visuals, scriptable, Linux operating system + Python / pygame environment or openFrameworks.
-
-\subsection{monome}
-
-Aleph: sound computer
-
-Norns: sound computer, currently on its second iteration, with expanded hard drive. Also there is a DIY versionm which is cheaper and runs on a Raspberry Pi.
-Norns is a Linux machine, running SuperCollider for the sound engine, and Lua scripts.
-
-\subsection{Shbobo}
-
-Peter Blasser's Shbobo
-
-Shnth and Shtar
-
-Shlisp language and Fish IDE.
-
-github.com/pblasser/shbobo
-
-\section{Education}
-
-Mitch Resnick's book Lifelong Kindergarten
-
-Low floor, wide walls, high ceiling
-
-Peers, projects, passion, play
-
-Gene Kogan and Andreas Refsgaard
-
-\section{Machine learning}
-
-ml5.js
-
-Runway
-
-TinyML Professional Certificate HarvardX
-
-\section{Digital rights}
-
-Electronic Frontier Foundation
-
-Edward Snowden
-
-Design Justice Network
+Overall thoughts: I think it would be great if your Chapter 3 clearly led you to the design principles you lay out in Chapter 4. So, why is “open” important -> because of the collaborations or arduino libraries you used. Why is “cheap”/”privacy” -> coded bias and ability to tinker, etc.
