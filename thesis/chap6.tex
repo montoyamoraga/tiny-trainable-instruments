@@ -1,21 +1,40 @@
 \chapter{Conclusion}
 
-This thesis project is a
+This thesis has presented the design and the complete process behind the development of interactive standalone instruments for manipulation of multimedia material using machine learning. The creation of these instruments involved designing hardware, publishing a software library, writing and teaching workshops, and making new art performances and workflows with these instruments.
+
+During this journey, we discussed different strategies for media arts education, ethics in artificial intelligence, and design of hardware and software tools for artists. This work is a foundation for further research, including the creation of more specific instruments and new software libraries, and the creation of new courses and educational units for arts, computer science, and interaction design.
 
 \section{Future work}
 
-\subsection{Education}
+\subsection{Hardware for new instruments}
+
+This project relies on a particular microcontroller, the Arduino Nano 33 BLE Sense. I used and Arduino board because of its popularity, availability, and software and community support.
+
+The particular board's main draw for building multimedia instrumetns is its embedded sensors, including microphone, gyroscope, and camera. This embedding on the chip makes it more attractive than other boards, where you need to acquire, wire, and callibrate off-board sensors, making the process of capturing data more cumbersome and expensive in resources, adding additional barriers to instrument makers and prototypers.
+
+When this project started in 2020, and still today, this board was the only Arduino microcontroller supported by the Google TensorFlow Lite Micro library, for machine learning using microcontrollers, and it was heavily featured on the first promotional and educational material, which were the direct inspiration for this thesis.
+
+Microcontrollers come and go, most probably this board will be discontinued, and I hope this project can be adapted to other boards and architectures, particularly to other open source microcontrollers, including other Arduino boards, PJRC Teensy and Adafruit Circuit Playground, among others.
+
+In terms of the outputs of the Tiny Trainable Instruments, I focused on creating many parallel multimedia approaches, including making sounds with piezo buzzers and MIDI, manipulating light with LEDs, creating movement and rhythm with servo motors, and printing text with thermal printers and screens. This is to appeal to a larger audience of artists and learners, interested in different mediums.
+
+The Tiny Trainable Instruments prototypes are built with prototyping electronic breadboard, to make explicit their open-endedness, and to relate to a flux, instead of a fixed in state PCB, and a further state of this project would include the creation of custom boards with fixed wiring, and of enclosures and packaging.
+
+
+\subsection{Software for new instruments}
+
+This thesis has been published as an open source software library for Arduino. It promotes modularity and adaptability, where a Tiny Trainable Instrument can be any combination of the multiple inputs and outputs.
+
+The file structure of the source code and the software dependencies of this library was also built with flexibility in mind, to encourage the remix and adaptation of this library to further projects.
+
+A particular challenging aspect of this project, is the breadth of the disciplines combined, and its novel application of machine learning in microcontrollers. As discussed in previous chapters, there is a trend and new wave of builders and makers creating standalone multimedia instruments, based on open operating systems like Linux, and/or different microcontrollers. Nonetheless, it is a hard skill to build digital standalone instruments, which follow the principles of this project, in terms of being as cheap as possible, and as open as possible, to encourage experimentation. I hope this project encourages people to learn how to make instruments, and also engages in discourse about the creation of new curricula for the next generation of instrument makers and artists.
+
+Another particular challenging aspect of writing software for multimedia instruments includes the licensing. The dependencies of this software are mostly other libraries by Arduino, Google, Adafruit, and with different licenses including public domain, MIT, and Apache. I hope this document helps to navigate these legal complexities.
+
+\subsection{Education, courses workshops}
+
+This thesis was inspired on previous educational experiences I have experienced, including machine learning for artists courses by Gene Kogan and Andreas Refsgaard, online classes. In particular for tiny machine learning, I took the Tiny ML professional certificate, made up of 3-courses by the HarvardX team at edx.org, and also I was inspired by the new classes at NYU ITP on physical computing and machine learning by Yining Shi.
 
 I hope that this thesis project is adopted by educators, to introduce students to machine learning, physical computing, media arts, and ethics.
 
-\subsection{Artist workflow}
-
-Training instead of programming.
-
-\subsection{Packaging}
-
-Low hanging fruit is to package a Tiny Trainable Instrument with a set of particular outputs, on a perfboard or PCB.
-
-The next step would be to create enclosures.
-
-\subsection{Gallery}
+Many sections of this project could be adapted to further existing curricula for music, rhythm, ethics, computer science, and to create a new wave of instrument makers and media artists.
