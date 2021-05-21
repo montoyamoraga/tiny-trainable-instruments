@@ -2,6 +2,10 @@
 
 Hi! Welcome to our installation guide, we're super glad to have you here :)
 
+This guide includes information as of May 2021, and we will explicitly include the software versions we are using.
+
+For additional documentation, please visit the official Arduino docs website at https://docs.arduino.cc, and in particular the documentation of the Arduino Nano 33 BLE Sense microcontroller at https://docs.arduino.cc/hardware/nano-33-ble-sense.
+
 ## Arduino IDE
 
 First, download the Arduino Desktop IDE, available at https://www.arduino.cc/en/software. Select the stable release corresponding to your computer's operating system.
@@ -26,7 +30,9 @@ Arduino Mbed OS Nano Boards
 
 ![Arduino Mbed OS Nano](../docs/images/1-arduino-mbed-os-nano.png "Arduino Mbed OS Nano")
 
-As of May 2021, we are using version 2.0.0. After this installation is complete, now you can select the Arduino with this option:
+As of May 2021, we are using version 2.0.0.
+
+After this installation is complete, now you can select the Arduino with this option:
 
 ```
 Tools > Board: "<board_name>" > Boards Manager... > Arduino Mbed OS Nano Boards > Arduino Nano 33 BLE
@@ -60,11 +66,26 @@ Next, search for `TinyTrainable` library for this project.This installation will
 
 ## Test Arduino installation
 
-To test if all dependencies were installed successfully, connect your Arduino to your computer with a USB cable, and navigate to `File > Examples > TinyTrainable > hello_none`, then press the upload button to send the code to the Arduino (Note that this is the procedure for running all examples). After it's done compiling, you should see it light up and cycle between its LEDs.
+To test if all dependencies were installed successfully, we will run our first code example. Please note that we will follow the same steps for all the other examples :)
+
+First connect your Arduino Nano 33 BLE Sense to your computer with a USB micro cable, and navigate to  `File > Examples > TinyTrainable > check_serial`.
+
+We will use two buttons on the Arduino IDE with our code: Compile and Upload.
+
+We recommend first clicking on Compile, which will translate our source code to machine code that the Arduino microcontroller understands, and save that result in our computer.
+
+Then, we can click the button Upload, which will send this machine code to the Arduino microcontroller.
+
+Now we will open our Serial Monitor, to read the messages that the Arduino will send us, and also see its LEDs which will cyle through different colors.
 
 If you still have questions about setting up the microcontroller, the full startup guide is available [here](https://www.arduino.cc/en/Guide/NANO33BLESense).
 
-## Python for training models
+
+
+## input-color installation
+
+
+## Python for machine learning
 
 For input-color, you only need Arduino libraries. For input-gesture and input-speech, we need to create databases and train algothitms on a computer. For that, you can choose between using the cloud service Google Colab, or you can also use your own machine.
 
