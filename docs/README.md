@@ -6,7 +6,7 @@ This document explains the documentation for the project Tiny Trainable Instrume
 
 ## Contents
 
-This documentation is written in Markdown, and distributed in both Markdown files (.md extension), and as PDF files. You can examine the source code of the Markdown files by clicking on the button "Raw" on the GitHub graphic user interface.
+This documentation is written in Markdown, and distributed here in Markdown files and PDF files, (.md and .pdf respectively)
 
 This folder docs/ contains the following files and folders:
 
@@ -19,5 +19,7 @@ This folder docs/ contains the following files and folders:
 * 6-input-speech [md](6-input-speech.md) [pdf](6-input-speech.pdf): TODO
 * 7-outputs [md](7-outputs.md) [pdf](7-outputs.pdf): TODO
 * 8-contributing [md](8-contributing.md) [pdf](8-contributing.pdf): how to contribute to this project.
+* 9-taller [md](9-taller.md) [pdf](9-taller.pdf): workshop instructions, in Spanish.
+* 9-workshop [md](9-workshop.md) [pdf](9-workshop.pdf): workshop instructions, in English.
 * [images/](images/)contains the images used in this documentation.
 * README [md](README.md) [pdf](README.pdf): this file that you are reading right now.
