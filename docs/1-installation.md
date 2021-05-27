@@ -22,7 +22,9 @@ Tools > Board: "<board_name>" > Boards Manager...
 
 ![Arduino Boards Manager](../docs/images/1-arduino-boards-manager.png "Arduino Boards Manager")
 
-Now we will install the corresponding core for our board manager. This might take a while to install. Look for this and install it:
+<!-- Guillermo: this image may induce to confusion since it already says Board: "Arduino Nano 33 BLE", and we are supposedly installing it -->
+
+Now we will install the corresponding core for our board manager, this might take a while. Go to the search bar and type the following, then hit install. Please note that as of May 2021, we are using version 2.0.0.
 
 ```
 Arduino Mbed OS Nano Boards
@@ -30,12 +32,10 @@ Arduino Mbed OS Nano Boards
 
 ![Arduino Mbed OS Nano](../docs/images/1-arduino-mbed-os-nano.png "Arduino Mbed OS Nano")
 
-As of May 2021, we are using version 2.0.0.
-
-After this installation is complete, now you can select the Arduino with this option:
+After the installation is complete, select the Arduino with this option:
 
 ```
-Tools > Board: "<board_name>" > Boards Manager... > Arduino Mbed OS Nano Boards > Arduino Nano 33 BLE
+Tools > Board: "<board_name>" > Arduino Mbed OS Nano Boards > Arduino Nano 33 BLE
 ```
 
 This option is valid for both Arduino Nano 33 BLE, and for the board we are using, the Arduino Nano 33 BLE Sense.
