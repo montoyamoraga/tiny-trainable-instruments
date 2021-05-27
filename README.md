@@ -10,7 +10,17 @@ The advisor of this thesis project is [Tod Machover](https://www.media.mit.edu/p
 
 This thesis project features contributions by UROP undergrad researchers Peter Tone and Maxwell Wang.
 
-This repository contains the thesis PDF document and the tutorials. The companion Arduino library is on the repository [https://github.com/montoyamoraga/TinyTrainable](https://github.com/montoyamoraga/TinyTrainable).
+## Structure
+
+This repository contains the following folders and files:
+
+* [assets/](assets/): 
+* [databases](databases/)
+* [notebooks/](notebooks): placeholder
+
+
+
+The Arduino software library built for this thesis has its own standalone repository [https://github.com/montoyamoraga/TinyTrainable](https://github.com/montoyamoraga/TinyTrainable).
 
 ## License
 
