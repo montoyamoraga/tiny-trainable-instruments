@@ -4,11 +4,11 @@
 
 This project is intended to be cheap and accesible, and it is based on the microcontroller Arduino Nano 33 BLE Sense. Please don't confuse it with the similarly named Arduino Nano 33 BLE :)
 
-In addition, it is sold with and without headers. We recommend acquiring the one ***with headers*** so you can immediately start using it on a breadboard without needing to solder the headers on it.
+The board is sold with and without headers and we recommend acquiring the one ***with headers***, so you can immediately start using it on a breadboard without needing to solder the headers on it.
 
 ## Minimum materials
 
-These materials are necessary for all Tiny Trainable Instruments
+This is the list of minimum required materials for all Tiny Trainable Instruments
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|
@@ -28,7 +28,7 @@ These are the recommended materials for starters, and are the ones covered in th
 
 ## Additional outputs
 
-These additional outputs include more expensive or more complex materiales, and they are recommended for more advanced users. These are not covered on the proposed beginner workshop, but are supported by the Tiny Trainable Instruments project and software library.
+These additional outputs include more expensive or more complex materiales, and they are recommended for more advanced users. They are not covered on the proposed beginner workshop, but are supported by the Tiny Trainable Instruments project and software library.
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|
