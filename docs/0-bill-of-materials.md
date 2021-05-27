@@ -15,7 +15,7 @@ These materials are necessary for all Tiny Trainable Instruments
 | [Arduino Nano 33 BLE Sense with headers](https://store.arduino.cc/usa/nano-33-ble-sense-with-headers) | 1 | 33.40 | https://www.arduino.cc/ | Microcontroller |
 | [Breadboard](https://www.adafruit.com/product/239) | 1 | 5.95 | Adafruit | Prototyping |
 | [Jumper wires](https://www.adafruit.com/product/758) | 1 | 3.95 | Adafruit | Connections |
-| [Micro USB cable](https://www.adafruit.com/product/592)  |  1 | 2.95 | Adafruit |Power |
+| [Micro USB cable](https://www.adafruit.com/product/592) | 1 | 2.95 | Adafruit |Power |
 
 ## Sound and movement outputs
 
@@ -28,7 +28,7 @@ These are the recommended materials for starters, and are the ones covered in th
 
 ## Additional outputs
 
-These additional outputs include more expensive or more complex materiales, and they are recommended for more advanced users. These are not covered on the proposed beginner workshop, but are supported by the Tiny Trainable Instrument project and software library.
+These additional outputs include more expensive or more complex materiales, and they are recommended for more advanced users. These are not covered on the proposed beginner workshop, but are supported by the Tiny Trainable Instruments project and software library.
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|

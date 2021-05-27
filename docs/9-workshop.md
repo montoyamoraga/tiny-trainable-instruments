@@ -4,8 +4,6 @@
 
 This workshop has been written and designed by Aarón Montoya-Moraga in 2021, as a research assistant and master's student at MIT Media Lab's Opera of the Future and Future Sketches research groups. Additional code, examples, and documentation by MIT undergraduate researchers Peter Tone and Maxwell Wang.
 
-## Context
-
 ## Key concepts
 
 Machine learning, media arts, Arduino microcontroller, tiny machine learning.
@@ -22,6 +20,11 @@ You would need to bring a computer, with Linux, Mac or Windows operating systems
 This workshop is taught online over teleconferencing.
 
 ## Session 0
+
+Basic facts:
+* 2 hours
+
+
 
 2 hours, Friday
 
@@ -45,3 +48,13 @@ output: buzzer
 
 input: gesture, speech
 output: buzzer, servo, LED
+
+## Funding
+
+Funded by the Council for the Arts at MIT, including 
+
+![Council for the Arts at MIT Logo](../docs/images/9-2021-CAMIT-logo.jpg "Council for the Arts at MIT Logo")
+
+## Contact
+
+Email velouria@media.mit.edu or submit an issue at the repository https://github.com/montoyamoraga/tiny-trainable-instruments/
