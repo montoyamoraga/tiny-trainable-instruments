@@ -50,7 +50,9 @@ Tools > Manage Libraries... >
 
 ![Arduino Manage Libraries](../docs/images/1-arduino-manage-libraries.png "Arduino Manage Libraries")
 
-Next, search for `TinyTrainable` library for this project.This installation will give you the option to also install its dependencies, select `Install all` to additionally download these libraries:
+Go to the search bar of the Libraries Manager and type `TinyTrainable` for this project. This installation will give you the option to also install its dependencies, select `Install all` to additionally download these libraries:
+
+<!-- Guillermo: What version to install? I'd also add a picture of the library entry on the library manager.-->
 
 * Libraries for using the embedded sensors of our microcontroller:
     * `Arduino_APDS9960`: color, proximity
@@ -66,15 +68,13 @@ Next, search for `TinyTrainable` library for this project.This installation will
 
 ## Test Arduino installation
 
-To test if all dependencies were installed successfully, we will run our first code example. Please note that we will follow the same steps for all the other examples :)
+To test if all dependencies were installed successfully, we will run our first code example. Please note that we will follow the same steps for all the other examples :) First connect your Arduino Nano 33 BLE Sense to your computer with a USB micro cable, and navigate to:
 
-First connect your Arduino Nano 33 BLE Sense to your computer with a USB micro cable, and navigate to  `File > Examples > TinyTrainable > check_serial`.
+`File > Examples > TinyTrainable > check_serial`.
 
-We will use two buttons on the Arduino IDE with our code: Compile and Upload.
+<!-- In my case I didn't find any example called check_serial, but one called inst0_serial -->
 
-We recommend first clicking on Compile, which will translate our source code to machine code that the Arduino microcontroller understands, and save that result in our computer.
-
-Then, we can click the button Upload, which will send this machine code to the Arduino microcontroller.
+We will use two buttons on the Arduino IDE with our code: `Compile` and `Upload`. It is recommended to first click on `Compile`, which will translate our source code to machine code that the Arduino microcontroller understands, and save that result in our computer. Then, we can click the button `Upload`, which will send this machine code to the Arduino microcontroller.
 
 Now we will open our Serial Monitor, to read the messages that the Arduino will send us, and also see its LEDs which will cyle through different colors.
 
@@ -88,6 +88,8 @@ If you still have questions about setting up the microcontroller, the full start
 ## Python for machine learning
 
 For input-color, you only need Arduino libraries. For input-gesture and input-speech, we need to create databases and train algothitms on a computer. For that, you can choose between using the cloud service Google Colab, or you can also use your own machine.
+
+<!-- May be worth to explain what input-color, input-gesture and input-speech are, how the examples are organized, etc. -->
 
 In your machine, the software we will need inlcudes Python, TensorFlow and Jupyter.
 
