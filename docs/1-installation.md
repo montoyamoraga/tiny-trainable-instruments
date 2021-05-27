@@ -91,7 +91,7 @@ For input-color, you only need Arduino libraries. For input-gesture and input-sp
 
 <!-- May be worth to explain what input-color, input-gesture and input-speech are, how the examples are organized, etc. -->
 
-In your machine, the software we will need inlcudes Python, TensorFlow and Jupyter.
+In the case of working on your machine, the software needed inlcudes: Python, TensorFlow and Jupyter.
 
 Your computer might have Python already installed, and it might be one that is not compatible with the TensorFlow version we are using.
 
@@ -103,7 +103,7 @@ These are the versions we will be using, as of May 2021:
 
 In order to be able to manage different versions of Python, we suggest installing the tool pyenv https://github.com/pyenv/pyenv.
 
-After installing pyenv, on the terminal go to this repository
+After installing pyenv, open the the terminal and go to this repository. If you dont know how to download a repository to your machine, follow this [tutorial](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) about cloning repositories from github.
 
 ```bash
 cd tiny-trainable-instruments/
@@ -115,15 +115,15 @@ Check that pyenv is able to read the .python-version file
 pyenv versions
 ```
 
-You should see a list, with the version we are using and an asterisk, to highlight that this is the Python version we will use. If there is no asterisk and it says that the required version of python is not installed, use the command
+You should see a list, with the version we are using and an asterisk, to highlight that this is the Python version we will use. If there is no asterisk and it says that the required version of python is not installed, use the command: <!-- Guillermo: Add a picture here because the text description is not clear enough. -->
 
 ```bash
 pyenv install <python version number>
 ```
 
-If you are using an old version of pyenv, there's a chance that the install won't work; copy the entire command pyenv gives you (including the &&'s) and enter it into the terminal. Then once pyenv is updated, try the above command again.
+If you are using an old version of pyenv, there's a chance that the install won't work; copy the entire command pyenv gives you (including the &&'s) and enter it into the terminal. Then once pyenv is updated, try the above command again. <!-- Guillermo: Add a picture here because the text description is not clear enough. -->
 
-Now that you have the correct version of Python, create a virtual environment (which we will name env) using the Python package venv. Most dependency problems can be solved by using a virtualenv; we can’t support issues not using a virtualenv due to the huge variety of system configurations.
+Now that you have the correct version of Python, create a virtual environment (which we will name env) using the Python package venv. Most dependency problems can be solved by using a virtualenv; we can’t support issues not using a virtualenv due to the huge variety of system configurations. On your terminal type:
 
 ```bash
 python -m venv env
@@ -155,9 +155,7 @@ pip install -r requirements.txt
 
 Now you can run the Jupyter Lab tool with `jupyter-lab`. This will open a tab on your browser to navigate through the files in your computer and allow you run code and read the documentation.
 
-The code for input-gesture and input-speech is written using Jupyter notebooks, which have the extension .ipynb, and are located on the folder instruments/.
-
-The documentation is written in several Markdown files with extension .md. These files are on the folder docs/, which includes an index on README.md.
+The code for input-gesture and input-speech is written using Jupyter notebooks, which have the extension .ipynb, and are located on the folder `instruments/`. The documentation is written in several Markdown files with extension .md. These files are on the folder [`docs/`](../docs/), which includes an index on README.md.
 
 If you double click on a Markdown file, it will open an Editor window with the Markdown code. To view the rendered text you can right click and select "Open with Markdown Preview".
 
