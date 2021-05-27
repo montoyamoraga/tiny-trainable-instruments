@@ -14,13 +14,20 @@ This thesis project features contributions by UROP undergrad researchers Peter T
 
 This repository contains the following folders and files:
 
-* [assets/](assets/): 
-* [databases](databases/)
-* [notebooks/](notebooks): placeholder
-
-
-
-The Arduino software library built for this thesis has its own standalone repository [https://github.com/montoyamoraga/TinyTrainable](https://github.com/montoyamoraga/TinyTrainable).
+* [assets/](assets/): graphic assets.
+* [databases/](databases/): databases for gesture and speech.
+* [docs/](docs/): Markdown files, image files, and PDF files for documentation, including workshop materials.
+* [notebooks/](notebooks): Python Jupyter notebooks for processing databases and training models.
+* [scripts/](scripts/): shell scripts. 
+* [thesis/](thesis/): Markdown files, image files, PDF files for thesis document.
+* [TinyTrainable/](TinyTrainable/)): the Arduino software library built for this thesis. IT is included here as a submodule, and the most up-to-date version is on its own standalone repository at [https://github.com/montoyamoraga/TinyTrainable](https://github.com/montoyamoraga/TinyTrainable).
+* [.gitignore](.gitignore): Git file for ignoring.
+* [.gitmodules](.gitmodules): Git file for submodules.
+* [.python-version](.python-version): file for Python module pyenv.
+* [LICENSE](LICENSE): text file with the license. 
+* [README.md](README.md): README file written in Markdown.
+* [README.pdf](README.pdf): README exported to PDF.
+* [requirements.txt](requirements.txt): file to install all necessary Python modules.
 
 ## License
 
