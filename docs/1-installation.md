@@ -22,7 +22,9 @@ Tools > Board: "<board_name>" > Boards Manager...
 
 ![Arduino Boards Manager](../docs/images/1-arduino-boards-manager.png "Arduino Boards Manager")
 
-Now we will install the corresponding core for our board manager. This might take a while to install. Look for this and install it:
+<!-- Guillermo: this image may induce to confusion since it already says Board: "Arduino Nano 33 BLE", and we are supposedly installing it -->
+
+Now we will install the corresponding core for our board manager, this might take a while. Go to the search bar and type the following, then hit install. Please note that as of May 2021, we are using version 2.0.0.
 
 ```
 Arduino Mbed OS Nano Boards
@@ -30,15 +32,13 @@ Arduino Mbed OS Nano Boards
 
 ![Arduino Mbed OS Nano](../docs/images/1-arduino-mbed-os-nano.png "Arduino Mbed OS Nano")
 
-As of May 2021, we are using version 2.0.0.
-
-After this installation is complete, now you can select the Arduino with this option:
+After the installation is complete, select the board we are going to work with (Arduino Nano 33 BLE) selecting the following options form the `Tools` menu:
 
 ```
-Tools > Board: "<board_name>" > Boards Manager... > Arduino Mbed OS Nano Boards > Arduino Nano 33 BLE
+Tools > Board: "<board_name>" > Arduino Mbed OS Nano Boards > Arduino Nano 33 BLE
 ```
 
-This option is valid for both Arduino Nano 33 BLE, and for the board we are using, the Arduino Nano 33 BLE Sense.
+Not that this option is valid for both Arduino Nano 33 BLE, and for the board we are using, the Arduino Nano 33 BLE Sense.
 
 ## Arduino libraries
 
@@ -50,7 +50,9 @@ Tools > Manage Libraries... >
 
 ![Arduino Manage Libraries](../docs/images/1-arduino-manage-libraries.png "Arduino Manage Libraries")
 
-Next, search for `TinyTrainable` library for this project.This installation will give you the option to also install its dependencies, select `Install all` to additionally download these libraries:
+Go to the search bar of the Libraries Manager and type `TinyTrainable` for this project. This installation will give you the option to also install its dependencies, select `Install all` to additionally download these libraries:
+
+<!-- Guillermo: What version to install? I'd also add a picture of the library entry on the library manager.-->
 
 * Libraries for using the embedded sensors of our microcontroller:
     * `Arduino_APDS9960`: color, proximity
@@ -66,15 +68,13 @@ Next, search for `TinyTrainable` library for this project.This installation will
 
 ## Test Arduino installation
 
-To test if all dependencies were installed successfully, we will run our first code example. Please note that we will follow the same steps for all the other examples :)
+To test if all dependencies were installed successfully, we will run our first code example. Please note that we will follow the same steps for all the other examples :) First connect your Arduino Nano 33 BLE Sense to your computer with a USB micro cable, and navigate to:
 
-First connect your Arduino Nano 33 BLE Sense to your computer with a USB micro cable, and navigate to  `File > Examples > TinyTrainable > check_serial`.
+`File > Examples > TinyTrainable > check_serial`.
 
-We will use two buttons on the Arduino IDE with our code: Compile and Upload.
+<!-- In my case I didn't find any example called check_serial, but one called inst0_serial -->
 
-We recommend first clicking on Compile, which will translate our source code to machine code that the Arduino microcontroller understands, and save that result in our computer.
-
-Then, we can click the button Upload, which will send this machine code to the Arduino microcontroller.
+We will use two buttons on the Arduino IDE with our code: `Compile` and `Upload`. It is recommended to first click on `Compile`, which will translate our source code to machine code that the Arduino microcontroller understands, and save that result in our computer. Then, we can click the button `Upload`, which will send this machine code to the Arduino microcontroller.
 
 Now we will open our Serial Monitor, to read the messages that the Arduino will send us, and also see its LEDs which will cyle through different colors.
 
@@ -89,7 +89,9 @@ If you still have questions about setting up the microcontroller, the full start
 
 For input-color, you only need Arduino libraries. For input-gesture and input-speech, we need to create databases and train algothitms on a computer. For that, you can choose between using the cloud service Google Colab, or you can also use your own machine.
 
-In your machine, the software we will need inlcudes Python, TensorFlow and Jupyter.
+<!-- May be worth to explain what input-color, input-gesture and input-speech are, how the examples are organized, etc. -->
+
+In the case of working on your machine, the software needed inlcudes: Python, TensorFlow and Jupyter.
 
 Your computer might have Python already installed, and it might be one that is not compatible with the TensorFlow version we are using.
 
@@ -101,7 +103,7 @@ These are the versions we will be using, as of May 2021:
 
 In order to be able to manage different versions of Python, we suggest installing the tool pyenv https://github.com/pyenv/pyenv.
 
-After installing pyenv, on the terminal go to this repository
+After installing pyenv, open the the terminal and go to this repository. If you dont know how to download a repository to your machine, follow this [tutorial](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) about cloning repositories from github.
 
 ```bash
 cd tiny-trainable-instruments/
@@ -113,15 +115,15 @@ Check that pyenv is able to read the .python-version file
 pyenv versions
 ```
 
-You should see a list, with the version we are using and an asterisk, to highlight that this is the Python version we will use. If there is no asterisk and it says that the required version of python is not installed, use the command
+You should see a list, with the version we are using and an asterisk, to highlight that this is the Python version we will use. If there is no asterisk and it says that the required version of python is not installed, use the command: <!-- Guillermo: Add a picture here because the text description is not clear enough. -->
 
 ```bash
 pyenv install <python version number>
 ```
 
-If you are using an old version of pyenv, there's a chance that the install won't work; copy the entire command pyenv gives you (including the &&'s) and enter it into the terminal. Then once pyenv is updated, try the above command again.
+If you are using an old version of pyenv, there's a chance that the install won't work; copy the entire command pyenv gives you (including the &&'s) and enter it into the terminal. Then once pyenv is updated, try the above command again. <!-- Guillermo: Add a picture here because the text description is not clear enough. -->
 
-Now that you have the correct version of Python, create a virtual environment (which we will name env) using the Python package venv. Most dependency problems can be solved by using a virtualenv; we can’t support issues not using a virtualenv due to the huge variety of system configurations.
+Now that you have the correct version of Python, create a virtual environment (which we will name env) using the Python package venv. Most dependency problems can be solved by using a virtualenv; we can’t support issues not using a virtualenv due to the huge variety of system configurations. On your terminal type:
 
 ```bash
 python -m venv env
@@ -153,13 +155,9 @@ pip install -r requirements.txt
 
 Now you can run the Jupyter Lab tool with `jupyter-lab`. This will open a tab on your browser to navigate through the files in your computer and allow you run code and read the documentation.
 
-The code for input-gesture and input-speech is written using Jupyter notebooks, which have the extension .ipynb, and are located on the folder instruments/.
+The code for input-gesture and input-speech is written using Jupyter notebooks, which have the extension .ipynb, and are located on the folder `instruments/`. The documentation is written in several Markdown files with extension .md. These files are on the folder [`docs/`](../docs/), which includes an index on README.md.
 
-The documentation is written in several Markdown files with extension .md. These files are on the folder docs/, which includes an index on README.md.
-
-If you double click on a Markdown file, it will open an Editor window with the Markdown code. To view the rendered text you can right click and select "Open with Markdown Preview".
-
-If you have internet connection, it might be more convenient to access the online documentation on the online repository.
+If you double click on a Markdown file, it will open an Editor window with the Markdown code. To view the rendered text you can right click and select "Open with Markdown Preview". If you have internet connection, it might be more convenient to access the online documentation on the online repository.
 
 To close the Jupyter notebook server, press `ctrl+c` in the terminal (even on OSX; it's not `cmd`) and confirm with `y`.
 
