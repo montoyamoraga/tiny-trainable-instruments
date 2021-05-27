@@ -32,13 +32,13 @@ Arduino Mbed OS Nano Boards
 
 ![Arduino Mbed OS Nano](../docs/images/1-arduino-mbed-os-nano.png "Arduino Mbed OS Nano")
 
-After the installation is complete, select the Arduino with this option:
+After the installation is complete, select the board we are going to work with (Arduino Nano 33 BLE) selecting the following options form the `Tools` menu:
 
 ```
 Tools > Board: "<board_name>" > Arduino Mbed OS Nano Boards > Arduino Nano 33 BLE
 ```
 
-This option is valid for both Arduino Nano 33 BLE, and for the board we are using, the Arduino Nano 33 BLE Sense.
+Not that this option is valid for both Arduino Nano 33 BLE, and for the board we are using, the Arduino Nano 33 BLE Sense.
 
 ## Arduino libraries
 
