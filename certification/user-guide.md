@@ -17,9 +17,23 @@ Participants of the study will will get these 6 minimum materials for building y
 
 During the workshop, we will place the Arduino microcontroller on the solderless breadboard, to make all the connections in a safe and easy way.
 
-![User guide materials all](../certification/images/user-guide-materials-all.jpg "User guide materials all")
+![User guide breadboard](../certification/images/user-guide-breadboard.jpg "User guide breadboard")
 
+We will use the USB cable to both power our circuits and to be able to upload code from our computers.
 
+![User guide usb cable](../certification/images/user-guide-usb-cable.jpg "User guide usb cable")
+
+When we connect the Arduino microcontroller to the USB port on our computers, its LEDs will light up.
+
+![User guide usb on](../certification/images/user-guide-usb-on.jpg "User guide usb on")
+
+During the workshop we will assemble 2 circuits: the first one involves the piezo buzzer, and it involves 4 jumper wires.
+
+![User guide output buzzer](../certification/images/user-guide-output-buzzer.jpg "User guide output buzzer")
+
+The other circuit is for the servo motor and it involves 8 jumper wires.
+
+![User guide output servo](../certification/images/user-guide-output-servo.jpg "User guide output servo")
 
 ## Installation
 
