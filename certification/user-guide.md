@@ -19,11 +19,7 @@ During the workshop, we will place the Arduino microcontroller on the solderless
 
 ![User guide breadboard](../certification/images/user-guide-breadboard.jpg "User guide breadboard")
 
-We will use the USB cable to both power our circuits and to be able to upload code from our computers.
-
-![User guide usb cable](../certification/images/user-guide-usb-cable.jpg "User guide usb cable")
-
-When we connect the Arduino microcontroller to the USB port on our computers, its LEDs will light up.
+We will use the USB cable to both power our circuits and to be able to upload code from our computers. When the Arduino microcontroller is powered on, its LEDs light up.
 
 ![User guide usb on](../certification/images/user-guide-usb-on.jpg "User guide usb on")
 
