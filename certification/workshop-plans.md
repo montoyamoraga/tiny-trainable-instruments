@@ -1,6 +1,20 @@
 # Tiny Trainable Instruments - Workshop plans
 
-We will send you one kit with materials to build our new multimedia instruments in the mail, with instructions on how to set it up with your computer. Then, we will run a workshop with 2 sessions of 2 hours each, dedicated to building, programming, and playing with these new instruments. During these workshops, you will have the chance to make multimedia art with others, and ask questions about the instruments.
+## Acquiring the materials
+
+The participants of the study in USA are sent via USPS the complete kit with all the materials, and they are given the option of doing contactless pickup from myself outdoors in the vicinity of MIT campus, near which I live.
+
+The participants of the study in Chile are able to do contactless pickup from my mother's residence in Santiago, Chile. All the materials  were shipped to Chile directly from Arduino and Adafruit via Fedex and UPS.
+
+## Workshop preparation
+
+Before the workshop wou will install all the free necessary software on your computer, and you will be able to contact me over email to help troubleshoot the installation. All software installed has instructions for easy uninstalling if you so desire after the workshop.
+
+## During the workshop
+
+The workshop is remote, and conducted via Zoom. It consists of 2 sessions of 2 hours each, dedicated to building, programming, and playing with these new instruments. During these workshops, you will have the chance to make multimedia art with others, and ask questions about the instruments.
+
+## After the workshop
 
 After the workshop, you will be sent a short survey asking questions about your experiences using the instruments, and the workshop itself. You will then be able to keep all the materials and your instrument, so you can explore it more on your own.
 

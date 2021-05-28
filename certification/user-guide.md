@@ -33,7 +33,20 @@ The other circuit is for the servo motor and it involves 8 jumper wires.
 
 ## Installation
 
-For this study the participants will install free open source software on their computer.
+For this study the participants will install free open source software on their computer from Arduino, and use the Google Chrome web browser, and the Google Colab cloud service for training machine learning algorithms.
 
+### Step 1
 
-* Arduino IDE
+Install on your computer the free open source official Arduino editor from their website [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software), available for Linux, Mac, and Windows computers.
+
+### Step 2
+
+Install the support for the microcontroller we are using, the Arduino Nano 33 BLE Sense, following the official Arduino quickstart guide, available at [https://docs.arduino.cc/software/ide-v1/installing-mbed-os-nano-boards](https://docs.arduino.cc/software/ide-v1/installing-mbed-os-nano-boards) 
+
+### Step 3
+
+For this study, you need a free Google account, to be able to run machine learning algorithms on the cloud using the free service Google Colaboratory, also known as Google Colab. More information is available at [https://research.google.com/colaboratory/faq.html](https://research.google.com/colaboratory/faq.html)
+
+### Step 4 (optional)
+
+Install the Google Chrome web browser on your computer, available at [https://www.google.com/chrome/](https://www.google.com/chrome/).

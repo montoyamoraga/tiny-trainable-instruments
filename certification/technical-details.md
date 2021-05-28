@@ -1,7 +1,29 @@
 # Tiny Trainable Instruments - Technical details
 
-Each instrument is comprised out of off-the-shelf components, with an Arduino microcontroller chip being placed on a solderless breadboard, and connected with Dupont jumper wires to different low-voltage components for multimedia output, in particular a piezo buzzer for sound, and a micro servo motor for movement.
+For building the instruments, participants receive a materials kit consisting of off-the-shelf components, each of them with their original packaging from the manufacturer.
 
-These are typical off-the-shelf and commercially available materials used on introduction to physical computing classes for adults and children.
+The instruments are built by placing the Arduino microcontroller on the solderless breadboard, and by making connections with jumper wires to different low-voltage components for multimedia output, in particular a piezo buzzer for sound, and a micro servo motor for movement.
 
-There is no unconventional wiring, everything will be powered with a micro USB cable which provdes a low voltage and surge protected power supply from your computer.
+![User guide output buzzer](../certification/images/user-guide-output-buzzer.jpg "User guide output buzzer")
+
+![User guide output servo](../certification/images/user-guide-output-servo.jpg "User guide output servo")
+
+All connections we are making and all the parts are being used as instructed and recommended by their manufacturers. All the products are off-the-shelf and commercially available, and we are not introducing any modifications to them.
+
+## Materials origin
+
+The Arduino microcontrollers are made in Italy and shipped from their USA warehouse, and purchased directly from their USA online store available at [https://store.arduino.cc/usa/](https://store.arduino.cc/usa/). All the other materials are acquired from Adafruit, a popular online store for beginners, students, and artists, shipped from their New York City USA warehouse, available at [https://www.adafruit.com/](https://www.adafruit.com/).
+
+## Power supply
+
+The participants power their instruments with an USB cable connected to their computers, which operates at 5 Volts. The Arduino microcontroller we are using converts this power source to 3.3 Volts for its internal operation, and provides that voltage to the rest of the instrument.
+
+WE use the LEDs on the Arduino microcontroller as a visual cue that we use to make sure that the instrument is powered and working.
+
+![User guide usb on](../certification/images/user-guide-usb-on.jpg "User guide usb on")
+
+With that are using our computers as power supply, and a USB cable to provide power to the instrument through an USB port, so that there are several stages for protection, including the computer's power supply, the limiting current of the USB port, and the Arduino microcontroller itself.
+
+All the connections we are doing are made with safe jumper wires, on a stable breadboard, and following popular procedures performed by students and beginners in similar educational contexts, so electrocution and fire are not risks.
+
+The breadboard and all the components we are using are tolerant to wrong connections and surge protected, and will not work or shut down when a wrong connection is made, with no harm for the user or their computer.
