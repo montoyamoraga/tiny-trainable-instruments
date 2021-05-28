@@ -1,6 +1,8 @@
 # Tiny Trainable Instruments - User Guide
 
-Note: ​This user guide is incomplete, but this is the form it will take when it is mailed out to users. It will be updated further when the software is more refined.
+## You will get these materials on the mail
+
+
 
 Your materials:
 
