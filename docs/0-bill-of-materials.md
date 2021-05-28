@@ -2,24 +2,24 @@
 
 ## Notes about the microcontroller
 
-This project is intended to be cheap and accesible, and it is based on the microcontroller Arduino Nano 33 BLE Sense. Please don't confuse it with the similarly named Arduino Nano 33 BLE :)
+This project is based on the microcontroller Arduino Nano 33 BLE Sense. Please don't confuse it with the similarly named Arduino Nano 33 BLE :)
 
-The board is sold with and without headers and we recommend acquiring the one ***with headers***, so you can immediately start using it on a breadboard without needing to solder the headers on it.
+The microcontroller is sold with and without headers and we recommend acquiring the one ***with headers***, so you can immediately start using it on a breadboard without needing to solder the headers on it.
 
 ## Minimum materials
 
-This is the list of minimum required materials for all Tiny Trainable Instruments
+This is the list of minimum required materials for Tiny Trainable Instruments
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|
-| [Arduino Nano 33 BLE Sense with headers](https://store.arduino.cc/usa/nano-33-ble-sense-with-headers) | 1 | 33.40 | https://www.arduino.cc/ | Microcontroller |
+| [Arduino Nano 33 BLE Sense with headers](https://store.arduino.cc/usa/nano-33-ble-sense-with-headers) | 1 | 33.40 | Arduino | Microcontroller |
 | [Breadboard](https://www.adafruit.com/product/239) | 1 | 5.95 | Adafruit | Prototyping |
 | [Jumper wires](https://www.adafruit.com/product/758) | 1 | 3.95 | Adafruit | Connections |
 | [Micro USB cable](https://www.adafruit.com/product/592) | 1 | 2.95 | Adafruit |Power |
 
 ## Sound and movement outputs
 
-These are the recommended materials for starters, and are the ones covered in the proposed beginner workshop.
+These are the recommended materials for starters, and are taught in the workshop.
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|
@@ -28,7 +28,7 @@ These are the recommended materials for starters, and are the ones covered in th
 
 ## Additional outputs
 
-These additional outputs include more expensive or more complex materiales, and they are recommended for more advanced users. They are not covered on the proposed beginner workshop, but are supported by the Tiny Trainable Instruments project and software library.
+These additional outputs include more expensive or more complex materiales, and they are recommended for more advanced users. They are not covered on the beginner workshop, but are supported by the Tiny Trainable Instruments project and software library.
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|

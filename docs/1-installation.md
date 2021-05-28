@@ -4,7 +4,10 @@ Hi! Welcome to our installation guide, we're super glad to have you here :)
 
 This guide includes information as of May 2021, and we will explicitly include the software versions we are using.
 
-For additional documentation, please visit the official Arduino docs website at https://docs.arduino.cc, and in particular the documentation of the Arduino Nano 33 BLE Sense microcontroller at https://docs.arduino.cc/hardware/nano-33-ble-sense.
+For additional documentation, please visit the official Arduino docs website at [docs.arduino.cc](https://docs.arduino.cc]), and in particular the documentation of the Arduino Nano 33 BLE Sense microcontroller at [docs.arduino.cc/hardware/nano-33-ble-sense](https://docs.arduino.cc/hardware/nano-33-ble-sense).
+
+## Overview
+
 
 ## Arduino IDE
 
@@ -20,7 +23,7 @@ Now we need to install the core and necessary libraries for the Arduino Nano 33 
 Tools > Board: "<board_name>" > Boards Manager...
 ```
 
-![Arduino Boards Manager](../docs/images/1-arduino-boards-manager.png "Arduino Boards Manager")
+![Arduino Boards Manager](../docs/images/1-arduino-boards-manager.jpg "Arduino Boards Manager")
 
 <!-- Guillermo: this image may induce to confusion since it already says Board: "Arduino Nano 33 BLE", and we are supposedly installing it -->
 
@@ -30,7 +33,7 @@ Now we will install the corresponding core for our board manager, this might tak
 Arduino Mbed OS Nano Boards
 ```
 
-![Arduino Mbed OS Nano](../docs/images/1-arduino-mbed-os-nano.png "Arduino Mbed OS Nano")
+![Arduino Mbed OS Nano](../docs/images/1-arduino-mbed-os-nano.jpg "Arduino Mbed OS Nano")
 
 After the installation is complete, select the board we are going to work with (Arduino Nano 33 BLE) selecting the following options form the `Tools` menu:
 
@@ -48,7 +51,7 @@ Next we will install all the libraries needed for this project. On the Arduino I
 Tools > Manage Libraries... >
 ```
 
-![Arduino Manage Libraries](../docs/images/1-arduino-manage-libraries.png "Arduino Manage Libraries")
+![Arduino Manage Libraries](../docs/images/1-arduino-manage-libraries.jpg "Arduino Manage Libraries")
 
 Go to the search bar of the Libraries Manager and type `TinyTrainable` for this project. This installation will give you the option to also install its dependencies, select `Install all` to additionally download these libraries:
 
@@ -139,7 +142,7 @@ Now your terminal should have every new line starting with (env). Your command p
 
 ../docs/images/1-arduino-boards-manager
 
-![Virtual environment command prompt](../docs/images/1-venv-activation.png "Activating virtual environment")
+![Virtual environment command prompt](../docs/images/1-venv-activation.jpg "Activating virtual environment")
 
 The pip of your Python virtual environment might need updating; you can update to the latest version with the command
 
