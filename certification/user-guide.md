@@ -1,19 +1,16 @@
 # Tiny Trainable Instruments - User Guide
 
-## You will get these materials on the mail
+## Materials
 
-Your materials:
+Participants of the workshop and study will will get these 6 minimum materials for building your Tiny Trainable Instruments:
 
-* 1x Arduino Nano 33 BLE Sense microcontroller with headers
-* 1x Solderless breadboard
-* 1x Micro USB Cable
-* 1x Piezo buzzer
-* 1x Micro servo motor
+1. 1x Arduino Nano 33 BLE Sense microcontroller with headers
+2. 1x Micro USB Cable
+3. 1x Solderless breadboard
+4. 1x Pack of jumper wires
+5. 1x Micro servo motor
+6. 1x Piezo buzzer
 
-![User guide materials minimum](../certification/images/user-guide-materials-minimum.jpg "User guide materials minimum")
+![User guide materials all](../certification/images/user-guide-materials-all.jpg "User guide materials all")
 
-![User guide materials outputs](../certification/images/user-guide-materials-outputs.jpg "User guide materials outputs")
-
-Assembly:
-
-Place the Arduino microcontroller on the breadboard
+## Installation
