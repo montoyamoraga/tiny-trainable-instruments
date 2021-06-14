@@ -1,5 +1,10 @@
 # tiny-trainable-instruments
 
+## Workshop - taller
+
+* Sign up form for free workshops in English for people based in USA: https://forms.gle/uFnaezWg9a17vjT66
+* Formulario de inscripción para el taller en español para gente en Chile: https://forms.gle/Wcx25fCXWWUXr2x67
+
 ## About
 
 Tiny Trainable Instruments is a collection of media arts instruments using tiny machine learning, and based on microcontrollers.
