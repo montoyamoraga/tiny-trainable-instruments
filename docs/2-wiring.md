@@ -16,24 +16,49 @@ A full breadboard guide is available at [https://learn.adafruit.com/breadboards-
 
 The Nano BLE 33 Sense has 30 pins in total, 15 on each side. The official pinout is available at [https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf](https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf).
 
-## Getting started
-
 We recommend placing the microcontroller at the top of the breadboard (C1 to G15) with the USB Micro B port facing up, like this:
 
 ![Arduino placement](../docs/images/2-arduino-placement.jpg "Arduino on breadboard")
 
 Note that the microcontroller should be flush with the breadboard; none of the headers should be visible!
 
-![Arduino flush with breadboard](../docs/images/2-arduino-sideview.jpg "Arduino sideview")
+![Arduino sideview](../docs/images/2-arduino-sideview.jpg "Arduino sideview")
 
-To check your Arduino installation is working correctly, let's run our first example ```check_serial```.
+## Your first example
+
+Connect your Arduino microcontroller to your computer with the USB cable and open the Arduino IDE software.
+
+On the board, select the ```Arduino Nano 33 BLE```.
+
+![Select board](../docs/images/2-select-board.jpg "Select board")
+
+Then, make sure yor port points to your Arduino, the number is irrelevant, and the actual text changes between computers.
+
+![Select port](../docs/images/2-select-port.jpg "Select port")
+
+Now let's open the example ```check_serial```, included with our TinyTrainable library.
+
+![Open example](../docs/images/2-open-example.jpg "Open example")
+
+Click on the arrow to the right for uploading the code, which will be shown on the bottom of the Arduino IDE, with the message ```Compiling sketch```.
+
+![Compiling sketch](../docs/images/2-compiling-sketch.jpg "Compiling sketch")
+
+The compilation might take several minutes, and after it is done, the message will change to ```Uploading...```
+
+![Uploading example](../docs/images/2-uploading-example.jpg "Uploading example")
+
+This process is shorter, and after it you will see the message ```Done uploading```.
+
+![Done uploading](../docs/images/2-done-uploading.jpg "Done uploading")
+
+On the upper right corner of the window, click on the magnifying glass icon for opening the ```Serial monitor```, which will looks like this.
 
 ![check_serial output](../docs/images/2-check-serial-output.jpg "check_serial output")
 
+Make sure the settings on the bottom match the ones on your computer, and that's it :)
 
-![check_serial output](../docs/images/2-check-serial-output.jpg "check_serial output")
-
-This is all you need for the first example, hello_tiny_world! In theory, we didn't even need the breadboard, but it's good practice to put the Arduino on one so we're ready to add more connections. Now, connect it to your computer with the USB A to USB Micro B cable, load the example ```check_serial```, and you should see the Arduino cycling its RGB LEDs!
+You uploaded your first example to your Arduino, which is now busy sending the messages you seen on the screen, and also showing all the different lights it has :)
 
 ## Outputs
 
