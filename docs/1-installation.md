@@ -46,6 +46,8 @@ Next we will install all the libraries needed for this project. On the Arduino I
 
 Go to the search bar of the Libraries Manager and type `TinyTrainable`. This installation will give you the option to also install its dependencies, select `Install all` to also download all the necessary libraries.
 
+NOTE: TinyTrainable v0.2.0 is not able to install these other libraries, so please install them one by one, or wait for the upcoming fix in later versions of TinyTrainable, sorry about that!
+
 * Libraries for using the embedded sensors of our microcontroller:
   * `Arduino_APDS9960`: color, proximity
   * `Arduino_LSM9DS1` acceleration, magnetic field, gyroscope orientation
