@@ -26,13 +26,20 @@ Note that the microcontroller should be flush with the breadboard; none of the h
 
 ![Arduino flush with breadboard](../docs/images/2-arduino-sideview.jpg "Arduino sideview")
 
-This is all you need for the first example, hello_tiny_world! In theory, we didn't even need the breadboard, but it's good practice to put the Arduino on one so we're ready to add more connections. Now, connect it to your computer with the USB A to USB Micro B cable, load the example, and you should see the Arduino cycling its RGB LEDs!
+To check your Arduino installation is working correctly, let's run our first example ```check_serial```.
+
+![check_serial output](../docs/images/2-check-serial-output.jpg "check_serial output")
+
+
+![check_serial output](../docs/images/2-check-serial-output.jpg "check_serial output")
+
+This is all you need for the first example, hello_tiny_world! In theory, we didn't even need the breadboard, but it's good practice to put the Arduino on one so we're ready to add more connections. Now, connect it to your computer with the USB A to USB Micro B cable, load the example ```check_serial```, and you should see the Arduino cycling its RGB LEDs!
 
 ## Outputs
 
 ### Buzzer
 
-For the next example, inst0_buzzer, we'll need to install a piezo buzzer. First, notice that the 14th pin on the left side and the 12th pin on the right side are labelled with white paint; this marks the grounded leads, which are also identified on the pinout. Take a wire (preferably green or black, by convention for ground) and connect it from I12 to anywhere on the top righthand negative rail (the upper 25 pins), like so:
+For the next example, check_buzzer, we'll need to install a piezo buzzer. First, notice that the 14th pin on the left side and the 12th pin on the right side are labelled with white paint; this marks ground, also identified on the pinout. Take a wire (preferably green by convention for ground) and connect it from I12 to anywhere on the top righthand negative rail (the upper 25 pins), like this:
 
 ![Connecting the ground wire](../docs/images/2-ground-wire.jpg "Ground wire")
 
@@ -40,7 +47,7 @@ Next, connect one of the legs of the piezo buzzer to the node labelled D8 on the
 
 ![Installing the piezo buzzer](../docs/images/2-piezo-buzzer-placement.jpg "Piezo buzzer on breadboard")
 
-Now you're good to go! Upload inst0_buzzer to the microcontroller, open the serial monitor (top right button in the Arduino IDE), and follow the instructions from there!
+Now you're good to go! Upload ```check_buzzer``` to the microcontroller, open the serial monitor (top right button in the Arduino IDE), and follow the instructions from there!
 
 ### LED
 
