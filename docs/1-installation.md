@@ -60,18 +60,6 @@ NOTE: TinyTrainable v0.2.0 is not able to install these other libraries, so plea
   * `Adafruit Thermal Printer Library`: for outputs with thermal printer.
   * `Servo`: for output with servo motors.
 
-## Test Arduino installation
-
-To test if all dependencies were installed successfully, we will run our first code example. Please note that we will follow the same steps for all the other examples :) First connect your Arduino Nano 33 BLE Sense to your computer with a USB micro cable, and navigate to:
-
-`File > Examples > TinyTrainable > check_serial`.
-
-We will use two buttons on the Arduino IDE with our code: `Compile` and `Upload`. It is recommended to first click on `Compile`, which will translate our source code to machine code that the Arduino microcontroller understands, and save that result in our computer. Then, we can click the button `Upload`, which will send this machine code to the Arduino microcontroller.
-
-Now we will open our Serial Monitor, to read the messages that the Arduino will send us, and also see its LEDs which will cyle through different colors.
-
-If you still have questions about setting up the microcontroller, the full startup guide is available [here](https://www.arduino.cc/en/Guide/NANO33BLESense).
-
 ## Python for machine learning
 
 For input-color, you only need Arduino libraries.
