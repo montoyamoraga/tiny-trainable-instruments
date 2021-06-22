@@ -46,14 +46,18 @@ Next we will install all the libraries needed for this project. On the Arduino I
 
 Go to the search bar of the Libraries Manager and type `TinyTrainable`. This installation will give you the option to also install its dependencies, select `Install all` to also download all the necessary libraries.
 
-NOTE: TinyTrainable v0.2.0 is not able to install these other libraries, so please install them one by one, or wait for the upcoming fix in later versions of TinyTrainable, sorry about that!
+![Install TinyTrainable](../docs/images/1-install-tinytrainable.jpg "Install TinyTrainable")
+
+As of June 2021, the latest version 0.2.2 of the TinyTrainable library has these dependencies:
 
 * Libraries for using the embedded sensors of our microcontroller:
   * `Arduino_APDS9960`: color, proximity
   * `Arduino_LSM9DS1` acceleration, magnetic field, gyroscope orientation
+
 * Libraries for machine learning:
   * `Arduino_KNN`: k-nearest neighbor algorithm.
   * `Arduino_TensorFlowLite`: microcontroller version of the TensorFlow machine learning library. Please download the latest non-precompiled version.
+
 * Libraries for multimedia output:
   * `Adafruit GFX Library`: for output with screen.
   * `Adafruit SSD1306`: for output with screen.
