@@ -1,66 +1,66 @@
-# Installation
+# Instalación
 
-Hi! Welcome to our installation guide, we're super glad to have you here :)
+Hola! Esta es nuestra guía de instalación, bienvenides :)
 
-This guide includes information as of June 2021, and we will explicitly include the software versions we are using.
+Esta guía incluye información actualizada en junio 2021, y estaremos incluyendo explícitamente las versiones de los software que estamos usando.
 
-We advise to install the same versions we are using, and if there is any issue with the library or related software, please us know via email or an issue the repository.
+Recomendamos instalar las mismas versiones que estamos usando, y si hay un problema con la biblioteca o software relacionado, por favor haznos saber por correo electrónico o el sistema de reportes del repositorio.
 
-For additional documentation, please visit the official Arduino docs website at [docs.arduino.cc](https://docs.arduino.cc]), and in particular the documentation of the Arduino Nano 33 BLE Sense microcontroller at [docs.arduino.cc/hardware/nano-33-ble-sense](https://docs.arduino.cc/hardware/nano-33-ble-sense).
+Para documentación adicional, por favor visita el sitio web oficial de documentación de Arduino en [docs.arduino.cc](https://docs.arduino.cc]),y en particular la documentación del microcontrolador Arduino Nano 33 BLE Sense en [docs.arduino.cc/hardware/nano-33-ble-sense](https://docs.arduino.cc/hardware/nano-33-ble-sense).
 
 ## Arduino IDE
 
-Download and install the Arduino IDE, available at [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software). Select the stable release corresponding to your computer's operating system.
+Descarga e instala el software Arduino IDE, disponible en [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software). Selecciona el lanzamiento estable (stable release) correspondiente al sistema operativo de tu computador.
 
-As of June 2021, we are using Arduino IDE 1.8.15.
+En junio 2021, estamos usando Arduino IDE 1.8.15.
 
 ## Arduino Mbed OS Nano boards
 
-After installing the Arduino IDE, we need to install the core and necessary libraries for the Arduino Nano 33 BLE Sense microcontroller. Open the Arduino IDE and navigate on the menu to the ```Boards Manager```:
+Después de instalar el software Arduino IDE, necesitamos instalar bibliotecas para nuestro microcontrolador Arduino Nano 33 BLE Sense. Abre la Arduino IDE y navega en el menú al ```Boards Manager```:
 
 ```Tools > Board: "<board_name>" > Boards Manager...```
 
 ![Arduino Boards Manager](../docs/images/1-arduino-boards-manager.jpg "Arduino Boards Manager")
 
-Use the search bar to find the option ```Arduino Mbed OS Nano Boards``` and install it, this might take a while.
+Usa la barra de búsqueda para encontrar la opción ```Arduino Mbed OS Nano Boards``` e instálala, esto puede tomar un tiempo largo.
 
-As of June 2021, we are using version 2.2.0.
+En junio 2021, estamos usando la versión 2.2.0.
 
 ![Arduino Mbed OS Nano](../docs/images/1-arduino-mbed-os-nano.jpg "Arduino Mbed OS Nano")
 
-After the installation is complete, we can select the board we are going to work with (Arduino Nano 33 BLE), from the `Tools` menu:
+Después de que la instalación está lista, podemos seleccionar el microcontrolador que vamos a utilizar (Arduino Nano 33 BLE), desde el menú `Tools`:
 
 ```Tools > Board: "<board_name>" > Arduino Mbed OS Nano Boards > Arduino Nano 33 BLE```
 
-Please note that this option is valid for both Arduino Nano 33 BLE, and for the board we are using, the Arduino Nano 33 BLE Sense.
+Por favor nota que esta opción es válida para el microcontrolador Arduino Nano 33 BLE, y para el que estamos usando, Arduino Nano 33 BLE Sense.
 
-## Arduino libraries
+## Bibliotecas Arduino
 
-Next we will install all the libraries needed for this project. On the Arduino IDE, navigate on the menu to
+A continuación instalaremos todas las bibliotecas necesarias para este proyecto. En la Arduino IDE, navega en el menú a 
 
 ```Tools > Manage Libraries... >```
 
 ![Arduino Manage Libraries](../docs/images/1-arduino-manage-libraries.jpg "Arduino Manage Libraries")
 
-Go to the search bar of the Libraries Manager and type `TinyTrainable`. This installation will give you the option to also install its dependencies, select `Install all` to download them.
+Usa la barra de búsqueda del Libraries Manager para encontrar `TinyTrainable`. Esta instalación te dará la opción de también instalar todas sus dependencias, selecciona `Install all` para también descargarlas.
 
 ![Install TinyTrainable](../docs/images/1-install-tinytrainable.jpg "Install TinyTrainable")
 
-As of June 2021, the latest version 0.2.2 of the TinyTrainable library has these dependencies:
+En junio 2021, la versión 0.2.2 es la más reciente de la biblioteca TinyTrainable, y tiene estas dependencias:
 
-* Libraries for using the embedded sensors of our microcontroller:
-  * `Arduino_APDS9960`: color, proximity
-  * `Arduino_LSM9DS1` acceleration, magnetic field, gyroscope orientation
+* Bibliotecas para usar los sensores del microcontrolador:
+  * `Arduino_APDS9960`: color, proximidad
+  * `Arduino_LSM9DS1` aceleración, campo magnético, orientación giroscopio
 
-* Libraries for machine learning:
-  * `Arduino_KNN`: k-nearest neighbor algorithm.
-  * `Arduino_TensorFlowLite`: microcontroller version of the TensorFlow machine learning library. Please download the latest non-precompiled version.
+* Bibliotecas para aprendizaje de máquinas:
+  * `Arduino_KNN`: algoritmo vecino de cercanía k.
+  * `Arduino_TensorFlowLite`: versión para microcontroladores de la biblioteca TensorFlow de aprendizaje de máquinas. Por favor descarga la versión no-precompilada más reciente.
 
-* Libraries for multimedia output:
-  * `Adafruit GFX Library`: for output with screen.
-  * `Adafruit SSD1306`: for output with screen.
-  * `Adafruit Thermal Printer Library`: for output with thermal printer.
-  * `Servo`: for output with servo motors.
+* Bibliotecas para salida multimedia:
+  * `Adafruit GFX Library`: para salida con pantalla.
+  * `Adafruit SSD1306`: para salida con pantalla.
+  * `Adafruit Thermal Printer Library`: para salida con impresora térmica.
+  * `Servo`: para salida con motores servo.
 
 ## Python for machine learning
 
