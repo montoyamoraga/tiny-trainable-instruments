@@ -2,7 +2,7 @@
 
 ## Notas sobre el microcontrolador
 
-Este proyecto está basado en el microcontrolador ```Arduino Nano 33 BLE Sense```. Por favor no lo confundas con el ```Arduino Nano 33 BLE``` que tiene un nombre similar :)
+Este proyecto está basado en el microcontrolador `Arduino Nano 33 BLE Sense`. Por favor no lo confundas con el `Arduino Nano 33 BLE` que tiene un nombre similar :)
 
 El microcontrolador se puede adquirir con o sin headers, y recomendamos adquirir el que los tiene (***with headers***), para que así puedas inmediatamente usarlo con tu protoboard, sin necesidad de tener que soldar los headers.
 

@@ -2,7 +2,7 @@
 
 ## Notes about the microcontroller
 
-This project is based on the microcontroller ```Arduino Nano 33 BLE Sense```. Please don't confuse it with the similarly named ```Arduino Nano 33 BLE``` :)
+This project is based on the microcontroller `Arduino Nano 33 BLE Sense`. Please don't confuse it with the similarly named `Arduino Nano 33 BLE` :)
 
 The microcontroller is sold with and without headers and we recommend acquiring the one ***with headers***, so you can immediately start using it on a breadboard without needing to solder the headers on it.
 
