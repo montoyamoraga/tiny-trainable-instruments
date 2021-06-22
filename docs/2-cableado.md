@@ -1,67 +1,65 @@
-# Wiring
+# Cableado
 
-## Conventions
+## Convenciones
 
-Wires:
+Cables:
 
-* Red = 3.3 V power from Arduino
-* Green = Ground from Arduino
+* Rojo = Poder 3.3 V desde Arduino
+* Verde = Tierra desde Arduino
 
-## Breadboard
+## Protoboard
 
-Breadboards are built so that within each of the rows, the 5 tie points in the columns labelled `a-e` are electrically connected inside the board and act as a single electrical node, and same with `f-j`.
+Las protoboards están construidas para que en cada fila, los 5 puntos en las columnas con la etiqueta `a-e` están conectados eléctricamente dentro de la placa como un solo nodo eléctrico, y lo mismo ocurre con `f-j`. 
 
-Adicionalmente, hay 2 columnas a cada lado de la protoboard, donde cada columna está interconectada entre sí. Convencionalmente, conectamos el voltaje positivo a la columna `+`, y tierra a la columna `-`.
-
-In addition, there are 2 columns to each side of the breadboard, where each column is one electrical node. Conventionally, we connect the positive voltage to the column labelled `+`, and the ground to the column labelled `-`.
+Adicionalmente, hay 2 columnas a cada lado de la protoboard; donde cada columna está interconectada entre sí. Convencionalmente, conectamos el voltaje positivo a la columna `+`, y tierra a la columna `-`.
 
 A full breadboard guide is available at [https://learn.adafruit.com/breadboards-for-beginners/breadboards](https://learn.adafruit.com/breadboards-for-beginners/breadboards).
 
-## Arduino microcontroller
+## Microcontrolador Arduino
 
-The ArduinoNano BLE 33 Sense we are using has 30 pins in total, 15 on each side. The official pinout is available at [https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf](https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf).
+El Arduino Nano 33 BLE sense que usamos tiene 30 pins en total, 15 por cada lado. La guía oficial de cada pin está disponible en [https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf](https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf).
 
-We recommend placing the microcontroller at the top of the breadboard (C1 to C15 and G1 to G15) with the USB Micro port facing up.
+Recomendamos ubicar el microcontrolador en la parte superior de la protoboard (C1 a C15 y G1 a G15), con el puerto USB micro hacia arriba.
 
 ![Arduino placement](../docs/images/2-arduino-placement.jpg "Arduino on breadboard")
 
-Note that the microcontroller should be flush with the breadboard; none of the headers should be visible.
+Nota que el microcontrolador debe estar rasante con la protoboard, ninguno de los pines headers debería ser visible.
 
 ![Arduino sideview](../docs/images/2-arduino-sideview.jpg "Arduino sideview")
 
-## Your first example
+## Tu primer ejemplo
 
-Connect your Arduino microcontroller to your computer with the USB cable and open the Arduino IDE software.
+Conecta tu microcontrolador Arduino a tu computador con el cable USB y abre el software Arduino IDE.
 
-On the board, select the ```Arduino Nano 33 BLE```.
+En la sección de seleccionar la placa (board), selecciona `Arduino Nano 33 BLE`.
 
 ![Select board](../docs/images/2-select-board.jpg "Select board")
 
-Then make sure yor port points to your Arduino, the number is irrelevant, and the actual text changes between computers.
+Luego asegúrate que tu puerto seleccionado es tu Arduino, el número es irrelevante, y el texto cambia entre computadores.
 
 ![Select port](../docs/images/2-select-port.jpg "Select port")
 
-Now let's open the example `check_serial`, included with our TinyTrainable library.
+Ahora abramos el ejemplo `check_serial`, incluido con la biblioteca TinyTrainable.
 
 ![Open example](../docs/images/2-open-example.jpg "Open example")
 
-Click on the arrow to the right for uploading the code, which will be shown on the bottom of the Arduino IDE, with the message `Compiling sketch`.
+Haz click en la flecha de la derecha para subir tu código (upload), lo que mostrará en la parte inferior de la ventana de la Arduino IDE, un mensaje de compilando bosquejo `Compiling sketch`.
 
 ![Compiling sketch](../docs/images/2-compiling-sketch.jpg "Compiling sketch")
 
-The compilation might take several minutes, and after it is done, the message will change to `Uploading...`
+La compilación puede tomar algunos minutos, y luego de terminar, el mensaje cambiará a subiendo `Uploading...`
 
 ![Uploading example](../docs/images/2-uploading-example.jpg "Uploading example")
 
-This process is shorter, and after it you will see the message `Done uploading`.
+Este proceso es más corto, y después de terminar anunciará que la subida fue realizada `Done uploading`.
 
 ![Done uploading](../docs/images/2-done-uploading.jpg "Done uploading")
 
-On the upper right corner of the window, click on the magnifying glass icon for opening the `Serial monitor`. Make sure the settings on the bottom match the ones on your computer, and that's it!
+En la esquina superior derecha de la ventana, haz click en el ícono de lupa para abrir el monitor serial `Serial monitor`. Asegúrate que la configuración de la parte inferior de la ventana sea la misma en tu computador, y eso es todo!
 
 ![check_serial output](../docs/images/2-check-serial-output.jpg "check_serial output")
 
-You uploaded your first example to your Arduino, which is now busy sending the messages you seen on the screen, and also showing all the different lights it has :)
+Acabas de subir tu primer ejemplo a tu Arduino, que ahora está ocupado enviando los mensajes que ves en la pantalla, y también mostrando todas las luces que tiene :)
 
 ## Outputs
 
