@@ -2,7 +2,7 @@
 
 ## Notes about the microcontroller
 
-This project is based on the microcontroller Arduino Nano 33 BLE Sense. Please don't confuse it with the similarly named Arduino Nano 33 BLE :)
+This project is based on the microcontroller ```Arduino Nano 33 BLE Sense```. Please don't confuse it with the similarly named ```Arduino Nano 33 BLE``` :)
 
 The microcontroller is sold with and without headers and we recommend acquiring the one ***with headers***, so you can immediately start using it on a breadboard without needing to solder the headers on it.
 
@@ -28,7 +28,7 @@ These are the recommended materials for starters, and are taught in the workshop
 
 ## Additional outputs
 
-These additional outputs include more expensive or more complex materiales, and they are recommended for more advanced users. They are not covered on the beginner workshop, but are supported by the Tiny Trainable Instruments project and software library.
+These additional outputs include more expensive or more complex materials, and they are recommended for more advanced users. They are not covered on the beginner workshop, but are supported by the Tiny Trainable Instruments project and software library.
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|
