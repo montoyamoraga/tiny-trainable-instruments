@@ -61,13 +61,15 @@ On the upper right corner of the window, click on the magnifying glass icon for 
 
 You uploaded your first example to your Arduino, which is now busy sending the messages you seen on the screen, and also showing all the different lights it has :)
 
+## Ground
+
+Notice that the 14th pin on the left side and the 12th pin on the right side are labelled with white paint; this marks ground, also identified on the pinout. Take a wire (preferably green by convention for ground) and connect it from I12 to anywhere on the top righthand negative rail (the upper 25 pins), like this:
+
+![Ground wire](../docs/images/2-ground-wire.jpg "Ground wire")
+
 ## Outputs
 
 ### Buzzer
-
-For the next example, check_buzzer, we'll need to install a piezo buzzer. First, notice that the 14th pin on the left side and the 12th pin on the right side are labelled with white paint; this marks ground, also identified on the pinout. Take a wire (preferably green by convention for ground) and connect it from I12 to anywhere on the top righthand negative rail (the upper 25 pins), like this:
-
-![Connecting the ground wire](../docs/images/2-ground-wire.jpg "Ground wire")
 
 Next, connect one of the legs of the piezo buzzer to the node labelled D8 on the pinout (which should be row 5 on the breadboard). Connect the other leg to the ground rail. Your wiring should look like this:
 
@@ -105,4 +107,12 @@ https://www.adafruit.com/product/276
 
 ### Serial
 
-With a serial cable into a computer.
+Use a micro USB cable to connect to a computer.
+
+### Servo
+
+The servo we are using has three cables:
+
+* Yellow: signal
+* Orange: power
+* Brown: ground

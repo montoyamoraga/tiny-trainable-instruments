@@ -19,35 +19,47 @@ You would need to bring a computer, with Linux, Mac or Windows operating systems
 
 This workshop is taught online over teleconferencing.
 
-## Session 0
+## First session
 
-Basic facts:
-* 2 hours
+Goals:
+
+* Address doubts about installation of Arduino software and libraries
+* Understand the check_ examples for testing wiring
+
+Code used:
+
+* check_serial: 
+* check_buzzer
+
+Hardware:
+
+* Breadboard
+* Arduino
+
+Activities:
 
 
+* 10min: introduction to workshop and instructor
+* 10min: participants introduce themselves
+* 20min: installation of Arduino IDE and libraries
+* 10min: compile and upload first example, check_serial
+* 10min: read the code example and make modifications
+* 10min: example with buzzer, compile and read check_buzzer
+* 10min: wire buzzer and play with different frequencies on check_buzzer
+* 05min: break
+* 10min: compile and read machine learning example: color_buzzer
+* 10min: explain training for color_buzzer
+* 10min: participants modify the color_buzzer example
 
-2 hours, Friday
+Extras:
 
-input: color
-output: buzzer
-
-### Time budget
-
-* 10min: Introductions of participants
-* 10min: Installation of Arduino IDE and libraries
-* 10min: Test the hardware microcontroller, hello_none
-* Open script for 
 * Capture examples of gesture and train overnight
 * Capture examples of speech and train overnight
 
-## Session 1
+## Second session
 
-### Time budget
 
-2 hours, Saturday
 
-input: gesture, speech
-output: buzzer, servo, LED
 
 ## Funding
 
