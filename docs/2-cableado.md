@@ -13,7 +13,7 @@ Las protoboards están construidas para que en cada fila, los 5 puntos en las co
 
 Adicionalmente, hay 2 columnas a cada lado de la protoboard; donde cada columna está interconectada entre sí. Convencionalmente, conectamos el voltaje positivo a la columna `+`, y tierra a la columna `-`.
 
-A full breadboard guide is available at [https://learn.adafruit.com/breadboards-for-beginners/breadboards](https://learn.adafruit.com/breadboards-for-beginners/breadboards).
+Una guía completa está disponible en [https://learn.adafruit.com/breadboards-for-beginners/breadboards](https://learn.adafruit.com/breadboards-for-beginners/breadboards).
 
 ## Microcontrolador Arduino
 
@@ -23,7 +23,7 @@ Recomendamos ubicar el microcontrolador en la parte superior de la protoboard (C
 
 ![Arduino placement](../docs/images/2-arduino-placement.jpg "Arduino on breadboard")
 
-Nota que el microcontrolador debe estar rasante con la protoboard, ninguno de los pines headers debería ser visible.
+Nota que el microcontrolador debe estar rasante con la protoboard, ninguno de los pines headers debería estar visible.
 
 ![Arduino sideview](../docs/images/2-arduino-sideview.jpg "Arduino sideview")
 
@@ -31,7 +31,7 @@ Nota que el microcontrolador debe estar rasante con la protoboard, ninguno de lo
 
 Conecta tu microcontrolador Arduino a tu computador con el cable USB y abre el software Arduino IDE.
 
-En la sección de seleccionar la placa (board), selecciona `Arduino Nano 33 BLE`.
+En la sección para elegir la placa (board), selecciona `Arduino Nano 33 BLE`.
 
 ![Select board](../docs/images/2-select-board.jpg "Select board")
 

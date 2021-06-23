@@ -16,13 +16,13 @@ En junio 2021, estamos usando Arduino IDE 1.8.15.
 
 ## Arduino Mbed OS Nano boards
 
-Después de instalar el software Arduino IDE, necesitamos instalar bibliotecas para nuestro microcontrolador Arduino Nano 33 BLE Sense. Abre la Arduino IDE y navega en el menú al ```Boards Manager```:
+Después de instalar el software Arduino IDE, necesitamos instalar bibliotecas para nuestro microcontrolador Arduino Nano 33 BLE Sense. Abre la Arduino IDE y navega en el menú al `Boards Manager`:
 
 ```Tools > Board: "<board_name>" > Boards Manager...```
 
 ![Arduino Boards Manager](../docs/images/1-arduino-boards-manager.jpg "Arduino Boards Manager")
 
-Usa la barra de búsqueda para encontrar la opción ```Arduino Mbed OS Nano Boards``` e instálala, esto puede tomar un tiempo largo.
+Usa la barra de búsqueda para encontrar la opción `Arduino Mbed OS Nano Boards` e instálala, esto puede tomar un tiempo largo.
 
 En junio 2021, estamos usando la versión 2.2.0.
 
@@ -36,9 +36,7 @@ Por favor nota que esta opción es válida para el microcontrolador Arduino Nano
 
 ## Bibliotecas Arduino
 
-A continuación instalaremos todas las bibliotecas necesarias para este proyecto. En la Arduino IDE, navega en el menú a 
-
-```Tools > Manage Libraries... >```
+A continuación instalaremos todas las bibliotecas necesarias para este proyecto. En la Arduino IDE, navega en el menú a `Tools > Manage Libraries... >`
 
 ![Arduino Manage Libraries](../docs/images/1-arduino-manage-libraries.jpg "Arduino Manage Libraries")
 

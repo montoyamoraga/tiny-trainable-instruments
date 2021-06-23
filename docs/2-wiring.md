@@ -11,15 +11,13 @@ Wires:
 
 Breadboards are built so that within each of the rows, the 5 tie points in the columns labelled `a-e` are electrically connected inside the board and act as a single electrical node, and same with `f-j`.
 
-Adicionalmente, hay 2 columnas a cada lado de la protoboard, donde cada columna está interconectada entre sí. Convencionalmente, conectamos el voltaje positivo a la columna `+`, y tierra a la columna `-`.
-
 In addition, there are 2 columns to each side of the breadboard, where each column is one electrical node. Conventionally, we connect the positive voltage to the column labelled `+`, and the ground to the column labelled `-`.
 
 A full breadboard guide is available at [https://learn.adafruit.com/breadboards-for-beginners/breadboards](https://learn.adafruit.com/breadboards-for-beginners/breadboards).
 
 ## Arduino microcontroller
 
-The ArduinoNano BLE 33 Sense we are using has 30 pins in total, 15 on each side. The official pinout is available at [https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf](https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf).
+The Arduino Nano BLE 33 Sense we are using has 30 pins in total, 15 on each side. The official pinout is available at [https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf](https://content.arduino.cc/assets/Pinout-NANOsense_latest.pdf).
 
 We recommend placing the microcontroller at the top of the breadboard (C1 to C15 and G1 to G15) with the USB Micro port facing up.
 
@@ -33,7 +31,7 @@ Note that the microcontroller should be flush with the breadboard; none of the h
 
 Connect your Arduino microcontroller to your computer with the USB cable and open the Arduino IDE software.
 
-On the board, select the ```Arduino Nano 33 BLE```.
+On the board, select the `Arduino Nano 33 BLE`.
 
 ![Select board](../docs/images/2-select-board.jpg "Select board")
 

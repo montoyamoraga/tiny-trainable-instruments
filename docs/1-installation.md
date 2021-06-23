@@ -16,13 +16,13 @@ As of June 2021, we are using Arduino IDE 1.8.15.
 
 ## Arduino Mbed OS Nano boards
 
-After installing the Arduino IDE, we need to install the core and necessary libraries for the Arduino Nano 33 BLE Sense microcontroller. Open the Arduino IDE and navigate on the menu to the ```Boards Manager```:
+After installing the Arduino IDE, we need to install the core and necessary libraries for the Arduino Nano 33 BLE Sense microcontroller. Open the Arduino IDE and navigate on the menu to the `Boards Manager`:
 
 ```Tools > Board: "<board_name>" > Boards Manager...```
 
 ![Arduino Boards Manager](../docs/images/1-arduino-boards-manager.jpg "Arduino Boards Manager")
 
-Use the search bar to find the option ```Arduino Mbed OS Nano Boards``` and install it, this might take a while.
+Use the search bar to find the option `Arduino Mbed OS Nano Boards` and install it, this might take a while.
 
 As of June 2021, we are using version 2.2.0.
 
@@ -36,9 +36,7 @@ Please note that this option is valid for both Arduino Nano 33 BLE, and for the 
 
 ## Arduino libraries
 
-Next we will install all the libraries needed for this project. On the Arduino IDE, navigate on the menu to
-
-```Tools > Manage Libraries... >```
+Next we will install all the libraries needed for this project. On the Arduino IDE, navigate on the menu to `Tools > Manage Libraries... >`
 
 ![Arduino Manage Libraries](../docs/images/1-arduino-manage-libraries.jpg "Arduino Manage Libraries")
 
@@ -48,19 +46,22 @@ Go to the search bar of the Libraries Manager and type `TinyTrainable`. This ins
 
 As of June 2021, the latest version 0.2.2 of the TinyTrainable library has these dependencies:
 
-* Libraries for using the embedded sensors of our microcontroller:
-  * `Arduino_APDS9960`: color, proximity
-  * `Arduino_LSM9DS1` acceleration, magnetic field, gyroscope orientation
+Libraries for using the embedded sensors of our microcontroller:
 
-* Libraries for machine learning:
-  * `Arduino_KNN`: k-nearest neighbor algorithm.
-  * `Arduino_TensorFlowLite`: microcontroller version of the TensorFlow machine learning library. Please download the latest non-precompiled version.
+* `Arduino_APDS9960`: color, proximity
+* `Arduino_LSM9DS1` acceleration, magnetic field, gyroscope orientation
 
-* Libraries for multimedia output:
-  * `Adafruit GFX Library`: for output with screen.
-  * `Adafruit SSD1306`: for output with screen.
-  * `Adafruit Thermal Printer Library`: for output with thermal printer.
-  * `Servo`: for output with servo motors.
+Libraries for machine learning:
+
+* `Arduino_KNN`: k-nearest neighbor algorithm.
+* `Arduino_TensorFlowLite`: microcontroller version of the TensorFlow machine learning library. Please download the latest non-precompiled version.
+
+Libraries for multimedia output:
+
+* `Adafruit GFX Library`: for output with screen.
+* `Adafruit SSD1306`: for output with screen.
+* `Adafruit Thermal Printer Library`: for output with thermal printer.
+* `Servo`: for output with servo motors.
 
 ## Python for machine learning
 
