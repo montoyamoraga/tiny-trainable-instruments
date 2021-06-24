@@ -24,6 +24,8 @@ After installing the Arduino IDE, we need to install the core and necessary libr
 
 Use the search bar to find the option `Arduino Mbed OS Nano Boards` and install it, this might take a while.
 
+Please note that if you look for "Mbed", several different options will appear, be careful with the similar named one called `Arduino Mbed OS Boards` which is deprecated and we should not install.
+
 As of June 2021, we are using version 2.2.0.
 
 ![Arduino Mbed OS Nano](../docs/images/1-arduino-mbed-os-nano.jpg "Arduino Mbed OS Nano")

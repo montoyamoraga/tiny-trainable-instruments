@@ -24,6 +24,8 @@ Después de instalar el software Arduino IDE, necesitamos instalar bibliotecas p
 
 Usa la barra de búsqueda para encontrar la opción `Arduino Mbed OS Nano Boards` e instálala, esto puede tomar un tiempo largo.
 
+Por favor nota que si buscas "Mbed" aparecen muchas opciones, ten mucho cuidado con la opción que tiene un nombre similar, llamada `Arduino Mbed OS Boards`, que es una versión anterior que no debemos instalar.
+
 En junio 2021, estamos usando la versión 2.2.0.
 
 ![Arduino Mbed OS Nano](../docs/images/1-arduino-mbed-os-nano.jpg "Arduino Mbed OS Nano")
