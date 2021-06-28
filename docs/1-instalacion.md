@@ -38,6 +38,18 @@ Por favor nota que esta opción es válida para el microcontrolador Arduino Nano
 
 ## Bibliotecas Arduino
 
+Antes de instalar la biblioteca TinyTrainable para este proyecto, primero actualizaremos todas tus biblitoecas instaladas. En la Arduino IDE, navega en el menú a `Tools > Manage Libraries... >`, y luego en la sección `Type` elige en el menú la opción `Updatable`.
+
+![Arduino manage libraries](../docs/images/1-arduino-manage-libraries.jpg "Arduino manage libraries")
+
+![Arduino updatable libraries](../docs/images/1-arduino-updatable-libraries.jpg "Arduino updatable libraries")
+
+Para actualizar cada biblioteca a su versión más nueva, ubica tu cursos sobre cada biblioteca, y haz click en el botón `Update`. En este ejemplo se muestra como ejemplo la actualización de la biblioteca Adafruit BusIo, que tengo instalada en mi computadora, pero lo más probable es que tú no la tengas ni la necesites.
+
+![Arduino update button](../docs/images/1-arduino-update-button.jpg "Arduino update button")
+
+Por favor repite este proceso hasta que todas tus bibliotecas estén actualizadas.
+
 A continuación instalaremos todas las bibliotecas necesarias para este proyecto. En la Arduino IDE, navega en el menú a `Tools > Manage Libraries... >`
 
 ![Arduino Manage Libraries](../docs/images/1-arduino-manage-libraries.jpg "Arduino Manage Libraries")

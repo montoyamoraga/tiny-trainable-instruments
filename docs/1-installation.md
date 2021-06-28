@@ -38,6 +38,18 @@ Please note that this option is valid for both Arduino Nano 33 BLE, and for the 
 
 ## Arduino libraries
 
+Before installing the TinyTrainable library for this project, please first update all your installed libraries. On the Arduino IDE, navigate on the menu to `Tools > Manage Libraries... >`, and then on the `Type` dropdown menu select `Updatable`.
+
+![Arduino manage libraries](../docs/images/1-arduino-manage-libraries.jpg "Arduino manage libraries")
+
+![Arduino updatable libraries](../docs/images/1-arduino-updatable-libraries.jpg "Arduino updatable libraries")
+
+To update each outdated library to their latest version, hover on top of each library, and click on the button `Update`. For this example we are showing the updating of the library Adafruit BusIO, which is installed on my computer, but most probably is not on yours, and you don't need it for this project either.
+
+![Arduino update button](../docs/images/1-arduino-update-button.jpg "Arduino update button")
+
+Please repeat this process until there are no updatable libraries left.
+
 Next we will install all the libraries needed for this project. On the Arduino IDE, navigate on the menu to `Tools > Manage Libraries... >`
 
 ![Arduino Manage Libraries](../docs/images/1-arduino-manage-libraries.jpg "Arduino Manage Libraries")
