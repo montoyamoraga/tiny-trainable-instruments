@@ -10,7 +10,9 @@ This thesis is also the basis for further research, including the creation of su
   \item Publishing a software library for machine learning with microcontrollers for multimedia art.
   \item Design, writing, and teaching of a 4 hour workshop for beginners, enthusiasts and artists to teach with the software library.
   \item Publishing code and tutorials for creating custom databases for gesture and speech.
+  \item Publishing custom trained models for machine learning.
   \item Pubslishing code and tutorials for training machine learning algorithms on the cloud and on personal computers for privacy.
+  \item Publishing satellite software libraries, such as MaquinitasParams for communication with other instruments, and MaquinitasRitmos for rhythmic data.
 \end{enumerate}
 
 \section{Lessons learned}
@@ -25,20 +27,15 @@ This thesis is also the basis for further research, including the creation of su
 
 \subsection{Hardware for new instruments}
 
-TODO: right now this section is not a brief summary of what i’ve presented before, it is too detailed. Instead, quickly summarize what you've discussed in each chapter in no more than one paragraph per chapter and then switch to the impact of your work and future connections.
+This thesis relies on an Arduino microcontroller because of their ubiquity, commercial availability, software support, strong documentation, and their enourmous fanbase and community support.
 
-This project relies on a particular microcontroller, the Arduino Nano 33 BLE Sense. I used and Arduino board because of its popularity, availability, and software and community support.
+In particular I picked the Arduino Nano 33 BLE Sense, because of 2 main reasons at the time this project started in late 2020: it is the only Arduino supported by TensorFlow Lite for microcontrollers and featured in the HarvardX certificate on Tiny Machine Learning, and also because of its convenience of having embedded sensors, which makes it simpler and cheaper to acquire data for live interaction and for building custom databases, eliminating barries to instruments makers and prototypers.
 
-The particular board's main draw for building multimedia instruments is its embedded sensors, including microphone, gyroscope, and camera. This embedding on the chip makes it more attractive than other boards, where users need to acquire, wire, and calibrate off-board sensors, making the process of capturing data more cumbersome and expensive in resources, adding additional barriers to instrument makers and prototypers. 
+Microcontrollers come and go, most probably this board will be discontinued, but the strategies and software can be forked and adapted to other microcontollers and software architectures. I am particularly looking forward to adapt this thesis project to other open source microcontrollers, including other Arduino boards, PJRC Teensy and Adafruit Circuit Playground, which would enable the adoption of other software stacks, such as Python instead of C++, and also to other commmunities building multimedia instruments and experiences.
 
-When this project started in 2020, and still today, this board was the only Arduino microcontroller supported by the Google TensorFlow Lite Micro library, for machine learning using microcontrollers, and it was heavily featured on the first promotional and educational material, which were the direct inspiration for this thesis, in terms of openness about the materials.
+In terms of the outputs of the Tiny Trainable Instruments, I focused on creating many parallel multimedia approaches, including making sounds with piezo buzzers and MIDI, manipulating light with LEDs, creating movement and rhythm with servo motors, and printing text with thermal printers and screens. This is to appeal to a larger audience of artists and learners, interested in different mediums, and I hope this inspires more complex 
 
-Microcontrollers come and go, most probably this board will be discontinued, and I hope this project can be adapted to other boards and architectures, particularly to other open source microcontrollers, including other Arduino boards, PJRC Teensy and Adafruit Circuit Playground, among others.
-
-In terms of the outputs of the Tiny Trainable Instruments, I focused on creating many parallel multimedia approaches, including making sounds with piezo buzzers and MIDI, manipulating light with LEDs, creating movement and rhythm with servo motors, and printing text with thermal printers and screens. This is to appeal to a larger audience of artists and learners, interested in different mediums.
-
-The Tiny Trainable Instruments are built with prototyping electronic breadboards, to make explicit their open-endedness, and to relate to a flux, instead of a fixed in state PCB, and a further state of this project would include the creation of custom boards with fixed wiring, and of enclosures and packaging.
-
+The Tiny Trainable Instruments are built with prototyping electronic breadboards, to make explicit their open-endedness, and to promote experimentation and lower barriers. A further iteration of this project would include the creation of custom printed circuit boards with fixed wiring, and also enclosures and packaging.
 
 \subsection{Software for new instruments}
 
@@ -54,12 +51,8 @@ Another particular challenging aspect of writing software for multimedia instrum
 
 \subsection{Educational impact}
 
-This project was built to inspire and celebrate a new generation of coursework, workshops, books, and 
-
-I hope that this thesis project is ad
+This project was built to inspire and celebrate a new generation of coursework, workshops, books, in the disciplines of ethical machine learning and microcontroller-based instruments.
 
 I hope that this thesis project is adopted by educators, to introduce students to machine learning, physical computing, media arts, and ethics.
 
 Many sections of this project could be adapted to further existing curricula for music, rhythm, ethics, computer science, and to create a new wave of instrument makers and media artists.
-
-TODO: maybe add potential future users. Talk about how I envision this project being used in these contexts.
