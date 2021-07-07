@@ -27,6 +27,11 @@
 *.out
 *.synctex.gz
 
+# .odt files
+# generated from .tex files with pandoc
+# for feedback from advisors
+*.odt
+
 # Mac computers
 .DS_Store
 
