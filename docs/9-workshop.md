@@ -4,6 +4,12 @@
 
 This workshop has been written and designed by Aarón Montoya-Moraga in 2021, as a research assistant and master's student at MIT Media Lab's Opera of the Future and Future Sketches research groups. Additional code, examples, and documentation by MIT undergraduate researchers Peter Tone and Maxwell Wang.
 
+## Navigation
+
+This is a proposed workshop for artists, beginners, and enthusiasts.
+
+It is located on the docs/ folder, and it stands for documentation. We will be referring to other files on the docu
+
 ## Key concepts
 
 Machine learning, media arts, Arduino microcontroller, tiny machine learning.
@@ -17,7 +23,12 @@ Machine learning, media arts, Arduino microcontroller, tiny machine learning.
 
 You would need to bring a computer, with Linux, Mac or Windows operating systems.
 
-This workshop is taught online over teleconferencing.
+## Prerrequisites
+
+Please follow all the instructions for installation of software, and test the installation of them.
+
+It is recommended to add an extra hour before the first session, to test the installations and fix them.
+
 
 ## First session
 
