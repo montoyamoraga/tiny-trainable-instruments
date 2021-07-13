@@ -1,5 +1,19 @@
-\chapter{Alternate worlds}
+\chapter{Scripts}
 
-These are some aspects I would do differently I could start again:
+During the writing of this thesis I developed scripts, which are included in this repository on the folder scripts.
 
-These are some aspects I would do differently if COVID19 hadn't happened:
+I abstracted them to make them useful for other people and published them with a MIT License at https://github.com/montoyamoraga/scripts.
+
+Since they are useful scripts and they are commented, I include them here.
+
+\section{Converting formats with ffmpeg}
+
+ffmpeg is a command line tool for converting audiovisual files between formats. This script was written to convert audio files from .mp3 to .ogg format for training a database for speech recognition.
+
+\lstinputlisting[language=bash]{../scripts/ffmpeg-convert.sh}
+
+\section{Deleting metadata with exiftool}
+
+exiftool is a command line tool for reading and writing metadata from files. This script was written to delete metadata from images, like GPS coordinates added by modern smartphones, only keeping the actual image.
+
+\lstinputlisting[language=bash]{../scripts/exiftool-delete-metadata.sh}
