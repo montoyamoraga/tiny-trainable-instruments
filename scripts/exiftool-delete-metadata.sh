@@ -27,7 +27,7 @@ then
     # if there are matching files then
   then
 
-      echo "successs, there are matching files"
+      echo "success, there are matching files"
 
     find ".$DIR_NAME" -iname "*.$EXT_ORIGINAL" | while read f
     do

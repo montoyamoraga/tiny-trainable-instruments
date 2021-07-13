@@ -27,7 +27,7 @@ then
     # if there are files with $EXTENSION in directory
     then
 
-      echo "successs, there are matching $EXT_ORIGINAL files"
+      echo "success, there are matching $EXT_ORIGINAL files"
 
       # iterate over every matching file in directory
       for i in $DIR_MEDIA/*.$EXT_ORIGINAL;
