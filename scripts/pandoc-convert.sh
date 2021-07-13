@@ -1,4 +1,4 @@
-echo "pandoc latex to docx and odt"
+echo "pandoc latex to docx"
 
 cd "$PWD/../thesis"
 
@@ -9,10 +9,6 @@ do
   base=$(basename "$f" .tex)
   # delete original docx dile
   rm -f "$PWD/docx/$base.docx"
-#   # delete original odt dile
-  rm -f "$PWD//odt/$base.odt"
   # create new docx file with pandoc
   pandoc -s -o "$PWD/docx/$base.docx" "$f"
-  # create new odt file with pandoc
-  pandoc -s -o "$PWD/odt/$base.odt" "$f"
 done
