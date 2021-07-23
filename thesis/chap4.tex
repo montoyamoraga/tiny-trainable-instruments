@@ -38,46 +38,90 @@ TODO: maybe add my own personal experience with these instruments.
 
 \subsection{Bastl Instruments}
 
-Some years ago, while browsing instruments at the Control shop in Brooklyn NY, some modules from the Czech company Bastl Instruments stood out to me, because of their wooden panels.
+Bastl Instruments is a Czech company of multimedia instruments, which has had a huge impact and influence on my research and practice.
+
+When I first started researching the Eurorack format some years ago, I visited the shop Control in Brooklyn NY, and some modules by Bastl stood out to me, because of their wooden panels and interaction with classic physical computing educational materials, such as motors and solenoids, which was an inspiration for me to include support for servo motors in Tiny Trainable Instruments.
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-servo.jpg}
-	\caption{Bastl Instruments, Servo module, retrieved from their website}
-	\label{fig:bastl-servo}
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-servo.jpg}
+  \caption{Bastl Instruments, Servo module, retrieved from their website}
+  \label{fig:bastl-servo}
 \end{figure}
 
-Then I also learned about their Arduino / microcontroller-based portable sampler called Microgranny 2, which retails for 220.00 USD as of July 2021.
+Another inspiration came from their microgranny 2 granular sampler which is made with an Atmega microcontroller and its firmware is open source and available as a repository on their GitHub account, along with many other of their instruments.
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-microgranny-2.jpg}
-	\caption{Bastl Instruments, microGranny 2 sampler, retrieved from their website}
-	\label{fig:bastl-microgranny-2}
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-microgranny-2.jpg}
+  \caption{Bastl Instruments, microGranny 2, retrieved from their website}
+  \label{fig:bastl-microgranny-2}
 \end{figure}
 
+Their Kastle line of synthesizers is is also based on microcontrollers, and it features a patchbay for making conections with jumper wires, the same used for prototyping in electronic breadboards, which made me lose the imposter syndrome of thinking that if I release Tiny Trainable Instruments are also valid, despite living in breadboards instead of custom printed circuit boards. Also, these are forgiving instruments, its inputs and outputs are robust enough to allow for mistakes in connections, in an electrical and mechanical way.
 
-The Czech company Bastl Instruments have released the Kastle series of instruments based on the Arduino Uno’s chip ATMEGA 328P, and their source code is released on GitHub, with alternate firmware for different behaviors.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-kastle-v15.jpg}
+  \caption{Bastl Instruments, Kastle v1.5, retrieved from their website}
+  \label{fig:bastl-kastle-v15}
+\end{figure}
 
-Currently they offer the Kastle v1.5, a melodic and drone synthesizer, and the Kastle Drum, for rhythmic work. The only difference between these synthesizers is the firmware and the faceplate, and it is encouraged to write new firmware to modify their behavior. Also they are forgiving instruments, its inputs and outputs are robust enough to allow for mistakes in connections, in an electrical and mechanical way.
+As of writing, two different units are in production, both retailing for ~100.00 USD, the Kastle v1.5 melodic / drone synthesizer, and the Kastle Drum, for rhythm. The only difference between these synthesizers is the firmware and the labels on the faceplate. The community is encouraged to write new firmware to modify their behavior. 
 
-This instrument inspired many characteristics present in Tiny Trainable Instruments, including 
- the use of breadboard jumper cables for making connections, their low cost (90 USD), and their portability by use of batteries.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-kastle-drum.jpg}
+  \caption{Bastl Instruments, Kastle Drum, retrieved from their website}
+  \label{fig:bastl-kastle-drum}
+\end{figure}
 
-Add an example of how Moog synthesizers in the 1970s were as expensive as a house!
-And then as a car.
+Another instrument I want to highlight is the Illuminati, currently discontinued, a device that uses different inputs (audio, control votage, MIDI messages), to control the light intensity of connected USB lamps, which influenced the conception of Tiny Trainable Instruments as multimedia arts instruments, not only focusing on audio and music.
 
-Mention how accessible the different components of the instruments are, how you can get everything from adafruit for not that much money, etc.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-illuminati.jpg}
+  \caption{Bastl Instruments, Illuminati, retrieved from their website}
+  \label{fig:bastl-illuminati}
+\end{figure}
 
-Add explanation about how this is not just on GitHub, but also published on the arduino IDE library, and how examples are worked already, and how things are precompiled.
+The final instrument from this company that I will feature is the OMSynth, one of many collaborations between Bastl and Casper Electronics. This device is an educational and maker circuit development tool for creating synthesizers, it includes basic fundamental blocks, such as battery power, audio input and output, potentiometers for attenuating and boosting signals, and a suite of parts kits for building devices including sequencers, oscillators, and samplers, on the included breadboard.
 
-Lower barriers include releasing a Bill of Materials, on Adafruit, inspired by the Drawdio project, which can be bought as a kit from Adafruit. TODO: explain why Adafruit is cool and easier to use than Digikey etc.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-omsynth.jpg}
+  \caption{Bastl Instruments, OMSynth, retrieved from their website}
+  \label{fig:bastl-omsynth}
+\end{figure}
+
+Many of BASTL standalone instruments are 200 USD or less, wich is a huge contrast to the 1960s, when a Moog analog system II costed 6,200 USD, which was enough to buy a small house \cite{analog-days}.
+
+TODO: Mention how accessible the different components of the instruments are, how you can get everything from adafruit for not that much money, etc.
+
+TODO: Add explanation about how this is not just on GitHub, but also published on the arduino IDE library, and how examples are worked already, and how things are precompiled.
+
+TODO: Lower barriers include releasing a Bill of Materials, on Adafruit, inspired by the Drawdio project, which can be bought as a kit from Adafruit. TODO: explain why Adafruit is cool and easier to use than Digikey etc.
 
 \subsection{Critter \& Guitari}
 
 This company has released standalone scriptable computers for arts, which run Linux operating system + Pure Data software.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/critter-and-guitari-organelle-m.jpg}
+  \caption{Critter \& Guitari, Organelle M, retrieved from their website}
+  \label{fig:critter-and-guitari-organelle-m}
+\end{figure}
+
 ETC and EYESY computers for visuals, scriptable, Linux operating system + Python / pygame environment or openFrameworks.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/critter-and-guitari-eyesy.jpg}
+  \caption{Critter \& Guitari, EYESY, retrieved from their website}
+  \label{fig:critter-and-guitari-eyesy}
+\end{figure}
 
 They can run on power supplies, and are also portable by the use of batteries.
 
