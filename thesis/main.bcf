@@ -2344,9 +2344,35 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">main.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">analog-days</bcf:citekey>
-    <bcf:citekey order="2">website-critter-and-guitari-kaleidoloop</bcf:citekey>
-    <bcf:citekey order="3">website-critter-and-guitari-kaleidoloop</bcf:citekey>
+    <bcf:citekey order="1">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="2">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="3">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="4">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="5">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="6">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="7">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="8">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="9">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="10">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="11">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="12">website-bastl-instruments-current</bcf:citekey>
+    <bcf:citekey order="13">analog-days</bcf:citekey>
+    <bcf:citekey order="14">website-critter-and-guitari-kaleidoloop</bcf:citekey>
+    <bcf:citekey order="15">website-critter-and-guitari-kaleidoloop</bcf:citekey>
+    <bcf:citekey order="16">website-critter-and-guitari-current</bcf:citekey>
+    <bcf:citekey order="17">website-critter-and-guitari-current</bcf:citekey>
+    <bcf:citekey order="18">website-critter-and-guitari-current</bcf:citekey>
+    <bcf:citekey order="19">website-critter-and-guitari-current</bcf:citekey>
+    <bcf:citekey order="20">website-monome-current</bcf:citekey>
+    <bcf:citekey order="21">website-monome-current</bcf:citekey>
+    <bcf:citekey order="22">website-monome-current</bcf:citekey>
+    <bcf:citekey order="23">website-monome-current</bcf:citekey>
+    <bcf:citekey order="24">website-monome-current</bcf:citekey>
+    <bcf:citekey order="25">website-monome-current</bcf:citekey>
+    <bcf:citekey order="26">website-shbobo-current</bcf:citekey>
+    <bcf:citekey order="27">website-shbobo-current</bcf:citekey>
+    <bcf:citekey order="28">website-shbobo-current</bcf:citekey>
+    <bcf:citekey order="29">website-shbobo-current</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
