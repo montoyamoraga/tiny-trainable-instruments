@@ -2,7 +2,8 @@
 "clear"
 
 # directory name
-DIR_MEDIA="media"
+# DIR_MEDIA="media"
+DIR_MEDIA="$PWD/../thesis/images"
 
 # extension of files
 EXT_ORIGINAL="jpg"
@@ -21,11 +22,15 @@ then
   # announce directory exists
   echo "success, $DIR_MEDIA/ exists"
 
-  find ".$DIR_NAME" -iname "*.$EXT_ORIGINAL" | while read f
+  find "$DIR_MEDIA" -iname "*.$EXT_ORIGINAL" | while read f
     do
       exiftool -all= -overwrite_original "$f"
       echo "formatted $f"
     done
+
+else
+  # announce directory does not exist
+  echo "fail, $DIR_MEDIA/ does not exist"
 
 # end of if statemement for existence of directory
 fi
