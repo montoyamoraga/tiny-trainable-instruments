@@ -1319,6 +1319,10 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesi
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap1.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap1.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap1.tex
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap2.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap2.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap2.tex
@@ -1349,10 +1353,6 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesi
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap3.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap3.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap3.tex
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap4.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap4.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap4.tex
