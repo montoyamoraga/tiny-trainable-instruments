@@ -36,7 +36,6 @@ cd instruments
 
 Activate the virtual environment
 
-
 ```bash
 source env/bin/activate
 ```
@@ -47,8 +46,7 @@ Run Jupyter lab
 jupyter-lab
 ```
 
-Open the window on your web browser, and navigate to the notebook (TODO change name) Instrument2.ipynb
-
+Open the window on your web browser, and navigate to the gesture notebook.
 
 ## Deploying
 

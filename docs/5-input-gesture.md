@@ -21,9 +21,9 @@ Follow the instructions on [wiring.md](wiring.md).
 
 ## Code examples
 
-hello_tiny_world: cycles through all the LEDs and their colors.
+check_serial: cycles through all the LEDs and their colors.
 
-gesture_buzzer: TODO
+gesture_buzzer: train with gestures, and then output over buzzer.
 
 gesture_classifier: uploads your finished model to the Arduino for classifying gestures!
 
@@ -33,15 +33,13 @@ gesture_database: collects accelerometer data to prepare for training a model.
 
 Open the Arduino IDE and select `File > Examples > TinyTrainable > gesture_database`, then execute the sketch. Open the serial monitor, which should list six values that the Arduino is measuring: a for (linear) acceleration, and g for gyroscope (angle). Hold the breadboard and perform one of three gestures, *with the end with the wire facing towards you*:
 
-(TODO: change gestures? None of the g values are used in these, I think; can we do something that rotates the Arduino? :D)
-
-* Gesture 0: diagonal up-left 
+* Gesture 0: diagonal up-left
 * Gesture 1: counterclockwise circle
 * Gesture 2: thrust forwards
 
-Note: There is a minimum acceleration threshold in order to prevent accidental inputs, so the gestures require a fairly quick motion. 
+Note: There is a minimum acceleration threshold in order to prevent accidental inputs, so the gestures require a fairly quick motion.
 
-You should see the serial monitor output a table of comma-separated values (csv). After recording the same gesture ten or so times, copy the entire output from the serial monitor and replace the example data in (TODO change path names) /instruments/instrument1/data/gestureX.csv (TODO: possible to link to files in different directories?). Next, click ```Clear output``` in the serial monitor, single-press the button on the Arduino to reset the example, and repeat this procedure for the remaining gestures. After you're done recording the data, now it's time to train your model!
+You should see the serial monitor output a table of comma-separated values (csv). After recording the same gesture 10 times, copy the entire output from the serial monitor and replace the example data in te corresponding .csv file. Next, click ```Clear output``` in the serial monitor, single-press the button on the Arduino to reset the example, and repeat this procedure for the remaining gestures. After you're done recording the data, now it's time to train your model!
 
 ## Training
 

@@ -139,11 +139,15 @@ sh markdown-to-pdf.sh
 
 ## Files
 
-TODO: explain difference between .h .cpp and .ino files
+Files with the extension .h are source code written in C++ and they include the definition and declaration of the classes, methods, and variables.
+
+Files with the extension .cp are source code written in C++ that implement the corresponding .h file.
+
+Arduino sketches have the extension .ino.
 
 ## Including libraries
 
-TODO: explain difference between these two lines
+There are 2 ways of including libraries, with <> or "". If you use "" the file is searched on the directory, and if you use <> you are asking Arduino to also check its libraries folder.
 
 ```cpp
 #include <Arduino.h>
