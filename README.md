@@ -19,7 +19,6 @@ This thesis project features contributions by UROP undergrad researchers Peter T
 
 This repository contains the following folders and files:
 
-* [assets/](assets/): graphic assets.
 * [certification/](certification/): Markdown files, image files, and PDF files for complying with MIT's guidelines and certification for Use of Humans as Experimental Subjects.
 * [databases/](databases/): databases for gesture and speech.
 * [docs/](docs/): Markdown files, image files, and PDF files for documentation, including workshop materials.
