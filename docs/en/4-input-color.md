@@ -10,7 +10,6 @@ All the training happens on the instrument, and it can be easily retrained by re
 
 ## Bill of materials
 
-
 ## Installation
 
 Follow the instructions on [installation.md](installation.md).
@@ -28,6 +27,5 @@ color_buzzer: Outputs sounds using a buzzer.
 color_printer
 
 color_serial
-
 
 ## Documentation

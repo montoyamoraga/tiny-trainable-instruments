@@ -89,7 +89,7 @@ MIDI Din jack
 
 We are using a thermal printer from Adafruit.
 
-https://www.adafruit.com/product/2753
+[https://www.adafruit.com/product/2753](https://www.adafruit.com/product/2753)
 
 It has 5 cables:
 
@@ -103,7 +103,8 @@ We use a power supply, whose ground  is connected to the one on the Arduino.
 
 The power supply is 9V, center positive.
 Here is one available:
-https://www.adafruit.com/product/276
+
+[https://www.adafruit.com/product/276](https://www.adafruit.com/product/276)
 
 ### Serial
 

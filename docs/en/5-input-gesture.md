@@ -7,7 +7,8 @@ input-gesture is an instrument that uses its sensors for measuring gestures, to 
 The instrument can be programmed with a computer and then run as a standalone instrument, or you can use its serial port to communicate with your computer for debugging or interfacing with other software.
 
 Training input-gesture is done in three steps:
-* *Data collection*, where the Arduino takes in environmental input from its sensors and writes it as a .csv (spreadsheet) file, which you then copy over to your computer
+
+* *Data collection*, where the Arduino takes in environmental input from its sensors and writes it as a .csv (spreadsheet) file, which you then copy over to your computer.
 * *Training*, where your computer analyzes the collected data and builds a model to interpret the data using machine learning
 * *Deploying*, where you upload your newly-trained model to the Arduino and execute it!
 

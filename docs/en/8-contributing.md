@@ -2,18 +2,18 @@
 
 If you find an error or have a comment, please start a discussion by submitting an issue on our repositories!
 
-* https://github.com/montoyamoraga/tiny-trainable-instruments/issues
-* https://github.com/montoyamoraga/TinyTrainable/issues
+* [https://github.com/montoyamoraga/tiny-trainable-instruments/issues](https://github.com/montoyamoraga/tiny-trainable-instruments/issues)
+* [https://github.com/montoyamoraga/TinyTrainable/issues](https://github.com/montoyamoraga/TinyTrainable/issues)
 
 ## Tools
 
 ## clang-format
 
-Tool for automation of formatting to source code. More information here: https://clang.llvm.org/docs/.ClangFormat.html
+Tool for automation of formatting to source code. More information here: [https://clang.llvm.org/docs/.ClangFormat.html](https://clang.llvm.org/docs/.ClangFormat.html)
 
 ### Doxygen
 
-Tool for generating documentation from the source code. More information: https://www.doxygen.nl/.
+Tool for generating documentation from the source code. More information: [https://www.doxygen.nl/](https://www.doxygen.nl/)
 
 ### GitHub Actions
 
@@ -21,39 +21,39 @@ Every time we push code to the TinyTrainable repositories, a GitHub action creat
 
 ### Jupyter
 
-Jupyter is a free, open-source browser application that allows users to easily read and write code in a clean, accessible environment. Code is segmented into cells, which users can execute individually by clicking into and selecting the triangle "play" button at the top. Subsequent code executes based on operations done in previous cells. Basically, Jupyter notebooks allow programmers to create clean, step-by-step interactive walkthroughs through their code. More information: https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html.
+Jupyter is a free, open-source browser application that allows users to easily read and write code in a clean, accessible environment. Code is segmented into cells, which users can execute individually by clicking into and selecting the triangle "play" button at the top. Subsequent code executes based on operations done in previous cells. Basically, Jupyter notebooks allow programmers to create clean, step-by-step interactive walkthroughs through their code. More information: [https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html).
 
 ### Markdown
 
-Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext. The documentation of this project is written using Markdown, including this document! More info: https://guides.github.com/features/mastering-markdown/.
+Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext. The documentation of this project is written using Markdown, including this document! More info: [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/).
 
 ## GitHub instructions
 
-### To contribute to this repository:
+### To contribute to this repository
 
-1. Create a free GitHub account
-2. Fork the repository
-3. Clone your new repository to your computer
+* Create a free GitHub account
+* Fork the repository
+* Clone your new repository to your computer
 
 ```bash
 git clone https://github.com/your_username/tiny-trainable-instruments.git
 ```
 
-Optionally, you can also clone the submodules of this repository, with the command 
+Optionally, you can also clone the submodules of this repository, with the command
 
 ```bash
 git submodule update --init --recursive
 ```
 
-4. Change directory (cd) into the project folder
+* Change directory (cd) into the project folder
 
 ```bash
 cd tiny-trainable-instruments
 ```
 
-5. Make some changes
+* Make some changes
 
-6. Stage and make a commit to your repository on your computer
+* Stage and make a commit to your repository on your computer
 
 ```bash
 git add .
@@ -63,35 +63,35 @@ git add .
 git commit -m "your comment"
 ```
 
-7. Push your commit to your personal fork on GitHub
+* Push your commit to your personal fork on GitHub
 
 ```bash
 git push
 ```
 
-8. Open your repository online
+* Open your repository online
 
-9. Open a pull request and wait for comments or approval
+* Open a pull request and wait for comments or approval
 
-### For subsequent pull requests:
+### For subsequent pull requests
 
 If your fork is behind [origin](https://github.com/montoyamoraga/tiny-trainable-instruments.git):
 
-1. Open a pull request, but reverse the order (merge main into your fork)
+* Open a pull request, but reverse the order (merge main into your fork)
 
-2. Approve the merge to update your fork
+* *Approve the merge to update your fork
 
-3. Pull your repository to your computer
+* *Pull your repository to your computer
 
 ```bash
 git pull
 ```
 
-4. Continue from step 4 above
+* Continue from step 4 above
 
 ## Contributing documentation
 
-For more information about how to contribute documentation to an open source artistic project, we recommend looking at the documentation by the p5.js project, available at https://github.com/processing/p5.js/blob/main/contributor_docs/contributing_documentation.md
+For more information about how to contribute documentation to an open source artistic project, we recommend looking at the documentation by the p5.js project, available at [https://github.com/processing/p5.js/blob/main/contributor_docs/contributing_documentation.md](https://github.com/processing/p5.js/blob/main/contributor_docs/contributing_documentation.md)
 
 ## Adding submodules
 
