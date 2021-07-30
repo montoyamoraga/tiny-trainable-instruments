@@ -8,18 +8,25 @@ This document explains the documentation for the project Tiny Trainable Instrume
 
 This documentation is written in Markdown, and distributed here in Markdown files and PDF files, (extensions .md and .pdf respectively)
 
-This folder docs/ contains the following files and folders:
+This folder [docs/](./) contains the following files and folders:
 
-* 0-bill-of-materials [md](en-0-bill-of-materials.md) [pdf](0-bill-of-materials.pdf): list of materials necessary to construct instruments.
-* 1-installation [md](1-installation.md) [pdf](1-installation.pdf): how to install software prerequisites.
-* 2-wiring [md](2-wiring.md)  [pdf](2-wiring.pdf): how to wire the circuit elements on the breadboard.
-* 3-tinytrainable [md](3-tinytrainable.md) [pdf](3-tinytrainable.pdf):
-* 4-input-color [md](4-input-color.md) [pdf](4-input-color.pdf):
-* 5-input-gesture [md](5-input-gesture.md) [pdf](5-input-gesture.pdf):
-* 6-input-speech [md](6-input-speech.md) [pdf](6-input-speech.pdf):
-* 7-outputs [md](7-outputs.md) [pdf](7-outputs.pdf):
-* 8-contributing [md](8-contributing.md) [pdf](8-contributing.pdf): how to contribute to this project.
-* 9-taller [md](9-taller.md) [pdf](9-taller.pdf): workshop instructions, in Spanish.
-* 9-workshop [md](9-workshop.md) [pdf](9-workshop.pdf): workshop instructions, in English.
-* [images/](images/)contains the images used in this documentation.
-* README [md](README.md) [pdf](README.pdf): this file that you are reading right now.
+* [en/](en/): the documentation in English.
+* [es/](es/): partial translation to Spanish of the documentation.
+* [images/](images/): images for the documentation
+* [README.md](README.md): this file that you are reading right now, in Markdown
+* [README.pdf](README.pdf): this file that you are reading right now, in PDF.
+
+The documentation in English in the [en/](en/) folder has the following files in Markdown, and there are also exports to PDF of each file.
+
+* [0-bill-of-materials.md](en/0-bill-of-materials.md): list of materials necessary to construct instruments.
+* [1-installation/md](en/1-installation.md): how to install software prerequisites.
+* [2-wiring.md](en/2-wiring.md): how to wire the circuit elements on the breadboard.
+* [3-tinytrainable.md](en/3-tinytrainable.md): description of the library.
+* [4-input-color.md](en/4-input-color.md):
+* [5-input-gesturemd](en/5-input-gesture.md):
+* [6-input-speech.md](en/6-input-speech.md):
+* [7-outputs.md](en/7-outputs.md):
+* [8-contributing.md](en/8-contributing.md): how to contribute to this project.
+* [9-workshop.md](en/9-workshop.md): workshop instructions.
+
+The documentation in Spanish in the [es/](es/) folder has some of these files translated, and they were used for the workshop taught in Spanish in June 2021.

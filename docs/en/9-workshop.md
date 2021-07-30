@@ -29,7 +29,6 @@ Please follow all the instructions for installation of software, and test the in
 
 It is recommended to add an extra hour before the first session, to test the installations and fix them.
 
-
 ## First session
 
 Goals:
