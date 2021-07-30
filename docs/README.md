@@ -22,10 +22,10 @@ The documentation in English in the [en/](en/) folder has the following files in
 * [1-installation/md](en/1-installation.md): how to install software prerequisites.
 * [2-wiring.md](en/2-wiring.md): how to wire the circuit elements on the breadboard.
 * [3-tinytrainable.md](en/3-tinytrainable.md): description of the library.
-* [4-input-color.md](en/4-input-color.md):
-* [5-input-gesturemd](en/5-input-gesture.md):
-* [6-input-speech.md](en/6-input-speech.md):
-* [7-outputs.md](en/7-outputs.md):
+* [4-input-color.md](en/4-input-color.md): how to make instruments with color input.
+* [5-input-gesturemd](en/5-input-gesture.md): how to make instruments with gesture input.
+* [6-input-speech.md](en/6-input-speech.md): how to make instruments with speech input.
+* [7-outputs.md](en/7-outputs.md): how to navigate the different output possibilities.
 * [8-contributing.md](en/8-contributing.md): how to contribute to this project.
 * [9-workshop.md](en/9-workshop.md): workshop instructions.
 
