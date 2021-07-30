@@ -76,7 +76,7 @@ Extras:
 
 Funded by the Council for the Arts at MIT, including 
 
-![Council for the Arts at MIT Logo](../docs/images/9-2021-CAMIT-logo.jpg "Council for the Arts at MIT Logo")
+![Council for the Arts at MIT Logo](../../docs/images/9-2021-CAMIT-logo.jpg "Council for the Arts at MIT Logo")
 
 ## Contact
 

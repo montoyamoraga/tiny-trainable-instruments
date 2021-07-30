@@ -20,7 +20,7 @@ After installing the Arduino IDE, we need to install the core and necessary libr
 
 ```Tools > Board: "<board_name>" > Boards Manager...```
 
-![Arduino Boards Manager](../docs/images/1-arduino-boards-manager.jpg "Arduino Boards Manager")
+![Arduino Boards Manager](../../docs/images/1-arduino-boards-manager.jpg "Arduino Boards Manager")
 
 Use the search bar to find the option `Arduino Mbed OS Nano Boards` and install it, this might take a while.
 
@@ -28,7 +28,7 @@ Please note that if you look for "Mbed", several different options will appear, 
 
 As of June 2021, we are using version 2.2.0.
 
-![Arduino Mbed OS Nano](../docs/images/1-arduino-mbed-os-nano.jpg "Arduino Mbed OS Nano")
+![Arduino Mbed OS Nano](../../docs/images/1-arduino-mbed-os-nano.jpg "Arduino Mbed OS Nano")
 
 After the installation is complete, we can select the board we are going to work with (Arduino Nano 33 BLE), from the `Tools` menu:
 
@@ -40,23 +40,23 @@ Please note that this option is valid for both Arduino Nano 33 BLE, and for the 
 
 Before installing the TinyTrainable library for this project, please first update all your installed libraries. On the Arduino IDE, navigate on the menu to `Tools > Manage Libraries... >`, and then on the `Type` dropdown menu select `Updatable`.
 
-![Arduino manage libraries](../docs/images/1-arduino-manage-libraries.jpg "Arduino manage libraries")
+![Arduino manage libraries](../../docs/images/1-arduino-manage-libraries.jpg "Arduino manage libraries")
 
-![Arduino updatable libraries](../docs/images/1-arduino-updatable-libraries.jpg "Arduino updatable libraries")
+![Arduino updatable libraries](../../docs/images/1-arduino-updatable-libraries.jpg "Arduino updatable libraries")
 
 To update each outdated library to their latest version, hover on top of each library, and click on the button `Update`. For this example we are showing the updating of the library Adafruit BusIO, which is installed on my computer, but most probably is not on yours, and you don't need it for this project either.
 
-![Arduino update button](../docs/images/1-arduino-update-button.jpg "Arduino update button")
+![Arduino update button](../../docs/images/1-arduino-update-button.jpg "Arduino update button")
 
 Please repeat this process until there are no updatable libraries left.
 
 Next we will install all the libraries needed for this project. On the Arduino IDE, navigate on the menu to `Tools > Manage Libraries... >`
 
-![Arduino Manage Libraries](../docs/images/1-arduino-manage-libraries.jpg "Arduino Manage Libraries")
+![Arduino Manage Libraries](../../docs/images/1-arduino-manage-libraries.jpg "Arduino Manage Libraries")
 
 Go to the search bar of the Libraries Manager and type `TinyTrainable`. This installation will give you the option to also install its dependencies, select `Install all` to download them.
 
-![Install TinyTrainable](../docs/images/1-install-tinytrainable.jpg "Install TinyTrainable")
+![Install TinyTrainable](../../docs/images/1-install-tinytrainable.jpg "Install TinyTrainable")
 
 As of June 2021, the latest version 0.2.2 of the TinyTrainable library has these dependencies:
 
@@ -131,7 +131,7 @@ Now your terminal should have every new line starting with (env). Your command p
 
 ../docs/images/1-arduino-boards-manager
 
-![Virtual environment command prompt](../docs/images/1-venv-activation.jpg "Activating virtual environment")
+![Virtual environment command prompt](../../docs/images/1-venv-activation.jpg "Activating virtual environment")
 
 The pip of your Python virtual environment might need updating; you can update to the latest version with the command
 
@@ -147,7 +147,7 @@ pip install -r requirements.txt
 
 Now you can run the Jupyter Lab tool with `jupyter-lab`. This will open a tab on your browser to navigate through the files in your computer and allow you run code and read the documentation.
 
-The code for input-gesture and input-speech is written using Jupyter notebooks, which have the extension .ipynb, and are located on the folder `instruments/`. The documentation is written in several Markdown files with extension .md. These files are on the folder [`docs/`](../docs/), which includes an index on README.md.
+The code for input-gesture and input-speech is written using Jupyter notebooks, which have the extension .ipynb, and are located on the folder `instruments/`. The documentation is written in several Markdown files with extension .md. These files are on the folder [`docs/`](../../docs/), which includes an index on README.md.
 
 If you double click on a Markdown file, it will open an Editor window with the Markdown code. To view the rendered text you can right click and select "Open with Markdown Preview". If you have internet connection, it might be more convenient to access the online documentation on the online repository.
 

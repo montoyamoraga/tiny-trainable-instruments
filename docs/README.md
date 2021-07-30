@@ -6,11 +6,11 @@ This document explains the documentation for the project Tiny Trainable Instrume
 
 ## Contents
 
-This documentation is written in Markdown, and distributed here in Markdown files and PDF files, (.md and .pdf respectively)
+This documentation is written in Markdown, and distributed here in Markdown files and PDF files, (extensions .md and .pdf respectively)
 
 This folder docs/ contains the following files and folders:
 
-* 0-bill-of-materials [md](0-bill-of-materials.md) [pdf](0-bill-of-materials.pdf): list of materials necessary to construct instruments.
+* 0-bill-of-materials [md](en-0-bill-of-materials.md) [pdf](0-bill-of-materials.pdf): list of materials necessary to construct instruments.
 * 1-installation [md](1-installation.md) [pdf](1-installation.pdf): how to install software prerequisites.
 * 2-wiring [md](2-wiring.md)  [pdf](2-wiring.pdf): how to wire the circuit elements on the breadboard.
 * 3-tinytrainable [md](3-tinytrainable.md) [pdf](3-tinytrainable.pdf):
