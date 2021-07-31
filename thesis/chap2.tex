@@ -2,22 +2,32 @@
 
 \epigraph{All the modern things \\ have always existed \\ they've just been waiting}{The Modern Things \\ Björk, 1995}
 
-This chapter describes the process of conceptualizing and developing this thesis project, which is an antidisciplinary project, drawing from folllowing disciplines:
+This chapter describes the process of conceptualizing and developing this thesis project, which is an antidisciplinary project, drawing from the disciplines of artificial intelligence, electrical engineering, computer science, media arts, music, and pedagogy, among others.
+
+\section{Definition of Tiny trainable instruments}
+
+\subsection{Definition of tiny}
+
+Bi tiny I mean handheld, light weight instruments that you can take for a walk or on your backpack. It is also an homage to the new uprising field of tiny machine learning.
+
+The Tiny Trainable Instruments project is made up of these deliverables, which will be described in this order:
 
 \begin{enumerate}
-  \item Artificial intelligence
-  \item Electrical engineering
-  \item Computer science
-  \item Media arts
-  \item Music
-  \item Pedagogy
+  \item TinyTrainable Arduino software library
+  \item Auxiliary code for machine learning
+  \item Workshop educational material
 \end{enumerate}
 
-\section{Definitions}
 
-In this section I include my personal definition of each concept of the title of this thesis project.
+\subsection{Definition of trainable}
 
-\subsection{Instruments}
+By trainable I mean a computational device that can learn by examples. This name comes from the machine learning lexicon, where training is a process where an algorithm finds the numerical values of all parameters (weights, biases) of a machine learning model, with the help of a dataset.
+
+The process of training a model with a microcontro;ler has been really rewarding for me during the making of this thesis. When I program audiovisual computational devices to react to sensors, I often find myself having to look at streams of data, having to program statistical methods to detect trends, such as averages, and then having to program a hard coded value on the software, and having to write a manual for setup or fine tuning for collaborators to be able to run it again under different conditions.
+
+The fact that I can program once, and then train on device, with the algorithm taking care of finding correlations, make for a more flexible workflow that I have enjoyed.
+
+\subsection{Definition of instruments}
 
 By instruments I mean devices that act as transducers across mediums, processing an input, which results in an output.
 
@@ -43,7 +53,6 @@ Another of my favorite instruments is the bicycle, which I like to define as a d
     \label{table:tiny-trainable-instruments-inputs-outputs-matrix}
 \end{table}{}
 
-
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-arduino-nano-33-ble-sense.jpg}
@@ -51,26 +60,6 @@ Another of my favorite instruments is the bicycle, which I like to define as a d
   \caption*{Retrieved from \cite{website-materials-arduino-nano-33-ble-sense}}
   \label{fig:materials-arduino-nano-33-ble-sense}
 \end{figure}
-
-\subsection{Definition of trainable}
-
-By trainable I mean a computational device that can learn by examples. This name comes from the machine learning lexicon, where training is a process where an algorithm finds the numerical values of all parameters (weights, biases) of a machine learning model, with the help of a dataset.
-
-The process of training a model with a microcontro;ler has been really rewarding for me during the making of this thesis. When I program audiovisual computational devices to react to sensors, I often find myself having to look at streams of data, having to program statistical methods to detect trends, such as averages, and then having to program a hard coded value on the software, and having to write a manual for setup or fine tuning for collaborators to be able to run it again under different conditions.
-
-The fact that I can program once, and then train on device, with the algorithm taking care of finding correlations, make for a more flexible workflow that I have enjoyed.
-
-\subsection{Definition of tiny}
-
-Bi tiny I mean handheld, light weight instruments that you can take for a walk or on your backpack. It is also an homage to the new uprising field of tiny machine learning.
-
-The Tiny Trainable Instruments project is made up of these deliverables, which will be described in this order:
-
-\begin{enumerate}
-  \item TinyTrainable Arduino software library
-  \item Auxiliary code for machine learning
-  \item Workshop educational material
-\end{enumerate}
 
 \section{TinyTrainable Arduino software library}
 
