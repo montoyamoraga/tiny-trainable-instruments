@@ -1,35 +1,15 @@
 # Contributing
 
+## Issues
+
 If you find an error or have a comment, please start a discussion by submitting an issue on our repositories!
 
 * [https://github.com/montoyamoraga/tiny-trainable-instruments/issues](https://github.com/montoyamoraga/tiny-trainable-instruments/issues)
 * [https://github.com/montoyamoraga/TinyTrainable/issues](https://github.com/montoyamoraga/TinyTrainable/issues)
 
-## Tools
+## Pull requests
 
-## clang-format
-
-Tool for automation of formatting to source code. More information here: [https://clang.llvm.org/docs/.ClangFormat.html](https://clang.llvm.org/docs/.ClangFormat.html)
-
-### Doxygen
-
-Tool for generating documentation from the source code. More information: [https://www.doxygen.nl/](https://www.doxygen.nl/)
-
-### GitHub Actions
-
-Every time we push code to the TinyTrainable repositories, a GitHub action creates a virtual machine, and runs a script to generate the Doxygen documentation and push it to the gh-pages branch.
-
-### Jupyter
-
-Jupyter is a free, open-source browser application that allows users to easily read and write code in a clean, accessible environment. Code is segmented into cells, which users can execute individually by clicking into and selecting the triangle "play" button at the top. Subsequent code executes based on operations done in previous cells. Basically, Jupyter notebooks allow programmers to create clean, step-by-step interactive walkthroughs through their code. More information: [https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html).
-
-### Markdown
-
-Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext. The documentation of this project is written using Markdown, including this document! More info: [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/).
-
-## GitHub instructions
-
-### To contribute to this repository
+Here is a step by step guide to make pull requests to this repository.
 
 * Create a free GitHub account
 * Fork the repository
@@ -51,7 +31,7 @@ git submodule update --init --recursive
 cd tiny-trainable-instruments
 ```
 
-* Make some changes
+* Make your changes
 
 * Stage and make a commit to your repository on your computer
 
@@ -71,23 +51,7 @@ git push
 
 * Open your repository online
 
-* Open a pull request and wait for comments or approval
-
-### For subsequent pull requests
-
-If your fork is behind [origin](https://github.com/montoyamoraga/tiny-trainable-instruments.git):
-
-* Open a pull request, but reverse the order (merge main into your fork)
-
-* *Approve the merge to update your fork
-
-* *Pull your repository to your computer
-
-```bash
-git pull
-```
-
-* Continue from step 4 above
+* Open ayour pull request and wait for comments or approval
 
 ## Contributing documentation
 
@@ -136,45 +100,3 @@ This script uses pandoc to convert the documentation from Markdown to PDF format
 ```bash
 sh markdown-to-pdf.sh
 ```
-
-## Files
-
-Files with the extension .h are source code written in C++ and they include the definition and declaration of the classes, methods, and variables.
-
-Files with the extension .cp are source code written in C++ that implement the corresponding .h file.
-
-Arduino sketches have the extension .ino.
-
-## Including libraries
-
-There are 2 ways of including libraries, with <> or "". If you use "" the file is searched on the directory, and if you use <> you are asking Arduino to also check its libraries folder.
-
-```cpp
-#include <Arduino.h>
-#include "Arduino.h"
-```
-
-## Data structures
-
-```cpp
-// using a template datatype allows debugPrint to take in any datatype, like 
-// Serial.println(). it needs to be defined here in the header file so it 
-// compiles before anything else, since it's called in the Inst0.cpp file
-template <typename T> void debugPrint(T message) {
-      if (_serialDebugging) {
-        Serial.println(message);
-      }
-    };
-
-```
-
-## C++
-
-We have a class called TinyTrainable, and subclasses for each of the other instruments.
-
-We declare certain methods as protected instead of private, because if they were private, all the instrument classes that inherit TinyTrainable wouldn't have access to these anymore. If we want to make them private we'd have to make public getter/setter methods.
-
-static void vs void
-
-Peter's explanation:
-i used "static void" because you only need to run it once per arduino even if you have multiple instances of the instrument classes (it doesn't need to be an instance method).
