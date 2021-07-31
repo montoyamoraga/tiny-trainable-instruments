@@ -1,7 +1,5 @@
 # Installation
 
-Hi! Welcome to our installation guide, we're super glad to have you here :)
-
 This guide includes information as of June 2021, and we will explicitly include the software versions we are using.
 
 We advise to install the same versions we are using, and if there is any issue with the library or related software, please us know via email or an issue the repository.
