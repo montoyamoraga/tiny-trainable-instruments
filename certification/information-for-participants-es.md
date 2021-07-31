@@ -1,12 +1,4 @@
-# Tiny Trainable Instruments - Information for participants
-
-The instruments we build are made out of off-the-shelf components, with an Arduino microcontroller chip being placed on a solderless breadboard, and connected with jumper wires to different low-voltage components for multimedia output, in particular a piezo buzzer for sound, and a micro servo motor for movement.
-
-These are popular materiales used for teaching and construction of artistic and computational devices for interactive installations, music making, and beginner projects in general.
-
-There is no unconventional wiring, everything will be powered with a micro USB cable from your computer, at safe voltages, with surge protection, and using isolated jumper cables on a mechanical stable electronics breadboard.
-
-# Tiny Trainable Instruments - Información para participantes
+# Tiny trainable instruments - Información para participantes
 
 Cada instrumento que construimos están hechos de componentes disponibles comercialmente, y consisten en un microcontrolador Arduino montado en una protoboard electrónica, y haciendo conexiones con cables aislados a otros componentes de bajo voltaje para emitir contenido multitmedia, en particular un zumbador piezoeléctrico para emitir sonido, y un micro motor servo para emitir movimiento.
 

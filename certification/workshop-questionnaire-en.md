@@ -1,6 +1,6 @@
-# Tiny Trainable Instruments - Workshop Questionnaire
+# Tiny trainable instruments - Workshop Questionnaire
 
-The purpose of this questionnaire is to learn about your experience building and using Tiny Trainable Instruments, which output multimedia events using creative machine learning. With this questionnaire, we can make changes for the next set of artists and enthusiasts who use them.
+The purpose of this questionnaire is to learn about your experience building and using Tiny trainable instruments, which output multimedia events using creative machine learning. With this questionnaire, we can make changes for the next set of artists and enthusiasts who use them.
 
 Participation in this questionnaire is optional. You do not have to answer any questions you don’t want to answer. You can stop participation in this questionnaire at any time if you want to. All your answers will be kept fully anonymous.
 
@@ -8,21 +8,21 @@ Participation in this questionnaire is optional. You do not have to answer any q
 
 <br/>
 
-2. Describe your experience with the Tiny Trainable Instruments in 3 words:
+2. Describe your experience with the Tiny trainable instruments in 3 words:
 
 <br/>
 
-3. What did you learn from using the Tiny Trainable Instruments?
+3. What did you learn from using the Tiny trainable instruments?
 
 <br/>
 
-4. Did you find your experience with the ​Tiny Trainable Instruments​ to be:
+4. Did you find your experience with the ​Tiny trainable instruments​ to be:
 
 * [ ] Relaxing
 * [ ] Stressful
 * [ ] Neither
 
-5. Would you continue using Tiny Trainable Instruments? Why or why not?
+5. Would you continue using Tiny trainable instruments? Why or why not?
 
 <br/>
 
@@ -31,11 +31,11 @@ Participation in this questionnaire is optional. You do not have to answer any q
 * [ ] Yes
 * [ ] No
 
-7. What was your favorite part about the Tiny Trainable Instruments?
+7. What was your favorite part about the Tiny trainable instruments?
 
 <br/>
 
-8. What was your least favorite part about the Tiny Trainable Instruments?
+8. What was your least favorite part about the Tiny trainable instruments?
 
 <br/>
 
@@ -47,7 +47,7 @@ Participation in this questionnaire is optional. You do not have to answer any q
 
 <br/>
 
-11. Do you have suggestions for new features we could add to the Tiny Trainable Instruments?
+11. Do you have suggestions for new features we could add to the Tiny trainable instruments?
 
 <br/>
 
@@ -55,9 +55,9 @@ There may be more questions of this nature added to the questionnaires, all of t
 
 We may modify questions slightly depending as workshops go on. We may also ask more questions that are specifically media arts related.
 
-# Tiny Trainable Instruments - Cuestionario del taller
+# Tiny trainable instruments - Cuestionario del taller
 
-El propósito de este cuestionario es aprender sobre tu experiencia construyendo y usando Tiny Trainable Instruments, que producen eventos multimedia usando aprendizaje de máquinas creativo. Con este cuestionario, podemos hacer cambios para el siguiente grupo de artistas y entusiastas que usen este proyecto.
+El propósito de este cuestionario es aprender sobre tu experiencia construyendo y usando Tiny trainable instruments, que producen eventos multimedia usando aprendizaje de máquinas creativo. Con este cuestionario, podemos hacer cambios para el siguiente grupo de artistas y entusiastas que usen este proyecto.
 
 La participación en este cuestionario es opcional. No tienes que responder ninguna pregunta que no quieras. Puedas dejar de participar en este cuestionario en cualquier momento que quieras. Todas tus respuestas serán anonimizadas totalmente.
 
@@ -65,21 +65,21 @@ La participación en este cuestionario es opcional. No tienes que responder ning
 
 <br/>
 
-2. Describe tu experiencia con Tiny Trainable Instruments en 3 palabras:
+2. Describe tu experiencia con Tiny trainable instruments en 3 palabras:
 
 <br/>
 
-3. Qué aprendiste al usar los Tiny Trainable Instruments?
+3. Qué aprendiste al usar los Tiny trainable instruments?
 
 <br/>
 
-4. Tu experiencia  con ​Tiny Trainable Instruments​ fue:
+4. Tu experiencia  con ​Tiny trainable instruments​ fue:
 
 * [ ] Relajante
 * [ ] Estresante
 * [ ] Ninguna de las anteriores
 
-5. Continuarías usando los Tiny Trainable Instruments? Por qué sí o por qué no?
+5. Continuarías usando los Tiny trainable instruments? Por qué sí o por qué no?
 
 <br/>
 
@@ -88,11 +88,11 @@ La participación en este cuestionario es opcional. No tienes que responder ning
 * [ ] Sí
 * [ ] No
 
-7. Cuál fue tu parte favorita de los Tiny Trainable Instruments?
+7. Cuál fue tu parte favorita de los Tiny trainable instruments?
 
 <br/>
 
-8. Cuál fue tu parte menos favorita de los Tiny Trainable Instruments?
+8. Cuál fue tu parte menos favorita de los Tiny trainable instruments?
 
 <br/>
 
@@ -104,7 +104,7 @@ La participación en este cuestionario es opcional. No tienes que responder ning
 
 <br/>
 
-11. Tienes alguna sugerencia sobre nuevas características para que agreguemos a los Tiny Trainable Instruments?
+11. Tienes alguna sugerencia sobre nuevas características para que agreguemos a los Tiny trainable instruments?
 
 <br/>
 
