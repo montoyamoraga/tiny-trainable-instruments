@@ -2,7 +2,7 @@
 
 ## About
 
-This document explains the documentation for the project Tiny Trainable Instruments.
+This document explains the documentation for the project Tiny trainable instruments.
 
 ## Contents
 
