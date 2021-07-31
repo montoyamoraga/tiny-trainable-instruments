@@ -18,7 +18,6 @@ The Tiny Trainable Instruments project is made up of these deliverables, which w
   \item Workshop educational material
 \end{enumerate}
 
-
 \subsection{Definition of trainable}
 
 By trainable I mean a computational device that can learn by examples. This name comes from the machine learning lexicon, where training is a process where an algorithm finds the numerical values of all parameters (weights, biases) of a machine learning model, with the help of a dataset.
@@ -39,7 +38,6 @@ Another of my favorite instruments is the bicycle, which I like to define as a d
     \centering
     \begin{tabular}{ | l | l | l | l | l | l | l | l |}
         \hline
-        % \backslashbox{Input}{Output}  & Color & Gesture & Speech  \\
         \textbf{\backslashbox{Input}{Output}}  & Buzzer & LED & MIDI & Printer & Screen & Serial & Servo \\
         \hline
         Color & & & & & & & \\
@@ -51,6 +49,50 @@ Another of my favorite instruments is the bicycle, which I like to define as a d
     \end{tabular}
     \caption{Matrix of inputs and outputs}
     \label{table:tiny-trainable-instruments-inputs-outputs-matrix}
+\end{table}{}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{ | l | l | l |}
+        \hline
+        \textbf{Input}  & \textbf{Sensor library} & \textbf{Machine learning library} \\
+        \hline
+        Color &  Arduino{\_}APDS9960 & Arduino{\_}KNN \\
+        \hline
+        Gesture & Arduino{\_}LSM9DS1 & Arduino{\_}TensorFlowLite \\
+        \hline
+        Speech & PDM & Arduino{\_}TensorFlowLite \\
+        \hline
+    \end{tabular}
+    \caption{Software dependencies for inputs}
+    \label{table:software-dependencies-inputs}
+\end{table}{}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{ | l | l | }
+        \hline
+        \textbf{Output}  & \textbf{Actuator library} \\
+        \hline
+        Buzzer & - \\
+        \hline
+        LED & - \\
+        \hline
+        MIDI & - \\
+        \hline
+        MIDI & - \\
+        \hline
+        Printer & Adafruit Thermal Printer Library\\
+        \hline
+        Screen & Adafruit{\_}SSD1306\\ 
+        \hline
+        Serial & - \\
+        \hline
+        Servo & Servo\\
+        \hline
+    \end{tabular}
+    \caption{Software dependencies for outputs}
+    \label{software-dependencies-outputs}
 \end{table}{}
 
 \begin{figure}[ht]
