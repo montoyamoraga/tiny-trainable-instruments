@@ -4,7 +4,7 @@
 
 \section{Research at MIT}
 
-As part of the research that directly inspired this thesis, here are some courses, projects, and studies I have undertaken while at MIT Media Lab.
+As part of the research that directly inspired this thesis, here are some courses I took and some projects I started while at MIT Media Lab, and how they inform my theoretical and practical background for Tiny trainable instruments.
 
 \subsection{Classes at MIT}
 
@@ -15,15 +15,17 @@ As part of the research that directly inspired this thesis, here are some course
   \item Spring 2020, MAS.712 Learning Creative Learning, by professor Mitchel Resnick
 \end{enumerate}
 
-In the class Current Debates in Media, topics covered included fake news, surveillance, algorithmic bias, data colonialism, climate justice, algorithms of oppression, among others. For my final paper I wrote on the role of the media during the 2019 Chilean protests.
+In the class Current Debates in Media, topics covered included fake news, surveillance, algorithmic bias, data colonialism, climate justice, algorithms of oppression, among others. For my final paper I wrote on the role of the media during the 2019 Chilean protests. This class directly inspired me to look for privacy-first machine learning, and thinking about artificial intelligence in a critical way and not as clean safe automation, but as invisibilized labor, exploitation, and algorithmic bias and discrimination in the worst scenarios.
 
-In the class Recreating the Past, I learned about media arts history, and I furthered my learning of the language C++ which I ended up using for writing the library for my thesis, and of the package and community of openFrameworks, which is one of the most popular open source frameworks for media arts.
+In the class Recreating the Past, I learned about media arts history, and I dived deep in the language C++ which I used for writing the TinyTrainable library, while working with the library openFrameworks, which is one of the most popular open source frameworks and communities for media arts.
 
-In the class Sound: Past and Future, I learned more about the history of different computational advancements for sound, with a strong focus on projects at MIT Media Lab's own research groups including Opera of the Future, Hyperinstruments, and Music, Mind, and Machine.
+In the class Sound: Past and Future, I learned more about the history of different computational advancements for sound, with a strong focus on projects at MIT Media Lab's own research groups including Opera of the Future, Hyperinstruments, and Music, Mind, and Machine. This class introduced me to many projects and it helped me decide on making instruments for my thesis, using the latest technologies I could find, in this case, microcontrollers and machine learning.
+
+In the class Learning Creative Learning, I was introduced to the Lifelong Kindergarten's frameworks and ideas, including the 4 P's (peers, projects, passion, and play), and the design of Scratch as a home with low floor, wide walls, and high ceiling, which I highly recommend to check on Mitchel Resnick's book Lifelong Kindergarten. This class gave me the push to write a library with a community in mind, starting with the development of it, which happened because I had the pleasure of working with MIT undergrads Peter Tone and Maxwell Wang, who helped me with different aspects of research and development.
 
 \subsection{Projects at MIT}
 
-Some other projects I created during these years include:
+Some other projects I created during this master's include:
 
 \begin{enumerate}
   \item SiguesAhi: an instrument to detect when oppressive institutions have ceased to exist. It is achieved with microcontrollers with Internet connectivity.
@@ -31,12 +33,44 @@ Some other projects I created during these years include:
   \item Introduction to networks for artists: a series of tutorials for beginners, to learn how to set up their own networks and collaborate in peer-to-peer ways for making art.
 \end{enumerate}
 
+SiguesAhi is a sibling project to Tiny trainable instruments. It is based on a microcontroller from the same series and format but different architecture and capabilities, the Arduino Nano 33 IoT.
+
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/sigues-ahi.jpg}
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/arduino-nano-33-iot-with-headers.jpg}
+  \caption{Arduino Nano 33 IoT with headers}
+  \caption*{Retrieved from \cite{website-arduino-nano-33-iot-with-headers}}
+  \label{}
+\end{figure}
+
+For this project, I am writing a library for making digital instruments, that can detect if institutions still exist. This is accomplished by connecting the microcontroller to the internet, and making it ping the Wikipedia website with a certain periodicity, and check the first sentence of the first paragraph of the entry. For the example, I am using the National Rifle Association, which sadly still exists.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/siguesahi.jpg}
   \caption{SiguesAhi project}
-  \caption*{Picture taken at home}
-  \label{fig:sigues-ahi}
+  \caption*{Picture by myself}
+  \label{fig:siguesahi}
+\end{figure}
+
+The \cite[Open Drawing Machine]{website-open-drawing-machine} is a collaborative project with Gaurav Patekar for the research group Future Sketches at MIT Media Lab. It is a low consisting open source machine, consisting of an Arduino microcontroller and hadrware for drawing computationally. We have done the research together, Gaurav designed and 3D printed the hardware, and I have packaged the results as a still unfinished openFrameworks addon.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/open-drawing-machine.jpg}
+  \caption{Open Drawing Machine project}
+  \caption*{Picture by myself}
+  \label{fig:open-drawing-machine}
+\end{figure}
+
+Currently the Open Drawing Machine can receive drawing commands from a computer through a serial port, and the next step of this project is being able to receive commands from other computers through networks and the internet. This comes from the last project I will mention that I worked at while at MIT Media Lab, which is \cite[Introduction to computer networks for artists]{website-intro-to-computer-networks-for-artists}, a collection of tutorials for remote peer-to-peer collaboration between artists.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/intro-to-computer-networks-for-artists.jpg}
+  \caption{Introduction to computer networks for artists project}
+  \caption*{Picture by myself}
+  \label{fig:intro-to-computer-networks-for-artists}
 \end{figure}
 
 \section{Computational media arts instruments}
@@ -308,16 +342,6 @@ Also Yining Shi created a new class at NYU ITP in 2020, at the intersection of m
 Machine learning algorithms need data to be trained on. I think it’s a human right to not be surveilled, and I hope my thesis can put a positive spin on the gathering of data, by letting users perform auto surveillance, like the Ai Weiwei piece WeiweiCam, a 2021 project where the artist installed cameras for self surveillance as a protest against the Chinese government.
 
 A huge inspiration for my thesis has been the Guardian Project by the Electronic Frontier Foundation, and the research and activism work by Sasha Sasha Costanza-Chock.
-
-\section{Education}
-
-Mitch Resnick's book Lifelong Kindergarten
-
-Low floor, wide walls, high ceiling
-
-Peers, projects, passion, play
-
-Gene Kogan and Andreas Refsgaard
 
 \section{Machine learning}
 
