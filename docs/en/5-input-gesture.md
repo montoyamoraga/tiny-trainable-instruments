@@ -10,7 +10,7 @@ Training input-gesture is done in three steps:
 
 * *Data collection*, where the Arduino takes in environmental input from its sensors and writes it as a .csv (spreadsheet) file, which you then copy over to your computer.
 * *Training*, where your computer analyzes the collected data and builds a model to interpret the data using machine learning
-* *Deploying*, where you upload your newly-trained model to the Arduino and execute it!
+* *Deploying*, where you upload your newly-trained model to the Arduino and run it!
 
 ## Installation
 
