@@ -2,7 +2,7 @@
 
 ## About
 
-Speech to MIDI to control drum machines
+Speech to \acrshort{MIDI} to control drum machines
 
 ## Reference
 
