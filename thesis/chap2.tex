@@ -8,7 +8,7 @@ First there is a definition of the words that make up the title of this project,
 
 \begin{enumerate}
   \item TinyTrainable Arduino software library
-  \item Auxiliary code for machine learning
+  \item Auxiliary code for \acrshort{ML}
   \item Workshop educational material
 \end{enumerate}
 
@@ -16,11 +16,11 @@ First there is a definition of the words that make up the title of this project,
 
 \subsection{Definition of tiny}
 
-Bi tiny I mean handheld, lightweight instruments that you can take for a walk or on your backpack. Tiny is also a nod to the new uprising field of tiny machine learning.
+Bi tiny I mean handheld, lightweight instruments that you can take for a walk or on your backpack. Tiny is also a nod to the new uprising field of tiny \acrshort{ML}.
 
 \subsection{Definition of trainable}
 
-By trainable I mean a computational device that can learn by examples. This name comes from the machine learning lexicon, where training is a process where an algorithm finds the numerical values of all parameters (weights, biases) of a machine learning model, with the help of a dataset.
+By trainable I mean a computational device that can learn by examples. This name comes from the \acrshort{ML} lexicon, where training is a process where an algorithm finds the numerical values of all parameters (weights, biases) of a \acrshort{ML} model, with the help of a dataset.
 
 The process of training a model with a microcontroller has been really rewarding for me during the making of this thesis. When I program audiovisual computational devices to react to sensors, I often find myself having to look at streams of data, having to program statistical methods to detect trends, such as averages, and then having to program a hard coded value on the software, and having to write a manual for setup or fine tuning for collaborators to be able to run it again under different conditions.
 
@@ -71,7 +71,7 @@ The Tiny trainable instruments
     \centering
     \begin{tabular}{ | l | l | l |}
         \hline
-        \textbf{Input}  & \textbf{Sensor library} & \textbf{Machine learning library} \\
+        \textbf{Input}  & \textbf{Sensor library} & \textbf{\acrshort{ML} library} \\
         \hline
         Color &  Arduino{\_}APDS9960 & Arduino{\_}KNN \\
         \hline
@@ -121,7 +121,7 @@ The Tiny trainable instruments
 
 \section{TinyTrainable Arduino software library}
 
-The main contribution of this thesis is the TinyTrainable Arduino library, an open source library for creating Tiny Trainable instruments, as in microcontroller-based devices that you can train to react to gestures with machine learning, so they can process and output different multimedia events, such as sound, movement, light, and text.
+The main contribution of this thesis is the TinyTrainable Arduino library, an open source library for creating Tiny Trainable instruments, as in microcontroller-based devices that you can train to react to gestures with \acrshort{ML}, so they can process and output different multimedia events, such as sound, movement, light, and text.
 s
 \subsection{Repository structure}
 
@@ -129,7 +129,7 @@ The library is a repository hosted at \url{https://github.com/montoyamoraga/Tiny
 
 The structure of the folders follows 2 simultaneous specifications: it includes the necessary file and folder names for being packaged and indexed as an Arduino Library, and also it complies with GitHub guidelines for licensing and automatic workflows for testing the code.
 
-The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in Arduino. Some trained machine learning models are included as C++ files on the assets/ folder.
+The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in Arduino. Some trained \acrshort{ML} models are included as C++ files on the assets/ folder.
 
 \subsection{Installation}
 
@@ -197,11 +197,11 @@ The materials for this thesis
 
 \section{Open}
 
-All examples included with this library were written with the aim of showing the fundamentals of how to build the instruments and different machine learning enabled manipulation of multimedia material, so that people could build on top of it and make it their own, by changing the values of variables and adding more functionalities.
+All examples included with this library were written with the aim of showing the fundamentals of how to build the instruments and different \acrshort{ML} enabled manipulation of multimedia material, so that people could build on top of it and make it their own, by changing the values of variables and adding more functionalities.
 
 \section{Philosophy and experience}
 
-Throughout this project, the magic number was 3. The machine learning algorithms were hardcoded to be able to distinguish between 3 different categories: 3 colors, 3 physical gestures, 3 sound utterances.
+Throughout this project, the magic number was 3. The \acrshort{ML} algorithms were hardcoded to be able to distinguish between 3 different categories: 3 colors, 3 physical gestures, 3 sound utterances.
 
 \section{Inputs}
 
