@@ -1338,11 +1338,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/zoom-introduction.jpg
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/zoom-introduction.jpg
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/zoom-introduction.jpg
@@ -1382,6 +1377,11 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesi
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/materials-arduino-nano-33-ble-sense.jpg
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/materials-arduino-nano-33-ble-sense.jpg
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/materials-arduino-nano-33-ble-sense.jpg
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/materials-adafruit-micro-usb-cable.jpg
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/materials-adafruit-micro-usb-cable.jpg
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/materials-adafruit-micro-usb-cable.jpg
