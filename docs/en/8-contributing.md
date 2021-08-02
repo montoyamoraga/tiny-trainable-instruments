@@ -51,7 +51,7 @@ git push
 
 * Open your repository online
 
-* Open ayour pull request and wait for comments or approval
+* Open your pull request and wait for comments or approval
 
 ## Contributing documentation
 
