@@ -43,7 +43,7 @@ SiguesAhi is a sibling project to Tiny trainable instruments. It is based on a m
   \label{}
 \end{figure}
 
-For this project, I am writing a library for making digital instruments, that can detect if institutions still exist. This is accomplished by connecting the microcontroller to the internet, and making it ping the Wikipedia website with a certain periodicity, and check the first sentence of the first paragraph of the entry. For the example, I am using the National Rifle Association, which sadly still exists.
+For this project, I am writing a library for making digital instruments that can detect if institutions still exist. This is accomplished by connecting the microcontroller to the internet, and making it ping the Wikipedia website with a certain periodicity, in order to download and check the first sentence of the first paragraph of the entry. As an example of the library, I am using the National Rifle Association, which sadly still exists.
 
 \begin{figure}[ht]
   \centering
@@ -53,7 +53,7 @@ For this project, I am writing a library for making digital instruments, that ca
   \label{fig:siguesahi}
 \end{figure}
 
-The \cite[Open Drawing Machine]{website-open-drawing-machine} is a collaborative project with Gaurav Patekar for the research group Future Sketches at MIT Media Lab. It is a low consisting open source machine, consisting of an Arduino microcontroller and hadrware for drawing computationally. We have done the research together, Gaurav designed and 3D printed the hardware, and I have packaged the results as a still unfinished openFrameworks addon.
+The \cite[Open Drawing Machine]{website-open-drawing-machine} is a collaborative project with Gaurav Patekar for the research group Future Sketches at MIT Media Lab. It is a low cost open source machine, consisting of an Arduino microcontroller and hardware for drawing computationally. We have done the research together, Gaurav designed and 3D printed the hardware, and I have packaged the results as a still unfinished openFrameworks addon.
 
 \begin{figure}[ht]
   \centering
@@ -63,7 +63,7 @@ The \cite[Open Drawing Machine]{website-open-drawing-machine} is a collaborative
   \label{fig:open-drawing-machine}
 \end{figure}
 
-Currently the Open Drawing Machine can receive drawing commands from a computer through a serial port, and the next step of this project is being able to receive commands from other computers through networks and the internet. This comes from the last project I will mention that I worked at while at MIT Media Lab, which is \cite[Introduction to computer networks for artists]{website-intro-to-computer-networks-for-artists}, a collection of tutorials for remote peer-to-peer collaboration between artists.
+Currently the Open Drawing Machine can receive drawing commands from a computer through a serial port, and the next step of this project is being able to receive commands from other computers through networks and the internet. This comes from the last project I will mention that I worked at while at MIT Media Lab, which is Introduction to computer networks for artists \cite{website-intro-to-computer-networks-for-artists}, a collection of tutorials for remote peer-to-peer collaboration between artists. This project is inspired by the amazing research on remote collaboration, sensors, peer-to-peer protocols, by friend Lisa Jamhoury, including the app Kinectron
 
 \begin{figure}[ht]
   \centering
@@ -79,7 +79,7 @@ On top of the proliferation of personal portable computers capable of performing
 
 In particular, here I will highlight some media arts instruments that have inspired my research, because of their use and promotion of open source software and hardware, scripting capabilities, and other design considerations. These instruments often sit at my desk for inspiration, or I spend hours playing with them for my art and learning from them and the communities around them.
 
-The tables \ref{table:media-arts-instruments-technical} and \ref{table:media-arts-instruments-influence} are respectively a technical and influence summary of the instruments that I reference in this section.
+The tables \ref{table:media-arts-instruments-technical} and \ref{table:media-arts-instruments-influence} are respectively a technical and influences summary of the instruments that I reference in this section.
 
 \begin{table}[ht]
     \centering
@@ -148,7 +148,7 @@ Another inspiration comes from their microgranny 2 granular sampler which is mad
   \label{fig:bastl-microgranny-2}
 \end{figure}
 
-Their Kastle synthesizers are also based on microcontrollers, and feature a patchbay for making connections with jumper wires, the same used for prototyping in electronic breadboards, which influenced me to make the Tiny trainable instruments built with breadboards and jumper wires, instead of custom printed circuit boards. Also, the Kastle sythns are forgiving instruments, their inputs and outputs are robust enough to allow for mistakes in connections, in an electrical and mechanical way, which I think it's perfect for safe experimentation, it would be a bummer if the instrument was easy to break, or if it demanded a huge effort in understanding electronics for using it.
+Their Kastle synthesizers are also based on microcontrollers, and feature a patchbay for making connections with jumper wires, the same used for prototyping in electronic breadboards, which influenced me to make the Tiny trainable instruments built with breadboards and jumper wires, instead of custom printed circuit boards. Also, the Kastle synths are forgiving instruments, their inputs and outputs are robust enough to allow for mistakes in connections, in an electrical and mechanical way, which I think it's perfect for safe experimentation, it would be a bummer if the instrument was easy to break, or if it demanded a huge effort in understanding electronics for using it.
 
 \begin{figure}[ht]
   \centering
@@ -178,7 +178,7 @@ Another instrument I want to highlight is the Illuminati, currently discontinued
   \label{fig:bastl-illuminati}
 \end{figure}
 
-The final instrument from this company that I want to highilight is the OMSynth, one of many collaborations with Casper Electronics. This device is an educational and maker circuit development tool for creating synthesizers, it includes basic fundamental blocks, such as battery power, audio input and output, potentiometers for attenuating and boosting signals, and a suite of parts kits for building devices including sequencers, oscillators, and samplers, on the included breadboard. Its release as a kit was also a direct influence in the release of Tiny trainable instruments as a kit with instructions.
+The final instrument from this company that I want to highlight is the OMSynth, one of many collaborations with Casper Electronics. This device is an educational and maker circuit development tool for creating synthesizers, it includes basic fundamental blocks, such as battery power, audio input and output, potentiometers for attenuating and boosting signals, and a suite of parts kits for building devices including sequencers, oscillators, and samplers, on the included breadboard. Its release as a kit was also a direct influence in the release of Tiny trainable instruments as a kit with instructions.
 
 \begin{figure}[ht]
   \centering
@@ -188,7 +188,7 @@ The final instrument from this company that I want to highilight is the OMSynth,
   \label{fig:bastl-omsynth}
 \end{figure}
 
-Many BASTL standalone instruments are 200.00 USD or less, which is a huge contrast to the 1960s, when a Moog analog system II cost 6,200.00 USD, which was enough to buy a small house \cite{analog-days}. Also, many of their instruments are sold as kits for building and soldering them yourself, for the cheaper cost and the added educational aspect of having a hands-on experience.
+Many BASTL standalone instruments are 200.00 USD or less, which is a huge contrast to the 1960s, when a Moog analog system II cost 6,200.00 USD, which was enough to buy a small house \cite{analog-days}. Also, many of their instruments are sold as kits for building and soldering them yourself, for the cheaper cost and the added educational aspect of having hands-on experience.
 
 \subsection{Critter \& Guitari}
 
@@ -285,7 +285,7 @@ Both run on microcontrollers, and they use a new proposed language called Shlisp
 
 As of 2021, their firmware and editor became open source, and it is available at github.com/pblasser/shbobo.
 
-COMMENT ON OPEN SOURCE: something being open source doesn't necessarily mean it is accessible to a wider audience. is one of the goals of your work to create instruments that are accessible to a wider audience?
+COMMENT ON OPEN SOURCE: something being open source doesn't necessarily mean it is accessible to a wider audience. Is one of the goals of your work to create instruments that are accessible to a wider audience?
 
 They promote computer-centric approaches to making sound, such as the use of integers and metaphors of finite state machines, and also allow for different ways of playing and sensing, such as the use of antennas for detecting hand distance, a microphone for detecting speech and whistling, and wooden bars with piezos for detecting pressure.
 
@@ -293,7 +293,7 @@ TODO: write how this inspired the new interactions i am inventing or appropriati
 
 \section{Education}
 
-This thesis is inspired by the work of the research group Lifelong Kindergarten at MIT Media Lab, led by professor Mitchel Resnick. On the book with the same title, he builds on Seymour Papert’s work, and proposes that educational projects should have “Low floor, wide walls, high ceilings”, and that learners thrive when they engage in the 4 Ps: “Peers, projects, passion, play”.
+This thesis is inspired by the work of the research group Lifelong Kindergarten at MIT Media Lab, led by professor Mitchel Resnick. In the book with the same title, he builds on Seymour Papert’s work, and proposes that educational projects should have “Low floor, wide walls, high ceilings”, and that learners thrive when they engage in the 4 Ps: “Peers, projects, passion, play”.
 
 In terms of peers, I have been lucky to have been supported by the MIT UROP office and MIT Media Lab, and had the opportunity to work with MIT undergrad researchers Peter Tone and Maxwell Wang. Also, this project was taught in collaborative workshops where people could discuss their ideas with their peers.
 

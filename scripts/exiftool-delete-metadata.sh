@@ -32,7 +32,7 @@ else
   # announce directory does not exist
   echo "fail, $DIR_MEDIA/ does not exist"
 
-# end of if statemement for existence of directory
+# end of if statement for existence of directory
 fi
 
 # announce finished running script
