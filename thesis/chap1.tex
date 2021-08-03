@@ -4,24 +4,44 @@
 
 \section{Context}
 
-This thesis is the capstone project of my master's program, between the academic years 2019-2021 at MIT Media Lab, where I am a Research Assistant at the groups Opera of the Future and Future Sketches. The work presented here has been developed mostly while working remotely during the COVID19 pandemic, while at home in Boston MA.
+This thesis is the capstone project of my master's program, between the academic years 2019-2021 at MIT Media Lab, where I am a Research Assistant at the groups Opera of the Future and Future Sketches. The work presented here has been developed mostly while working remotely from my room in Boston MA during the COVID19 pandemic.
 
-This thesis is a collection of media arts instruments, using tiny \acrshort{ML}, and with a strong emphasis on \acrlong{AI} ethics and \acrlong{DIY}. Its main audience is beginners and artists, and it is my hope that this work can inspire a new generation of instrument makers, artists, designers, educators, programmers, policy makers, activists, and enthusiasts.
+This thesis is a collection of media arts instruments made with microcontrollers and \acrfull{ML}, with a strong emphasis on \acrfull{AI} ethics and \acrfull{DIY} methods. Its main audience is beginners and artists, and it is my hope that this work can inspire a new generation of instrument makers, artists, designers, educators, programmers, policy makers, activists, and enthusiasts.
 
-\acrfull{ML} has several barriers of entry, including cost, complexity, and difficulty. Since my practice is based on sharing and working on the open with different communities, I am not a fan of the current state of industrial \acrshort{ML} that relies on proprietary software and hardware. This tends to happen because their ML models are aiming for high precision, and need to be trained for long periods of time, using expensive non open computational resources, with huge datasets that often are scraped from the internet without the explicit consent of the people, and a byproduct of surveillance capitalism.
+\acrshort{ML} has several barriers of entry, including cost, complexity, and difficulty. Since my practice is based on sharing and working on the open with different communities, I am not a fan of the current state of industrial \acrshort{ML} that relies on proprietary software and hardware. This tends to happen because their ML models are aiming for high precision, and need to be trained for long periods of time, using expensive non open computational resources, with huge datasets that often are scraped from the internet without the explicit consent of the people, and a byproduct of surveillance capitalism.
+
+The release of the library Arduino TensorFlow Lite in late 2019 made me aware of the tiny \acrshort{ML} field, a subset of \acrshort{ML} that focuses on hardware and software that are able to run calculations both on-device and with low power, a stark contrast to many industrial acrshort{ML} applications. The associated tutorials showed how you could use your Arduino microcontrooller to build your own database to detect colors and gestures, and I decided that this thesis project would be an exploration of the artistic applications of these emerging techniques. 
+
+One aspect that deeply resonated with me data agency, the ability to capture my own data, and use it for my own purposes, in the microcontroller, without having to rely on databases. 
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/weiweicam.jpg}
+  \caption{Weiweicam, by Ai Weiwei, 2012}
+  \caption*{Retrieved from \cite{website-forbes-ai-weiwei-cam}}
+  \label{fig:weiweicam}
+\end{figure}
+
+
+It is particularly important in terms of consent and data agency, to 
 
 Since all \acrshort{ML} algorithms are written by humans, and then trained on biased data, and they are deployed to the world, where they affect our lives. These imperfections are highlighted over the course of this thesis, by being explicit about the assumptions and quantizations performed when working with data.
 
-This thesis proposes a scaling down of \acrshort{ML}, to make it more accessible to artists, it is my belief that computational technology is 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.40\textheight,keepaspectratio]{images/meme-spider-man.jpg}
+  \caption{Meme about need of machine learning}
+  \caption*{Retrieved from \cite{website-twitter-dynamicwebpaige-meme}}
+  \label{fig:meme-spider-man}
+\end{figure}
 
+This thesis proposes a scaling down of \acrshort{ML}, to make it more accessible to artists, it is my belief that computational technology is 
+ 
 \cite{website-talk-technology-and-public-art-rafael-lozano-hemmer}
 36m28s
 Rafael Lozano-Hemmer: Face recognition needs to be banned in all applications except art.
 
-TODO: add Zoom example of garbage speech to text
-
-
- in expensive or rented resources, such as the service Google Colab, which allows you to share and train ML models on the cloud. This thesis shows users how to build \acrshort{ML} art systems that can circumvent this and allow for more control of their data.
+n expensive or rented resources, such as the service Google Colab, which allows you to share and train ML models on the cloud. This thesis shows users how to build \acrshort{ML} art systems that can circumvent this and allow for more control of their data.
 
 Artists have unprecedented access to new tools for making new tools and instruments, and this thesis intends to be a foundation for a new generation of instruments for manipulating audiovisual material, using \acrshort{ML}. This approach is really exciting because it allows beginners and artists to train their instruments instead of programming them, by inputting data for tuning, instead of having to write lines of code and fixed thresholds for changing their behavior.
 
@@ -40,7 +60,7 @@ In this other example, I said out loud the names of my thesis commitee members: 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/zoom-commitee.jpg}
-  \caption{monome norns}
+  \caption{Screen capture of speech to text on Zoom, committee}
   \caption*{Screen capture of speech to text on Zoom, introduction}
   \label{fig:zoom-committee}
 \end{figure}
@@ -55,14 +75,6 @@ Years ago I decided against using text completion (if you have ever interacted w
   \caption{Meme about biased data}
   \caption*{Retrieved from \cite{website-twitter-janellecshane-meme}}
   \label{fig:meme-star-wars}
-\end{figure}
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/meme-spider-man.jpg}
-  \caption{Meme about biased data}
-  \caption*{Retrieved from \cite{website-twitter-dynamicwebpaige-meme}}
-  \label{fig:meme-spider-man}
 \end{figure}
 
 TODO: Add an example of a biased dataset that is commonly used.
