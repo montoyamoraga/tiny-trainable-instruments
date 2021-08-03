@@ -18,11 +18,19 @@ This thesis is a collection of media arts instruments made with microcontrollers
 
 \acrshort{ML} has several barriers of entry, including cost, complexity, and difficulty. Since my practice is based on sharing and working on the open with different communities, I am not a fan of the current state of industrial \acrshort{ML} that relies on proprietary software and hardware. This tends to happen because their ML models are aiming for high precision, and need to be trained for long periods of time, using expensive non open computational resources, with huge datasets that often are scraped from the internet without the explicit consent of the people, and a byproduct of surveillance capitalism.
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/surveillance-camera-tree.jpg}
+  \caption{Surveillance camera in a park in Boston MA}
+  \caption*{Picture taken by myself}
+  \label{fig:surveillance-camera-tree}
+\end{figure}
+
 TODO: insert picture of surveillance camera near my home, in the middle of nature.
 
-The release of the library Arduino TensorFlow Lite in late 2019 made me aware of the tiny \acrshort{ML} field, a subset of \acrshort{ML} that focuses on hardware and software that are able to run calculations both on-device and with low power, a stark contrast to many industrial \acrshort{ML} applications. The tutorials published by Arduino showed how to build your own database to detect colors and gestures, and I decided that this thesis project would be an exploration of the artistic applications of these emerging techniques.
+The release of the library Arduino TensorFlow Lite in late 2019 made me aware of the tiny \acrshort{ML} field, a subset of \acrshort{ML} that focuses on hardware and software that are able to run calculations both on-device and with low power, a stark contrast to many industrial \acrshort{ML} applications. The tutorials published by Arduino showed how to build your own database to detect colors and gestures using a microcontroller, and I decided that this thesis project would be an exploration of the artistic applications of these emerging techniques.
 
-One aspect that deeply resonated with me was \textbf{data agency}, the ability to capture my own data, and use it for my own purposes, in the microcontroller, without having to rely on databases, and bypassing any corporate or government surveillance. Since during this thesis work and pandemic lockdown context, I have found myself several times during the year working in my room on my own, capturing data of myself, and then building databases for other people to use, in a way that reminds of one of my favorite artists and activists, Ai Weiwei, who in 2012 while facing government surveillance, decided to livestream all his activities from his house, which I think it's a way of reclaiming agency about your data. 
+One aspect that deeply resonated with me was \textbf{data agency}, and being in control of your own data, in particular capture, storage, publication, and use. In this thesis I propose the microcontroller as a way of building our own databases and deploying our models bypassing any corporate or government surveillance. During this year and more of pandemic lockdown context, I have found myself several times working alone in my room, capturing data of myself and my living environment, and then building databases for other people to use, in a way that reminds of one of my favorite artists and activists, Ai Weiwei, who in 2012 while facing government surveillance, decided to livestream from his house, which I also see today as a way of reclaiming data agency.
 
 \begin{figure}[ht]
   \centering
@@ -32,7 +40,7 @@ One aspect that deeply resonated with me was \textbf{data agency}, the ability t
   \label{fig:weiweicam}
 \end{figure}
 
-I am an underrepresented minority, and often it happens to me that supposedly automatic neutral technologies don't understand me. Here is an example of the popular software Zoom, where I spoke out loud "This is a test to show that Zoom speech to text transcription does not work with my voice because of my accent", but the words Zoom and voice were transcribed as soon and boys, respectively.
+I am an underrepresented minority, and it often happens to me that supposedly automatic neutral technologies fail to detect me. Here is an example of the popular software Zoom, where I spoke out loud "This is a test to show that Zoom speech to text transcription does not work with my voice because of my accent", but the words Zoom and voice were transcribed as soon and boys, respectively.
 
 \begin{figure}[ht]
   \centering
@@ -42,7 +50,7 @@ I am an underrepresented minority, and often it happens to me that supposedly au
   \label{fig:zoom-voice}
 \end{figure}
 
-Here is also a further experiment of pronunciation with less common words, the names of the members of my thesis committee: Tod Machover, Mitchel Resnick, Zach Lieberman, where the result had even more errors.
+Here is also a further experiment with more unusual words, the names of the members of my thesis committee: Tod Machover, Mitchel Resnick, Zach Lieberman, where the transcription had even more errors.
 
 \begin{figure}[ht]
   \centering
@@ -52,7 +60,9 @@ Here is also a further experiment of pronunciation with less common words, the n
   \label{fig:zoom-committee}
 \end{figure}
 
-These examples are not affecting me negatively, but these algorithmic decisions can have devastating effects in equity and discrimination.  Despite \acrshort{ML} algorithms being promoted by corporations and governments as unbiased, most probably these algorithms have never been exposed to Chilean people with my accent.
+Despite these \acrshort{ML} algorithms being promoted by corporations and governments as unbiased and effective, most probably these algorithms have never been exposed to Chilean people with my accent, so they fail. Because of these errors, but more importantly, because of not wanting to renounce my privacy I routinely turn off voice assistants and text completion in my devices (if you have ever interacted with me over text, I typed every single character :)), and even cover the camera of my computer, just in case.
+
+These examples shown are not affecting me negatively, but these algorithmic decisions can easily have devastating effects in equity and discrimination. Routinely corporations 
 
 \begin{figure}[ht]
   \centering
@@ -62,9 +72,9 @@ These examples are not affecting me negatively, but these algorithmic decisions 
   \label{fig:meme-star-wars}
 \end{figure}
 
-Because of these errors, but more importantly, because of me renouncing my privacy I routinely turn off voice assistants and text completion in my devices (if you have ever interacted with me over text, I typed every single character :)), and tape the camera of my computer.
+Because of these errors, but more importantly, because of not wanting to renounce my privacy I routinely turn off voice assistants and text completion in my devices (if you have ever interacted with me over text, I typed every single character :)), and even cover the camera of my computer, just in case.
 
-Not always we can just turn off or opt out of these computational or \acrshort{AI} systems, but we should be able to, because there is even more at stake than losing our privacy! We could be subjected to the harmful \textbf{algorithmic bias}. As the Algorithmic Justice League explains on their website:
+Sadly, we often cannot turn off or opt out of these computational or \acrshort{AI} systems, but we should be able to, because there is even more at stake than losing our privacy! We could be subjected to harmful \textbf{algorithmic bias}, as the Algorithmic Justice League explains on their website:
 
 \begin{displayquote}
 In today’s world, AI systems are used to decide who gets hired, the quality of medical treatment we receive, and whether we become a suspect in a police investigation. While these tools show great promise, they can also harm vulnerable and marginalized people, and threaten civil rights. Unchecked, unregulated and, at times, unwanted, AI systems can amplify racism, sexism, ableism, and other forms of discrimination.\cite{website-algorithmic-justice-league}
