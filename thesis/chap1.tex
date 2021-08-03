@@ -8,7 +8,17 @@ This thesis is the capstone project of my master's program, between the academic
 
 This thesis is a collection of media arts instruments made with microcontrollers and \acrfull{ML}, with a strong emphasis on \acrfull{AI} ethics and \acrfull{DIY} methods. Its main audience is beginners and artists, and it is my hope that this work can inspire a new generation of instrument makers, artists, designers, educators, programmers, policy makers, activists, and enthusiasts.
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/tiny-trainable-instruments-early-protoype.jpg}
+  \caption{Early prototype of Tiny trainable instruments}
+  \caption*{Picture taken by myself}
+  \label{fig:tiny-trainable-instruments-early-protoype}
+\end{figure}
+
 \acrshort{ML} has several barriers of entry, including cost, complexity, and difficulty. Since my practice is based on sharing and working on the open with different communities, I am not a fan of the current state of industrial \acrshort{ML} that relies on proprietary software and hardware. This tends to happen because their ML models are aiming for high precision, and need to be trained for long periods of time, using expensive non open computational resources, with huge datasets that often are scraped from the internet without the explicit consent of the people, and a byproduct of surveillance capitalism.
+
+TODO: insert picture of surveillance camera near my home, in the middle of nature.
 
 The release of the library Arduino TensorFlow Lite in late 2019 made me aware of the tiny \acrshort{ML} field, a subset of \acrshort{ML} that focuses on hardware and software that are able to run calculations both on-device and with low power, a stark contrast to many industrial \acrshort{ML} applications. The tutorials published by Arduino showed how to build your own database to detect colors and gestures, and I decided that this thesis project would be an exploration of the artistic applications of these emerging techniques.
 
@@ -22,7 +32,7 @@ One aspect that deeply resonated with me was \textbf{data agency}, the ability t
   \label{fig:weiweicam}
 \end{figure}
 
-Another aspect I want to highlight is \textbf{algorithmic bias}. The worlwide release of the documentary Coded Bias on Netflix has helped me find the language to navigate these topics. I am an underrepresented minority, and often it happens to me that supposedly automatic neutral technologies don't understand me. Here is an example of the popular software Zoom, where I spoke out loud "This is a test to show that Zoom transcriptoin does not work with my voice because of my accent", but the words Zoom and voice were transcribed as soon and boys, respectively.
+I am an underrepresented minority, and often it happens to me that supposedly automatic neutral technologies don't understand me. Here is an example of the popular software Zoom, where I spoke out loud "This is a test to show that Zoom speech to text transcription does not work with my voice because of my accent", but the words Zoom and voice were transcribed as soon and boys, respectively.
 
 \begin{figure}[ht]
   \centering
@@ -32,7 +42,7 @@ Another aspect I want to highlight is \textbf{algorithmic bias}. The worlwide re
   \label{fig:zoom-voice}
 \end{figure}
 
-Here is also a further experiment of pronunciation with less common words, in this case, the names of the members of my thesis commitee: Tod Machover, Mitchel Resnick, Zach Lieberman.
+Here is also a further experiment of pronunciation with less common words, the names of the members of my thesis commitee: Tod Machover, Mitchel Resnick, Zach Lieberman, where the result had even more errors.
 
 \begin{figure}[ht]
   \centering
@@ -44,10 +54,6 @@ Here is also a further experiment of pronunciation with less common words, in th
 
 These examples are not affecting me negatively, but these algorithmic decisions can have devastating effects in equity and discrimination.  Despite \acrshort{ML} algorithms being promoted by corporations and governments as unbiased, most probably these algorithms have never been exposed to Chilean people with my accent.
 
-Because of these errors and my general distrust with these supposedly automatic tools, I routinously turn off voice assistants and text completion in my devices (if you have ever interacted with me over text, I typed every single character :)). I am not comfortable with the widespread commercialization of voice assistants, including Apple's Siri, Amazon's Alexa,  Google's Google Assistant, or Microsoft's Cortana, because I think they are an invasion of privacy.
-
-A year ago, while I was deciding what topic to work on for this thesis, a video \cite{website-talk-technology-and-public-art-rafael-lozano-hemmer} was released of a conversation between artists Rafael Lozano-Hemmer and Dorothy Santos, and on 36m28s Rafael said " Face recognition needs to be banned in all applications except art."
-
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/meme-star-wars.jpg}
@@ -56,9 +62,19 @@ A year ago, while I was deciding what topic to work on for this thesis, a video 
   \label{fig:meme-star-wars}
 \end{figure}
 
-This was the perfect spark for starting to work on this project, and make more accesible these computational techniques to beginners, enthusiasts, and educators, to have a more critical and safer use of technology. I highly recommend checking out the important work of the Algorithmic Justice League in these important topics.
+Because of these errors, but more importantly, because of me renouncing to my privacy I routinously turn off voice assistants and text completion in my devices (if you have ever interacted with me over text, I typed every single character :)), and tape the camera of my computer.
 
-We should also not forget that with computational resources becoming cheaper, \acrshort{ML} becomes cheaper, and we can be tempted to use it in applications that don't need in the first place.
+Not always we can just turn off or opt out of these computational or \acrshort{AI} systems, but we should be able to, because there is even more at stake than losing our privacy! We could be subjected to the harmful \textbf{algorithmic bias}. As the Algorithmic Justice League explains on their website:
+
+\begin{displayquote}
+In today’s world, AI systems are used to decide who gets hired, the quality of medical treatment we receive, and whether we become a suspect in a police investigation. While these tools show great promise, they can also harm vulnerable and marginalized people, and threaten civil rights. Unchecked, unregulated and, at times, unwanted, AI systems can amplify racism, sexism, ableism, and other forms of discrimination.\cite{website-algorithmic-justice-league}
+\end{displayquote}
+
+I highly recommend everyone to watch the Coded Bias documentary on Netflix, and inform themselves about the important and necessary digital advocacy of the Algorithmic Justice League, who have helped me learn the language to navigate these important topics of civil rights.
+
+The final catalyst that led me to this thesis happened a year ago, when I watched a video \cite{website-talk-technology-and-public-art-rafael-lozano-hemmer} of a conversation between artists Rafael Lozano-Hemmer and Dorothy Santos, and on 36m28s Rafael said " Face recognition needs to be banned in all applications except art."
+
+This was the perfect spark for starting to work on this project, and make more accesible these computational techniques to beginners, enthusiasts, and educators. Despite the creative anda artistic applications that I will show during this thesis, let's keep in mind that as \acrshort{ML} becomes cheaper and more pervasive, it is not the solution to all problems, or even needed in many scenarios.
 
 \begin{figure}[ht]
   \centering
@@ -68,35 +84,15 @@ We should also not forget that with computational resources becoming cheaper, \a
   \label{fig:meme-spider-man}
 \end{figure}
 
-Artists have unprecedented access to new tools for making new tools and instruments, and this thesis intends to be a foundation for a new generation of instruments for manipulating audiovisual material, using \acrshort{ML}. This approach is really exciting because it allows beginners and artists to train their instruments instead of programming them, by inputting data for tuning, instead of having to write lines of code and fixed thresholds for changing their behavior.
+In this XXIth century artists have an unprecedented access to tools for making new tools and instruments, and I intend this thesis to be a foundation for a new generation of instrument makers for manipulating audiovisual material, using \acrshort{ML}. This approach is really exciting because it allows beginners and artists to train their instruments instead of programming them, by inputting data for tuning, instead of having to write lines of code and fixed thresholds for changing their behavior.
 
-My guess is that these errors come from a combination of factors, including my English accent, and the Chilean accent not being widely included on the databases used for training.
+\section{Objectives and dreams}
 
-The proposal of media arts instruments that can run on little power, rechargeable batteries is a friendly use of resources for experimentation in arts. This is in contrast with the high power use and critique of other emerging fields such as Non Fungible Tokens (NFTs) and cryptoart. The proposal of these scriptable open source instruments allows for users to continuously tweak and modify their instruments, repurpose the hardware, and enable sharing.
+Infrastructure and cooperation are key to society, I love how I can bike on roads and hike on paths that were built as shared resources for the benefit of everyone, and I hope this work can be adopted by fellow artists and educators to create new instruments for arts, and to inspire critical and ethical thinking about \acrshort{AI}
 
-\section{Objectives}
+I am convinced there is a huge educational value in creating your own databases, and in this thesis I propose techniques and software so that people can build their own databases, in order to train models that are tailored to each person's voice or environment, instead of using widespread databases and their inherent biases. Also I hope this work will help appreciate the craft of making databases, or even the exploitation and problematic lack of consent behind them.
 
-With the release of the library Google TensorFlow Lite Micro, the TinyML Foundation, new avenues have been opened for creative expression using \acrshort{ML} in microcontrollers.
-
-TensorFlow is a library by Google for \acrshort{ML}. They have released different flavors for different devices, including TensorFlow.js for working with KavaScript and in the browser, and TensorFlow Lite for devices with less memory, like mobile devices. The newer TensorFlow Lite Micro is even lighter and intended for working on microcontrollers, and that is the flavor I am using in this thesis.
-
-in a paragraph here that combines the points you make in the first paragraphs -> the main contributions of YOUR thesis... which it seems is basically just addressing a bunch of the context section? Blakeley Payne's thesis does a good job of outlining contributions. It's also good to do here to understand where you are going
-
-Homebrew examples, teach people how to build their own databases, and how to circumvent corporations view.
-
-TODO: Terms and conditions comic book. If people were to read terms and conditions, it would take them X years
-
-You can train an instrument to only detect your voice, your accent, your living conditions.
-
-TODO: Raspberry Pi example, it’s cheap but it needs a lot of extra hardware to be used
-
-Navigating legal documents can be hard. In 2010, GameStation added a soul clause to their terms of conditions as an April Fool's prank, making them legal owners of thousands of customers' souls \cite{website-huffpost-gamestation-soul-clause}. And back in 2007, it was estimated that people would need around 250 hours every year to actually read the privacy policies shown to them \cite{article-cost-of-reading-privacy-policies}.
-
-\section{Some dreams}
-
-Infrastructure and cooperation are key, I love how I can bike on roads and hike on paths, and I hope this work can be adopted by fellow artists and educators to create new instruments for arts, and for making new laws that curb algorithmic bias.
-
-TODO: insert picture of surveillance camera near my home, in the middle of nature.
+Finally, as a non USA citizen subjected to all sorts of regulations during my studies here, and as a programmer working with software with various licenses, and as musician repurposing other's people's work via sampling, I know first hand that navigating legal documents is very hard. As an anecdote, in 2010, GameStation added a soul clause to their terms of conditions as an April Fool's prank, making them legal owners of thousands of customers' souls \cite{website-huffpost-gamestation-soul-clause}. And back in 2007, it was estimated that people would need around 250 hours every year to actually read the privacy policies shown to them \cite{article-cost-of-reading-privacy-policies}. That is why in this thesis I tried my best to cite every work that I am both using as a building block, or served as a direct or indirect inspiration.
 
 I hope this work can be taken to the next step, by building a new generation of private and smart devices, like one of my first dreams, a drum machine I can talk to, and ask for different rhythms mid performance, or using my body gestures to write poems.
 
