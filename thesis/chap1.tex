@@ -10,9 +10,9 @@ This thesis is a collection of media arts instruments made with microcontrollers
 
 \acrshort{ML} has several barriers of entry, including cost, complexity, and difficulty. Since my practice is based on sharing and working on the open with different communities, I am not a fan of the current state of industrial \acrshort{ML} that relies on proprietary software and hardware. This tends to happen because their ML models are aiming for high precision, and need to be trained for long periods of time, using expensive non open computational resources, with huge datasets that often are scraped from the internet without the explicit consent of the people, and a byproduct of surveillance capitalism.
 
-The release of the library Arduino TensorFlow Lite in late 2019 made me aware of the tiny \acrshort{ML} field, a subset of \acrshort{ML} that focuses on hardware and software that are able to run calculations both on-device and with low power, a stark contrast to many industrial acrshort{ML} applications. The associated tutorials showed how you could use your Arduino microcontrooller to build your own database to detect colors and gestures, and I decided that this thesis project would be an exploration of the artistic applications of these emerging techniques. 
+The release of the library Arduino TensorFlow Lite in late 2019 made me aware of the tiny \acrshort{ML} field, a subset of \acrshort{ML} that focuses on hardware and software that are able to run calculations both on-device and with low power, a stark contrast to many industrial \acrshort{ML} applications. The tutorials published by Arduino showed how to build your own database to detect colors and gestures, and I decided that this thesis project would be an exploration of the artistic applications of these emerging techniques.
 
-One aspect that deeply resonated with me data agency, the ability to capture my own data, and use it for my own purposes, in the microcontroller, without having to rely on databases. 
+One aspect that deeply resonated with me was \textbf{data agency}, the ability to capture my own data, and use it for my own purposes, in the microcontroller, without having to rely on databases, and bypassing any corporate or government surveillance. Since during this thesis work and pandemic lockdown context, I have found myself several times during the year working in my room on my own, capturing data of myself, and then building databases for other people to use, in a way that reminds of one of my favorite artists and activists, Ai Weiwei, who in 2012 while facing government surveillance, decided to livestream all his activites from his house, which I think it's a way of reclaiming agency about your data. 
 
 \begin{figure}[ht]
   \centering
@@ -22,30 +22,7 @@ One aspect that deeply resonated with me data agency, the ability to capture my 
   \label{fig:weiweicam}
 \end{figure}
 
-
-It is particularly important in terms of consent and data agency, to 
-
-Since all \acrshort{ML} algorithms are written by humans, and then trained on biased data, and they are deployed to the world, where they affect our lives. These imperfections are highlighted over the course of this thesis, by being explicit about the assumptions and quantizations performed when working with data.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.40\textheight,keepaspectratio]{images/meme-spider-man.jpg}
-  \caption{Meme about need of machine learning}
-  \caption*{Retrieved from \cite{website-twitter-dynamicwebpaige-meme}}
-  \label{fig:meme-spider-man}
-\end{figure}
-
-This thesis proposes a scaling down of \acrshort{ML}, to make it more accessible to artists, it is my belief that computational technology is 
- 
-\cite{website-talk-technology-and-public-art-rafael-lozano-hemmer}
-36m28s
-Rafael Lozano-Hemmer: Face recognition needs to be banned in all applications except art.
-
-n expensive or rented resources, such as the service Google Colab, which allows you to share and train ML models on the cloud. This thesis shows users how to build \acrshort{ML} art systems that can circumvent this and allow for more control of their data.
-
-Artists have unprecedented access to new tools for making new tools and instruments, and this thesis intends to be a foundation for a new generation of instruments for manipulating audiovisual material, using \acrshort{ML}. This approach is really exciting because it allows beginners and artists to train their instruments instead of programming them, by inputting data for tuning, instead of having to write lines of code and fixed thresholds for changing their behavior.
-
-In this first example, I said the following phrase "This is a text to show that Zoom transcription does not work with my voice, because of my accent."
+Another aspect I want to highlight is \textbf{algorithmic bias}. The worlwide release of the documentary Coded Bias on Netflix has helped me find the language to navigate these topics. I am an underrepresented minority, and often it happens to me that supposedly automatic neutral technologies don't understand me. Here is an example of the popular software Zoom, where I spoke out loud "This is a test to show that Zoom transcriptoin does not work with my voice because of my accent", but the words Zoom and voice were transcribed as soon and boys, respectively.
 
 \begin{figure}[ht]
   \centering
@@ -55,19 +32,21 @@ In this first example, I said the following phrase "This is a text to show that 
   \label{fig:zoom-voice}
 \end{figure}
 
-In this other example, I said out loud the names of my thesis commitee members: Tod Machover, Mitchel Resnick, Zach Lieberman.
+Here is also a further experiment of pronunciation with less common words, in this case, the names of the members of my thesis commitee: Tod Machover, Mitchel Resnick, Zach Lieberman.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/zoom-commitee.jpg}
   \caption{Screen capture of speech to text on Zoom, committee}
-  \caption*{Screen capture of speech to text on Zoom, introduction}
+  \caption*{Screen capture by myself}
   \label{fig:zoom-committee}
 \end{figure}
 
-My guess is that these errors come from a combination of factors, including my English accent, and the Chilean accent not being widely included on the databases used for training.
+These examples are not affecting me negatively, but these algorithmic decisions can have devastating effects in equity and discrimination.  Despite \acrshort{ML} algorithms being promoted by corporations and governments as unbiased, most probably these algorithms have never been exposed to Chilean people with my accent.
 
-Years ago I decided against using text completion (if you have ever interacted with me over text, I typed every single character :)), and also I don't use any voice assistants, including Apple's Siri, Amazon's Alexa,  Google's Google Assistant, or Microsoft's Cortana.
+Because of these errors and my general distrust with these supposedly automatic tools, I routinously turn off voice assistants and text completion in my devices (if you have ever interacted with me over text, I typed every single character :)). I am not comfortable with the widespread commercialization of voice assistants, including Apple's Siri, Amazon's Alexa,  Google's Google Assistant, or Microsoft's Cortana, because I think they are an invasion of privacy.
+
+A year ago, while I was deciding what topic to work on for this thesis, a video \cite{website-talk-technology-and-public-art-rafael-lozano-hemmer} was released of a conversation between artists Rafael Lozano-Hemmer and Dorothy Santos, and on 36m28s Rafael said " Face recognition needs to be banned in all applications except art."
 
 \begin{figure}[ht]
   \centering
@@ -77,18 +56,27 @@ Years ago I decided against using text completion (if you have ever interacted w
   \label{fig:meme-star-wars}
 \end{figure}
 
-TODO: Add an example of a biased dataset that is commonly used.
+This was the perfect spark for starting to work on this project, and make more accesible these computational techniques to beginners, enthusiasts, and educators, to have a more critical and safer use of technology. I highly recommend checking out the important work of the Algorithmic Justice League in these important topics.
 
-The proliferation of surveillance tools and now of microcontrollers allows for an even more pervasive surveillance and data leaks by governments and corporations. This thesis allows for beginners and artists to develop their own databases, by self sensing and surveillance. TODO: explain self-sensing and surveillance, and explain harms of surveillance, with an example.
+We should also not forget that with computational resources becoming cheaper, \acrshort{ML} becomes cheaper, and we can be tempted to use it in applications that don't need in the first place.
 
-Low power and repurposable
-Tiny \acrshort{ML} is defined as \acrshort{ML} performed with low-power devices TODO: add citation or mention that it is my own definition. The proposal of media arts instruments that can run on little power, rechargeable batteries is a friendly use of resources for experimentation in arts. This is in contrast with the high power use and critique of other emerging fields such as Non Fungible Tokens (NFTs) and cryptoart. The proposal of these scriptable open source instruments allows for users to continuously tweak and modify their instruments, repurpose the hardware, and enable sharing.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.40\textheight,keepaspectratio]{images/meme-spider-man.jpg}
+  \caption{Meme about need of machine learning}
+  \caption*{Retrieved from \cite{website-twitter-dynamicwebpaige-meme}}
+  \label{fig:meme-spider-man}
+\end{figure}
 
-TODO: Add a reference to an early tiny ML paper.
+Artists have unprecedented access to new tools for making new tools and instruments, and this thesis intends to be a foundation for a new generation of instruments for manipulating audiovisual material, using \acrshort{ML}. This approach is really exciting because it allows beginners and artists to train their instruments instead of programming them, by inputting data for tuning, instead of having to write lines of code and fixed thresholds for changing their behavior.
+
+My guess is that these errors come from a combination of factors, including my English accent, and the Chilean accent not being widely included on the databases used for training.
+
+The proposal of media arts instruments that can run on little power, rechargeable batteries is a friendly use of resources for experimentation in arts. This is in contrast with the high power use and critique of other emerging fields such as Non Fungible Tokens (NFTs) and cryptoart. The proposal of these scriptable open source instruments allows for users to continuously tweak and modify their instruments, repurpose the hardware, and enable sharing.
 
 \section{Objectives}
 
-With the release of TensorFlow Lite Micro, the TinyML Foundation, new avenues have been opened for creative expression using \acrshort{ML} in microcontrollers.
+With the release of the library Google TensorFlow Lite Micro, the TinyML Foundation, new avenues have been opened for creative expression using \acrshort{ML} in microcontrollers.
 
 TensorFlow is a library by Google for \acrshort{ML}. They have released different flavors for different devices, including TensorFlow.js for working with KavaScript and in the browser, and TensorFlow Lite for devices with less memory, like mobile devices. The newer TensorFlow Lite Micro is even lighter and intended for working on microcontrollers, and that is the flavor I am using in this thesis.
 
