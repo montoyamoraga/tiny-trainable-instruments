@@ -30,7 +30,7 @@ With that, the \emph{tiny} in \emph{Tiny trainable instruments} comes from them 
 
 By \emph{trainable} I mean a device that can learn by examples. This name comes from the \acrshort{ML} lexicon, where training is a process where an algorithm  iteratively finds the numerical values of all parameters (weights, biases) of a \acrshort{ML} model.
 
-Training a device is particularly attractive for artists working with sensors. The Arduino microcontroller that this thesis uses has several embedded sensors, which we can use to produce huge streams of data, like this screenshot of it outputting raw data from its RGB sensor for color.
+Training a device is particularly attractive for artists working with sensors. The Arduino microcontroller that this thesis uses has several embedded sensors, which we can use to produce huge streams of data, like this screenshot of it outputting raw data from its \acrshort{RGB} sensor for color.
 
 \begin{figure}[ht]
   \centering
@@ -40,7 +40,7 @@ Training a device is particularly attractive for artists working with sensors. T
   \label{fig:arduino-data-stream}
 \end{figure}
 
-If we wanted to use this sensor at home to detect a red object, we can start by taking notes of the RGB values of the sensor when the red object is close to it, and then include this value as a threshold for detection on the software uploaded to the microcontroller. Since the RGB sensor needs a consistent lighting, we need to be really careful with the lighting conditions, and if they change, we have to look at the stream of data to find the new value for red, and update the code, and reprogram the microcontroller.
+If we wanted to use this sensor at home to detect a red object, we can start by taking notes of the \acrshort{RGB} values of the sensor when the red object is close to it, and then include this value as a threshold for detection on the software uploaded to the microcontroller. Since the \acrshort{RGB} sensor needs a consistent lighting, we need to be really careful with the lighting conditions, and if they change, we have to look at the stream of data to find the new value for red, and update the code, and reprogram the microcontroller.
 
 This is a tedious process, and it inspired me to work on this thesis, so that I could help artists use \acrshort{ML} and microcontrollers to capture data, then train a model, and let the algorithm figure out the correct answer, without having to write more code!
 
@@ -94,7 +94,7 @@ The TinyTrainable library is flexible, since it allows us to combine any of the 
     \centering
     \begin{tabular}{ | l | l | l | l | l | l | l | l |}
         \hline
-        \textbf{\backslashbox{Input}{Output}}  & Buzzer & LED & \acrshort{MIDI} & Printer & Screen & Serial & Servo \\
+        \textbf{\backslashbox{Input}{Output}}  & Buzzer & \acrshort{LED} & \acrshort{MIDI} & Printer & Screen & Serial & Servo \\
         \hline
         Color & & & & & & & \\
         \hline
@@ -136,7 +136,7 @@ The outputs rely on extra hardware, and in some cases, external libraries, which
         \hline
         Buzzer & - \\
         \hline
-        LED & - \\
+        \acrshort{LED} & - \\
         \hline
         \acrshort{MIDI} & - \\
         \hline
@@ -209,26 +209,20 @@ In terms of software, there is a base class Input on the source code, which stor
 
 \subsection{Color input}
 
-The color input allows artists to build a Tiny trainable instrument that can detect the color of objects near to the microcontroller. It accomplishes this feat by relying on 2 software libraries: Arduino{\_}APDS9960 for the sensor, and Arduino{\_}KNN for \acrshort{ML}.
+The color input allows artists to build Tiny trainable instruments that can detect the color of objects near to the microcontroller. I recommend that this is the first input that people try, since it is the easiest to implement, and the fastest to use.
 
-I recommend that this is the first input that people try, since it is the easiest to implement, and the fastest to use.
-
-
-
-intended as the simplest and fastest input, and it is recommended to start building with this one.
-
-In terms of software, it relies on 2 libraries: 
+For detecting color, the TinyTrainable is a wrapper of the Arduino{\_}APDS9960 library, needed to access the data of the embedded distance and color sensor of the microcontroller. This allows the instrument to detect nearby objects, and when they are close enough to the microcontroller, it reads a 1 pixel \acrshort{RGB} value, detecting how red, how green, and how blue any object is.
 
 
-
-For detecting color, we are using 2 different sensors of the Arduino which is able to 
-
+It accomplishes this feat by relying on 2 software libraries:  for the sensor, and Arduino{\_}KNN for \acrshort{ML}. For the color reading, the sensor first detects distance of objects near the Arduino microcontroller, 
 
 \subsection{Gesture input}
 
+The gesture input allows artists to build Tiny Trainable instruments that can detect different motion gestures, by moving the microcontroller in space.
+
 \subsection{Speech input}
 
-
+The speech input allows artists to build Tiny Trainable instruments that can detect different sounds or utterances, by emitting sound next to the microcontroller.
 
 \section{Design principles}
 
@@ -254,7 +248,7 @@ Throughout this project, the magic number was 3. The \acrshort{ML} algorithms we
 
 \subsection{Color}
 
-This approach uses the RGB color sensor from the microcontroller, with the auxiliary help from the proximity sensor, that is used to capture color information at a certain distance threshold.
+This approach uses the \acrshort{RGB} color sensor from the microcontroller, with the auxiliary help from the proximity sensor, that is used to capture color information at a certain distance threshold.
 
 The data is passed to a k-Nearest-Neighbor algorithm, programmed using the Arduino KNN library.
 
