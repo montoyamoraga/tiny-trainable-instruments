@@ -4,37 +4,33 @@
 
 This chapter describes the process of conceptualizing and developing this antidisciplinary thesis project, drawing from the fields of \acrlong{AI}, electrical engineering, computer science, media arts, music, and pedagogy, among others.
 
-The core componentes of this thesis are:
-
-\begin{enumerate}
-  \item Repository with TinyTrainable Arduino software library
-  \item Code and guides for \acrshort{ML} and custom databases
-  \item Workshop, documentation, and educational material
-\end{enumerate}
-
-In this chapter I will explain both the process and the result of each component, but first I will define the words that make up the title of this project.
+First, let me explain my definitions of the words that make up the title of this project.
 
 \section{Definition of Tiny trainable instruments}
 
 \subsection{Definition of tiny}
 
-By \emph{tiny} I mean lightweight handheld instruments, that you can fit on a backpack, or take for a walk. This is inspired on my personal practice, for years I have accumulated many small tools for arts that I combine for performing on gigs or while traveling, including small electronic synthesizers, sound mixers, battery-powered speakers. Here is an example of a handheld synthesizer that I use for field recordings and sampling, with a battery pack.
+By \emph{tiny} I mean lightweight handheld instruments, that you can fit on a backpack, or take for a walk. This is inspired on my personal practice: for years I have accumulated many small tools for arts that I perform gigs with, or that I carry with me while traveling, mostly small electronic synthesizers, sound mixers, and battery-powered speakers.
+
+Here is an example of a yellow handheld sampler with an included microphone and speaker that I enjoy for field recordings, and with a green battery pack for portability.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/critter-and-guitari-kaleidoloop-battery.jpg}
-  \caption{Sampler synthesizer with microphone and portable battery}
+  \caption{Sampler with microphone and portable battery}
   \caption*{Picture taken by myself}
   \label{fig:critter-and-guitari-kaleidoloop-battery}
 \end{figure}
 
-Tiny is also a nod to the emerging field of tiny \acrshort{ML}, and the community behind this movement, including most importantly the tinyMLx professional certificate\cite{website-edx-harvardx-tinymlx-professional-certificate} offered by HarvardX, that I completed while working on this project.
+\emph{Tiny} is also a nod to the emerging field and community of tiny \acrshort{ML}, including most importantly for me the tinyMLx professional certificate\cite{website-edx-harvardx-tinymlx-professional-certificate} offered by HarvardX, that I completed while working on this project.
+
+With that, the \emph{tiny} in \emph{Tiny trainable instruments} comes from them being handheld on an breadboard, for being able to be powered from a generic USB power bank, and for using tiny \acrshort{ML} for mediating their inputs and outputs.
 
 \subsection{Definition of trainable}
 
-By \emph{trainable} I mean a computational device that can learn by examples. This name comes from the \acrshort{ML} lexicon, where training is a process where an algorithm  iteratively finds the numerical values of all parameters (weights, biases) of a \acrshort{ML} model.
+By \emph{trainable} I mean a device that can learn by examples. This name comes from the \acrshort{ML} lexicon, where training is a process where an algorithm  iteratively finds the numerical values of all parameters (weights, biases) of a \acrshort{ML} model.
 
-The possibility of training the instrument   really rewarding for me during the making of this thesis. When I program audiovisual computational devices to react to sensors, I often find myself having to look at streams of data, having to program statistical methods to detect trends, such as averages, and then having to program a hard coded value on the software, and having to write a manual for setup or fine tuning for collaborators to be able to run it again under different conditions.
+Training a device is particularly attractive for artists working with sensors. The Arduino microcontroller that this thesis uses has several embedded sensors, which we can use to produce huge streams of data, like this screenshot of it outputting raw data from its RGB sensor for color.
 
 \begin{figure}[ht]
   \centering
@@ -44,25 +40,46 @@ The possibility of training the instrument   really rewarding for me during the 
   \label{fig:arduino-data-stream}
 \end{figure}
 
-Teachable machine by Google
+If we wanted to use this sensor at home to detect a red object, we can start by taking notes of the RGB values of the sensor when the red object is close to it, and then include this value as a threshold for detection on the software uploaded to the microcontroller. Since the RGB sensor needs a consistent lighting, we need to be really careful with the lighting conditions, and if they change, we have to look at the stream of data to find the new value for red, and update the code, and reprogram the microcontroller.
 
-The fact that I can program once, and then train on device, with the algorithm taking care of finding correlations, make for a more flexible workflow that I am hoping can be included in the toolkit of artists.
+This is a tedious process, and it inspired me to work on this thesis, so that I could help artists use \acrshort{ML} and microcontrollers to capture data, then train a model, and let the algorithm figure out the correct answer, without having to write more code!
 
-\subsection{Definition of instruments}
+An educational and creative example I recommend checking out is Teachable Machine by Google \cite{website-google-teachable-machine}, a web application that allows you to use your computer's microphone and webcam to generate data, and then train models that can detect different words, images, or body postures, without having to write any line of code.
 
-By \emph{instruments} I mean devices that act as transducers across mediums, processing an input, which results in an output.
-
-A musical example is the guitar, where the input strumming results in output sound. I mention the guitar because of its nonlinear and flexible behavior, with multiple different ways of strumming, even by non-human agents, resulting in infinite sounds.
+In particular, I became interested on tiny \acrshort{ML} examples that requires small databases, and that can be trained on device, for the use case of making an instrument that you can change its behavior mid performance, like guitar players do with their guitars, when they change their tunings between songs. With my thesis you can program a device that can detect an apple, and then five minutes later, an orange, and then for your last song, a grapefruit. Hat tip to Sonic Youth, a band that used to tour with more than a dozen guitars, each one of them with a different tuning, and they would switch instruments between songs.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\linewidth,height=0.40\textheight,keepaspectratio]{images/sonic-youth-guitar.jpg}
+  \includegraphics[width=0.75\linewidth,height=0.30\textheight,keepaspectratio]{images/sonic-youth-guitar.jpg}
   \caption{Sonic Youth guitar with custom tunings}
   \caption*{Retrieved from \cite{sonic-youth-illustrated-equipment-guide}}
   \label{fig:sonic-youth-guitar}
 \end{figure}
 
-Another of my favorite instruments is the bicycle, which I like to define as a device that converts the input pedalling into all sorts of outputs: adventure, sweat, and wind in your face.
+\subsection{Definition of instruments}
+
+By \emph{instruments} I mean devices that transduce energy across different media. Instruments receive an input, process it, and then produce an output. For musical instruments I like to think about instruments are able to not just produce musical notes from western scales, but a wide spectrum of sounds, encompassing the wide vocabulary of experimental electronic music and electroacoustic music.
+
+I even consider the bicycle as an instrument for art, that converts your input of pedalling into all sorts of multimedia output: adventure, sweat, and wind in your face. There are more reasons why I am citing the bicycle example: when you ride a bike on the street, you are not in a corporate or government playground, there are mostly no rules besides gravity, and there are no backdoors that anyone can use to track you, exploit you, or limit your speed or your way, and I would like to include this sense of freedom and liberty to the definition of instrument.
+
+This is a huge contrast to the computer that I am using to type this thesis, an Apple Macbook Air from 2017 that I am really comfortable with, but still I know that my liberties are easily compromised, like when Apple tells me that a certain app is not trusted, or they don't allow me to have 32 bits apps anymore, or they charge me money for publishing my own software ugh. Even this thesis is hosted on GitHub, which is blocked for developers in Iran, Syria, and Crimea. As I am a Chilean, a country recently affected by a dictatorship, and also having ancestors subjected to political exile, I am particularly sensitive to policies that don't allow for people to have access to freedom of speech, or of computing.
+
+This uncomfort also led me to the creation of \textit{Tiny trainable instruments}, I feel more empowered and more free with this project, because it is based on open source microcontrollers, that nobody can censor me when I use them, an experience that has been as 
+gratifiying for me as playing with my favorite instruments ()guitar and bicycle) , and I hope it is for you too when exploring this thesis.
+
+\section{Components of the project}
+
+In this chapter I will explain both the process and the result of each component of this thesis:
+
+\begin{enumerate}
+  \item TinyTrainable Arduino software library
+  \item Code for training \acrshort{ML} with \acrshort{DIY} databases
+  \item Workshop and educational material
+\end{enumerate}
+
+\subsection{TinyTrainable Arduino software library}
+
+This project 
 
 \begin{table}[ht]
     \centering
