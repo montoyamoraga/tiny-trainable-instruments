@@ -78,7 +78,17 @@ In this chapter I will explain both the process and the result of each component
 
 \subsection{TinyTrainable Arduino software library}
 
-This project's main contribution is the TinyTrainable Arduino software library. This library allows you to create flexible instruments, where you can combine any input with any output, which are summarized on this table.
+This project's main contribution is the TinyTrainable Arduino software library, which allows you to create flexible multimedia instruments, where you can combine any input with any output, and it runs on the microntroller Arduino Nano 33 BLE Sense.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-arduino-nano-33-ble-sense.jpg}
+  \caption{Arduino Nano 33 \acrshort{BLE} Sense microcontroller with headers}
+  \caption*{Retrieved from \cite{website-materials-arduino-nano-33-ble-sense}}
+  \label{fig:materials-arduino-nano-33-ble-sense}
+\end{figure}
+
+The library is flexible, and it allows any of the 3 available inputs, with any of the 7 possible outputs, summarized on this table.
 
 \begin{table}[ht]
     \centering
@@ -97,6 +107,8 @@ This project's main contribution is the TinyTrainable Arduino software library. 
     \label{table:tiny-trainable-instruments-inputs-outputs-matrix}
 \end{table}{}
 
+For the sensors of the inputs I used the embedded sensors of the microcontroller with their corresponding open source libraries, and processed the input data with 2 recently released open source \acrshort{ML} libraries, summarized on this table.
+
 \begin{table}[ht]
     \centering
     \begin{tabular}{ | l | l | l |}
@@ -113,6 +125,8 @@ This project's main contribution is the TinyTrainable Arduino software library. 
     \caption{Software dependencies for inputs}
     \label{table:software-dependencies-inputs}
 \end{table}{}
+
+The outputs rely on extra hardware, and in some cases, external libraries, which are summarized here.
 
 \begin{table}[ht]
     \centering
@@ -138,14 +152,6 @@ This project's main contribution is the TinyTrainable Arduino software library. 
     \caption{Software dependencies for outputs}
     \label{software-dependencies-outputs}
 \end{table}{}
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-arduino-nano-33-ble-sense.jpg}
-  \caption{Arduino Nano 33 \acrshort{BLE} Sense microcontroller with headers}
-  \caption*{Retrieved from \cite{website-materials-arduino-nano-33-ble-sense}}
-  \label{fig:materials-arduino-nano-33-ble-sense}
-\end{figure}
 
 \section{TinyTrainable Arduino software library}
 
