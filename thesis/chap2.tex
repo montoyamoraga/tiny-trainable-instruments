@@ -4,33 +4,63 @@
 
 This chapter describes the process of conceptualizing and developing this antidisciplinary thesis project, drawing from the fields of \acrlong{AI}, electrical engineering, computer science, media arts, music, and pedagogy, among others.
 
-First there is a definition of the words that make up the title of this project, and then an overview and explanation of the main components of this thesis , which include:
+The core componentes of this thesis are:
 
 \begin{enumerate}
-  \item TinyTrainable Arduino software library
-  \item Auxiliary code for \acrshort{ML}
-  \item Workshop educational material
+  \item Repository with TinyTrainable Arduino software library
+  \item Code and guides for \acrshort{ML} and custom databases
+  \item Workshop, documentation, and educational material
 \end{enumerate}
+
+In this chapter I will explain both the process and the result of each component, but first I will define the words that make up the title of this project.
 
 \section{Definition of Tiny trainable instruments}
 
 \subsection{Definition of tiny}
 
-Bi tiny I mean handheld, lightweight instruments that you can take for a walk or on your backpack. Tiny is also a nod to the new uprising field of tiny \acrshort{ML}.
+By \emph{tiny} I mean lightweight handheld instruments, that you can fit on a backpack, or take for a walk. This is inspired on my personal practice, for years I have accumulated many small tools for arts that I combine for performing on gigs or while traveling, including small electronic synthesizers, sound mixers, battery-powered speakers. Here is an example of a handheld synthesizer that I use for field recordings and sampling, with a battery pack.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/critter-and-guitari-kaleidoloop-battery.jpg}
+  \caption{Sampler synthesizer with microphone and portable battery}
+  \caption*{Picture taken by myself}
+  \label{fig:critter-and-guitari-kaleidoloop-battery}
+\end{figure}
+
+Tiny is also a nod to the emerging field of tiny \acrshort{ML}, and the community behind this movement, including most importantly the tinyMLx professional certificate\cite{website-edx-harvardx-tinymlx-professional-certificate} offered by HarvardX, that I completed while working on this project.
 
 \subsection{Definition of trainable}
 
-By trainable I mean a computational device that can learn by examples. This name comes from the \acrshort{ML} lexicon, where training is a process where an algorithm finds the numerical values of all parameters (weights, biases) of a \acrshort{ML} model, with the help of a dataset.
+By \emph{trainable} I mean a computational device that can learn by examples. This name comes from the \acrshort{ML} lexicon, where training is a process where an algorithm  iteratively finds the numerical values of all parameters (weights, biases) of a \acrshort{ML} model.
 
-The process of training a model with a microcontroller has been really rewarding for me during the making of this thesis. When I program audiovisual computational devices to react to sensors, I often find myself having to look at streams of data, having to program statistical methods to detect trends, such as averages, and then having to program a hard coded value on the software, and having to write a manual for setup or fine tuning for collaborators to be able to run it again under different conditions.
+The possibility of training the instrument   really rewarding for me during the making of this thesis. When I program audiovisual computational devices to react to sensors, I often find myself having to look at streams of data, having to program statistical methods to detect trends, such as averages, and then having to program a hard coded value on the software, and having to write a manual for setup or fine tuning for collaborators to be able to run it again under different conditions.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.40\textheight,keepaspectratio]{images/arduino-data-stream.jpg}
+  \caption{Data stream from embedded sensors in an Arduino microcontroller}
+  \caption*{Screen capture by myself}
+  \label{fig:arduino-data-stream}
+\end{figure}
+
+Teachable machine by Google
 
 The fact that I can program once, and then train on device, with the algorithm taking care of finding correlations, make for a more flexible workflow that I am hoping can be included in the toolkit of artists.
 
 \subsection{Definition of instruments}
 
-By instruments I mean devices that act as transducers across mediums, processing an input, which results in an output.
+By \emph{instruments} I mean devices that act as transducers across mediums, processing an input, which results in an output.
 
 A musical example is the guitar, where the input strumming results in output sound. I mention the guitar because of its nonlinear and flexible behavior, with multiple different ways of strumming, even by non-human agents, resulting in infinite sounds.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.40\textheight,keepaspectratio]{images/sonic-youth-guitar.jpg}
+  \caption{Sonic Youth guitar with custom tunings}
+  \caption*{Retrieved from \cite{sonic-youth-illustrated-equipment-guide}}
+  \label{fig:sonic-youth-guitar}
+\end{figure}
 
 Another of my favorite instruments is the bicycle, which I like to define as a device that converts the input pedalling into all sorts of outputs: adventure, sweat, and wind in your face.
 
@@ -107,7 +137,7 @@ The main contribution of this thesis is the TinyTrainable Arduino library, an op
 s
 \subsection{Repository structure}
 
-The library is a repository hosted at \url{https://github.com/montoyamoraga/TinyTrainable}, where you can review all the history and commits through time, to see how the library or each file has evolved over time.
+The library is a repository hosted at \url{https://github.com/montoyamoraga/TinyTrainable}, where you can review all the history and commits through time, where anyone can see how the library or each file has evolved over time.
 
 The structure of the folders follows 2 simultaneous specifications: it includes the necessary file and folder names for being packaged and indexed as an Arduino Library, and also it complies with GitHub guidelines for licensing and automatic workflows for testing the code.
 
@@ -155,15 +185,11 @@ To build your instrument, you need a breadboard, jumper wires, and one of the ma
 
 The TinyTrainable library supports a 
 
-UNTILHERE
-
 \section{Technology stack}
 
 This project is built with microcontrollers and 
 
 \section{Design principles}
-
-This thesis tries to 
 
 \begin{enumerate}
   \item Affordable
