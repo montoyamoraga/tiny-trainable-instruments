@@ -78,17 +78,17 @@ In this chapter I will explain both the process and the result of each component
 
 \subsection{TinyTrainable Arduino software library}
 
-This project's main contribution is the TinyTrainable Arduino software library, which allows you to create flexible multimedia instruments, where you can combine any input with any output, and it runs on the microntroller Arduino Nano 33 BLE Sense.
+This project's main contribution is the TinyTrainable Arduino software library, which allows you to create flexible multimedia instruments, where you can combine any input with any output, and it runs on the microntroller Arduino Nano 33 BLE Sense. This microcontroller was chosen because it is currently the only Arduino supported by the Arduino Tensor Flow Lite library.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-arduino-nano-33-ble-sense.jpg}
+  \includegraphics[width=0.75\linewidth,height=0.30\textheight,keepaspectratio]{images/materials-arduino-nano-33-ble-sense.jpg}
   \caption{Arduino Nano 33 \acrshort{BLE} Sense microcontroller with headers}
   \caption*{Retrieved from \cite{website-materials-arduino-nano-33-ble-sense}}
   \label{fig:materials-arduino-nano-33-ble-sense}
 \end{figure}
 
-The library is flexible, and it allows any of the 3 available inputs, with any of the 7 possible outputs, summarized on this table.
+The TinyTrainable library is flexible, since it allows us to combine any of the 3 available inputs, with any of the 7 possible outputs, summarized on this table, for a total of 21 possibilities!
 
 \begin{table}[ht]
     \centering
@@ -107,7 +107,7 @@ The library is flexible, and it allows any of the 3 available inputs, with any o
     \label{table:tiny-trainable-instruments-inputs-outputs-matrix}
 \end{table}{}
 
-For the sensors of the inputs I used the embedded sensors of the microcontroller with their corresponding open source libraries, and processed the input data with 2 recently released open source \acrshort{ML} libraries, summarized on this table.
+For the inputs I used the embedded sensors of the Arduino microcontroller with their corresponding open source libraries, and processed the input data with 2 recently released open source \acrshort{ML} libraries, summarized on this table.
 
 \begin{table}[ht]
     \centering
@@ -153,29 +153,25 @@ The outputs rely on extra hardware, and in some cases, external libraries, which
     \label{software-dependencies-outputs}
 \end{table}{}
 
-\section{TinyTrainable Arduino software library}
+\subsubsection{Repository structure}
 
-The main contribution of this thesis is the TinyTrainable Arduino library, an open source library for creating Tiny Trainable instruments, as in microcontroller-based devices that you can train to react to gestures with \acrshort{ML}, so they can process and output different multimedia events, such as sound, movement, light, and text.
-s
-\subsection{Repository structure}
+The TinyTrainable library is a repository hosted at \url{https://github.com/montoyamoraga/TinyTrainable}, where you can review all the history and commits through time, where anyone can see how the library or each file has evolved over time.
 
-The library is a repository hosted at \url{https://github.com/montoyamoraga/TinyTrainable}, where you can review all the history and commits through time, where anyone can see how the library or each file has evolved over time.
+The structure of the folders follows 2 simultaneous specifications: it includes the necessary file and folder names for being packaged and indexed as an Arduino Library, and on top of that it complies with GitHub guidelines for licensing libraries, and for automatic workflows for code testing.
 
-The structure of the folders follows 2 simultaneous specifications: it includes the necessary file and folder names for being packaged and indexed as an Arduino Library, and also it complies with GitHub guidelines for licensing and automatic workflows for testing the code.
+The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in the Arduino langauge. The examples are divided in 4 folders: 1 for each input, and 1 extra for checking the wiring of each output.
 
-The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in Arduino. Some trained \acrshort{ML} models are included as C++ files on the assets/ folder.
+Some trained \acrshort{ML} models are included as C++ files on the assets/ folder. 
 
-\subsection{Installation}
+\subsubsection{Installation}
 
 The library can be downloaded from the Releases section of the repository at  \url{https://github.com/montoyamoraga/TinyTrainable/releases}, where you also have access to the complete history of releases over time. To install it, you need to uncompress the .zip into a folder, and then make it discoverable by the Arduino IDE.
 
-Since that method can be cumbersome and prone to errors, I made the effort to publish the TinyTrainable library, by complying with the latest Arduino Library Manager specifications, detailed on their repository \url{https://github.com/arduino/library-registry/}. With that, from the Arduino IDE you can open their Library Manager and do a one-click installation of the library, or even with the Arduino CLI you can install it via the command line on your machine.
+Since that method is not automatic and could be prone to errors, I made the effort to publish the TinyTrainable library, by complying with the latest Arduino Library Manager specifications, detailed on their repository \url{https://github.com/arduino/library-registry/}. With that, from the Arduino IDE you can open their Library Manager and do a 1 click installation of the library, or as an alternative use arduino-cli, the Arduino command line tool on your terminal.
 
-\subsection{Hardware basics}
+\subsubsection{Hardware basics}
 
-This library has only 1 fixed hardware requirement: it only runs on the Arduino Nano 33\acrshort{BLE}Sense, a microcontroller released in 2019. This library relies on the microcontroller's embedded sensors, so there is no need for wiring extra components.
-
-For power you need a generic micro USB cable to provide the necessary input of 5V to the Arduino microcontroller. To upload code to the microcontroller you can use the same USB cable to connect to a computer running the Arduino IDE.
+The TinyTrainable library has only 1 fixed and particular hardware requirement: it only runs on the Arduino Nano 33 \acrshort{BLE} Sense, a microcontroller released in 2019. For powering it you need a generic micro USB cable to provide the necessary input of 5V. To upload code to the microcontroller you can use the same USB cable to connect to a computer running the Arduino IDE.
 
 \begin{figure}[ht]
   \centering
@@ -185,7 +181,7 @@ For power you need a generic micro USB cable to provide the necessary input of 5
   \label{fig:materials-adafruit-usb-cable}
 \end{figure}
 
-To build your instrument, you need a breadboard, jumper wires, and one of the many possible output devices that we describe in the following section.
+To build a Tiny trainable instrument, you also need a breadboard, jumper wires, and one of the many possible output devices that I will describe soon.
 
 \begin{figure}[ht]
   \centering
@@ -203,13 +199,36 @@ To build your instrument, you need a breadboard, jumper wires, and one of the ma
   \label{fig:materials-adafruit-jumper-wires}
 \end{figure}
 
-\subsection{Hardware for outputs}
+Let's now dive deep into the different inputs and outputs for building a Tiny trainable instrument.
 
-The TinyTrainable library supports a 
+\section{Inputs}
 
-\section{Technology stack}
+As I mentioned before, for the inputs no extra wiring is needed, since we are using the embedded sensors of the Arduino microcontroller, to detect the 3 possible inputs: color, gesture, and speech. These inputs were designed to foster different behaviors with the library, which are detailed in the following sections.
 
-This project is built with microcontrollers and 
+In terms of software, there is a base class Input on the source code, which stores common properties and methods for all inputs, and this class is inherited to each of the different inputs.
+
+\subsection{Color input}
+
+The color input allows artists to build a Tiny trainable instrument that can detect the color of objects near to the microcontroller. It accomplishes this feat by relying on 2 software libraries: Arduino{\_}APDS9960 for the sensor, and Arduino{\_}KNN for \acrshort{ML}.
+
+I recommend that this is the first input that people try, since it is the easiest to implement, and the fastest to use.
+
+
+
+intended as the simplest and fastest input, and it is recommended to start building with this one.
+
+In terms of software, it relies on 2 libraries: 
+
+
+
+For detecting color, we are using 2 different sensors of the Arduino which is able to 
+
+
+\subsection{Gesture input}
+
+\subsection{Speech input}
+
+
 
 \section{Design principles}
 
@@ -232,15 +251,6 @@ All examples included with this library were written with the aim of showing the
 
 Throughout this project, the magic number was 3. The \acrshort{ML} algorithms were hardcoded to be able to distinguish between 3 different categories: 3 colors, 3 physical gestures, 3 sound utterances.
 
-\section{Inputs}
-
-We are using the RGB color, proximity, gyroscope, accelerometer, and microphone sensors on the microcontroller, in order to capture the Inputs
-
-\begin{enumerate}
-  \item Color
-  \item Gesture
-  \item Speech
-\end{enumerate}
 
 \subsection{Color}
 
