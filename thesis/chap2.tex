@@ -68,7 +68,7 @@ This uncomfort also was a catalyst for the creation of \textit{Tiny trainable in
 
 \section{Components of the project}
 
-In this chapter I will explain both the process and the result of each component of this thesis:
+In this section I will explain the process and the result of each component of this thesis:
 
 \begin{enumerate}
   \item TinyTrainable Arduino software library
@@ -88,7 +88,7 @@ This project's main contribution is the TinyTrainable Arduino software library, 
   \label{fig:materials-arduino-nano-33-ble-sense}
 \end{figure}
 
-The TinyTrainable library is flexible, since it allows us to combine any of the 3 available inputs, with any of the 7 possible outputs, summarized on this table, for a total of 21 possibilities!
+The TinyTrainable library is flexible, since it allows us to combine any of the 3 available inputs, with any of the 7 possible outputs, for a total of 21 possibilities summarized on \ref{tiny-trainable-instruments-inputs-outputs-matrix}
 
 \begin{table}[ht]
     \centering
@@ -104,10 +104,10 @@ The TinyTrainable library is flexible, since it allows us to combine any of the 
         \hline
     \end{tabular}
     \caption{Matrix of inputs and outputs}
-    \label{table:tiny-trainable-instruments-inputs-outputs-matrix}
+    \label{tiny-trainable-instruments-inputs-outputs-matrix}
 \end{table}{}
 
-For the inputs I used the embedded sensors of the Arduino microcontroller with their corresponding open source libraries, and processed the input data with 2 recently released open source \acrshort{ML} libraries, summarized on this table.
+For the inputs I used the embedded sensors of the Arduino microcontroller with their corresponding open source libraries, and processed the input data with 2 recently released open source \acrshort{ML} libraries, summarized on \ref{software-dependencies-inputs}.
 
 \begin{table}[ht]
     \centering
@@ -123,10 +123,10 @@ For the inputs I used the embedded sensors of the Arduino microcontroller with t
         \hline
     \end{tabular}
     \caption{Software dependencies for inputs}
-    \label{table:software-dependencies-inputs}
+    \label{software-dependencies-inputs}
 \end{table}{}
 
-The outputs rely on extra hardware, and in some cases, external libraries, which are summarized here.
+The outputs are actuators that  rely on extra hardware, and in some cases, external libraries, which are summarized on \ref{software-dependencies-outputs}.
 
 \begin{table}[ht]
     \centering
@@ -152,6 +152,8 @@ The outputs rely on extra hardware, and in some cases, external libraries, which
     \caption{Software dependencies for outputs}
     \label{software-dependencies-outputs}
 \end{table}{}
+
+The behavior of the TinyTrainable library is already designed, and is explained on this chapter. The software implementation is in flux, and I do my best to publish new releases with notes on how the library has changed over time, including bug fixes, clearer language on the examples, and different ways of interfacing with the methods and variables of the TinyTraianbe library.
 
 \subsubsection{Repository structure}
 
@@ -201,7 +203,7 @@ To build a Tiny trainable instrument, you also need a breadboard, where you can 
 
 As I mentioned before, for the inputs no extra wiring is needed, since we are using the embedded sensors of the Arduino microcontroller, to detect the 3 possible inputs: color, gesture, and speech. These inputs were designed to foster different behaviors with the library, which are detailed in the following sections.
 
- I decided that each different method will be able to detect 3 different categories, because I that more categories would make the instruments more cumbersome to train, by needing larger databases, and longer training. Hopefully in the future I can adapt the TinyTrainable library to make this a variable number of categories it can classify, but for now this is harcoded in the library. Nonetheless, if you want to use the library for your own project with a different number of categories, the library is open source and documented, so that it should be not too difficult to adapt it to your needs.
+I decided that each different method will be able to detect 3 different categories, because I that more categories would make the instruments more cumbersome to train, by needing larger databases, and longer training. Hopefully in the future I can adapt the TinyTrainable library to make this a variable number of categories it can classify, but for now this is harcoded in the library. Nonetheless, if you want to use the library for your own project with a different number of categories, the library is open source and documented, so that it should be not too difficult to adapt it to your needs.
 
 \subsection{Color input}
 
@@ -241,13 +243,15 @@ The speech database we build is the most compromising one, since it is identifia
 
 \section{Outputs}
 
-The 7 different outputs included on the TinyTrainable library were chosen to show a breadth of possibilities, with the hope that this library can be incorporated to the practice of artists working with light, visuals, sound, sculpture, dance, and poetry, among others.
+The 7 possible outputs of the TinyTrainable library were chosen to showcase many artistic mediums, with the hope that this library can be incorporated to the practice of artists working with light, visuals, sound, sculpture, dance, and poetry, among others.
 
-The TinyTrainable library includes 4 examples for each one of the 7 outputs: 1 for checking that the wiring is correct on the breadboard, and combinations with each 1 of the 3 inputs.
+The TinyTrainable library includes 4 examples for each one of the 7 outputs: 1 for checking that the wiring is correct on the breadboard, and combinations with each 1 of the 3 inputs. Each example is an homage to the classic \emph{helllo world} examples of computer science education, that is, they are introductory building blocks, intended to teach artists the basics of each output, so then they can continue on their own.
+
+All the materials for the outputs are illustrated by the corresponding image of the product page on the website Adafruit, which I recommend for beginners and artists interested in building their own Tiny trainable instruments.
 
 \subsection{Buzzer output}
 
-The buzzer is a low-cost device that can emit sound. The library allows you to output different sounds by controlling 2 fundamentals of the sound: the frequency and the duration.
+The buzzer is a device that can vibrate and with that emit sound. The TinyTrainable library allows you to output a different sound for each of the 3 different input classifications, by controlling 2 fundamentals of the sound: frequency and duration.
 
 \begin{figure}[ht]
   \centering
@@ -263,6 +267,8 @@ This output requires no additional libraries, the Arduino microcontroller by its
 
 \subsection{LED output}
 
+The \acrshort{LED} is a device that emits light. The TinyTrainable library allows you to toggle on and off 3 different LEDs, depending on which of the 3 possible inputs was detected by the \acrshort{ML} algorithm.
+
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-led.jpg}
@@ -271,29 +277,29 @@ This output requires no additional libraries, the Arduino microcontroller by its
   \label{fig:materials-adafruit-led}
 \end{figure}
 
-This output requires no additional libraries, the Arduino microcontroller by itself is able to provide enough power to light up most hobbyist LEDs.
+This output requires no additional libraries, the Arduino microcontroller by itself is able to provide enough power to light up most hobby LEDs.
 
 \subsection{MIDI output}
 
-We wrote functionalities to manipulate \acrshort{MIDI} instruments, and included examples to interface with some popular and cheap \acrshort{MIDI} instruments, such as the Korg volca beats.
-
-We included examples for rhythmic and melodic elements, using two very ubiquitous and inexpensive \acrshort{MIDI} musical instruments, which are the Korg volca beats, and the Korg volca keys.
+\acrfull{MIDI} is a protocol invented in the 1980s to allow musical instruments to be interconnected and share information, including musical notes, control parameters, and timing. Traditionally MIDI instruments have a 5 pin  \acrshort{DIN} connector, (from the German \acrlong{DIN}), like the one pictured here for use on a breadboard.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-midi-jack.jpg}
-  \caption{MIDI jack}
+  \caption{MIDI DIN connector}
   \caption*{Retrieved from \cite{website-materials-adafruit-midi-jack}}
   \label{fig:materials-adafruit-midi-jack}
 \end{figure}
+
+MIDI can be used for transmitting all sorts of data, and I show on the examples how to use MIDI to control different aspects of MIDI enabled instruments, including syntesizers and drum machines. As a bonus, I wrote examples to interface with 3 synthesizers from the volca series by Korg: volca bass (analog bass machine), volca beats (drum machine), and volca keys (polyphonic synthesizer). I picked these synthesizers to have melodic and percussive musical elements, because of their huge popularity, their relatively low price of 150.00 USD, their extensive MIDI capabilities, and because I am a huge fan of the instrument designs by Tatsuya Takahashi.
 
 This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baudrate.
 
 \subsection{Printer output}
 
-A thermal printer is the basis for creating written and literary output, inspired by the field of computational poetry.
+I used to associate printing to expensive toners and ink cartridges, and mostly frustration. This radically changed on a physical computing class, where I learned about thermal printers, and how I could use Arduino microcontrollers to drive them! I find these thermal printers amazing because they are mostly a one time investment, they don't need anything besides paper and power, so I have used them for interactive art installations since then, and that is why I decided to include support for them on this project.
 
-I used the popular Adafruit Thermal printer kit, which is documented on their website and includes a software library, distributed over GitHub and Arduino IDE, and also as a submodule on this project's TinyTrainable software library.
+The thermal printer kit I recommend on the bill of materials is around 60.00 USD, and includes the power supply, and paper roll. I picked this one because it is sold and supported by Adafruit, and I am a huge fan of their software libraries and tutorials. 
 
 \begin{figure}[ht]
   \centering
@@ -303,11 +309,13 @@ I used the popular Adafruit Thermal printer kit, which is documented on their we
   \label{fig:materials-adafruit-thermal-printer}
 \end{figure}
 
-This output requires 1 additional library, t
+With this output, you can create a Tiny trainable instrument that can respond in different ways, depending on the classification of the input. I hope this inspires a new generation of computer poets and interactive literature!
+
+This output requires 1 additional library, the Adafruit Thermal Printer library, which is open source and includes several examples for expanding the functionality of it. If you want to use an alternative hardware or software for thermal printing, you can fork the TinyTrainable library and make it your own way.
 
 \subsection{Screen output}
 
-I am really fond of instruments with small screens, such as the Pocket Operator series by Teenage Engineering.
+In contrast to the static nature of the output of the thermal printer, which prints a fixed message on a piece of paper, I included support for using a screen, for dynamic messages on a surface. 
 
 \begin{figure}[ht]
   \centering
@@ -317,19 +325,27 @@ I am really fond of instruments with small screens, such as the Pocket Operator 
   \label{fig:materials-adafruit-screen}
 \end{figure}
 
-This output requires 1 additional library, t
+This output requires 1 additional library, the Adafruit{\_}SSD1306 library (and its own dependencies) for the particular screen I recommend on the bill of materials. The same vendor Adafruit offers many alternatives in different sizes, technologies, and color support. I encourage people to use different screens from different vendors, and fork and adapt the TinyTrainable library to accomplish it.
 
 \subsection{Serial output}
 
-We use the already mentioned USB cable to connect to our computer, and receive messages over the serial port, available through the Arduino IDE.
+This output uses the same USB cable we mentioned earlier, for delivering the power and uploading code to the Arduino microcontroller. We can use the same cable to send messages over the serial protocol, and receive them on the Arduino IDE, or in any other software that reads from the serial port.
+\begin{figure}[ht]
+
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/output-serial.jpg}
+  \caption{Tiny trainable instrument with serial output}
+  \caption*{Picture taken by myself}
+  \label{fig:output-serial}
+\end{figure}
+
+This output is useful for proofs of concept, for quick testing of the input classification before wiring a more complex output, and also for doing low-level communication with other serial software on your computer. 
 
 This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baudrate.
 
 \subsection{Servo output}
 
-This output creates movement and through that, rhythmic sounds.
-
-The main inspiration for this output was the emerging use of motor-activated percussive instruments, such as the Polyend Perc.
+This final output is one of the cheapest ones, along with the buzzer, and that is why both are included on the workshop that I will mention later on this document. This is another example taken from the tradition of learning how to use servo motors on physical computing classes when learning how to program Arduino microcontrollers, and that is why I inlcuded support for them on the library.
 
 \begin{figure}[ht]
   \centering
@@ -339,18 +355,25 @@ The main inspiration for this output was the emerging use of motor-activated per
   \label{fig:materials-adafruit-servo}
 \end{figure}
 
+I see the servo motor as a very versatile output, which can be thought of as a generator of movement, so our Tiny trainable instrument can dance in space, or point at different places. For this library I programmed support for moving the servo at different tempos, even with some random noise for hiccupy movement, so that the servo motor can be thought of as a robotic arm for drumming or tapping on different surfaces for music. In this image you can see an example of this with some tape and wire for extending the arm of the servo motor.
+
 This output requires no additional libraries, the Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the servo.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/output-servo.jpg}
-  \caption{Micro servo motor}
-  \caption*{Retrieved from \cite{website-materials-adafruit-servo}}
+  \caption{Tiny trainable instrument with servo output}
+  \caption*{Picture taken by myself}
   \label{fig:output-servo}
 \end{figure}
 
+\subsection{Code to build databases and train ML models}
+
+\subsection{Workshop and educational material}
 
 \section{Design principles}
+
+In this section I explain the design principles that I followed.
 
 \begin{enumerate}
   \item Affordable
@@ -359,31 +382,27 @@ This output requires no additional libraries, the Arduino microcontroller by its
   \item Private
 \end{enumerate}
 
-\subsection{Cheap}
+\subsection{Affordable}
 
-The materials for this thesis 
+The software library is inexpensive, it can be downloaded from the internet, and it's free.
+
+The materials picked were the most cheap ones I could think of, and they are often used in similar educational contexts, because they can be reusable, and are resistant.
+
+\subsection{Hackable}
 
 \section{Open}
 
 All examples included with this library were written with the aim of showing the fundamentals of how to build the instruments and different \acrshort{ML} enabled manipulation of multimedia material, so that people could build on top of it and make it their own, by changing the values of variables and adding more functionalities.
 
-\section{Philosophy and experience}
-
-Throughout this project, the magic number was 3. The \acrshort{ML} algorithms were hardcoded to be able to distinguish between 3 different categories: 3 colors, 3 physical gestures, 3 sound utterances.
-
 \section{Development}
 
-This thesis has been developed with the invaluable help of undergrad researchers Peter Tone and Maxwell Wang.
+This thesis has been developed in collaboration with MIT undergrad researchers Peter Tone and Maxwell Wang, and funded by the MIT UROP office and MIT Media Lab. Peter Tone helped with research in data structures, library writing, and programming different sections of the library, from the most experimental features to the most polished ones, and also helped with the design of the user-facing methods and variables. Maxwell Wang helped with proofreading the code, making sure the language of the examples and documentation were appropriate for beginners, and helped with the planning and conceptualization of the workshop. 
 
-They have cloned both repositories, the main one and the Arduino library one, and have continuously submitted pull requests with their contributions.
+This colaboration was remote, and made possible over issues and pull requests in repositories, and notes in shared Google Drive documents.
 
-Peter Tone has helped with research in data structures, library writing, and we have shared back and forth code, going from experimental proofs of concepts, and has also helped with the design of the user-facing library.
+The most difficult bottlenecks that I faced while programming this library were solved by office hours with Chilean artist and programmer Roy Macdonald.
 
-Maxwell Wang has proofread the code, has run the examples, and has helped with the writing of the documentation for self-learners and for the workshops.
-
-We all share a Google Drive folder, where we all share notes about our research and development of the library and the educational material.
-
-\section{Code}
+\section{Code details}
 
 This thesis is distributed as a repository, hosted on the GitHub platform, and available at https://github.com/montoyamoraga/tiny-trainable-instruments.
 
@@ -404,19 +423,18 @@ The source code for where there is a TinyTrainable.h and TinyTrainable.cpp file 
 
 \subsubsection{inputs/}
 
-Base class Input and inherited classes for each one of the other inputs.
-
+This folder contains the C++ files for the output base class, and the files for each the 7 outputs that inherit from the base class. Each output file imports the necessary library dependencies and acts as a wrapper for them.
 \subsubsection{outputs/}
 
-Base class Output and inherited classes for each one of the other outputs.
+This folder contains the C++ files for the output base class, and the files for each the 7 outputs that inherit from the base class. Each output file imports the necessary library dependencies and acts as a wrapper for them.
 
 \subsubsection{tensorflow{\_}speech/}
 
-Auxiliary files, copied from the examples from the Arduino TensorFlow Lite that we are building on top of, and also from the newer TinyML library by the EdX team. These, unless otherwise noted, are included without modifications and distributed through the Apache License included on each file's headers.
+This folder contains auxiliary files for the speech input, copied from the examples from the Arduino TensorFlow Lite library. Unless, other otherwise noted, are included without modifications and distributed through the Apache License included on each file's headers.
 
-\section{Tools}
+\section{Auxiliary}
 
-This is a summary of tools used for making this project.
+This is a summary of some auxiliary tools I used for making this project.
 
 \subsection{clang-format}
 
