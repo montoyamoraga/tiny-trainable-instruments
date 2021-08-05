@@ -369,30 +369,45 @@ This output requires no additional libraries, the Arduino microcontroller by its
 
 \subsection{Code to build databases and train ML models}
 
+One of the biggest challenges I have encountered when working with \acrshort{ML} is to find a suitable database, that I am comfortable to work with, and that I know how to use. Often, the solution to my artistic project is building my own databases, which I have done in the past by scraping the web, or doing very tedious manual work, and I do these experiments on my computer, and not publish them becasue I don't want to infringe anyone's copyright.
+
+This project does not include techniques for web scraping, since I don't want anyone to run in trouble, and also because I enjoyed to use the Arduino microcontroller and my computer at the privacy of my room, to build the necessary databases for gesture and speech recognition, and I want to share that with artists.
+
+In the repository that holds this thesis, available at \url{https://github.com/montoyamoraga/tiny-trainable-instruments}, I included a folder called \emph{notebooks/}, with Jupyter notebooks written in Python 3 and using the Google TensorFlow library for training.
+
+
+
 \subsection{Workshop and educational material}
+
+A big part of my practice is teaching computation to artists and beginners, so I included as much documentation as I could think of during the making of this thesis. I also hope the fact that this thesis was built in small increments, which were saved and published in the repositories that make up this project, can be considerd as having  educational value. Many of my favorite things I have learned has been thanks to other artists' generosity of sharing not only the output of their work, but also their process.
+
+This thesis includes documentation all through it: the source code is commented, there are README files for helping navigate each repository and folder, the library includes examples with each section commented and explained, and the library complies with the Doxygen standard for generating automatic documentation.
+
+I also designed, wrote, and taught a remote workshop for beginners with the TinyTrainable library. This workshop workshop was 4 hours of duration, spread on 2 sessions of 2 hours each, and they were attended by 6 or 7 people each time. I taught the workshop 3 times at the end of June 2021, twice in English for people based in USA, and once in Spanish for people based in Chile, for a total of 20 participants. All the materials were funded by a generous grant by the Council for the Arts at MIT.
 
 \section{Design principles}
 
-In this section I explain the design principles that I followed.
-
-\begin{enumerate}
-  \item Affordable
-  \item Hackable
-  \item Open
-  \item Private
-\end{enumerate}
+Here is a summary of the main design principles I followed when making decisions and building this thesis project.
 
 \subsection{Affordable}
 
-The software library is inexpensive, it can be downloaded from the internet, and it's free.
+The software library is virtually free, it can be downloaded from the internet at no monetary cost, only bandwidth and time and hard drive costs.
 
-The materials picked were the most cheap ones I could think of, and they are often used in similar educational contexts, because they can be reusable, and are resistant.
+The materials picked were the most cheap ones I could think of, and they are often used in similar educational contexts, because they can be reusable, and are forgiving to mistakes. The microcontroller is a one time investment, and the outputs range from 2.00 USD to 60.00 USD. 
 
-\subsection{Hackable}
+The materials for the workshop for building Tiny trainable instruments with buzzer, serial, and servo outputs had a cost of 60.00 USD, including shipping.
 
-\section{Open}
+\subsection{Open}
 
 All examples included with this library were written with the aim of showing the fundamentals of how to build the instruments and different \acrshort{ML} enabled manipulation of multimedia material, so that people could build on top of it and make it their own, by changing the values of variables and adding more functionalities.
+
+\subsection{Remixable}
+
+All the process and the code is open, and I I wish that the TinyTrainable library can be used as a dependency on other people's projects. I also hope that people make this project their own, and build their own spinoffs. 
+
+\subsection{Private}
+
+A huge emphasis I wanted to stress is to make people feel safe while handling the data. Maybe nowadays we are used to be surrounded by surveillance cameras when we are in public, or even at our homes with devices that listen to us and are connected to the cloud. I wish this thesis can provide a computational experience that feels safe, respects your privacy and makes you critical and aware of the issues of modern industrial machine learning applications.
 
 \section{Development}
 
