@@ -2,11 +2,11 @@
 
 \epigraph{And you may ask yourself \\ "Well\dots how did I get here?"}{Once in a Lifetime \\ Talking Heads, 1981}
 
-In this chapter I showcase early experiments in the different topics I worked on this thesis, with a strong focus on the different aspects of my education and artistic practice.  I include many of my breakthroughs and pitfalls that eventually led me to working on this thesis, in an open, detailed, celebratory, and critical narrative.
+In this chapter I showcase early experiments in the different fields I worked on this thesis, with a strong focus on the different aspects of my education and artistic practice.  I include many of my breakthroughs and pitfalls that eventually led me to working on this thesis, in an open, detailed, celebratory, and critical narrative.
 
 \section{Learning microcontrollers}
 
-I learned how to program microcontrollers around 2010 as an undergraduate student of electrical engineering in Chile using PIC microcontrollers and Microsoft's tools, including the operating system Windows and the C\# programming language. Around the same time, with my classmate Braulio we made our first project with Arduino Uno microcontroller. It consisted of a robotic guitar tuner, where the Arduino detected the pitch of a string, analyzed the frequency, and then made a servo motor move the tuning gear of the string, in order to match the desired pitch.
+I learned how to program microcontrollers around 2010 in Chile as an undergraduate student of electrical engineering. I was taught how to program PIC microcontrollers with Microsoft's tools, including the operating system Windows and the C\# programming language. Around the same time, with my classmate Braulio we made our first project with an Arduino Uno microcontroller. It consisted of a robotic guitar tuner, where the Arduino detected the pitch of a string, analyzed the frequency, and then made a servo motor move the tuning gear of the string, in order to match the desired pitch.
 
 \begin{figure}[ht]
   \centering
@@ -18,18 +18,19 @@ I learned how to program microcontrollers around 2010 as an undergraduate studen
 
 Fast forward to 2013, for my undergraduate thesis I had to complete a capstone project and implement many low-level programming techniques, and Arduinos were not allowed because they were considered a shortcut. For this thesis I worked with my classmate Guillermo, and we built a robotic device with a \acrshort{PIC} microcontroller programmed with C\#. Our code was very specific to that particular chip and project, and hardly reusable or interesting for a wider audience.
 
-The Arduino microcontrollers satisfied many of my interests, which were even more obvious in contrast with the \acrshort{PIC} microcontrollers: I wanted to be able to write code that worked for my projects, share them with a wider community, and .
+Since graduation I haven't programmed with \acrshort{PIC} microcontrollers. I realized I wasn't excited about making one-off devices, with non-reusable code that I couldn't share, or having to use propietary or bulky interfaces for writing for deploying my code. In contrast, Arduinos became a huge part of my practice, because of their low cost, open source nature, ease of programming and uploadin the code with a generic USB cable, and because of the enormouus and growing available documentation and user contributed libraries, which now also includie the TinyTrainable library developed for this thesis project.
 
-Maybe programming at a low-level makes the code runs faster, but I take into account the human effort of programming. I have seen fights on the internet of people dissing Arduino-based projects, arguing that at 30.00 USD they are too expensive, and you could achieve the same results with a tenth of that price in parts, but I think we have to be careful and also think about the human cost of programming. I rather we all have non painful programming experiences, so that we can spend more time away from screens and making art!
+The Arduino ecosystem fostered many aspects of my practice, and now looking at it in retrospective, it made me realize that what I Love is not computers but computation, making small machines that can crunch numbers for art, and making them openly and in collaboration with friends.
 
-This experience was highly educational, but what I most learned was about my interest in usability, remixing, and community. This device worked, but the 
- learn a lot, and the device worked, but the code was not reusable for other projects, and the \acrshort{PIC} microcontrollers
+A huge argument that I see people on the internet making against Arduino microcontrollers, is that they are too expensive ( ~30.00 USD) in comparison to the 1/10th of the cost of the bare bones chips and parts you need to build your own microcontroller unit. I am against this argument, since it invisibilizes the effort put in documentation by the Arduino community, and also it assumes that everybody is comfortable soldering and with high advanced electronics degrees. Even if you factor in the cost of hours you need to make your own, it doesn't pay itself. Obviously I see and the educational aspect of building your own things, but it's a slippery slope and discrimination to think that if you build a project with an Arduino it's not good because it's not from scratch, and I think it's rude t say it's not worth it, as rude as yelling at someone buying bread and making fun of them not buying the ingredients and cooking it themselves.
 
-I wasn't excited about the prospect of making one-off devices, with non-reusable code that I couldn't share, so I haven't programmed \acrshort{PIC} microcontrollers since then. In contrast, Arduinos became a huge part of my practice since then, because of their low cost, ease of programming, and of the available resources and documentation, and user contributed libraries, including the TinyTrainable library developed for this thesis project.
+Another strong argument againt Arduino microcontrollers is about efficiency: that Arduino is too high-level and overbloated, and that applications and projects could be faster if you programmed on a lower-level language. I also see this argument when comparing different programming languages for graphic arts. Once again, knowing how to program with lower-level programming languages is amazing, and there is value and fun on it, but in my practice, I put a high value on my time and energy, and I rather make my code slower or less efficient, so I can spend more time making art or resting.
+
+I rather we all have non painful programming experiences, so that we can spend more time away from screens and making art!
 
 \section{Computer music and physical computing}
 
-During undergrad I took classes and did research with professors and computer musicians Rodrigo Cádiz and Patricio de la Cuadra. With them I learned the fundamentals of computer music, including languages such as Max and Pure Data, which I still use to this day. For a class project I created a spoon synthesizer with masking tape, cardboard, and a Makey Makey, a device created in 2021 by Eric Rosenbaum and Jay Silver from MIT Media Lab's Lifelong Kindergarten research group. This was my introduction to physical computing, as a way of creating custom playful interfaces for manipulating media with computers for arts.
+During undergrad I took classes and did research with professors and computer musicians Rodrigo Cádiz and Patricio de la Cuadra. With them I learned the fundamentals of computer music, including languages such as Max and Pure Data, which I still use to this day. For a class project I created a spoon synthesizer with masking tape, cardboard, and a Makey Makey, a device created in 2021 by Eric Rosenbaum and Jay Silver from MIT Media Lab's Lifelong Kindergarten research group. This was my first hands-on introduction to physical computing, as a way of building my own custom playful interfaces for manipulating sound with computers.
  
 \begin{figure}[ht]
   \centering
@@ -39,17 +40,15 @@ During undergrad I took classes and did research with professors and computer mu
   \label{fig:makey-makey-spoons}
 \end{figure}
 
-This was my first time interfacing with my computer without a mouse or a keyboard, but with a flexible instrument that was the result of me tinkering around with cheap reusable materials, in a similar remixable way that I arrange my pedalboards for playing guitar in fleeting ways that are constantly changing.
+For this project I applied my practice as a guitar player, where I am constantly mixing and matching different devices on my pedalboard. This inspired me to make this flexible synthesizer with objects lying around me: spoons, masking tape, and cardboard. They also are forgiving, and I was able to change their physical position. The Makey Makey acted as interface with the computer, where I could assign on the fly different sounds to each spae.
 
-\section{Learning open source hardware}
+In retrospective this project was an instrument an amazing experience that followed Mitchel Resnick's 4 P's: it was a Passion Project that I built for Playing with my Peers, whic is a constant on my artistic practice.
 
-After graduation in 2013 I freelanced as a software and technology designer and developer for artists. I learned computer protocols and networks, and wrote custom software for live multimedia theater and music shows. I discovered Processing, a project that Arduino was based on, and I dived deep on computer graphics, interactivity, and it quickly became central to my practice and work.
+\section{Physical computing and more microcontrollers}
 
-Realizing that I wanted a bigger community of people to learn media arts with, I researched communities where I thought I could concentrate on learning this craft in a focused and immersive way, so I applied to New York University's Interactive Telecommunications Program (\acrshort{NYU} \acrshort{ITP}), where I joined as a graduate student in 2015. 
+After graduation in 2013 I freelanced as a software and technology designer and developer for artists. I learned computer protocols and networks, and wrote custom software for live multimedia theater and music shows. Realizing that I wanted a bigger community of people to learn media arts with, I applied to New York University's Interactive Telecommunications Program (\acrshort{NYU} \acrshort{ITP}), where I joined as a graduate student in 2015. In my first semester I took the class Introduction to Physical Computing, taught by one of Arduino's co-creators Tom Igoe. Since I was already familiar with electronics and circuits, I focused on learning interface design, human computer interaction, open source hardware and software, and physical computing education.
 
-In my first semester I took the class Introduction to Physical Computing, taught by one of Arduino's co-creators Tom Igoe. Since I was already familiar with electronics and circuits, I focused on learning interface design, human computer interaction, open source hardware and software, and physical computing education.
-
-During my research I was introduced to a wider ecosystem of microcontrollers beyond Arduino, that were possible because of its open source nature and the community behind it. My favorite example is the Teensy by PJRC, which captivated me by its USB MIDI capabilities, which allowed for standalone \acrshort{MIDI} operation, and the creation of plug and play devices that needed no additional setup or scripting. Also by its audio library, which allowed me to create interactive standalone experiences, playing audio samples and applying audio effects.
+During my research I was introduced to a wider ecosystem of microcontrollers beyond Arduino, that were possible because of its open source nature and the community behind it. My favorite example is the Teensy by PJRC, which captivated me by two main features: it can send and receive \acrshort{MIDI} over USB, and it has a powerful audio library, that allows you to play audio samples, create effects, and process real time audio. With the Teensy I was able to make standalone projects in a way that before would have required me to use a full fledged computer.
 
 \begin{figure}[ht]
   \centering
@@ -61,9 +60,14 @@ During my research I was introduced to a wider ecosystem of microcontrollers bey
 
 \section{Processing and p5.js}
 
-The program at \acrshort{NYU} \acrshort{ITP} is by definition in constant change, and I feel lucky because in my first semester's Introduction to Computational Media class we were taught p5.js instead of Processing, a change that hadn't happened in a year. I had almost no experience in web programming, and I mostly didn't see the point of it.
+Processing is an open source software written in Java, and it was started at MIT Media Lab's Aesthetics and Computations group by Ben Fry and Casey Reas. Over the years I have learned on my own Processing, and through it computer graphics and interactivity.
 
-Lauren McCarthy, the creator of the p5.js library, was a professor at \acrshort{NYU} in my first year, and I took her class Performing User, about performance art and technology, and it was my favorite class in graduate school.
+I was excited to learn more Processing in 2015 in my first semester at \acrshort{NYU} \acrshort{ITP}'s Introduction to Computational Media class, like it had been taught for around a decade. I consider myself lucky, becasue that year they replaced Processing with p5.js, another software by the Processing Foundation, created by Lauren McCarthy as an inspired port of Processing to JavaScript, to make art that runs on web browsers and over the internet.
+
+I had no experience in web programming, and I hadn't experienced its artistic potential, but I quickly got inspired by web programming. Not only that, Lauren McCarthy was a professor at at \acrshort{NYU} \acrshort{ITP}, and I took her class Performing User \ref{website-nyu-itp-lauren-mccarthy-performing-user}, about performance technology, my favorite class during my master's program.
+
+These educational experiences made me understand better the politic and societal implications of open source softare, appreciate and use the web as an artistic medium, and it inspired my graduate thesis in 2017, a multimedia open source self portrait. This thesis included a piece 
+
 
 At \acrshort{NYU} \acrshort{ITP} I but mostly about web and scripting, and my thesis concentrated on open source, performance art, with only a small hardware component in the form of a Raspberry Pi computer with a countdown timer to my projected death time, according to data by the United Nations, based on my assigned-at-birth-gender and my birth place.
 
