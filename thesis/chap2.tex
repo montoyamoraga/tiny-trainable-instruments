@@ -24,7 +24,7 @@ Here is an example of a yellow handheld sampler with an included microphone and 
 
 \emph{Tiny} is also a nod to the emerging field and community of tiny \acrshort{ML}, including most importantly for me the tinyMLx professional certificate\cite{website-edx-harvardx-tinymlx-professional-certificate} offered by HarvardX, that I completed while working on this project.
 
-With that, the \emph{tiny} in \emph{Tiny trainable instruments} comes from them being handheld on an breadboard, for being able to be powered from a generic USB power bank, and for using tiny \acrshort{ML} for mediating their inputs and outputs.
+With that, the \emph{tiny} in \emph{Tiny trainable instruments} comes from them being handheld devices built on breadboards, from being able to be powered from a generic USB power bank, and from using tiny \acrshort{ML} for mediating their inputs and outputs.
 
 \subsection{Definition of trainable}
 
@@ -159,9 +159,7 @@ The TinyTrainable library is a repository hosted at \url{https://github.com/mont
 
 The structure of the folders follows 2 simultaneous specifications: it includes the necessary file and folder names for being packaged and indexed as an Arduino Library, and on top of that it complies with GitHub guidelines for licensing libraries, and for automatic workflows for code testing.
 
-The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in the Arduino langauge. The examples are divided in 4 folders: 1 for each input, and 1 extra for checking the wiring of each output.
-
-Some trained \acrshort{ML} models are included as C++ files on the assets/ folder. 
+The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in the Arduino langauge. The examples are divided in 4 folders: 1 for each input, and 1 extra for checking the wiring of each output. In the assets/ folder I included some C++ files with trained models for the examples.
 
 \subsubsection{Installation}
 
@@ -171,7 +169,7 @@ Since that method is not automatic and could be prone to errors, I made the effo
 
 \subsubsection{Hardware basics}
 
-The TinyTrainable library has only 1 fixed and particular hardware requirement: it only runs on the Arduino Nano 33 \acrshort{BLE} Sense, a microcontroller released in 2019. For powering it you need a generic micro USB cable to provide the necessary input of 5V. To upload code to the microcontroller you can use the same USB cable to connect to a computer running the Arduino IDE.
+The TinyTrainable library at its current iteration has only 1 stric hardware requirement: it only runs on the Arduino Nano 33 \acrshort{BLE} Sense, a microcontroller released in 2019. For powering it you need a generic micro USB cable to provide the necessary input of 5V. To upload code to the microcontroller you can use the same USB cable to connect to a computer running the Arduino IDE.
 
 \begin{figure}[ht]
   \centering
@@ -181,7 +179,7 @@ The TinyTrainable library has only 1 fixed and particular hardware requirement: 
   \label{fig:materials-adafruit-usb-cable}
 \end{figure}
 
-To build a Tiny trainable instrument, you also need a breadboard, jumper wires, and one of the many possible output devices that I will describe soon.
+To build a Tiny trainable instrument, you also need a breadboard, where you can place the Arduino microcontroller, and some jumper wires to connect it to one of the many possible output devices that I will describe soon.
 
 \begin{figure}[ht]
   \centering
@@ -199,30 +197,149 @@ To build a Tiny trainable instrument, you also need a breadboard, jumper wires, 
   \label{fig:materials-adafruit-jumper-wires}
 \end{figure}
 
-Let's now dive deep into the different inputs and outputs for building a Tiny trainable instrument.
-
 \section{Inputs}
 
 As I mentioned before, for the inputs no extra wiring is needed, since we are using the embedded sensors of the Arduino microcontroller, to detect the 3 possible inputs: color, gesture, and speech. These inputs were designed to foster different behaviors with the library, which are detailed in the following sections.
 
-In terms of software, there is a base class Input on the source code, which stores common properties and methods for all inputs, and this class is inherited to each of the different inputs.
+ I decided that each different method will be able to detect 3 different categories, because I that more categories would make the instruments more cumbersome to train, by needing larger databases, and longer training. Hopefully in the future I can adapt the TinyTrainable library to make this a variable number of categories it can classify, but for now this is harcoded in the library. Nonetheless, if you want to use the library for your own project with a different number of categories, the library is open source and documented, so that it should be not too difficult to adapt it to your needs.
 
 \subsection{Color input}
 
-The color input allows artists to build Tiny trainable instruments that can detect the color of objects near to the microcontroller. I recommend that this is the first input that people try, since it is the easiest to implement, and the fastest to use.
+The color input allows artists to build Tiny trainable instruments that can detect 3 different colors of objects near the microcontroller. I recommend that this is the first input that people try, since it is the easiest and fastest of the other inputs to learn and use. It is based on the examples included with the Arduino{\_}KNN library.
 
-For detecting color, the TinyTrainable is a wrapper of the Arduino{\_}APDS9960 library, needed to access the data of the embedded distance and color sensor of the microcontroller. This allows the instrument to detect nearby objects, and when they are close enough to the microcontroller, it reads a 1 pixel \acrshort{RGB} value, detecting how red, how green, and how blue any object is.
+When detecting color, the library acts a wrapper of the Arduino{\_}APDS9960 library, needed to access the data of the embedded distance and color sensor of the microcontroller. This allows the instrument to detect nearby objects, and then when they are close to the microcontroller, it reads a 1 pixel \acrshort{RGB} value, detecting how red, how green, and how blue any object is.
 
+The \acrshort{RGB} data is stored in the microcontroller, to build a database that then is used to train a a \acrshort{ML} algorithm, in particular a \acrfull{k-NN}, implemented with the Arduino{\_}KNN library. After the algorithm is trained, the instrument is able to detect between the 3 different colors.
 
-It accomplishes this feat by relying on 2 software libraries:  for the sensor, and Arduino{\_}KNN for \acrshort{ML}. For the color reading, the sensor first detects distance of objects near the Arduino microcontroller, 
+The main difference between this input and the other ones, is that both the data capture and the model training happen on the device, and it is not persistent: every time the Arduino microcontroller is turned on it needs to be trained again.
 
 \subsection{Gesture input}
 
-The gesture input allows artists to build Tiny Trainable instruments that can detect different motion gestures, by moving the microcontroller in space.
+The gesture input allows artists to build Tiny Trainable instruments that can detect 3 different motion gestures, by moving the microcontroller in space. It is based on the magic$\_$wand example of the Arduino TensorFlow Lite library.
+
+When detecting gestures, the library acts as a wrapper of the Arduino{\_}LSM9DS1 library, needed to acess the data of the embedded \acrfull{IMU}. The library includes an Arduino sketch to capture the data of the 3 gestures we want to recognize, which then needs to be saved on a computer. These files with the database are imported in a Jupyter notebook to to train the \acrshort{ML} model with Google TensorFlow. The trained model is then used with the TinyTrainable library and uploaded to the Arduino microcontroller to detect the 3 different gestures.
+
+Even though for both the color input and the gesture input we use the Arduino to capture the data, for the gesture input we do need a computer to process the data, the drawback is that we still need a computer for training the model. A positive aspect is that the training is persistent, the Arduino microcontroller only needs to be trained once for the same database, and remembers the model every time it is turned on, unlike the color input which forgets the trained model.
+
+A contribution of this thesis, is that previously existing examples rely on the cloud, in particular the freemium service Google Colab for training the model on the cloud. Training on the cloud has its own perks, in my case the Google Colab resources are faster than training on my own computer, but I think this comes at the drawback of losing privacy.
+
+The gesture database we are handling is not compromising or makes you identifiable for governments or corporations, unlike your fingerprints or DNA. Since the gesture information is low stake, I don't disencourage people to not use Google Colab, but I do want to stress that we can circumvent these corporate systems, so for this thesis project I included also code for being able to train on your own computer, in a more private and secure way.
 
 \subsection{Speech input}
 
-The speech input allows artists to build Tiny Trainable instruments that can detect different sounds or utterances, by emitting sound next to the microcontroller.
+The speech input allows artists to build Tiny Trainable instruments that can detect 3 different sounds or utterances, by emitting sound next to the microcontroller.  It is based on the micro$\_$speech example of the Arduino TensorFlow Lite library.
+
+When detecting speech, the library acts as a wrapper of the PDM library, needed to acess the data of the embedded microphone. This is input is the only one where we are not using the microcontroller to capture the data: the documentation includes instructions to build your own database with the microphone in your copmuter, in orderto capture the data of the 3 different words we want to recognize. 
+
+In a similar fashion as the gesture input, the database files are then imported in a Jupyter notebook to to train the \acrshort{ML} model with Google TensorFlow. The trained model is then used with the TinyTrainable library and uploaded to the Arduino microcontroller to detect the 3 different words.
+
+The speech input is the most complex and time consuming one to implement, and we need we need a computer for both capturing the data and training the model. A positive aspect is that just like the gesture input, the training is persistent, the Arduino microcontroller only needs to be trained once for the same database, and remembers the model every time it is turned on, unlike the color input which forgets the trained model.
+
+Just like the gesture input, the speech input can be trained either on the cloud using Google Colab, or can be trained on your machine. Because of its complexity, I do advise that the time difference is significant: on my Macbook the model took between 1 and 2 days to train, in comparison with the gesture model which takes around 2 hours in my machine.
+
+The speech database we build is the most compromising one, since it is identifiable, and it could even be used for cloning our voice with deepfake techniques, so this is the one I encourage people to be more mindful about publishing their custom databases.
+
+\section{Outputs}
+
+The 7 different outputs included on the TinyTrainable library were chosen to show a breadth of possibilities, with the hope that this library can be incorporated to the practice of artists working with light, visuals, sound, sculpture, dance, and poetry, among others.
+
+The TinyTrainable library includes 4 examples for each one of the 7 outputs: 1 for checking that the wiring is correct on the breadboard, and combinations with each 1 of the 3 inputs.
+
+\subsection{Buzzer output}
+
+The buzzer is a low-cost device that can emit sound. The library allows you to output different sounds by controlling 2 fundamentals of the sound: the frequency and the duration.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-buzzer.jpg}
+  \caption{Buzzer}
+  \caption*{Retrieved from \cite{website-materials-adafruit-buzzer}}
+  \label{fig:materials-adafruit-buzzer}
+\end{figure}
+
+I wanted to include the buzzer because of its low cost and low fidelity sound, which make a high constrast with the complexity of the technology involved in doing tiny \acrshort{ML}, resulting in cutting edge tecnhnology driving a cheap buzzing sound. 
+
+This output requires no additional libraries, the Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the buzzer.
+
+\subsection{LED output}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-led.jpg}
+  \caption{LED}
+  \caption*{Retrieved from \cite{website-materials-adafruit-led}}
+  \label{fig:materials-adafruit-led}
+\end{figure}
+
+This output requires no additional libraries, the Arduino microcontroller by itself is able to provide enough power to light up most hobbyist LEDs.
+
+\subsection{MIDI output}
+
+We wrote functionalities to manipulate \acrshort{MIDI} instruments, and included examples to interface with some popular and cheap \acrshort{MIDI} instruments, such as the Korg volca beats.
+
+We included examples for rhythmic and melodic elements, using two very ubiquitous and inexpensive \acrshort{MIDI} musical instruments, which are the Korg volca beats, and the Korg volca keys.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-midi-jack.jpg}
+  \caption{MIDI jack}
+  \caption*{Retrieved from \cite{website-materials-adafruit-midi-jack}}
+  \label{fig:materials-adafruit-midi-jack}
+\end{figure}
+
+This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baudrate.
+
+\subsection{Printer output}
+
+A thermal printer is the basis for creating written and literary output, inspired by the field of computational poetry.
+
+I used the popular Adafruit Thermal printer kit, which is documented on their website and includes a software library, distributed over GitHub and Arduino IDE, and also as a submodule on this project's TinyTrainable software library.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-thermal-printer.jpg}
+  \caption{Thermal printer kit}
+  \caption*{Retrieved from \cite{website-materials-adafruit-thermal-printer}}
+  \label{fig:materials-adafruit-thermal-printer}
+\end{figure}
+
+This output requires 1 additional library, t
+
+\subsection{Screen output}
+
+I am really fond of instruments with small screens, such as the Pocket Operator series by Teenage Engineering.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-screen.jpg}
+  \caption{Screen}
+  \caption*{Retrieved from \cite{website-materials-adafruit-screen}}
+  \label{fig:materials-adafruit-screen}
+\end{figure}
+
+This output requires 1 additional library, t
+
+\subsection{Serial output}
+
+We use the already mentioned USB cable to connect to our computer, and receive messages over the serial port, available through the Arduino IDE.
+
+This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baudrate.
+
+\subsection{Servo output}
+
+This output creates movement and through that, rhythmic sounds.
+
+The main inspiration for this output was the emerging use of motor-activated percussive instruments, such as the Polyend Perc.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-servo.jpg}
+  \caption{Micro servo motor}
+  \caption*{Retrieved from \cite{website-materials-adafruit-servo}}
+  \label{fig:materials-adafruit-servo}
+\end{figure}
+
+This output requires no additional libraries, the Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the servo.
 
 \section{Design principles}
 
@@ -244,113 +361,6 @@ All examples included with this library were written with the aim of showing the
 \section{Philosophy and experience}
 
 Throughout this project, the magic number was 3. The \acrshort{ML} algorithms were hardcoded to be able to distinguish between 3 different categories: 3 colors, 3 physical gestures, 3 sound utterances.
-
-
-\subsection{Color}
-
-This approach uses the \acrshort{RGB} color sensor from the microcontroller, with the auxiliary help from the proximity sensor, that is used to capture color information at a certain distance threshold.
-
-The data is passed to a k-Nearest-Neighbor algorithm, programmed using the Arduino KNN library.
-
-\subsection{Gesture}
-
-This input uses the information from the Inertial Measurement Unit (IMU) of the microcontroller, including a gyroscope and accelerometer. It captures data after a certain threshold of movement is detected.
-
-The data is passed to a TensorFlow neural network, programmed using the Arduino TensorFlow Lite library, and based on the included magic$\_$wand example.
-
-\subsection{Speech}
-
-This input uses the information from the microphone of the microcontroller.
-
-The data is passed to a TensorFlow neural network, programmed using the Arduino TensorFlow Lite library, and based on the included micro$\_$speech example.
-
-\section{Outputs}
-
-The different outputs were picked, because of their low cost, ubiquity, and possibilities of expansion and combining them.
-
-\subsection{Buzzer}
-
-This output creates pitched sound, by using a PWM output.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-buzzer.jpg}
-  \caption{Buzzer}
-  \caption*{Retrieved from \cite{website-materials-adafruit-buzzer}}
-  \label{fig:materials-adafruit-buzzer}
-\end{figure}
-
-\subsection{LED}
-
-This section requires no dependencies.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-led.jpg}
-  \caption{LED}
-  \caption*{Retrieved from \cite{website-materials-adafruit-led}}
-  \label{fig:materials-adafruit-led}
-\end{figure}
-
-\subsection{MIDI}
-
-We wrote functionalities to manipulate \acrshort{MIDI} instruments, and included examples to interface with some popular and cheap \acrshort{MIDI} instruments, such as the Korg volca beats.
-
-We included examples for rhythmic and melodic elements, using two very ubiquitous and inexpensive \acrshort{MIDI} musical instruments, which are the Korg volca beats, and the Korg volca keys.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-midi-jack.jpg}
-  \caption{MIDI jack}
-  \caption*{Retrieved from \cite{website-materials-adafruit-midi-jack}}
-  \label{fig:materials-adafruit-midi-jack}
-\end{figure}
-
-\subsection{Serial}
-
-This output requires no library dependencies.
-
-We use the already mentioned USB cable to connect to our computer, and receive messages over the serial port, available through the Arduino IDE.
-
-\subsection{Screen}
-
-This output requires a library for printing messages on a screen.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-screen.jpg}
-  \caption{Screen}
-  \caption*{Retrieved from \cite{website-materials-adafruit-screen}}
-  \label{fig:materials-adafruit-screen}
-\end{figure}
-
-\subsection{Servo motor}
-
-This output creates movement and through that, rhythmic sounds.
-
-The main inspiration for this output was the emerging use of motor-activated percussive instruments, such as the Polyend Perc.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-servo.jpg}
-  \caption{Micro servo motor}
-  \caption*{Retrieved from \cite{website-materials-adafruit-servo}}
-  \label{fig:materials-adafruit-servo}
-\end{figure}
-
-\subsection{Thermal printer}
-
-A thermal printer is the basis for creating written and literary output, inspired by the field of computational poetry.
-
-I used the popular Adafruit Thermal printer kit, which is documented on their website and includes a software library, distributed over GitHub and Arduino IDE, and also as a submodule on this project's TinyTrainable software library.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-thermal-printer.jpg}
-  \caption{Thermal printer kit}
-  \caption*{Retrieved from \cite{website-materials-adafruit-thermal-printer}}
-  \label{fig:materials-adafruit-thermal-printer}
-\end{figure}
 
 \section{Development}
 
@@ -391,7 +401,7 @@ Base class Input and inherited classes for each one of the other inputs.
 
 Base class Output and inherited classes for each one of the other outputs.
 
-\subsubsection{tensorflow/}
+\subsubsection{tensorflow{\_}speech/}
 
 Auxiliary files, copied from the examples from the Arduino TensorFlow Lite that we are building on top of, and also from the newer TinyML library by the EdX team. These, unless otherwise noted, are included without modifications and distributed through the Apache License included on each file's headers.
 
