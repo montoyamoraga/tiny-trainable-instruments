@@ -143,21 +143,3 @@ While graduating from \acrshort{NYU} \acrshort{ITP}, and working for one year as
 During this workshop I learned many different tools for \acrshort{ML}, and also did my first experiments in creating my own custom databases. I got a mix from excitement for the graphic and plastic possibilities that \acrshort{AI} gives me, but the main bottleneck that I found was the databases. The algorithms I was trying to play with needed very specific requirements in terms of their data input, such as specific imageresolution, file formats, file size, so even if you found a database, you had to modify it. During this month my work focused on learning how to create databases with web scraping, which you can find at this repository \url{https://github.com.montoyamoraga/scrapers}. This is also the basis for the research in custom databases that I conducted during this research, and my draw towards using the Arduino microcontroller as a source for data, and I hope my contributions in how to parse data and how to build your own databases is helpful to you.
 
 For people that are interested in the rich field of image generation with \acrshort{ML}, I highly recommend the book on GANs by Casey Reas, published by Anteism, as of 2021 on its second edition. It’s an arts-first book that contextualizes the use of \acrshort{ML} algorithms for the creation of images, and uses the metaphor of these algorithms as being similar to the development of the camera. Artists don’t need to understand all the physics or mechanics behind a camera in order to make art with it, but it can help to understand it too. I think that \acrshort{ML} is a revolutionary strategy for instrument making and arts, while also introducing new civic complexities, and in this thesis I have tried to follow the example of this book, to introduce the technology and contextualize for a new generation of artists and instrument makers.
-
-\section{Hardware and instruments}
-
-After joining MIT Media Lab in 2019, I made the conscious decision of focusing on hardware research, so I could make computational arts outside my laptop computer. This was fueled by the introduction of restrictive developments by Apple, such as advising the use of apps created by unregistered developers, and discontinuing support for 32 bit apps. This also happened because on my first semester, I was introduced by classmate Will Freudenheim to the Shbobo synthesizers by Peter Blasser, becaming quickly central to my research, and which I exhibit on the next chapter.
-
-I started my research by catching up with the newer developments by Teensy. The newer ones are faster and more powerful, and I usedm to design and implement many small projects. I want to mention this personal project, a standalone audiobook I made with rotary encoders and a small screen for navigation, because it led me to add of support of this same screen on the TinyTrainable library.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.40\textheight,keepaspectratio]{images/bonsai.jpg}
-  \caption{Audiobook made with Teensy}
-  \caption*{Picture taken by myself}
-  \label{fig:bonsai-audiobook}
-\end{figure}
-
-In parallel, I researched the evolution of the teaching of physical computing at \acrshort{NYU} \acrshort{ITP}, and I discovered that they stopped teaching with the now classic Arduino Uno, and have replaced it with the newer series of Arduino Nano microcontrollers, which have a smaller format and and operating voltage of 3.3V instead of 5V.
-
-While browsing this series, I discovered the Arduino Nano 33 \acrshort{BLE} Sense that I based my thesis now. It comes with 9 emedded sensors, to measure and detect acceleration, movement, distance, color, and a microphone. This is an amazing help for beginners, since a huge challenge when you are starting to build your own projects and learning electronics, is reading datasheets to understand what sensors you can use with your microcontroller, how to wire them and callibrate them, and then what library supports it. This makes it easier and cheaper to prototype, and this made my work on my thesis easier, since I didn't have to include instructions for wiring sensors or callibrating them, and I could focus on \acrshort{ML} and the different outputs for arts.

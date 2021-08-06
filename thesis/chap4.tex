@@ -2,11 +2,27 @@
 
 \epigraph{It has to start somewhere \\ it has to start sometime \\ what better place than here? \\ what better time than now?}{Guerrilla Radio \\ Rage Against the Machine, 1999}
 
-\section{Research at MIT}
+\section{Hardware and instruments}
 
-As part of the research that directly inspired this thesis, here are some courses I took and some projects I started while at MIT Media Lab, and how they inform my theoretical and practical background for Tiny trainable instruments.
+After joining MIT Media Lab in 2019, I made the conscious decision of focusing on hardware research, so I could make computational arts, instead of software that needs to run on a laptop computer or a browser. This was fueled by the introduction of restrictive news by Apple, such as advising against the use of apps created by unregistered developers, and discontinuing support for 32 bit apps.
 
-\subsection{Classes at MIT}
+I started my research by catching up with the newer developments by Teensy. The newer ones are faster and more powerful, and I usedm to design and implement many small projects. I want to mention this personal project, a standalone audiobook I made with rotary encoders and a small screen for navigation, because it led me to add of support of this same screen on the TinyTrainable library.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.40\textheight,keepaspectratio]{images/bonsai.jpg}
+  \caption{Audiobook made with Teensy}
+  \caption*{Picture taken by myself}
+  \label{fig:bonsai-audiobook}
+\end{figure}
+
+In parallel, I researched the evolution of the teaching of physical computing at \acrshort{NYU} \acrshort{ITP}, and I discovered that they stopped teaching with the now classic Arduino Uno, and have replaced it with the newer series of Arduino Nano microcontrollers, which have a smaller format and and operating voltage of 3.3V instead of 5V.
+
+While browsing this series, I discovered the Arduino Nano 33 \acrshort{BLE} Sense that I based my thesis now. It comes with 9 emedded sensors, to measure and detect acceleration, movement, distance, color, and a microphone. This is an amazing help for beginners, since a huge challenge when you are starting to build your own projects and learning electronics, is reading datasheets to understand what sensors you can use with your microcontroller, how to wire them and callibrate them, and then what library supports it. This makes it easier and cheaper to prototype, and this made my work on my thesis easier, since I didn't have to include instructions for wiring sensors or callibrating them, and I could focus on \acrshort{ML} and the different outputs for arts.
+
+\section{Coursework at MIT}
+
+As part of the research that directly inspired this thesis, here is the coursework I took, and my notes about how they inform my theoretical and practical background for Tiny trainable instruments.
 
 \begin{enumerate}
   \item Fall 2019, CMS.901 Current Debates in Media, by professor Sasha Costanza-Chock
@@ -23,7 +39,7 @@ In the class Sound: Past and Future, I learned more about the history of differe
 
 In the class Learning Creative Learning, I was introduced to the Lifelong Kindergarten's frameworks and ideas, including the 4 P's (peers, projects, passion, and play), and the design of Scratch as a home with low floor, wide walls, and high ceiling, which I highly recommend to check on Mitchel Resnick's book Lifelong Kindergarten. This class gave me the push to write a library with a community in mind, starting with the development of it, which happened because I had the pleasure of working with MIT undergrads Peter Tone and Maxwell Wang, who helped me with different aspects of research and development.
 
-\subsection{Projects at MIT}
+\section{Projects at MIT}
 
 Some other projects I created during this master's include:
 
@@ -75,7 +91,7 @@ Currently the Open Drawing Machine can receive drawing commands from a computer 
 
 \section{Computational media arts instruments}
 
-On top of the proliferation of personal portable computers capable of performing real-time audio, and their creative live use by compute
+On top of the proliferation of personal portable computers capable of performing real-time audio, and their creative live use by computer musicians and live performes, I 
 
 In particular, here I will highlight some media arts instruments that have inspired my research, because of their use and promotion of open source software and hardware, scripting capabilities, and other design considerations. These instruments often sit at my desk for inspiration, or I spend hours playing with them for my art and learning from them and the communities around them.
 
@@ -259,7 +275,7 @@ Norns is a Linux machine, running SuperCollider for the sound engine, and Lua sc
 
 \subsection{Shbobo}
 
-Peter Blasser has released several collections / companies of musical instruments, the most famous one being Ciat-Lonbarde. Peter also runs Shbobo, which to date has two different instruments, the Shnth and the Shtar.
+In my first semester I was introduced by classmate Will Freudenheim to the Shbobo synthesizers by Peter Blasser. Peter Blasser has released several collections / companies of musical instruments, the most famous one being Ciat-Lonbarde.
 
 \begin{figure}[ht]
   \centering
@@ -279,7 +295,7 @@ Peter Blasser has released several collections / companies of musical instrument
 
 Both run on microcontrollers, and they use a new proposed language called Shlisp, based on Lisp, and also they can be programmed using the Fish IDE.
 
-As of 2021, their firmware and editor became open source, and it is available at github.com/pblasser/shbobo.
+As of 2021, their firmware and editor became open source, and it is available at \url{https://github.com/pblasser/shbobo}.
 
 COMMENT ON OPEN SOURCE: something being open source doesn't necessarily mean it is accessible to a wider audience. Is one of the goals of your work to create instruments that are accessible to a wider audience?
 
@@ -307,12 +323,6 @@ While being a graduate student and research resident at \acrshort{NYU} \acrshort
 
 In turn, at \acrshort{NYU} \acrshort{ITP} a team of artists and programmers built the library and community of ml5.js, with the 5 being an homage to p5.js. Technically, ml5.js is a wrapper for TensorFlow.js, in the same spirit that p5.js is a wrapper for HTML5 elements such as the canvas.
 
-Another huge contribution to the landscape of \acrshort{ML} for arts has been the release of the app Runway, which started as Cristóbal Valenzuela’s thesis, and is now a company with Alejandro Matamala and Anastasis Germanidis.
-
-After leaving \acrshort{NYU} \acrshort{ITP} in 2018, I was a student at the month-long workshop “Autonomous Generative Spirit” taught by Gene Kogan and Andreas Refsgaard at the School of Machines, Make and Make Believe in Berlin 2018. We experimented with quick and cheap methods for \acrshort{ML}, such as the k-nearest neighbors algorithm using the artist and beginner-friendly app Wekinator by Rebecca Fiebrink, and also more computer-intensive algorithms, which sometimes required proprietary hardware such as NVIDIA graphics cards to be trained in a matter of hours, instead of days or weeks using our computers.
-
-There is a tradeoff between speed and cost, and also between monetary cost and time cost.
-
 \begin{figure}[ht]
   \centering
     \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/sam-lavigne-training-poses.jpg}
@@ -338,14 +348,6 @@ Also Yining Shi created a new class at \acrshort{NYU} \acrshort{ITP} in 2020, at
 \acrshort{ML} algorithms need data to be trained on. I think it’s a human right to not be surveilled, and I hope my thesis can put a positive spin on the gathering of data, by letting users perform auto surveillance, like the Ai Weiwei piece WeiweiCam, a 2021 project where the artist installed cameras for self surveillance as a protest against the Chinese government.
 
 A huge inspiration for my thesis has been the Guardian Project by the Electronic Frontier Foundation, and the research and activism work by Sasha Sasha Costanza-Chock.
-
-\section{ML}
-
-ml5.js
-
-Runway
-
-TinyML Professional Certificate HarvardX
 
 \section{Digital rights}
 
