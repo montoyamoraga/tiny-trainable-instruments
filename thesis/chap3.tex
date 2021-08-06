@@ -146,16 +146,18 @@ For people that are interested in the rich field of image generation with \acrsh
 
 \section{Hardware and instruments}
 
+After joining MIT Media Lab in 2019, I made the conscious decision of focusing on hardware research, so I could make computational arts outside my laptop computer. This was fueled by the introduction of restrictive developments by Apple, such as advising the use of apps created by unregistered developers, and discontinuing support for 32 bit apps. This also happened because on my first semester, I was introduced by classmate Will Freudenheim to the Shbobo synthesizers by Peter Blasser, becaming quickly central to my research, and which I exhibit on the next chapter.
 
-When I joined MIT Media Lab in 2019, I made the conscious decision of focusing on hardware, to give my creations a life outside of my computer, also inspired by newer restrictive developments by Apple, such as restricting the use of apps created by unregistered developers. In my first semester, which ended up being the only on-campus semester I had, I was introduced by my friend Will Freudenheim to the Shbobo synthesizers by Peter Blasser.
+I started my research by catching up with the newer developments by Teensy. The newer ones are faster and more powerful, and I usedm to design and implement many small projects. I want to mention this personal project, a standalone audiobook I made with rotary encoders and a small screen for navigation, because it led me to add of support of this same screen on the TinyTrainable library.
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.40\textheight,keepaspectratio]{images/bonsai.jpg}
+  \caption{Audiobook made with Teensy}
+  \caption*{Picture taken by myself}
+  \label{fig:bonsai-audiobook}
+\end{figure}
 
-I was partially aware of the instruments made by Peter Blasser, in particular the analog ones.
+In parallel, I researched the evolution of the teaching of physical computing at \acrshort{NYU} \acrshort{ITP}, and I discovered that they stopped teaching with the now classic Arduino Uno, and have replaced it with the newer series of Arduino Nano microcontrollers, which have a smaller format and and operating voltage of 3.3V instead of 5V.
 
-While at MIT Media Lab, I was delighted by the newer versions of Teensy, which are even faster and more powerful, and which led me to start designing handheld samplers for field recordings, and other standalone devices.
-
-This in turn led me to review the current \acrshort{NYU} \acrshort{ITP} materials for physical computing, where they currently stopped using the now classic Arduino Uno, and have incorporated in their teaching the new series of Arduino Nano microcontrollers, which I based my thesis on.
-
-In particular, the Arduino Nano 33 \acrshort{BLE} Sense I am using, comes with 9 sensors, to measure and detect acceleration, movement, distance, color, and a microphone. This is an amazing breakthrough, since now we can use all this data without having to purchase, install, or calibrate the sensors.
-
-I am using the Arduino's sensors to gather multimedia input data, analyze it with \acrshort{ML}, and then respond with multimedia outputs.
+While browsing this series, I discovered the Arduino Nano 33 \acrshort{BLE} Sense that I based my thesis now. It comes with 9 emedded sensors, to measure and detect acceleration, movement, distance, color, and a microphone. This is an amazing help for beginners, since a huge challenge when you are starting to build your own projects and learning electronics, is reading datasheets to understand what sensors you can use with your microcontroller, how to wire them and callibrate them, and then what library supports it. This makes it easier and cheaper to prototype, and this made my work on my thesis easier, since I didn't have to include instructions for wiring sensors or callibrating them, and I could focus on \acrshort{ML} and the different outputs for arts.
