@@ -88,25 +88,26 @@ I was not only in awe of p5.js and Processing, but also of the people and the co
 
 While I was a student at \acrshort{NYU} \acrshort{ITP} I was the recipient of 2 summer grants to work on an internationalization project of p5.js. Since my native language is Spanish, and I wanted to share all my passion for web programming with p5.js, I focused on translating the official p5.js website and book to Spanish, and teach introductory workshops in Spanish in my home country Chile. My main goal was to let people be able to learn and enjoy p5.js without having first to learn English. Since then, this project has been expanded to other languages, and I am still a contributor to p5.js.
 
-Another reason why I wanted to teach and share p5.js, is because still to this day their community statement \cite{website-p5js-community-statement} is one of my favorite documents, fostering an inclusive environment for artists. Another really amazing document I have found is the ml5.js community statement \cite{website-ml5js-community-statement}. 
+Another reason why I wanted to teach and share p5.js, is because still to this day their community statement \cite{website-p5js-community-statement} is one of my favorite documents, fostering an inclusive environment for artists. This document inspired the ml5.js community statement \cite{website-ml5js-community-statement}, a \acrshort{ML} library for arts created at \acrshort{NYU} \acrshort{ITP}, with a strong emphasis on \acrshort{AI} ethics.
 
-After graduating from \acrshort{NYU} \acrshort{ITP} I focused on media arts education, writing tutorials, teaching introduction to programming workshops for artists.
+In my workshops and classes, when I have taught p5.js or ml5.js, I like to take a moment with my students and read the community statements, and also read the source code, and show them the repositories where these libraries are developed. I think it is very educational to take a moment and acknowledge the work made by the community to build these libraries. I also like to point out that these libraries are not made out of scratch (Hennesy Youngman claims that in arts we ran out of scratch in the 1960s (\cite{hennesy-youngman-art-thoughtz-how-to-make-an-art}). p5.js is a wrapper for drawing and interactivity features of HTML5, and ml5.js is a wrapper of Google's TensorFlow.js.
 
-When I joined MIT Media Lab in 2019, I made the conscious decision of focusing on hardware, to give my creations a life outside of my computer, also inspired by newer restrictive developments by Apple, such as restricting the use of apps created by unregistered developers. In my first semester, which ended up being the only on-campus semester I had, I was introduced by my friend Will Freudenheim to the Shbobo synthesizers by Peter Blasser.
+Another feature of my classes is that even though I always like to pick a particular framework, I like to give students an overview of different software that they can use to achieve similar results, so that they can work in an agnostic way, and even if they don't continue using the tools I teach, they learn fundamentals of programming and arts. Since most of my recent workshops and classes have been short crash courses on complex topics, I like to share resources with students so that they can continue learning on their own, and that is why I enjoy being a contributor and maintainer of documentation of open source projects.
+
+I hope that people find the documentation and writing of the TinyTrainable library useful, and that even if they don't end up using it, they learn fundamentals of programming, \acrshort{ML}, and how to use the different outputs and protocols I showcase.
 
 \section{Publishing libraries}
 
-I was partially aware of the instruments made by Peter Blasser, in particular the analog ones.
+After years of working with different software libraries for arts, and publishing my code and teaching with it, I started packaging and writing my own software libraries, with the hope that people can reuse my code and learn from it. My first experiments were in the Python ecosystem, where I have published protestpy \cite{website-pypi-protestpy}, a library for creating protest material, and kaputtpy \cite{website-pypi-kaputtpy}, a library for ruining digital devices.
 
-While at MIT Media Lab, I was delighted by the newer versions of Teensy, which are even faster and more powerful, and which led me to start designing handheld samplers for field recordings, and other standalone devices.
+Publishing my libraries so they can be installed with one-click, or a command line, and making them depend on other libraries and languages, is for me an exercise in trust, and a way to give back to other artists what I have learned. It is to me like building a skatepark or a hiking trail, you build infrastructure so that other people can use it for their own needs, mostly for fun and art :)
 
-This in turn led me to review the current \acrshort{NYU} \acrshort{ITP} materials for physical computing, where they currently stopped using the now classic Arduino Uno, and have incorporated in their teaching the new series of Arduino Nano microcontrollers, which I based my thesis on.
+Apart from these software libraries, I have on and off made small publishing experiments other ecosystems, such as Max, Haskell, and Node.js, but the bulk of my work since 2016 lives in Git repositories on my GitHub at \url{https://github.com/montoyamoraga/}.
 
-In particular, the Arduino Nano 33 \acrshort{BLE} Sense I am using, comes with 9 sensors, to measure and detect acceleration, movement, distance, color, and a microphone. This is an amazing breakthrough, since now we can use all this data without having to purchase, install, or calibrate the sensors.
+TinyTrainable is my first library for hardware, and this experience has led me to publish libraries for other projects I have been working on, and also publish alpha releases for libraries that were inspired by this thesis, but that I think are out of scope, so I plan on working on them after graduation.
 
-I am using the Arduino's sensors to gather multimedia input data, analyze it with \acrshort{ML}, and then respond with multimedia outputs.
+\section{ML for arts}
 
-\section{Artistic ML}
 
 My first experiment in this field was with my \acrshort{NYU} \acrshort{ITP} classmate Corbin Ordel, who was a student at Gene Kogan's \acrshort{ML} for Artist class. Together we audited Rebecca Fiebrink's \acrshort{ML} for Musicians and Artists class, available at the Kadenze platform, and learned the Wekinator platform.
 
@@ -127,3 +128,20 @@ A big inspiration for this thesis has been the book on GANs by Casey Reas, publi
 Since many \acrshort{ML} projects rely on proprietary hardware, such as NVIDIA GPUs, or rely on the cloud for faster compilation times, for this thesis I decided to make open source \acrshort{ML} projects that people could read and understand and remix and hack.
 
 TODO: mention the impact of the documentary Coded Bias, and how these researchers impacted my desire to make my thesis. Also mention how right before pandemic I had started a pottery class, with the intention of making clay-based instruments for thesis, as a metaphor of making code and hardware and software feel fluid and not static, I want to empower people to program, in particular \acrshort{ML} because of its dangerous implementations by oppressive governments and corporations, and in particular for arts, for making artists dream come true.
+
+\section{Hardware and instruments}
+
+
+
+When I joined MIT Media Lab in 2019, I made the conscious decision of focusing on hardware, to give my creations a life outside of my computer, also inspired by newer restrictive developments by Apple, such as restricting the use of apps created by unregistered developers. In my first semester, which ended up being the only on-campus semester I had, I was introduced by my friend Will Freudenheim to the Shbobo synthesizers by Peter Blasser.
+
+
+I was partially aware of the instruments made by Peter Blasser, in particular the analog ones.
+
+While at MIT Media Lab, I was delighted by the newer versions of Teensy, which are even faster and more powerful, and which led me to start designing handheld samplers for field recordings, and other standalone devices.
+
+This in turn led me to review the current \acrshort{NYU} \acrshort{ITP} materials for physical computing, where they currently stopped using the now classic Arduino Uno, and have incorporated in their teaching the new series of Arduino Nano microcontrollers, which I based my thesis on.
+
+In particular, the Arduino Nano 33 \acrshort{BLE} Sense I am using, comes with 9 sensors, to measure and detect acceleration, movement, distance, color, and a microphone. This is an amazing breakthrough, since now we can use all this data without having to purchase, install, or calibrate the sensors.
+
+I am using the Arduino's sensors to gather multimedia input data, analyze it with \acrshort{ML}, and then respond with multimedia outputs.
