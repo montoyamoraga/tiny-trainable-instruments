@@ -114,7 +114,7 @@ Apart from these software libraries, I have on and off made small publishing exp
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\linewidth,height=0.35\textheight,keepaspectratio]{images/github-contributions.jpg}
+  \includegraphics[width=0.80\linewidth,height=0.40\textheight,keepaspectratio]{images/github-contributions.jpg}
   \caption{Github contributions}
   \caption*{Screen capture by myself}
   \label{fig:github-contributions}
@@ -124,29 +124,27 @@ TinyTrainable is my first library for hardware, and this experience has led me t
 
 \section{ML for arts}
 
+My first project in this field was in 2016 with my \acrshort{NYU} \acrshort{ITP} classmate Corbin Ordel, who was a student at Gene Kogan's \acrshort{ML} for Artists class. Together we audited Rebecca Fiebrink's \acrshort{ML} for Musicians and Artists class, available at the Kadenze platform, and learned the Wekinator platform. As a final project for Gene's class, with Corbin we made the project Piano Die Hard, a digital sculpture consisting on a piano that is watching the trailer for the movie Die Hard, and every time it detects an explosion, it plays music as accompaniment.
 
-My first experiment in this field was with my \acrshort{NYU} \acrshort{ITP} classmate Corbin Ordel, who was a student at Gene Kogan's \acrshort{ML} for Artist class. Together we audited Rebecca Fiebrink's \acrshort{ML} for Musicians and Artists class, available at the Kadenze platform, and learned the Wekinator platform.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.80\linewidth,height=0.40\textheight,keepaspectratio]{images/piano-die-hard.jpg}
+  \caption{Piano Die Hard}
+  \caption*{Retrieved from \cite{website-alt-ai}}
+  \label{fig:piano-die-hard}
+\end{figure}
 
-Our project is Piano Die Hard, a digital sculpture consisting on a piano that reacted in real time, 
+The technology stack for this project was very convoluted: a computer looped the trailer of the movie and fed it to an old TV and to an openFrameworks app. This app outputted statistic descriptors about the color of each picture frame, which were then sent to the Wekinator app, which decided with a \acrshort{k-NN} algorithm if the image was either an explosion or not. When it detected an explosion, we sent a control signal to an Arduino, which moved a motor connected to a fishing rod and a kitchen utensil, which scratched the strings of the open carcass of an old piano every time there was explosion.
 
+The training of the model was made beforehand with a selection of 1980's movies, featuring scenes with and without explosions. This project was a direct inspiration for the color input of the TinyTrainable library, mixing color data with a \acrshort{k-NN} algorithm, and it's really fascinating for me to compress all of this complexity of 5 five years ago, needing a computer and different apps, into a single microcontroller, and I hope everybody can enjoy this too.
 
-teamed up to hack a project we called Piano Die Hard, built with open source tools such as Wekinator, Arduino, openFrameworks, and using the \acrshort{ML} algorithm KNN. We created a video database of explosions in the Die Hard movie franchise, and another one of other 1980's movies with no explosions, and we trained our \acrshort{ML} algorithm to distinguish between the categories explosion and no explosion. We featured this project at a \acrshort{NYU} \acrshort{ITP} show, were written up at the Daily Beast newspaper, and exhibited our work at the alt-ai conference.
+While graduating from \acrshort{NYU} \acrshort{ITP}, and working for one year as a research resident and graduate teaching assistant, I was exposed to many exciting developments in \acrshort{AI} and creativity, including saw the creation of the the ml5.js library and the company RunwayML by Cristóbal Valenzuela, Alejandro Matamala, and Anastasis Germanidis. Through this I became excited about the creative potential of \acrshort{ML}, so in 2018 I took a month-long intensive class at the School of Machines in Berlin, Germany, facilitated by Gene Kogan and Andreas Refsgaard, and organized by Rachel Uwa.
 
-In 2017, while I was finishing my appointment as research resident at \acrshort{NYU} ITP, Cristóbal Valenzuela had started the project RunwayML as his master's thesis, which is now a company led by Cristóbal, Alejandro Matamala and Anastasis Germanidis.
+During this workshop I learned many different tools for \acrshort{ML}, and also did my first experiments in creating my own custom databases. I got a mix from excitement for the graphic and plastic possibilities that \acrshort{AI} gives me, but the main bottleneck that I found was the databases. The algorithms I was trying to play with needed very specific requirements in terms of their data input, such as specific imageresolution, file formats, file size, so even if you found a database, you had to modify it. During this month my work focused on learning how to create databases with web scraping, which you can find at this repository \url{https://github.com.montoyamoraga/scrapers}. This is also the basis for the research in custom databases that I conducted during this research, and my draw towards using the Arduino microcontroller as a source for data, and I hope my contributions in how to parse data and how to build your own databases is helpful to you.
 
-At \acrshort{NYU} \acrshort{ITP} I also saw the first experiments with deeplearn.js, later TensorFlow.js, which soon became the foundation of the ml5.js library, a wrapper for TensorFlow.js, for on-the-browser \acrshort{ML}.
-
-I decided I wanted to dip my toes in \acrshort{ML}, so I took a month-long intensive class at the School of Machines in Berlin, Germany, facilitated by Gene Kogan and Andreas Refsgaard, and organized by Rachel Uwa.
-
-
-A big inspiration for this thesis has been the book on GANs by Casey Reas, published by Anteism, as of 2021 on its second edition. It’s an arts-first book that contextualizes the use of \acrshort{ML} algorithms for the creation of images, and uses the metaphor of these algorithms as being similar to the development of the camera. Artists don’t need to understand all the physics or mechanics behind a camera in order to make art with it, but it can help to understand it too. I think \acrshort{ML} is also a game changer for instrument making, and \acrshort{ML} introduces new civic complexities, and my thesis tries to follow the example of this book, to introduce the technology and contextualize for a new generation of artists and instrument makers.
-
-Since many \acrshort{ML} projects rely on proprietary hardware, such as NVIDIA GPUs, or rely on the cloud for faster compilation times, for this thesis I decided to make open source \acrshort{ML} projects that people could read and understand and remix and hack.
-
-TODO: mention the impact of the documentary Coded Bias, and how these researchers impacted my desire to make my thesis. Also mention how right before pandemic I had started a pottery class, with the intention of making clay-based instruments for thesis, as a metaphor of making code and hardware and software feel fluid and not static, I want to empower people to program, in particular \acrshort{ML} because of its dangerous implementations by oppressive governments and corporations, and in particular for arts, for making artists dream come true.
+For people that are interested in the rich field of image generation with \acrshort{ML}, I highly recommend the book on GANs by Casey Reas, published by Anteism, as of 2021 on its second edition. It’s an arts-first book that contextualizes the use of \acrshort{ML} algorithms for the creation of images, and uses the metaphor of these algorithms as being similar to the development of the camera. Artists don’t need to understand all the physics or mechanics behind a camera in order to make art with it, but it can help to understand it too. I think that \acrshort{ML} is a revolutionary strategy for instrument making and arts, while also introducing new civic complexities, and in this thesis I have tried to follow the example of this book, to introduce the technology and contextualize for a new generation of artists and instrument makers.
 
 \section{Hardware and instruments}
-
 
 
 When I joined MIT Media Lab in 2019, I made the conscious decision of focusing on hardware, to give my creations a life outside of my computer, also inspired by newer restrictive developments by Apple, such as restricting the use of apps created by unregistered developers. In my first semester, which ended up being the only on-campus semester I had, I was introduced by my friend Will Freudenheim to the Shbobo synthesizers by Peter Blasser.
