@@ -309,7 +309,7 @@ The thermal printer kit I recommend on the bill of materials is around 60.00 USD
   \label{fig:materials-adafruit-thermal-printer}
 \end{figure}
 
-With this output, you can create a Tiny trainable instrument that can respond in different ways, depending on the classification of the input. I hope this inspires a new generation of computer poets and interactive literature!
+With this output, you can create a Tiny trainable instrument that can print different texts and in various fonts and formatting, depending on the classification of the input. I hope this inspires a new generation of computer poets and interactive literature!
 
 This output requires 1 additional library, the Adafruit Thermal Printer library, which is open source and includes several examples for expanding the functionality of it. If you want to use an alternative hardware or software for thermal printing, you can fork the TinyTrainable library and make it your own way.
 
@@ -367,7 +367,7 @@ This output requires no additional libraries, the Arduino microcontroller by its
   \label{fig:output-servo}
 \end{figure}
 
-\subsection{Code to build databases and train ML models}
+\section{Code to build databases and train ML models}
 
 One of the biggest challenges I have encountered when working with \acrshort{ML} is to find a suitable database, that I am comfortable to work with, and that I know how to use. Often, the solution to my artistic project is building my own databases, which I have done in the past by scraping the web, or doing very tedious manual work, and I do these experiments on my computer, and not publish them becasue I don't want to infringe anyone's copyright.
 
@@ -375,9 +375,7 @@ This project does not include techniques for web scraping, since I don't want an
 
 In the repository that holds this thesis, available at \url{https://github.com/montoyamoraga/tiny-trainable-instruments}, I included a folder called \emph{notebooks/}, with Jupyter notebooks written in Python 3 and using the Google TensorFlow library for training.
 
-
-
-\subsection{Workshop and educational material}
+\section{Workshop and educational material}
 
 A big part of my practice is teaching computation to artists and beginners, so I included as much documentation as I could think of during the making of this thesis. I also hope the fact that this thesis was built in small increments, which were saved and published in the repositories that make up this project, can be considerd as having  educational value. Many of my favorite things I have learned has been thanks to other artists' generosity of sharing not only the output of their work, but also their process.
 
@@ -447,7 +445,7 @@ This folder contains the C++ files for the output base class, and the files for 
 
 This folder contains auxiliary files for the speech input, copied from the examples from the Arduino TensorFlow Lite library. Unless, other otherwise noted, are included without modifications and distributed through the Apache License included on each file's headers.
 
-\section{Auxiliary}
+\section{Auxiliary tools}
 
 This is a summary of some auxiliary tools I used for making this project.
 
@@ -455,7 +453,7 @@ This is a summary of some auxiliary tools I used for making this project.
 
 Tool for automation of formatting to source code. More information at \url{https://clang.llvm.org/docs/.ClangFormat.html}.
 
-\section{Doxygen}
+\subsection{Doxygen}
 
 Tool for generating documentation from the source code. More information at \url{https://www.doxygen.nl/}.
 
