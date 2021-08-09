@@ -10,9 +10,9 @@ First, let me explain my definitions of the words that make up the title of this
 
 \subsection{Definition of tiny}
 
-By \emph{tiny} I mean lightweight handheld instruments, that you can fit on a backpack, or take for a walk. This is inspired on my personal practice: for years I have accumulated many small tools for arts that I perform gigs with, or that I carry with me while traveling, mostly small electronic synthesizers, sound mixers, and battery-powered speakers.
+By \emph{tiny} I mean lightweight handheld instruments that you can fit in a backpack, or take for a walk. This is inspired by my personal practice: for years I have accumulated many small tools for arts that I perform gigs with, or that I carry with me while traveling, mostly small electronic synthesizers, sound mixers, and battery-powered speakers.
 
-Here is an example of a yellow handheld sampler with an included microphone and speaker that I enjoy for field recordings, and with a green battery pack for portability.
+Here is an example of a yellow handheld sampler with an included microphone and speaker that I enjoy for field recordings, complete with a green battery pack for portability.
 
 \begin{figure}[ht]
   \centering
@@ -22,15 +22,15 @@ Here is an example of a yellow handheld sampler with an included microphone and 
   \label{fig:critter-and-guitari-kaleidoloop-battery}
 \end{figure}
 
-\emph{Tiny} is also a nod to the emerging field and community of tiny \acrshort{ML}, including most importantly for me the tinyMLx professional certificate\cite{website-edx-harvardx-tinymlx-professional-certificate} offered by HarvardX, that I completed while working on this project.
+\emph{Tiny} is also a nod to the emerging field and community of tiny \acrshort{ML}, including - most importantly for me - the tinyMLx professional certificate\cite{website-edx-harvardx-tinymlx-professional-certificate} offered by HarvardX, that I completed while working on this project.
 
-With that, the \emph{tiny} in \emph{Tiny trainable instruments} comes from them being handheld devices built on breadboards, from being able to be powered from a generic USB power bank, and from using tiny \acrshort{ML} for mediating their inputs and outputs.
+With that, the \emph{tiny} in \emph{Tiny trainable instruments} comes from them being handheld devices built on breadboards, from their being able to be powered from a generic USB power bank, and from their using tiny \acrshort{ML} processes for mediating their inputs and outputs.
 
 \subsection{Definition of trainable}
 
-By \emph{trainable} I mean a device that can learn by examples. This name comes from the \acrshort{ML} lexicon, where training is a process where an algorithm  iteratively finds the numerical values of all parameters (weights, biases) of a \acrshort{ML} model.
+By \emph{trainable} I mean a device that can learn by example. This name comes from the \acrshort{ML} lexicon, where training is a process whereby an algorithm  iteratively finds the numerical values of all parameters (weights, biases) of a \acrshort{ML} model.
 
-Training a device is particularly attractive for artists working with sensors. The Arduino microcontroller that this thesis uses has several embedded sensors, which we can use to produce huge streams of data, like this screenshot of it outputting raw data from its \acrshort{RGB} sensor for color.
+Training a device is particularly attractive for artists working with sensors. The Arduino microcontroller that this thesis uses has several embedded sensors, which can be used to produce huge streams of data, like this screenshot showing the output of raw data from its \acrshort{RGB} color sensor.
 
 \begin{figure}[ht]
   \centering
@@ -40,13 +40,13 @@ Training a device is particularly attractive for artists working with sensors. T
   \label{fig:arduino-data-stream}
 \end{figure}
 
-If we wanted to use this sensor at home to detect a red object, we can start by taking notes of the \acrshort{RGB} values of the sensor when the red object is close to it, and then include this value as a threshold for detection on the software uploaded to the microcontroller. Since the \acrshort{RGB} sensor needs a consistent lighting, we need to be really careful with the lighting conditions, and if they change, we have to look at the stream of data to find the new value for red, and update the code, and reprogram the microcontroller.
+If we wanted to use this sensor at home to detect a red object, we would start by taking notes of the \acrshort{RGB} values of the sensor when the red object is close to it, and would then include this value as a threshold for detection on the software uploaded to the microcontroller. Since the \acrshort{RGB} sensor needs consistent lighting to work effectively, we need to be especially careful with the lighting conditions; if they change, we have to look at the stream of data to find the new value for red, and then update the code and reprogram the microcontroller.
 
-This is a tedious process, and it inspired me to work on this thesis, so that I could help artists use \acrshort{ML} and microcontrollers to capture data, then train a model, and let the algorithm figure out the correct answer, without having to write more code!
+This is a tedious process, and it inspired me to work on this thesis, so that I could help artists use \acrshort{ML} and microcontrollers to capture data, and then train a model, letting the algorithm figure out the correct answer without one having to write more code!
 
-An educational and creative example I recommend checking out is Teachable Machine by Google \cite{website-google-teachable-machine}, a web application that allows you to use your computer's microphone and webcam to generate data, and then train models that can detect different words, images, or body postures, without having to write any line of code.
+An educational and creative example I recommend consulting is Teachable Machine by Google \cite{website-google-teachable-machine}, a web application that allows you to use your computer's microphone and webcam to generate data, and then to train models that can detect different words, images, or body postures without having to write any line of code.
 
-In particular, I became interested on tiny \acrshort{ML} examples that requires small databases, and that can be trained on device, for the use case of making an instrument that you can change its behavior mid performance, like guitar players do with their guitars, when they change their tunings between songs. With my thesis you can program a device that can detect an apple, and then five minutes later, an orange, and then for your last song, a grapefruit. Hat tip to Sonic Youth, a band that used to tour with more than a dozen guitars, each one of them with a different tuning, and they would switch instruments between songs.
+In particular, I became interested in tiny \acrshort{ML} examples that require small databases and that can be trained on-device, for the use of making an instrument whose behavior can be changed mid-performance, like guitar players do with their guitars when they change their tunings between songs. With this thesis, one can program a device that can detect an apple, and then five minutes later, an orange, and then for your last song, a grapefruit. Hat tip to Sonic Youth, a band that used to tour with more than a dozen guitars, each one of them with a different tuning; they would switch instruments between songs.
 
 \begin{figure}[ht]
   \centering
@@ -58,13 +58,13 @@ In particular, I became interested on tiny \acrshort{ML} examples that requires 
 
 \subsection{Definition of instruments}
 
-By \emph{instruments} I mean devices that transduce energy across different media. Instruments receive an input, process it, and then produce an output. For musical instruments I like to think about instruments are able to not just produce musical notes from western scales, but a wide spectrum of sounds, encompassing the wide vocabulary of experimental electronic music and electroacoustic music.
+By \emph{instruments} I mean devices that transduce energy across different media. Instruments receive an input, process it, and then produce an output. For musical instruments, I like to think that instruments are able to not just produce musical Western scales, but a wide spectrum of sounds encompassing the broad vocabulary of experimental electronic music and electroacoustic music.
 
-On top of that, my personal definition of \emph{instrument}, includes having freedom and liberty, no censorship. This is why I consider my bicycle to be an art instrument, that transduces my pedalling input into multimedia output: adventure, sweat, and wind in my face. Also, while I am riding it I am not subjected to the restrictions of any corporate or government playground, there are mostly no rules besides gravity, and there are no backdoors that anyone can use to track me, exploit me, or limit my speed (we have smartphones for corporate and government surveillance, but that's another story).
+On top of that, my personal definition of \emph{instrument} includes having freedom and liberty, not censorship. This is why I consider my bicycle to be an art instrument that transduces my pedalling input into multimedia output: adventure, sweat, and wind in my face. Also, while I am riding it, I am not subjected to the restrictions of any corporate or government playground, there are mostly no rules besides gravity, and there are no backdoors that anyone can use to track me, exploit me, or limit my speed (we have smartphones for corporate and government surveillance, but that's another story).
 
-The liberties that \emph{instruments} make me feel, are a huge contrast to the computational tools I am using for crafting this thesis. I am typing on an Apple Macbook, and even though I like its keyboard and portability, I am aware that I face restrictions: Apple wants developers to pay to be certified developers, and if I update my operating system I won't be able to run 32 bits apps anymore. This thesis is hosted on GitHub, which is a service blocked for developers in certain countries due to USA sanctions \cite{website-github-trade-controls}. I am from a country recently affected by a dictatorship and human rights violations, and some of my relatives have been exiled, so I am particularly sensitive to policies that limit people's freedom of speech and computing.
+The liberties that \emph{instruments} make me feel are a huge contrast to the computational tools I am using for crafting this thesis. I am typing on an Apple Macbook, and even though I like its keyboard and portability, I am aware that I face restrictions: Apple wants developers to pay to be certified developers, and if I update my operating system I won't be able to run 32 bits apps anymore. This thesis is hosted on GitHub, which is a service blocked for developers in certain countries due to U.S.A. sanctions \cite{website-github-trade-controls}. I am from a country recently affected by a dictatorship and human rights violations and some of my relatives have been exiled, so I am particularly sensitive to policies that limit people's freedom of speech and computing.
 
-This uncomfort also was a catalyst for the creation of \textit{Tiny trainable instruments}, which are based on open source off-the-cloud microcontrollers, and nobody can censor me when I use them for arts, thus being \emph{instruments}, as gratifying as playing with my guitar and bicycle, and I hope you feel that joy too while on this thesis.
+This discomfort was also a catalyst for the creation of \textit{Tiny trainable instruments}, which are based on open source off-the-cloud microcontrollers, and nobody can censor me when I use them for arts, thus being \emph{instruments}, as gratifying as playing with my guitar and bicycle, and I hope you feel that joy too while spending time with this thesis.
 
 \section{Components of the project}
 
@@ -78,7 +78,7 @@ In this section I will explain the process and the result of each component of t
 
 \subsection{TinyTrainable Arduino software library}
 
-This project's main contribution is the TinyTrainable Arduino software library, which allows you to create flexible multimedia instruments, where you can combine any input with any output, and it runs on the microntroller Arduino Nano 33 BLE Sense. This microcontroller was chosen because it is currently the only Arduino supported by the Arduino Tensor Flow Lite library.
+This project's main contribution is the TinyTrainable Arduino software library, which allows you to create flexible multimedia instruments, where you can combine any input with any output, and it runs on the microcontroller Arduino Nano 33 BLE Sense. This microcontroller was chosen because it is currently the only Arduino supported by the Arduino TensorFlow Lite library.
 
 \begin{figure}[ht]
   \centering
@@ -88,7 +88,7 @@ This project's main contribution is the TinyTrainable Arduino software library, 
   \label{fig:materials-arduino-nano-33-ble-sense}
 \end{figure}
 
-The TinyTrainable library is flexible, since it allows us to combine any of the 3 available inputs, with any of the 7 possible outputs, for a total of 21 possibilities summarized on \ref{tiny-trainable-instruments-inputs-outputs-matrix}
+The TinyTrainable library is flexible, since it allows one to combine any of the 3 available inputs with any of the 7 possible outputs, for a total of 21 possibilities summarized on \ref{tiny-trainable-instruments-inputs-outputs-matrix}:
 
 \begin{table}[ht]
     \centering
@@ -107,7 +107,7 @@ The TinyTrainable library is flexible, since it allows us to combine any of the 
     \label{tiny-trainable-instruments-inputs-outputs-matrix}
 \end{table}{}
 
-For the inputs I used the embedded sensors of the Arduino microcontroller with their corresponding open source libraries, and processed the input data with 2 recently released open source \acrshort{ML} libraries, summarized on \ref{software-dependencies-inputs}.
+For the inputs I used the embedded sensors of the Arduino microcontroller with their corresponding open source libraries, and processed the input data with 2 recently released open source \acrshort{ML} libraries, summarized on \ref{software-dependencies-inputs}:
 
 \begin{table}[ht]
     \centering
@@ -126,7 +126,7 @@ For the inputs I used the embedded sensors of the Arduino microcontroller with t
     \label{software-dependencies-inputs}
 \end{table}{}
 
-The outputs are actuators that  rely on extra hardware, and in some cases, external libraries, which are summarized on \ref{software-dependencies-outputs}.
+The outputs are actuators that  rely on extra hardware, and in some cases, external libraries, which are summarized in \ref{software-dependencies-outputs}.
 
 \begin{table}[ht]
     \centering
@@ -153,15 +153,15 @@ The outputs are actuators that  rely on extra hardware, and in some cases, exter
     \label{software-dependencies-outputs}
 \end{table}{}
 
-The behavior of the TinyTrainable library is already designed, and is explained on this chapter. The software implementation is in flux, and I do my best to publish new releases with notes on how the library has changed over time, including bug fixes, clearer language on the examples, and different ways of interfacing with the methods and variables of the TinyTraianbe library.
+The behavior of the TinyTrainable library is already designed, and is explained in this chapter. The software implementation is in flux, and I do my best to publish new releases with notes on how the library has changed over time, including bug fixes, clearer language for the examples, and different ways of interfacing with the methods and variables of the TinyTrainable library.
 
 \subsubsection{Repository structure}
 
-The TinyTrainable library is a repository hosted at \url{https://github.com/montoyamoraga/TinyTrainable}, where you can review all the history and commits through time, where anyone can see how the library or each file has evolved over time.
+The TinyTrainable library is a repository hosted at \url{https://github.com/montoyamoraga/TinyTrainable}, where one can review all the history and commits through time, and where anyone can see how the whole library or each file has evolved over time.
 
 The structure of the folders follows 2 simultaneous specifications: it includes the necessary file and folder names for being packaged and indexed as an Arduino Library, and on top of that it complies with GitHub guidelines for licensing libraries, and for automatic workflows for code testing.
 
-The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in the Arduino langauge. The examples are divided in 4 folders: 1 for each input, and 1 extra for checking the wiring of each output. In the assets/ folder I included some C++ files with trained models for the examples.
+The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in the Arduino langauge. The examples are divided into four folders: one for each input, and one extra for checking the wiring of each output. In the assets/ folder I included some C++ files with trained models for the examples.
 
 \subsubsection{Installation}
 
