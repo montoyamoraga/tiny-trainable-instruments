@@ -6,7 +6,7 @@ This project is based on the microcontroller `Arduino Nano 33 BLE Sense`. Please
 
 ## Minimum materials
 
-This is the list of minimum required materials for Tiny trainable instruments
+This is the list of minimum required materials for Tiny Trainable Instruments
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|
@@ -26,7 +26,7 @@ These are the recommended materials for starters, and are taught in the workshop
 
 ## Additional outputs
 
-These additional outputs include more expensive or more complex materials, and they are recommended for more advanced users. They are not covered on the beginner workshop, but are supported by the Tiny trainable instruments project and software library.
+These additional outputs include more expensive or more complex materials, and they are recommended for more advanced users. They are not covered on the beginner workshop, but are supported by the Tiny Trainable Instruments project and software library.
 
 | Item | Quantity | Cost (USD) | Retailer | Comment |
 |------|----------|------------|----------|---------|

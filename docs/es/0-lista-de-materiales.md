@@ -8,7 +8,7 @@ El microcontrolador se puede adquirir con o sin headers, y recomendamos adquirir
 
 ## Materiales mínimos
 
-Esta es la lista de materiales mínimos requeridos para Tiny trainable instruments.
+Esta es la lista de materiales mínimos requeridos para Tiny Trainable Instruments.
 
 | Item | Cantidad | Costo (USD) | Distribuidor | Comentario |
 |------|----------|------------|----------|---------|
@@ -28,7 +28,7 @@ Estos son los materiales recomendados para principiantes, y son los incluidos en
 
 ## Salidas adicionales
 
-Estas salidas adicionales incluyen materiales más caros o más complejos, y son recomendados para usuarios más avanzados. No son enseñados en el taller para principiantes, pero sí están incluidos en el proyecto Tiny trainable instruments y la biblioteca de software.
+Estas salidas adicionales incluyen materiales más caros o más complejos, y son recomendados para usuarios más avanzados. No son enseñados en el taller para principiantes, pero sí están incluidos en el proyecto Tiny Trainable Instruments y la biblioteca de software.
 
 | Item | Cantidad | Costo (USD) | Distribuidor | Comentario |
 |------|----------|------------|----------|---------|
