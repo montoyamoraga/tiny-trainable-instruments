@@ -4,9 +4,9 @@
 
 \section{Microcontrollers as alternative to computers}
 
-When I joined MIT Media Lab in 2019, I made the decision of focusing my efforts hardware research, so I could make computational art devices, instead of software that needs to run on a laptop computer or a browser. This was fueled by the introduction of restrictive news by Apple, such as advising against the use of apps created by unregistered developers and discontinuing support for 32 bit apps, and by the ever-changing nature of the web, which makes my online artwork break often and need maintenance, and the need for additional corporate infrastructure to keep it online. In contrast I saw hardware as a space where I could deploy my ideas and keep them runing without outside intervention.
+When I joined MIT Media Lab in 2019, I made the decision to focus my efforts on hardware research, so I could make computational art devices, instead of software that needs to run on a laptop computer or a browser. This was fueled by the introduction of restrictive news by Apple, such as advising against the use of apps created by unregistered developers and discontinuing support for 32-bit apps, and by the ever-changing nature of the web, which makes my online artwork break often and need maintenance, and the need for additional corporate infrastructure to keep it online. In contrast I saw hardware as a space where I could deploy my ideas and keep them running without outside intervention.
 
-I started my research by catching up with the newer developments by Teensy. The newer ones are faster and more powerful, and I usedm to design and implement many small projects. I want to mention this personal project, a standalone audiobook I made with rotary encoders and a small screen for navigation, because it led me to add of support of this same screen on the TinyTrainable library.
+I started my research by catching up with the newer developments by Teensy. The newer microcontrollers are faster and more powerful, and I used them to design and implement many small projects. I want to mention this personal project, a standalone audiobook I made with rotary encoders and a small screen for navigation, because it led me to include software for support of this same screen in the TinyTrainable library.
 
 \begin{figure}[ht]
   \centering
@@ -79,7 +79,7 @@ The \cite[Open Drawing Machine]{website-open-drawing-machine} is a collaborative
   \label{fig:open-drawing-machine}
 \end{figure}
 
-Currently the Open Drawing Machine can receive drawing commands from a computer through a serial port, and the next step of this project is being able to receive commands from other computers through networks and the internet. This comes from the last project I will mention that I worked on while at MIT Media Lab, which is Introduction to computer networks for artists \cite{website-intro-to-computer-networks-for-artists}, a collection of tutorials for remote peer-to-peer collaboration between artists. This project is inspired by the amazing research on remote collaboration, sensors, peer-to-peer protocols, by friend Lisa Jamhoury, including the app Kinectron
+Currently the Open Drawing Machine can receive drawing commands from a computer through a serial port, and the next step of this project is being able to receive commands from other computers through networks and the internet. This comes from the last project I will mention that I worked on while at MIT Media Lab, which is Introduction to computer networks for artists \cite{website-intro-to-computer-networks-for-artists}, a collection of tutorials for remote peer-to-peer collaboration between artists. This project is inspired by the amazing research on remote collaboration, sensors, peer-to-peer protocols, by friend Lisa Jamhoury, including the app Kinectron.
 
 \begin{figure}[ht]
   \centering
@@ -91,9 +91,9 @@ Currently the Open Drawing Machine can receive drawing commands from a computer 
 
 \section{Computational media arts instruments}
 
-There is a rich ecosystem of personal computers, operating systems and software for making art, and it is common nowadays for artists to rely on their computer for making all of their art, on the go, wherever they are. In the 1990s, musicians stopeed having to rely on analog hardware, and started replacing their tools for recording and mixing with software on their computers.
+There is a rich ecosystem of personal computers, operating systems and software for making art, and it is common nowadays for artists to rely on their computer for making all of their art, on the go, wherever they are. In the 1990s, musicians stopped having to rely on analog hardware, and started replacing their tools for recording and mixing with software on their computers.
 
-Apart from the proliferation of laptop computers and software for arts, I will share my research in devices that I like to call computational media arts instruments. They are computational because they are digital and crunch numbers, and they are instruments that allows us to process different media in creative ways.
+Apart from the proliferation of laptop computers and software for arts, I will share my research in devices that I like to call computational media arts instruments. They are computational because they are digital and crunch numbers, and they are instruments that allow us to process different media in creative ways.
 
 I will focus on the instruments that can be programmed, and that promote open source hardware or software. Many of these instruments often sit at my desk for inspiration, or I spend hours playing with them for my art and learning from them and the communities around them.
 
@@ -146,7 +146,7 @@ The tables \ref{table:media-arts-instruments-technical} and \ref{table:media-art
 
 \subsection{Bastl Instruments}
 
-Bastl Instruments is a Czech company of multimedia instruments, which has had a huge impact and influence on my research and practice. When I first started researching the Eurorack format some years ago, I visited the shop Control in Brooklyn NY, and some modules by Bastl stood out to me, because of their wooden panels and interaction with classic physical computing educational materials, such as motors and solenoids, which was an inspiration for me to include servo motors as an output in Tiny trainable instruments.
+Bastl Instruments is a Czech company of multimedia instruments, which has had a huge impact and influence on my research and practice. When I first started researching the Eurorack format some years ago, I visited the shop Control in Brooklyn, NY, and some modules by Bastl stood out to me, because of their wooden panels and interaction with classic physical computing educational materials, such as motors and solenoids, which was an inspiration for me to include servo motors as an output in Tiny trainable instruments.
 
 \begin{figure}[ht]
   \centering
@@ -166,7 +166,7 @@ Another inspiration comes from their microgranny 2 granular sampler which is mad
   \label{fig:bastl-microgranny-2}
 \end{figure}
 
-Their Kastle synthesizers are also based on microcontrollers, and feature a patchbay for making connections with jumper wires, the same used for prototyping in electronic breadboards, which influenced me to make the Tiny trainable instruments built with breadboards and jumper wires, instead of custom printed circuit boards. Also, the Kastle synths are forgiving instruments, their inputs and outputs are robust enough to allow for mistakes in connections, in an electrical and mechanical way, which I think it's perfect for safe experimentation, it would be a bummer if the instrument was easy to break, or if it demanded a huge effort in understanding electronics for using it.
+Their Kastle synthesizers are also based on microcontrollers, and feature a patchbay for making connections with jumper wires, the same used for prototyping in electronic breadboards, which influenced me to make the Tiny trainable instruments built with breadboards and jumper wires, instead of custom printed circuit boards. Also, the Kastle synths are forgiving instruments, their inputs and outputs are robust enough to allow for mistakes in connections, in an electrical and mechanical way, which I think is perfect for safe experimentation. It would be a bummer if the instrument was easy to break, or if it demanded a huge effort in understanding electronics for using it.
 
 \begin{figure}[ht]
   \centering
@@ -176,7 +176,7 @@ Their Kastle synthesizers are also based on microcontrollers, and feature a patc
   \label{fig:bastl-kastle-v15}
 \end{figure}
 
-As of writing, 2 different units are in production, both retailing for ~100.00 USD, the Kastle v1.5 melodic / drone synthesizer, and the Kastle Drum, for rhythm. The only difference between these synthesizers is the firmware and the labels on the faceplate. The community is encouraged to write new firmware to modify their behavior. 
+As of writing, two different units are in production, both retailing for around 100.00 USD: the Kastle v1.5 melodic / drone synthesizer, and the Kastle Drum, for rhythm. The only difference between these synthesizers is the firmware and the labels on the faceplate. The community is encouraged to write new firmware to modify their behavior. 
 
 \begin{figure}[ht]
   \centering
@@ -186,7 +186,7 @@ As of writing, 2 different units are in production, both retailing for ~100.00 U
   \label{fig:bastl-kastle-drum}
 \end{figure}
 
-Another instrument I want to highlight is the Illuminati, currently discontinued, a device that uses different inputs (audio, control voltage, \acrshort{MIDI} messages), to control the light intensity of connected USB lamps, which influenced the conception of Tiny trainable instruments as multimedia arts instruments, not only focusing on audio and music, but also printed text, light, and screen output.
+Another instrument I want to highlight is the Illuminati, currently discontinued, a device that uses different inputs (audio, control voltage, \acrshort{MIDI} messages) to control the light intensity of connected USB lamps, which influenced the conception of Tiny trainable instruments as multimedia arts instruments, not only focusing on audio and music, but also printed text, light, and screen output.
 
 \begin{figure}[ht]
   \centering
@@ -196,7 +196,7 @@ Another instrument I want to highlight is the Illuminati, currently discontinued
   \label{fig:bastl-illuminati}
 \end{figure}
 
-The final instrument from this company that I want to highlight is the OMSynth, one of many collaborations with Casper Electronics. This device is an educational and maker circuit development tool for creating synthesizers, it includes basic fundamental blocks, such as battery power, audio input and output, potentiometers for attenuating and boosting signals, and a suite of parts kits for building devices including sequencers, oscillators, and samplers, on the included breadboard. Its release as a kit was also a direct influence in the release of Tiny trainable instruments as a kit with instructions.
+The final instrument from this company that I want to highlight is the OMSynth, one of many collaborations with Casper Electronics. This device is an educational and maker circuit development tool for creating synthesizers. It includes basic fundamental blocks, such as battery power, audio input and output, potentiometers for attenuating and boosting signals, and a suite of parts kits for building devices including sequencers, oscillators, and samplers, on the included breadboard. Its release as a kit was also a direct influence in the release of Tiny trainable instruments as a kit with instructions.
 
 \begin{figure}[ht]
   \centering
@@ -210,7 +210,7 @@ Many BASTL standalone instruments are 200.00 USD or less, which is a huge contra
 
 \subsection{Critter \& Guitari}
 
-Critter \& Guitari is an American company based in Brooklyn NY, which have released in the past computational microcontroller-based audiovisual instruments, from which my favorite is the Kaleidoloop, currently discontinued. It is a sampler with an internal mic and speaker, that allows you to record audio and then control its output with 2 knobs for volume and playback rate. It is designed to be portable for doing field recordings, and it was an influence on the design of the Tiny trainable instruments library, which allows the construction of standalone instruments, that with a USB power bank or a battery, you can take for a walk or place anywhere you want.
+Critter \& Guitari is an American company based in Brooklyn NY, which has released in the past computational microcontroller-based audiovisual instruments, from which my favorite is the Kaleidoloop, currently discontinued. It is a sampler with an internal mic and speaker, that allows you to record audio and then control its output with 2 knobs for volume and playback rate. It is designed to be portable for doing field recordings, and it was an influence on the design of the Tiny trainable instruments library, which allows the construction of standalone instruments, that with a USB power bank or a battery, you can take for a walk or place anywhere you want.
 
 \begin{figure}[ht]
   \centering
@@ -220,7 +220,7 @@ Critter \& Guitari is an American company based in Brooklyn NY, which have relea
   \label{fig:critter-and-guitari-kaleidoloop}
 \end{figure}
 
-In 2015, Critter \& Guitari releasd the Organelle, a sound computer, with the Linux operating system installed, and the software Pure Data as the programmable interface between the hardware and the ounsd engine. Every sound you can do on an Organelle you could do on your laptop using Pure Data too, and you could build your own interface to interact with the sound.
+In 2015, Critter \& Guitari released the Organelle, a sound computer with the Linux operating system installed, and the software Pure Data as the programmable interface between the hardware and the sound engine. Every sound you can do on an Organelle you could do on your laptop using Pure Data too, and you could build your own interface to interact with the sound.
 
 \begin{figure}[ht]
   \centering
@@ -363,7 +363,7 @@ During the development of this thesis, I have been fortunate to collaborate on d
 
 \subsection{Squishies, by Hannah Lienhard}
 
-Squishies is Hannah Lienhard's master's thesis, and consists of novel squishable interfaces for musical expression. We shared discussions about low-level sound design, code reusability, sound art education, and digital instruments. We were part of a master's thesis working group, facilitated by Roya Moussapour with two other Media Lab classmates, where we workshopped drafts of our thesis. This practice and feedback has been critical in shaping the language and discourse of this thesis document.
+Squishies is Hannah Lienhard's Master's thesis, and consists of novel squishable interfaces for musical expression. We shared discussions about low-level sound design, code reusability, sound art education, and digital instruments. We were part of a Master's thesis working group, facilitated by Roya Moussapour with two other Media Lab classmates, where we workshopped drafts of our thesis. This practice and feedback has been critical in shaping the language and discourse of this thesis document.
 
 \subsection{Fluid Music, by Charles Holbrow}
 
