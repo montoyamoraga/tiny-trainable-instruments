@@ -1,4 +1,4 @@
-# Tiny trainable instruments - Information for participants
+# Tiny Trainable Instruments - Information for participants
 
 The instruments we build are made out of off-the-shelf components, with an Arduino microcontroller chip being placed on a solderless breadboard, and connected with jumper wires to different low-voltage components for multimedia output, in particular a piezo buzzer for sound, and a micro servo motor for movement.
 

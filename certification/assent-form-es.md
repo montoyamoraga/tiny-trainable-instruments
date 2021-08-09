@@ -1,4 +1,4 @@
-# Tiny trainable instruments - Consentimiento para participar en la investigación
+# Tiny Trainable Instruments - Consentimiento para participar en la investigación
 
 1. Mi nombre es Aarón Montoya-Moraga, y soy un estudiante de posgrado en MIT Media Lab, y asistente de investigación en los grupos de investigación Opera of the Future y Future Sketches.
 

@@ -1,8 +1,8 @@
-# Tiny trainable instruments - User Guide
+# Tiny Trainable Instruments - User Guide
 
 ## Materials
 
-Participants of the study will will get a kit with these 6 materials for building their Tiny trainable instruments:
+Participants of the study will will get a kit with these 6 materials for building their Tiny Trainable Instruments:
 
 1. 1x Arduino Nano 33 BLE Sense microcontroller with headers
 2. 1x Micro USB Cable

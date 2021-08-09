@@ -1,4 +1,4 @@
-# Tiny trainable instruments - Información para participantes
+# Tiny Trainable Instruments - Información para participantes
 
 Cada instrumento que construimos están hechos de componentes disponibles comercialmente, y consisten en un microcontrolador Arduino montado en una protoboard electrónica, y haciendo conexiones con cables aislados a otros componentes de bajo voltaje para emitir contenido multitmedia, en particular un zumbador piezoeléctrico para emitir sonido, y un micro motor servo para emitir movimiento.
 

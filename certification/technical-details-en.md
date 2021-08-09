@@ -1,4 +1,4 @@
-# Tiny trainable instruments - Technical details
+# Tiny Trainable Instruments - Technical details
 
 For building the instruments, participants receive a materials kit consisting of off-the-shelf components, each of them with their original packaging from the manufacturer.
 

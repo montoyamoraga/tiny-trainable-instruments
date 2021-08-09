@@ -1,4 +1,4 @@
-# Tiny trainable instruments - Detalles técnicos
+# Tiny Trainable Instruments - Detalles técnicos
 
 Para construir los instrumentos, los participantes reciben un kit de materiales que consiste en materiales disponibles comercialmente en tiendas, cada uno en su paquete original directo desde el fabricante o distribuidor.
 

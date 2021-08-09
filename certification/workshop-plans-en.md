@@ -1,4 +1,4 @@
-# Tiny trainable instruments - Workshop plans
+# Tiny Trainable Instruments - Workshop plans
 
 ## Acquiring the materials
 

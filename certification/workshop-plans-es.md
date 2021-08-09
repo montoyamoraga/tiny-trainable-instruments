@@ -1,4 +1,4 @@
-# Tiny trainable instruments - Planes del taller
+# Tiny Trainable Instruments - Planes del taller
 
 ## Adquirir los materiales
 
