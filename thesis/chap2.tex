@@ -297,9 +297,9 @@ This output requires no additional libraries, since the Arduino microcontroller 
 
 \subsection{Printer output}
 
-I used to associate printing to expensive toners and ink cartridges, and mostly frustration. This radically changed on a physical computing class, where I learned about thermal printers, and how I could use Arduino microcontrollers to drive them! I find these thermal printers amazing because they are mostly a one time investment, they don't need anything besides paper and power, so I have used them for interactive art installations since then, and that is why I decided to include support for them on this project.
+I used to associate printing with expensive toners and ink cartridges, and mostly frustration. This radically changed when I took a physical computing class, where I learned about thermal printers and how I could use Arduino microcontrollers to drive them! I find these thermal printers amazing because they are mostly a one-time investment and they don't need anything besides paper and power, so I have used them for interactive art installations since then. That is why I decided to include support for them on this project.
 
-The thermal printer kit I recommend on the bill of materials is around 60.00 USD, and includes the power supply, and paper roll. I picked this one because it is sold and supported by Adafruit, and I am a huge fan of their software libraries and tutorials. 
+The thermal printer kit I recommend on the bill of materials is around 60.00 USD, and includes the power supply and paper roll. I picked this one because it is sold and supported by Adafruit, and I am a huge fan of their software libraries and tutorials. 
 
 \begin{figure}[ht]
   \centering
@@ -315,7 +315,7 @@ This output requires 1 additional library, the Adafruit Thermal Printer library,
 
 \subsection{Screen output}
 
-In contrast to the static nature of the output of the thermal printer, which prints a fixed message on a piece of paper, I included support for using a screen, for dynamic messages on a surface. 
+In contrast to the static nature of the output of the thermal printer, which prints a fixed message on a piece of paper, I included support for using a screen for dynamic messages on a surface. 
 
 \begin{figure}[ht]
   \centering
@@ -325,7 +325,7 @@ In contrast to the static nature of the output of the thermal printer, which pri
   \label{fig:materials-adafruit-screen}
 \end{figure}
 
-This output requires 1 additional library, the Adafruit{\_}SSD1306 library (and its own dependencies) for the particular screen I recommend on the bill of materials. The same vendor Adafruit offers many alternatives in different sizes, technologies, and color support. I encourage people to use different screens from different vendors, and fork and adapt the TinyTrainable library to accomplish it.
+This output requires 1 additional library, the Adafruit{\_}SSD1306 library (and its own dependencies), for the particular screen I recommend on the bill of materials. The same vendor Adafruit offers many alternatives in different sizes, technologies, and color support. I encourage people to use different screens from different vendors, and fork and adapt the TinyTrainable library to accomplish it.
 
 \subsection{Serial output}
 
@@ -381,7 +381,7 @@ A big part of my practice is teaching computation to artists and beginners, so I
 
 This thesis includes documentation all through it: the source code is commented, there are README files for helping navigate each repository and folder, the library includes examples with each section commented and explained, and the library complies with the Doxygen standard for generating automatic documentation.
 
-I also designed, wrote, and taught a remote workshop for beginners with the TinyTrainable library. This workshop workshop was 4 hours of duration, spread on two sessions of two hours each, and they were attended by 6 or 7 people each time. I taught the workshop three times at the end of June 2021, twice in English for people based in USA, and once in Spanish for people based in Chile, for a total of 20 participants. All the materials were funded by a generous grant by the Council for the Arts at MIT.
+I also designed, wrote, and taught a remote workshop for beginners with the TinyTrainable library. This workshop was four hours long, spread over two sessions of two hours each, and they were attended by 6 or 7 people each time. I taught the workshop three times at the end of June 2021, twice in English for people based in the U.S.A., and once in Spanish for people based in Chile, to a total of 20 participants. All the materials were funded by a generous grant from the Council for the Arts at MIT.
 
 \section{Design principles}
 
@@ -389,29 +389,29 @@ Here is a summary of the main design principles I followed when making decisions
 
 \subsection{Affordable}
 
-The software library is virtually free, it can be downloaded from the internet at no monetary cost, only bandwidth and time and hard drive costs.
+The software library is virtually free, and it can be downloaded from the internet at no monetary cost; only bandwidth and time and hard drive costs.
 
-The materials picked were the most cheap ones I could think of, and they are often used in similar educational contexts, because they can be reusable, and are forgiving to mistakes. The microcontroller is a one time investment, and the outputs range from 2.00 USD to 60.00 USD. 
+The materials picked were the cheapes ones I could think of, and they are often used in similar educational contexts because they can be reusable and are forgiving to mistakes. The microcontroller is a one-time investment, and the outputs range from 2.00 USD to 60.00 USD. 
 
-The materials for the workshop for building Tiny Trainable Instruments with buzzer, serial, and servo outputs had a cost of 60.00 USD, including shipping.
+The materials for the workshop for building Tiny Trainable Instruments with buzzer, serial, and servo outputs had a cost of only 60.00 USD, including shipping.
 
 \subsection{Open}
 
-All examples included with this library were written with the aim of showing the fundamentals of how to build the instruments and different \acrshort{ML} enabled manipulation of multimedia material, so that people could build on top of it and make it their own, by changing the values of variables and adding more functionalities.
+All examples included with this library were written with the aim of showing the fundamentals of how to build the instruments and different \acrshort{ML}-enabled manipulation of multimedia material, so that people could build on top of it and make it their own, by changing the values of variables and adding more functionalities.
 
 \subsection{Remixable}
 
-All the process and the code is open, and I I wish that the TinyTrainable library can be used as a dependency on other people's projects. I also hope that people make this project their own, and build their own spinoffs. 
+All the process and the code is open, and I wish that the TinyTrainable library can be used as a dependency on other people's projects. I also hope that people modify this project and make it their own, building their own spin-offs. 
 
 \subsection{Private}
 
-A huge emphasis I wanted to stress is to make people feel safe while handling the data. Maybe nowadays we are used to be surrounded by surveillance cameras when we are in public, or even at our homes with devices that listen to us and are connected to the cloud. I wish this thesis can provide a computational experience that feels safe, respects your privacy and makes you critical and aware of the issues of modern industrial machine learning applications.
+A huge emphasis I wanted to stress is to make people feel safe while handling the data. Maybe nowadays we are used to being surrounded by surveillance cameras when we are in public, or even at our homes with devices that listen to us and are connected to the cloud. I hope that this thesis can provide a computational experience that feels safe, respects your privacy, and makes you critical and aware of the issues of modern industrial machine learning applications.
 
 \section{Development}
 
-This thesis has been developed in collaboration with MIT undergrad researchers Peter Tone and Maxwell Wang, and funded by the MIT UROP office and MIT Media Lab. Peter Tone helped with research in data structures, library writing, and programming different sections of the library, from the most experimental features to the most polished ones, and also helped with the design of the user-facing methods and variables. Maxwell Wang helped with proofreading the code, making sure the language of the examples and documentation were appropriate for beginners, and helped with the planning and conceptualization of the workshop. 
+This thesis has been developed in collaboration with MIT undergrad researchers Peter Tone and Maxwell Wang, and funded by the MIT UROP office and the MIT Media Lab. Peter Tone helped with research in data structures, library writing, and programming different sections of the library, from the most experimental features to the most polished ones, and also helped with the design of the user-facing methods and variables. Maxwell Wang helped with proofreading the code, making sure the language of the examples and documentation were appropriate for beginners, and helped with the planning and conceptualization of the workshop. 
 
-This colaboration was remote, and made possible over issues and pull requests in repositories, and notes in shared Google Drive documents.
+This collaboration was remote, and made possible over issues and pull requests in repositories, and notes in shared Google Drive documents.
 
 The most difficult bottlenecks that I faced while programming this library were solved by office hours with Chilean artist and programmer Roy Macdonald.
 
@@ -419,11 +419,11 @@ The most difficult bottlenecks that I faced while programming this library were 
 
 This thesis is distributed as a repository, hosted on the GitHub platform, and available at https://github.com/montoyamoraga/tiny-trainable-instruments.
 
-The auxiliary files, such as the LaTeX project for this document, and the auxiliary Jupyter notebooks, and documentation and tutorials are included on this repository.
+The auxiliary files, such as the LaTeX project for this document, and the auxiliary Jupyter notebooks, and documentation and tutorials are included in this repository.
 
 The main software component of this project is the TinyTrainable library, available at https://github.com/montoyamoraga/TinyTrainable and also through the Arduino IDE.
 
-The code included on this library is distributed on the folders:
+The code included in this library is distributed through the folders:
 
 \begin{enumerate}
   \item examples/
@@ -436,14 +436,15 @@ The source code for where there is a TinyTrainable.h and TinyTrainable.cpp file 
 
 \subsubsection{inputs/}
 
-This folder contains the C++ files for the output base class, and the files for each the 7 outputs that inherit from the base class. Each output file imports the necessary library dependencies and acts as a wrapper for them.
+This folder contains the C++ files for the output base class, and the files for each of the 3 inputs that inherit from the base class. Each input file imports the necessary library dependencies and acts as a wrapper for them.
+
 \subsubsection{outputs/}
 
-This folder contains the C++ files for the output base class, and the files for each the 7 outputs that inherit from the base class. Each output file imports the necessary library dependencies and acts as a wrapper for them.
+This folder contains the C++ files for the output base class, and the files for each ofthe 7 outputs that inherit from the base class. Each output file imports the necessary library dependencies and acts as a wrapper for them.
 
 \subsubsection{tensorflow{\_}speech/}
 
-This folder contains auxiliary files for the speech input, copied from the examples from the Arduino TensorFlow Lite library. Unless, other otherwise noted, are included without modifications and distributed through the Apache License included on each file's headers.
+This folder contains auxiliary files for the speech input, copied from the examples from the Arduino TensorFlow Lite library. Unless other otherwise noted, are included without modifications and distributed through the Apache License included on each file's headers.
 
 \section{Auxiliary tools}
 
@@ -463,7 +464,8 @@ Every time we push code to the TinyTrainable repositories, a GitHub action creat
 
 \subsection{Jupyter}
 
-Jupyter is a free, open-source browser application that allows users to easily read and write code in a clean, accessible environment. Code is segmented into cells, which users can run individually by clicking into and selecting the triangle "play" button at the top. Subsequent code runs based on operations done in previous cells. Basically, Jupyter notebooks allow programmers to create clean, step-by-step interactive walkthroughs through their code. More information at \url{https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html}.
+Jupyter is a free, open-source browser application that allows users to easily read and write code in a clean, accessible environment. Code is segmented into cells, which users can run individually by clicking into and selecting the triangle "play" button at the top. Subsequent code runs based on operations done in previous cells. Basically, Jupyter notebooks allow programmers to create clean, step-by-step interactive walkthroughs for their code. More information at \url{https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html}.
+
 \subsection{Markdown}
 
 Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext. The documentation of this project is written using Markdown, including this document! More info at \url{https://guides.github.com/features/mastering-markdown/}
