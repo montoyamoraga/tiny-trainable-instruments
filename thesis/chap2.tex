@@ -217,41 +217,41 @@ The main difference between this input and the other ones, is that both the data
 
 \subsection{Gesture input}
 
-The gesture input allows artists to build Tiny Trainable instruments that can detect three different motion gestures, by moving the microcontroller in space. It is based on the magic$\_$wand example of the Arduino TensorFlow Lite library.
+The gesture input allows artists to build Tiny Trainable instruments that can detect three different motion gestures, by moving the microcontroller in space. It is based on the magic wand example of the Arduino TensorFlow Lite library.
 
-When detecting gestures, the library acts as a wrapper of the Arduino{\_}LSM9DS1 library, needed to acess the data of the embedded \acrfull{IMU}. The library includes an Arduino sketch to capture the data of the three gestures we want to recognize, which then needs to be saved on a computer. These files with the database are imported in a Jupyter notebook to to train the \acrshort{ML} model with Google TensorFlow. The trained model is then used with the TinyTrainable library and uploaded to the Arduino microcontroller to detect the three different gestures.
+When detecting gestures, the library acts as a wrapper of the Arduino{\_}LSM9DS1 library, needed to access the data of the embedded \acrfull{IMU}. The library includes an Arduino sketch to capture the data of the three gestures we want to recognize, which then needs to be saved on a computer. These files with the database are imported in a Jupyter notebook to train the \acrshort{ML} model with Google TensorFlow. The trained model is then used with the TinyTrainable library and uploaded to the Arduino microcontroller to detect the three different gestures.
 
-Even though for both the color input and the gesture input we use the Arduino to capture the data, for the gesture input we do need a computer to process the data, the drawback is that we still need a computer for training the model. A positive aspect is that the training is persistent, the Arduino microcontroller only needs to be trained once for the same database, and remembers the model every time it is turned on, unlike the color input which forgets the trained model.
+Even though for both the color input and the gesture input we use the Arduino to capture the data, for the gesture input we do need a computer to process the data; the drawback is that we still need a computer for training the model. A positive aspect is that the training is persistent: the Arduino microcontroller only needs to be trained once for the same database, and remembers the model every time it is turned on, unlike the color input which forgets the trained model.
 
-A contribution of this thesis, is that previously existing examples rely on the cloud, in particular the freemium service Google Colab for training the model on the cloud. Training on the cloud has its own perks, in my case the Google Colab resources are faster than training on my own computer, but I think this comes at the drawback of losing privacy.
+A contribution of this thesis is that previously existing examples rely on the cloud, in particular the freemium service Google Colab for training the model on the cloud. Training on the cloud has its own perks; for example, in my case the Google Colab resources are faster than training on my own computer, but I think this comes at the expense of losing privacy.
 
-The gesture database we are handling is not compromising or makes you identifiable for governments or corporations, unlike your fingerprints or DNA. Since the gesture information is low-stakes, I don't disencourage people to not use Google Colab, but I do want to stress that we can circumvent these corporate systems. For this thesis project I included also code for being able to train on your own computer, in a more private and secure way.
+The gesture database we are handling is not compromising and does not make you identifiable for governments or corporations, unlike your fingerprints or DNA. Since the gesture information is low-stakes, I don't disencourage people from using Google Colab with this thesis, but I do want to stress that we can circumvent these corporate systems. For this reason I also included code for being able to train on your own computer, in a more private and secure way.
 
 \subsection{Speech input}
 
 The speech input allows artists to build Tiny Trainable instruments that can detect three different sounds or utterances, by emitting sound next to the microcontroller.  It is based on the micro$\_$speech example of the Arduino TensorFlow Lite library.
 
-When detecting speech, the library acts as a wrapper of the PDM library, needed to acess the data of the embedded microphone. This is input is the only one where we are not using the microcontroller to capture the data: the documentation includes instructions to build your own database with the microphone in your computer, in orderto capture the data of the three different words we want to recognize. 
+When detecting speech, the library acts as a wrapper of the PDM library, needed to access the data of the embedded microphone. This input is the only one where we are not using the microcontroller to capture the data: the documentation includes instructions for building your own database with the microphone in your computer, in order to capture the data of the three different words we want to recognize. 
 
-In a similar fashion as the gesture input, the database files are then imported in a Jupyter notebook to to train the \acrshort{ML} model with Google TensorFlow. The trained model is then used with the TinyTrainable library and uploaded to the Arduino microcontroller to detect the three different words.
+In a similar fashion as the gesture input, the database files are then imported in a Jupyter notebook to train the \acrshort{ML} model with Google TensorFlow. The trained model is then used with the TinyTrainable library and uploaded to the Arduino microcontroller to detect the three different words.
 
-The speech input is the most complex and time consuming one to implement, and we need we need a computer for both capturing the data and training the model. A positive aspect is that just like the gesture input, the training is persistent, the Arduino microcontroller only needs to be trained once for the same database, and remembers the model every time it is turned on, unlike the color input which forgets the trained model.
+The speech input is the most complex and time-consuming one to implement, and we need a computer for both capturing the data and training the model. A positive aspect is that just like the gesture input, the training is persistent, the Arduino microcontroller only needs to be trained once for the same database, and remembers the model every time it is turned on, unlike the color input which forgets the trained model.
 
 Just like the gesture input, the speech input can be trained either on the cloud using Google Colab, or can be trained on your machine. Because of its complexity, I do advise that the time difference is significant: on my Macbook the model took between one and two days to train, in comparison with the gesture model which takes around two hours in my machine.
 
-The speech database we build is the most compromising one, since it is identifiable, and it could even be used for cloning our voice with deepfake techniques, so this is the one I encourage people to be more mindful about publishing their custom databases.
+The speech database we built is the most compromising one, since it is identifiable, and it could even be used for cloning our voice with deepfake techniques. So this is the one I encourage people to be more mindful about when publishing their custom databases.
 
 \section{Outputs}
 
 The 7 possible outputs of the TinyTrainable library were chosen to showcase many artistic mediums, with the hope that this library can be incorporated into the practice of artists working with light, visuals, sound, sculpture, dance, and poetry, among others.
 
-The TinyTrainable library includes four examples for each one of the seven outputs: one for checking that the wiring is correct on the breadboard, and combinations with each one of the three inputs. Each example is an homage to the classic \emph{helllo world} examples of computer science education, that is, they are introductory building blocks, intended to teach artists the basics of each output, so then they can continue on their own.
+The TinyTrainable library includes four examples for each one of the seven outputs: one for checking that the wiring is correct on the breadboard, and combinations with each one of the three inputs. Each example is an homage to the classic \emph{hello world} examples of computer science education; that is, they are introductory building blocks, intended to teach artists the basics of each output so then they can continue on their own.
 
 All the materials for the outputs are illustrated by the corresponding image of the product page on the website Adafruit, which I recommend for beginners and artists interested in building their own Tiny Trainable Instruments.
 
 \subsection{Buzzer output}
 
-The buzzer is a device that can vibrate and with that emit sound. The TinyTrainable library allows you to output a different sound for each of the three different input classifications, by controlling two fundamentals of the sound: frequency and duration.
+The buzzer is a device that can vibrate and that emits sound. The TinyTrainable library allows you to output a different sound for each of the three different input classifications, by controlling two fundamentals of the sound: frequency and duration.
 
 \begin{figure}[ht]
   \centering
@@ -261,7 +261,7 @@ The buzzer is a device that can vibrate and with that emit sound. The TinyTraina
   \label{fig:materials-adafruit-buzzer}
 \end{figure}
 
-I wanted to include the buzzer because of its low cost and low fidelity sound, which make a high constrast with the complexity of the technology involved in doing tiny \acrshort{ML}, resulting in cutting edge tecnhnology driving a cheap buzzing sound. 
+I wanted to include the buzzer because of its low cost and low fidelity sound, which make a big constrast with the complexity of the technology involved in doing tiny \acrshort{ML}, resulting in cutting edge technology driving a cheap buzzing sound. 
 
 This output requires no additional libraries, the Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the buzzer.
 
@@ -281,7 +281,7 @@ This output requires no additional libraries, the Arduino microcontroller by its
 
 \subsection{MIDI output}
 
-\acrfull{MIDI} is a protocol invented in the 1980s to allow musical instruments to be interconnected and share information, including musical notes, control parameters, and timing. Traditionally MIDI instruments have a 5 pin  \acrshort{DIN} connector, (from the German \acrlong{DIN}), like the one pictured here for use on a breadboard.
+\acrfull{MIDI} is a protocol invented in the 1980s to allow musical instruments to be interconnected and share information, including musical notes, control parameters, and timing. Traditionally, MIDI instruments have a 5 pin  \acrshort{DIN} connector, (from the German \acrlong{DIN}), like the one pictured here for use on a breadboard.
 
 \begin{figure}[ht]
   \centering
@@ -291,9 +291,9 @@ This output requires no additional libraries, the Arduino microcontroller by its
   \label{fig:materials-adafruit-midi-jack}
 \end{figure}
 
-MIDI can be used for transmitting all sorts of data, and I show on the examples how to use MIDI to control different aspects of MIDI enabled instruments, including syntesizers and drum machines. As a bonus, I wrote examples to interface with three synthesizers from the volca series by Korg: volca bass (analog bass machine), volca beats (drum machine), and volca keys (polyphonic synthesizer). I picked these synthesizers to have melodic and percussive musical elements, because of their huge popularity, their relatively low price of 150.00 USD, their extensive MIDI capabilities, and because I am a huge fan of the instrument designs by Tatsuya Takahashi.
+MIDI can be used for transmitting all sorts of data, and thesis examples how to use MIDI to control different aspects of MIDI-enabled instruments, including synthesizers and drum machines. As a bonus, I wrote examples to interface with three synthesizers from the volca series by Korg: volca bass (analog bass machine), volca beats (drum machine), and volca keys (polyphonic synthesizer). I picked these synthesizers to haveboth melodic and percussive musical elements, because of their huge popularity, their relatively low price of 150.00 USD, their extensive MIDI capabilities, and because I am a huge fan of the instrument designs by Tatsuya Takahashi.
 
-This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baudrate.
+This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baud rate.
 
 \subsection{Printer output}
 
@@ -357,7 +357,7 @@ This final output is one of the cheapest ones, along with the buzzer, and that i
 
 I see the servo motor as a very versatile output, which can be thought of as a generator of movement, so our Tiny Trainable Instrument can dance in space, or point at different places. For this library I programmed support for moving the servo at different tempos, even with some random noise for hiccupy movement, so that the servo motor can be thought of as a robotic arm for drumming or tapping on different surfaces for music. In this image you can see an example of this with some tape and wire for extending the arm of the servo motor.
 
-This output requires no additional libraries, the Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the servo.
+This output requires no additional libraries. The Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the servo.
 
 \begin{figure}[ht]
   \centering
