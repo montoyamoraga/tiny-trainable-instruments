@@ -1,4 +1,4 @@
-\chapter{Tiny trainable instruments}
+\chapter{Tiny Trainable Instruments}
 
 \epigraph{All the modern things \\ have always existed \\ they've just been waiting}{The Modern Things \\ Björk, 1995}
 
@@ -6,7 +6,7 @@ This chapter describes the process of conceptualizing and developing this antidi
 
 First, let me explain my definitions of the words that make up the title of this project.
 
-\section{Definition of Tiny trainable instruments}
+\section{Definition of Tiny Trainable Instruments}
 
 \subsection{Definition of tiny}
 
@@ -24,7 +24,7 @@ Here is an example of a yellow handheld sampler with an included microphone and 
 
 \emph{Tiny} is also a nod to the emerging field and community of tiny \acrshort{ML}, including - most importantly for me - the tinyMLx professional certificate\cite{website-edx-harvardx-tinymlx-professional-certificate} offered by HarvardX, that I completed while working on this project.
 
-With that, the \emph{tiny} in \emph{Tiny trainable instruments} comes from them being handheld devices built on breadboards, from their being able to be powered from a generic USB power bank, and from their using tiny \acrshort{ML} processes for mediating their inputs and outputs.
+With that, the \emph{tiny} in \emph{Tiny Trainable Instruments} comes from them being handheld devices built on breadboards, from their being able to be powered from a generic USB power bank, and from their using tiny \acrshort{ML} processes for mediating their inputs and outputs.
 
 \subsection{Definition of trainable}
 
@@ -64,7 +64,7 @@ On top of that, my personal definition of \emph{instrument} includes having free
 
 The liberties that \emph{instruments} make me feel are a huge contrast to the computational tools I am using for crafting this thesis. I am typing on an Apple Macbook, and even though I like its keyboard and portability, I am aware that I face restrictions: Apple wants developers to pay to be certified developers, and if I update my operating system I won't be able to run 32 bits apps anymore. This thesis is hosted on GitHub, which is a service blocked for developers in certain countries due to U.S.A. sanctions \cite{website-github-trade-controls}. I am from a country recently affected by a dictatorship and human rights violations and some of my relatives have been exiled, so I am particularly sensitive to policies that limit people's freedom of speech and computing.
 
-This discomfort was also a catalyst for the creation of \textit{Tiny trainable instruments}, which are based on open source off-the-cloud microcontrollers, and nobody can censor me when I use them for arts, thus being \emph{instruments}, as gratifying as playing with my guitar and bicycle, and I hope you feel that joy too while spending time with this thesis.
+This discomfort was also a catalyst for the creation of \textit{Tiny Trainable Instruments}, which are based on open source off-the-cloud microcontrollers, and nobody can censor me when I use them for arts, thus being \emph{instruments}, as gratifying as playing with my guitar and bicycle, and I hope you feel that joy too while spending time with this thesis.
 
 \section{Components of the project}
 
@@ -159,19 +159,19 @@ The behavior of the TinyTrainable library is already designed, and is explained 
 
 The TinyTrainable library is a repository hosted at \url{https://github.com/montoyamoraga/TinyTrainable}, where one can review all the history and commits through time, and where anyone can see how the whole library or each file has evolved over time.
 
-The structure of the folders follows 2 simultaneous specifications: it includes the necessary file and folder names for being packaged and indexed as an Arduino Library, and on top of that it complies with GitHub guidelines for licensing libraries, and for automatic workflows for code testing.
+The structure of the folders follows two simultaneous specifications: it includes the necessary file and folder names for being packaged and indexed as an Arduino Library, and on top of that it complies with GitHub guidelines for licensing libraries, and for automatic workflows for code testing.
 
-The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in the Arduino langauge. The examples are divided into four folders: one for each input, and one extra for checking the wiring of each output. In the assets/ folder I included some C++ files with trained models for the examples.
+The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in the Arduino language. The examples are divided into four folders: one for each input, and one extra for checking the wiring of each output. In the assets/ folder, I included some C++ files with trained models for the examples.
 
 \subsubsection{Installation}
 
 The library can be downloaded from the Releases section of the repository at  \url{https://github.com/montoyamoraga/TinyTrainable/releases}, where you also have access to the complete history of releases over time. To install it, you need to uncompress the .zip into a folder, and then make it discoverable by the Arduino IDE.
 
-Since that method is not automatic and could be prone to errors, I made the effort to publish the TinyTrainable library, by complying with the latest Arduino Library Manager specifications, detailed on their repository \url{https://github.com/arduino/library-registry/}. With that, from the Arduino IDE you can open their Library Manager and do a 1 click installation of the library, or as an alternative use arduino-cli, the Arduino command line tool on your terminal.
+Since that method is not automatic and could be prone to errors, I made the effort to publish the TinyTrainable library, by complying with the latest Arduino Library Manager specifications, detailed on their repository \url{https://github.com/arduino/library-registry/}. With that, from the Arduino IDE you can open their Library Manager and do a 1-click installation of the library, or as an alternative use arduino-cli, the Arduino command line tool on your terminal.
 
 \subsubsection{Hardware basics}
 
-The TinyTrainable library at its current iteration has only 1 stric hardware requirement: it only runs on the Arduino Nano 33 \acrshort{BLE} Sense, a microcontroller released in 2019. For powering it you need a generic micro USB cable to provide the necessary input of 5V. To upload code to the microcontroller you can use the same USB cable to connect to a computer running the Arduino IDE.
+The TinyTrainable library at its current iteration has only one strict hardware requirement: it only runs on the Arduino Nano 33 \acrshort{BLE} Sense, a microcontroller released in 2019. For powering it you need a generic micro USB cable to provide the necessary input of 5V. To upload code to the microcontroller you can use the same USB cable to connect to a computer running the Arduino IDE.
 
 \begin{figure}[ht]
   \centering
@@ -181,7 +181,7 @@ The TinyTrainable library at its current iteration has only 1 stric hardware req
   \label{fig:materials-adafruit-usb-cable}
 \end{figure}
 
-To build a Tiny trainable instrument, you also need a breadboard, where you can place the Arduino microcontroller, and some jumper wires to connect it to one of the many possible output devices that I will describe soon.
+To build a Tiny Trainable Instrument, you also need a breadboard, where you can place the Arduino microcontroller, and some jumper wires to connect it to one of the many possible output devices that I will describe soon.
 
 \begin{figure}[ht]
   \centering
@@ -207,7 +207,7 @@ I decided that each different method will be able to detect 3 different categori
 
 \subsection{Color input}
 
-The color input allows artists to build Tiny trainable instruments that can detect 3 different colors of objects near the microcontroller. I recommend that this is the first input that people try, since it is the easiest and fastest of the other inputs to learn and use. It is based on the examples included with the Arduino{\_}KNN library.
+The color input allows artists to build Tiny Trainable Instruments that can detect 3 different colors of objects near the microcontroller. I recommend that this is the first input that people try, since it is the easiest and fastest of the other inputs to learn and use. It is based on the examples included with the Arduino{\_}KNN library.
 
 When detecting color, the library acts a wrapper of the Arduino{\_}APDS9960 library, needed to access the data of the embedded distance and color sensor of the microcontroller. This allows the instrument to detect nearby objects, and then when they are close to the microcontroller, it reads a 1 pixel \acrshort{RGB} value, detecting how red, how green, and how blue any object is.
 
@@ -247,7 +247,7 @@ The 7 possible outputs of the TinyTrainable library were chosen to showcase many
 
 The TinyTrainable library includes 4 examples for each one of the 7 outputs: 1 for checking that the wiring is correct on the breadboard, and combinations with each 1 of the 3 inputs. Each example is an homage to the classic \emph{helllo world} examples of computer science education, that is, they are introductory building blocks, intended to teach artists the basics of each output, so then they can continue on their own.
 
-All the materials for the outputs are illustrated by the corresponding image of the product page on the website Adafruit, which I recommend for beginners and artists interested in building their own Tiny trainable instruments.
+All the materials for the outputs are illustrated by the corresponding image of the product page on the website Adafruit, which I recommend for beginners and artists interested in building their own Tiny Trainable Instruments.
 
 \subsection{Buzzer output}
 
@@ -309,7 +309,7 @@ The thermal printer kit I recommend on the bill of materials is around 60.00 USD
   \label{fig:materials-adafruit-thermal-printer}
 \end{figure}
 
-With this output, you can create a Tiny trainable instrument that can print different texts and in various fonts and formatting, depending on the classification of the input. I hope this inspires a new generation of computer poets and interactive literature!
+With this output, you can create a Tiny Trainable Instrument that can print different texts and in various fonts and formatting, depending on the classification of the input. I hope this inspires a new generation of computer poets and interactive literature!
 
 This output requires 1 additional library, the Adafruit Thermal Printer library, which is open source and includes several examples for expanding the functionality of it. If you want to use an alternative hardware or software for thermal printing, you can fork the TinyTrainable library and make it your own way.
 
@@ -334,7 +334,7 @@ This output uses the same USB cable we mentioned earlier, for delivering the pow
 
   \centering
   \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/output-serial.jpg}
-  \caption{Tiny trainable instrument with serial output}
+  \caption{Tiny Trainable Instrument with serial output}
   \caption*{Picture taken by myself}
   \label{fig:output-serial}
 \end{figure}
@@ -355,14 +355,14 @@ This final output is one of the cheapest ones, along with the buzzer, and that i
   \label{fig:materials-adafruit-servo}
 \end{figure}
 
-I see the servo motor as a very versatile output, which can be thought of as a generator of movement, so our Tiny trainable instrument can dance in space, or point at different places. For this library I programmed support for moving the servo at different tempos, even with some random noise for hiccupy movement, so that the servo motor can be thought of as a robotic arm for drumming or tapping on different surfaces for music. In this image you can see an example of this with some tape and wire for extending the arm of the servo motor.
+I see the servo motor as a very versatile output, which can be thought of as a generator of movement, so our Tiny Trainable Instrument can dance in space, or point at different places. For this library I programmed support for moving the servo at different tempos, even with some random noise for hiccupy movement, so that the servo motor can be thought of as a robotic arm for drumming or tapping on different surfaces for music. In this image you can see an example of this with some tape and wire for extending the arm of the servo motor.
 
 This output requires no additional libraries, the Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the servo.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/output-servo.jpg}
-  \caption{Tiny trainable instrument with servo output}
+  \caption{Tiny Trainable Instrument with servo output}
   \caption*{Picture taken by myself}
   \label{fig:output-servo}
 \end{figure}
@@ -393,7 +393,7 @@ The software library is virtually free, it can be downloaded from the internet a
 
 The materials picked were the most cheap ones I could think of, and they are often used in similar educational contexts, because they can be reusable, and are forgiving to mistakes. The microcontroller is a one time investment, and the outputs range from 2.00 USD to 60.00 USD. 
 
-The materials for the workshop for building Tiny trainable instruments with buzzer, serial, and servo outputs had a cost of 60.00 USD, including shipping.
+The materials for the workshop for building Tiny Trainable Instruments with buzzer, serial, and servo outputs had a cost of 60.00 USD, including shipping.
 
 \subsection{Open}
 
