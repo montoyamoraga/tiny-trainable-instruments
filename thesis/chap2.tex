@@ -341,11 +341,11 @@ This output uses the same USB cable we mentioned earlier, for delivering the pow
 
 This output is useful for proofs of concept, for quick testing of the input classification before wiring a more complex output, and also for doing low-level communication with other serial software on your computer. 
 
-This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baudrate.
+This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baud rate.
 
 \subsection{Servo output}
 
-This final output is one of the cheapest ones, along with the buzzer, and that is why both are included on the workshop that I will mention later on this document. This is another example taken from the tradition of learning how to use servo motors on physical computing classes when learning how to program Arduino microcontrollers, and that is why I inlcuded support for them on the library.
+This final output is one of the cheapest ones, along with the buzzer, and that is why both were included in the thesis workshop. This is another example taken from the tradition of learning how to use servo motors in physical computing classes when learning how to program Arduino microcontrollers. That is why I included support for them in the library.
 
 \begin{figure}[ht]
   \centering
@@ -355,7 +355,7 @@ This final output is one of the cheapest ones, along with the buzzer, and that i
   \label{fig:materials-adafruit-servo}
 \end{figure}
 
-I see the servo motor as a very versatile output, which can be thought of as a generator of movement, so our Tiny Trainable Instrument can dance in space, or point at different places. For this library I programmed support for moving the servo at different tempos, even with some random noise for hiccupy movement, so that the servo motor can be thought of as a robotic arm for drumming or tapping on different surfaces for music. In this image you can see an example of this with some tape and wire for extending the arm of the servo motor.
+I see the servo motor as a very versatile output, which can be thought of as a generator of movement. So our Tiny Trainable Instrument can dance in space, or point at different places. For this library, I programmed support for moving the servo at different tempos, even with some random noise for hiccupy movement, so that the servo motor can be thought of as a robotic arm for drumming or tapping on different surfaces for music. In this image, you can see an example of this with some tape and wire for extending the arm of the servo motor.
 
 This output requires no additional libraries. The Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the servo.
 
@@ -369,15 +369,15 @@ This output requires no additional libraries. The Arduino microcontroller by its
 
 \section{Code to build databases and train ML models}
 
-One of the biggest challenges I have encountered when working with \acrshort{ML} is to find a suitable database, that I am comfortable to work with, and that I know how to use. Often, the solution to my artistic project is building my own databases, which I have done in the past by scraping the web, or doing very tedious manual work, and I do these experiments on my computer, and not publish them becasue I don't want to infringe anyone's copyright.
+One of the biggest challenges I have encountered when working with \acrshort{ML} is to find a suitable database, that I am comfortable to work with, and that I know how to use. Often, the solution to my artistic project is building my own databases, which I have done in the past by scraping the web, or doing very tedious manual work. I do these experiments on my computer and do not publish them because I don't want to infringe on anyone's copyright.
 
-This project does not include techniques for web scraping, since I don't want anyone to run in trouble, and also because I enjoyed to use the Arduino microcontroller and my computer at the privacy of my room, to build the necessary databases for gesture and speech recognition, and I want to share that with artists.
+This project does not include techniques for web scraping, since I don't want anyone to run into legal trouble, and also because I enjoyed using the Arduino microcontroller and my computer in the privacy of my room, to build the necessary databases for gesture and speech recognition, and I want to share that with artists.
 
 In the repository that holds this thesis, available at \url{https://github.com/montoyamoraga/tiny-trainable-instruments}, I included a folder called \emph{notebooks/}, with Jupyter notebooks written in Python 3 and using the Google TensorFlow library for training.
 
 \section{Workshop and educational material}
 
-A big part of my practice is teaching computation to artists and beginners, so I included as much documentation as I could think of during the making of this thesis. I also hope the fact that this thesis was built in small increments, which were saved and published in the repositories that make up this project, can be considerd as having  educational value. Many of my favorite things I have learned has been thanks to other artists' generosity of sharing not only the output of their work, but also their process.
+A big part of my practice is teaching computation to artists and beginners, so I included as much documentation as I could think of during the making of this thesis. I also hope the fact that this thesis was built in small increments, which were saved and published in the repositories that make up this project, can be considered as having  educational and scholarly value. Many of the favorite things I have learned have been thanks to other artists' generosity of sharing not only the output of their work, but also their process.
 
 This thesis includes documentation all through it: the source code is commented, there are README files for helping navigate each repository and folder, the library includes examples with each section commented and explained, and the library complies with the Doxygen standard for generating automatic documentation.
 

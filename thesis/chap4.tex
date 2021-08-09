@@ -18,26 +18,26 @@ I started my research by catching up with the newer developments by Teensy. The 
 
 In parallel, I researched the evolution of the teaching of physical computing at \acrshort{NYU} \acrshort{ITP}, and I discovered that they stopped teaching with the now classic Arduino Uno, and have replaced it with the newer series of Arduino Nano microcontrollers, which have a smaller format and and operating voltage of 3.3V instead of 5V.
 
-While browsing this series, I discovered the Arduino Nano 33 \acrshort{BLE} Sense that I based my thesis now. It comes with 9 emedded sensors, to measure and detect acceleration, movement, distance, color, and a microphone. This is an amazing help for beginners, since a huge challenge when you are starting to build your own projects and learning electronics, is reading datasheets to understand what sensors you can use with your microcontroller, how to wire them and callibrate them, and then what library supports it. This makes it easier and cheaper to prototype, and this made my work on my thesis easier, since I didn't have to include instructions for wiring sensors or callibrating them, and I could focus on \acrshort{ML} and the different outputs for arts.
+While browsing this series, I discovered the Arduino Nano 33 \acrshort{BLE} Sense that I based my thesis on. It comes with 9 embedded sensors, to measure and detect acceleration, movement, distance, color, plus a microphone. This is an amazing help for beginners, since a huge challenge when you are starting to build your own projects and learning electronics is reading datasheets to understand what sensors you can use with your microcontroller, how to wire them and calibrate them, and then what library supports it. This makes it easier and cheaper to prototype, and this made my work on my thesis easier, since I didn't have to include instructions for wiring sensors or calibrating them, and I could focus on \acrshort{ML} and the different outputs for arts.
 
 \section{Coursework at MIT}
 
 As part of the research that directly inspired this thesis, here is the coursework I took, and my notes about how they inform my theoretical and practical background for Tiny Trainable Instruments.
 
 \begin{enumerate}
-  \item Fall 2019, CMS.901 Current Debates in Media, by professor Sasha Costanza-Chock
-  \item Fall 2019, MAS.S65 Recreating The Past, by professor Zach Lieberman
-  \item Spring 2020, MAS.826 Sound: Past and Future, by Tod Machover
-  \item Spring 2020, MAS.712 Learning Creative Learning, by professor Mitchel Resnick
+  \item Fall 2019, CMS.901 Current Debates in Media, by Professor Sasha Costanza-Chock
+  \item Fall 2019, MAS.S65 Recreating The Past, by Professor Zach Lieberman
+  \item Spring 2020, MAS.826 Sound: Past and Future, by Professor Tod Machover
+  \item Spring 2020, MAS.712 Learning Creative Learning, by Professor Mitchel Resnick
 \end{enumerate}
 
 In the class Current Debates in Media, topics covered included fake news, surveillance, algorithmic bias, data colonialism, climate justice, algorithms of oppression, among others. For my final paper I wrote on the role of the media during the 2019 Chilean protests. This class directly inspired me to look for privacy-first \acrshort{ML}, and thinking about \acrshort{AI} in a critical way and not as clean safe automation, but as invisibilized labor, exploitation, and algorithmic bias and discrimination in the worst scenarios.
 
-In the class Recreating the Past, I learned about media arts history, and I dived deep in the language C++ which I used for writing the TinyTrainable library, while working with the library openFrameworks, which is one of the most popular open source frameworks and communities for media arts.
+In the class Recreating the Past, I learned about media arts history, and I dived deep into the language C++ which I used for writing the TinyTrainable library, while working with the library openFrameworks, which is one of the most popular open source frameworks and communities for media arts.
 
 In the class Sound: Past and Future, I learned more about the history of different computational advancements for sound, with a strong focus on projects at MIT Media Lab's own research groups including Opera of the Future, Hyperinstruments, and Music, Mind, and Machine. This class introduced me to many projects and it helped me decide on making instruments for my thesis, using the latest technologies I could find, in this case, microcontrollers and \acrshort{ML}.
 
-In the class Learning Creative Learning, I was introduced to the Lifelong Kindergarten's frameworks and ideas, including the 4 P's (peers, projects, passion, and play), and the design of Scratch as a home with low floor, wide walls, and high ceiling, which I highly recommend to check on Mitchel Resnick's book Lifelong Kindergarten. This class gave me the push to write a library with a community in mind, starting with the development of it, which happened because I had the pleasure of working with MIT undergrads Peter Tone and Maxwell Wang, who helped me with different aspects of research and development.
+In the class Learning Creative Learning, I was introduced to the Lifelong Kindergarten's frameworks and ideas, including the 4 P's (peers, projects, passion, and play), and the design of Scratch as a home with low floor, wide walls, and high ceiling, which I highly recommend to follow up with  on Mitchel Resnick's book Lifelong Kindergarten. This class gave me the push to write a library with a community in mind, starting with the development of it, which happened because I had the pleasure of working with MIT undergrads Peter Tone and Maxwell Wang, who helped me with different aspects of research and development.
 
 \section{Research projects at MIT}
 
@@ -69,7 +69,7 @@ For this project, I am writing a library for making digital instruments that can
   \label{fig:siguesahi}
 \end{figure}
 
-The \cite[Open Drawing Machine]{website-open-drawing-machine} is a collaborative project with Gaurav Patekar for the research group Future Sketches at MIT Media Lab. It is a low cost open source machine, consisting of an Arduino microcontroller and hardware for drawing computationally. We have done the research together, Gaurav designed and 3D printed the hardware, and I have packaged the results as a still unfinished openFrameworks addon.
+The Open Drawing Machine \cite{website-open-drawing-machine} is a collaborative project with Gaurav Patekar for the research group Future Sketches at MIT Media Lab. It is a low cost open source machine, consisting of an Arduino microcontroller and hardware for drawing computationally. We have done the research together; Gaurav designed and 3D-printed the hardware, and I have packaged the results as a still unfinished openFrameworks add-on.
 
 \begin{figure}[ht]
   \centering
