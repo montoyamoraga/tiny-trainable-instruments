@@ -203,7 +203,7 @@ To build a Tiny Trainable Instrument, you also need a breadboard, where you can 
 
 As I mentioned before, for the inputs no extra wiring is needed, since we are using the embedded sensors of the Arduino microcontroller to detect the three possible inputs: color, gesture, and speech. These inputs were designed to foster different behaviors with the library, which are detailed in the following sections.
 
-I decided that each different method will be able to detect three different categories, because I thought hat more categories would make the instruments more cumbersome to train, by needing larger databases, and longer training. Hopefully in the future I can adapt the TinyTrainable library to make this a variable number of categories it can classify, but for now this is hardcoded in the library. Nonetheless, if you want to use the library for your own project with a different number of categories, the library is open source and documented, so that it should not be too difficult to adapt it to your needs.
+I decided that each different method will be able to detect three different categories, because I thought that more categories would make the instruments more cumbersome to train, by needing larger databases, and longer training. Hopefully in the future I can adapt the TinyTrainable library to make this a variable number of categories it can classify, but for now this is hardcoded in the library. Nonetheless, if you want to use the library for your own project with a different number of categories, the library is open source and documented, so that it should not be too difficult to adapt it to your needs.
 
 \subsection{Color input}
 
@@ -225,7 +225,7 @@ Even though for both the color input and the gesture input we use the Arduino to
 
 A contribution of this thesis is that previously existing examples rely on the cloud, in particular the freemium service Google Colab for training the model on the cloud. Training on the cloud has its own perks; for example, in my case the Google Colab resources are faster than training on my own computer, but I think this comes at the expense of losing privacy.
 
-The gesture database we are handling is not compromising and does not make you identifiable for governments or corporations, unlike your fingerprints or DNA. Since the gesture information is low-stakes, I don't disencourage people from using Google Colab with this thesis, but I do want to stress that we can circumvent these corporate systems. For this reason I also included code for being able to train on your own computer, in a more private and secure way.
+The gesture database we are handling is not compromising and does not make you identifiable for governments or corporations, unlike your fingerprints or DNA. Since the gesture information is low-stakes, I don't discourage people from using Google Colab with this thesis, but I do want to stress that we can circumvent these corporate systems. For this reason I also included code for being able to train on your own computer, in a more private and secure way.
 
 \subsection{Speech input}
 
@@ -261,7 +261,7 @@ The buzzer is a device that can vibrate and that emits sound. The TinyTrainable 
   \label{fig:materials-adafruit-buzzer}
 \end{figure}
 
-I wanted to include the buzzer because of its low cost and low fidelity sound, which make a big constrast with the complexity of the technology involved in doing tiny \acrshort{ML}, resulting in cutting edge technology driving a cheap buzzing sound. 
+I wanted to include the buzzer because of its low cost and low fidelity sound, which make a big contrast with the complexity of the technology involved in doing tiny \acrshort{ML}, resulting in cutting edge technology driving a cheap buzzing sound. 
 
 This output requires no additional libraries, the Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the buzzer.
 
@@ -291,7 +291,7 @@ This output requires no additional libraries, the Arduino microcontroller by its
   \label{fig:materials-adafruit-midi-jack}
 \end{figure}
 
-MIDI can be used for transmitting all sorts of data, and thesis examples how to use MIDI to control different aspects of MIDI-enabled instruments, including synthesizers and drum machines. As a bonus, I wrote examples to interface with three synthesizers from the volca series by Korg: volca bass (analog bass machine), volca beats (drum machine), and volca keys (polyphonic synthesizer). I picked these synthesizers to haveboth melodic and percussive musical elements, because of their huge popularity, their relatively low price of 150.00 USD, their extensive MIDI capabilities, and because I am a huge fan of the instrument designs by Tatsuya Takahashi.
+MIDI can be used for transmitting all sorts of data, and thesis examples how to use MIDI to control different aspects of MIDI-enabled instruments, including synthesizers and drum machines. As a bonus, I wrote examples to interface with three synthesizers from the volca series by Korg: volca bass (analog bass machine), volca beats (drum machine), and volca keys (polyphonic synthesizer). I picked these synthesizers to have both melodic and percussive musical elements, because of their huge popularity, their relatively low price of 150.00 USD, their extensive MIDI capabilities, and because I am a huge fan of the instrument designs by Tatsuya Takahashi.
 
 This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baud rate.
 
@@ -391,7 +391,7 @@ Here is a summary of the main design principles I followed when making decisions
 
 The software library is virtually free, and it can be downloaded from the internet at no monetary cost; only bandwidth and time and hard drive costs.
 
-The materials picked were the cheapes ones I could think of, and they are often used in similar educational contexts because they can be reusable and are forgiving to mistakes. The microcontroller is a one-time investment, and the outputs range from 2.00 USD to 60.00 USD. 
+The materials picked were the cheapest ones I could think of, and they are often used in similar educational contexts because they can be reusable and are forgiving to mistakes. The microcontroller is a one-time investment, and the outputs range from 2.00 USD to 60.00 USD. 
 
 The materials for the workshop for building Tiny Trainable Instruments with buzzer, serial, and servo outputs had a cost of only 60.00 USD, including shipping.
 
@@ -440,11 +440,11 @@ This folder contains the C++ files for the output base class, and the files for 
 
 \subsubsection{outputs/}
 
-This folder contains the C++ files for the output base class, and the files for each ofthe 7 outputs that inherit from the base class. Each output file imports the necessary library dependencies and acts as a wrapper for them.
+This folder contains the C++ files for the output base class, and the files for each of the 7 outputs that inherit from the base class. Each output file imports the necessary library dependencies and acts as a wrapper for them.
 
 \subsubsection{tensorflow{\_}speech/}
 
-This folder contains auxiliary files for the speech input, copied from the examples from the Arduino TensorFlow Lite library. Unless other otherwise noted, are included without modifications and distributed through the Apache License included on each file's headers.
+This folder contains auxiliary files for the speech input, copied from the examples from the Arduino TensorFlow Lite library. Unless otherwise noted, are included without modifications and distributed through the Apache License included on each file's headers.
 
 \section{Auxiliary tools}
 
