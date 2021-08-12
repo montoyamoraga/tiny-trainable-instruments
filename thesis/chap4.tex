@@ -1,372 +1,471 @@
-\chapter{Background and inspiration}
+\chapter{Tiny Trainable Instruments}
 
-\epigraph{It has to start somewhere \\ it has to start sometime \\ what better place than here? \\ what better time than now?}{Guerrilla Radio \\ Rage Against the Machine, 1999}
+\epigraph{All the modern things \\ have always existed \\ they've just been waiting}{The Modern Things \\ Björk, 1995}
 
-\section{Microcontrollers as alternative to computers}
+This chapter describes the process of conceptualizing and developing this antidisciplinary thesis project, living at the interstitial spaces between the fields of \acrlong{AI}, electrical engineering, computer science, media arts, music, and pedagogy, among others.
 
-When I joined MIT Media Lab in 2019, I made the decision to focus my efforts on hardware research, so I could make computational art devices, instead of software that needs to run on a laptop computer or a browser. This was fueled by the introduction of restrictive news by Apple, such as advising against the use of apps created by unregistered developers and discontinuing support for 32-bit apps, and by the ever-changing nature of the web, which makes my online artwork break often and need maintenance, and the need for additional corporate infrastructure to keep it online. In contrast I saw hardware as a space where I could deploy my ideas and keep them running without outside intervention.
+In the next section I explain my personal definitions of the words that make up the title of this project.
 
-I started my research by catching up with the newer developments by Teensy. The newer microcontrollers are faster and more powerful, and I used them to design and implement many small projects. I want to mention this personal project, a standalone audiobook I made with rotary encoders and a small screen for navigation, because it led me to include software for support of this same screen in the TinyTrainable library.
+\section{Definition of Tiny Trainable Instruments}
+
+\subsection{Definition of tiny}
+
+By \emph{tiny} I mean lightweight handheld instruments that you can fit in a backpack, or take for a walk. This is inspired by my personal practice: for years I have accumulated many small tools for arts that I perform gigs with, or that I carry with me while traveling, mostly small electronic synthesizers, sound mixers, and battery-powered speakers.
+
+Here is an example of a yellow handheld sampler with an included microphone and speaker that I enjoy for field recordings, complete with a green battery pack for portability.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\linewidth,height=0.40\textheight,keepaspectratio]{images/bonsai.jpg}
-  \caption{Audiobook made with Teensy}
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/critter-and-guitari-kaleidoloop-battery.jpg}
+  \caption{Sampler with microphone and portable battery}
   \caption*{Picture taken by myself}
-  \label{fig:bonsai-audiobook}
+  \label{fig:critter-and-guitari-kaleidoloop-battery}
 \end{figure}
 
-In parallel, I researched the evolution of the teaching of physical computing at \acrshort{NYU} \acrshort{ITP}, and I discovered that they stopped teaching with the now classic Arduino Uno, and have replaced it with the newer series of Arduino Nano microcontrollers, which have a smaller format and and operating voltage of 3.3V instead of 5V.
+\emph{Tiny} is also a nod to the emerging field and community of tiny \acrshort{ML}, including - most importantly for me - the tinyMLx professional certificate\cite{website-edx-harvardx-tinymlx-professional-certificate} offered by HarvardX, that I completed while working on this project. I have high hopes that this field empowers people to make technology that is not dependent on the cloud, big data, or centralized servers.
 
-While browsing this series, I discovered the Arduino Nano 33 \acrshort{BLE} Sense that I based my thesis on. It comes with 9 embedded sensors, to measure and detect acceleration, movement, distance, color, plus a microphone. This is an amazing help for beginners, since a huge challenge when you are starting to build your own projects and learning electronics is reading datasheets to understand what sensors you can use with your microcontroller, how to wire them and calibrate them, and then what library supports it. This makes it easier and cheaper to prototype, and this made my work on my thesis easier, since I didn't have to include instructions for wiring sensors or calibrating them, and I could focus on \acrshort{ML} and the different outputs for arts.
+With that, the \emph{tiny} in \emph{Tiny Trainable Instruments} comes from them being handheld devices built on breadboards, from their being able to be powered from a generic USB power bank, and from their using tiny \acrshort{ML} processes for interpreting the data from their inputs and reacting via their outputs.
 
-\section{Coursework at MIT}
+\subsection{Definition of trainable}
 
-As part of the research that directly inspired this thesis, here is the coursework I took, and my notes about how they inform my theoretical and practical background for Tiny Trainable Instruments.
+By \emph{trainable} I mean a device that can learn by example. This name comes from the \acrshort{ML} lexicon, where training is a process whereby an algorithm  iteratively finds the numerical values of all parameters (weights, biases) of a \acrshort{ML} model.
+
+Training a device is particularly attractive for artists working with sensors. The Arduino microcontroller that this thesis uses has several embedded sensors, which can be used to produce huge streams of data, like this screenshot showing the output of raw data from its \acrshort{RGB} color sensor.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.40\textheight,keepaspectratio]{images/arduino-data-stream.jpg}
+  \caption{Data stream from embedded sensors in an Arduino microcontroller}
+  \caption*{Screen capture by myself}
+  \label{fig:arduino-data-stream}
+\end{figure}
+
+If we wanted to use this sensor at home to detect a red object, we would start by taking notes of the \acrshort{RGB} values of the sensor when the red object is close to it, and would then include this value as a threshold for detection on the software uploaded to the microcontroller. Since the \acrshort{RGB} sensor needs consistent lighting to work effectively, we need to be especially careful with the lighting conditions; if they change, we have to look at the stream of data to find the new value for red, and then update the code and reprogram the microcontroller.
+
+This is a tedious process, and it inspired me to work on this thesis, so that I could help artists use \acrshort{ML} and microcontrollers to capture data, and then train a model, letting the algorithm figure out the correct answer without one having to write more code!
+
+An educational and creative example I recommend consulting is Teachable Machine by Google \cite{website-google-teachable-machine}, a web application that allows you to use your computer's microphone and webcam to generate data, and then to train models that can detect different words, images, or body postures without having to write any line of code.
+
+In particular, I became interested in tiny \acrshort{ML} examples that require small databases and that can be trained on-device, for the use of making an instrument whose behavior can be changed mid-performance, like guitar players do with their guitars when they change their tunings between songs. With this thesis, one can program a device that can detect an apple, and then five minutes later, an orange, and then for your last song, a grapefruit. Hat tip to Sonic Youth, a band that used to tour with more than a dozen guitars, each one of them with a different tuning; they would switch instruments between songs.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.30\textheight,keepaspectratio]{images/sonic-youth-guitar.jpg}
+  \caption{Sonic Youth guitar with custom tunings}
+  \caption*{Retrieved from \cite{sonic-youth-illustrated-equipment-guide}}
+  \label{fig:sonic-youth-guitar}
+\end{figure}
+
+\subsection{Definition of instruments}
+
+By \emph{instruments} I mean devices that transduce energy across different media. Instruments receive an input, process it, and then produce an output. For musical instruments, I like to think that instruments are able to not just produce musical Western scales, but a wide spectrum of sounds encompassing the broad vocabulary of experimental electronic music and electroacoustic music.
+
+On top of that, my personal definition of \emph{instrument} includes having freedom and liberty, not censorship. This is why I consider my bicycle to be an art instrument that transduces my pedaling input into multimedia output: adventure, sweat, and wind in my face. Also, while I am riding it, I am not subjected to the restrictions of any corporate or government playground, there are mostly no rules besides gravity, and there are no backdoors that anyone can use to track me, exploit me, or limit my speed (we have smartphones for corporate and government surveillance, but that's another story).
+
+The liberties that \emph{instruments} make me feel are a huge contrast to the computational tools I am using for crafting this thesis. I am typing on an Apple Macbook, and even though I like its keyboard and portability, I am aware that I face restrictions: Apple wants developers to pay to be certified developers, and if I update my operating system I won't be able to run 32 bits apps anymore. This thesis is hosted on GitHub, which is a service blocked for developers in certain countries due to U.S.A. sanctions \cite{website-github-trade-controls}. I am from a country recently affected by a dictatorship and human rights violations and some of my relatives have been exiled, so I am particularly sensitive to policies that limit people's freedom of speech and computing.
+
+This discomfort was also a catalyst for the creation of \textit{Tiny Trainable Instruments}, which are based on open source off-the-cloud microcontrollers, and nobody can censor me when I use them for arts, thus being \emph{instruments}, as gratifying as playing with my guitar and bicycle, and I hope you feel that joy too while spending time with this thesis.
+
+\section{Components of the project}
+
+In this section I will explain the process and the result of each component of this thesis:
 
 \begin{enumerate}
-  \item Fall 2019, CMS.901 Current Debates in Media, by Professor Sasha Costanza-Chock
-  \item Fall 2019, MAS.S65 Recreating The Past, by Professor Zach Lieberman
-  \item Spring 2020, MAS.826 Sound: Past and Future, by Professor Tod Machover
-  \item Spring 2020, MAS.712 Learning Creative Learning, by Professor Mitchel Resnick
+  \item TinyTrainable Arduino software library
+  \item Code for training \acrshort{ML} with \acrshort{DIY} databases
+  \item Workshop and educational material
 \end{enumerate}
 
-In the class Current Debates in Media, topics covered included fake news, surveillance, algorithmic bias, data colonialism, climate justice, algorithms of oppression, among others. For my final paper I wrote on the role of the media during the 2019 Chilean protests. This class directly inspired me to look for privacy-first \acrshort{ML}, and thinking about \acrshort{AI} in a critical way and not as clean safe automation, but as invisibilized labor, exploitation, and algorithmic bias and discrimination in the worst scenarios.
+\subsection{TinyTrainable Arduino software library}
 
-In the class Recreating the Past, I learned about media arts history, and I dived deep into the language C++ which I used for writing the TinyTrainable library, while working with the library openFrameworks, which is one of the most popular open source frameworks and communities for media arts.
-
-In the class Sound: Past and Future, I learned more about the history of different computational advancements for sound, with a strong focus on projects at MIT Media Lab's own research groups including Opera of the Future, Hyperinstruments, and Music, Mind, and Machine. This class introduced me to many projects and it helped me decide on making instruments for my thesis, using the latest technologies I could find, in this case, microcontrollers and \acrshort{ML}.
-
-In the class Learning Creative Learning, I was introduced to the Lifelong Kindergarten's frameworks and ideas, including the 4 P's (peers, projects, passion, and play), and the design of Scratch as a home with low floor, wide walls, and high ceiling, which I highly recommend to follow up with  on Mitchel Resnick's book Lifelong Kindergarten \cite{lifelong-kindergarten}. This class gave me the push to write a library with a community in mind, starting with the development of it, which happened because I had the pleasure of working with MIT undergrads Peter Tone and Maxwell Wang, who helped me with different aspects of research and development.
-
-\section{Research projects at MIT}
-
-Some other projects I created during this master's include:
-
-\begin{enumerate}
-  \item SiguesAhi \cite{website-library-siguesahi}: an instrument to detect when oppressive institutions have ceased to exist. It is achieved with microcontrollers with Internet connectivity.
-  \item Open Drawing Machine \cite{website-open-drawing-machine}, with Gaurav Patekar: an open source low cost programmable drawing machine.
-  \item Introduction to networks for artists \cite{website-intro-to-computer-networks-for-artists}: a series of tutorials for beginners, to learn how to set up their own networks and collaborate in peer-to-peer ways for making art.
-\end{enumerate}
-
-SiguesAhi is a sibling project to Tiny Trainable Instruments. It is based on a microcontroller from the same series and format but different architecture and capabilities, the Arduino Nano 33 IoT.
+This project's main contribution is the TinyTrainable Arduino software library, which allows you to create flexible multimedia instruments, where you can combine any input with any output, and it runs on the microcontroller Arduino Nano 33 BLE Sense \cite{website-materials-arduino-nano-33-ble-sense}. This microcontroller was chosen because it is currently the only Arduino supported by the Arduino TensorFlow Lite library.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/arduino-nano-33-iot-with-headers.jpg}
-  \caption{Arduino Nano 33 IoT with headers}
-  \caption*{Retrieved from \cite{website-arduino-nano-33-iot-with-headers}}
-  \label{}
+  \includegraphics[width=0.75\linewidth,height=0.30\textheight,keepaspectratio]{images/materials-arduino-nano-33-ble-sense.jpg}
+  \caption{Arduino Nano 33 \acrshort{BLE} Sense microcontroller with headers}
+  \caption*{Retrieved from \cite{website-materials-arduino-nano-33-ble-sense}}
+  \label{fig:materials-arduino-nano-33-ble-sense}
 \end{figure}
 
-For this project, I am writing a library for making digital instruments that can detect if institutions still exist. This is accomplished by connecting the microcontroller to the internet, and making it ping the Wikipedia website with a certain periodicity, in order to download and check the first sentence of the first paragraph of the entry. As an example of the library, I am using the National Rifle Association, which sadly still exists.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/siguesahi.jpg}
-  \caption{SiguesAhi project}
-  \caption*{Picture by myself}
-  \label{fig:siguesahi}
-\end{figure}
-
-The Open Drawing Machine \cite{website-open-drawing-machine} is a collaborative project with Gaurav Patekar for the research group Future Sketches at MIT Media Lab. It is a low cost open source machine, consisting of an Arduino microcontroller and hardware for drawing computationally. We have done the research together; Gaurav designed and 3D-printed the hardware, and I have packaged the results as a still unfinished openFrameworks add-on.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/open-drawing-machine.jpg}
-  \caption{Open Drawing Machine project}
-  \caption*{Picture by myself}
-  \label{fig:open-drawing-machine}
-\end{figure}
-
-Currently the Open Drawing Machine can receive drawing commands from a computer through a serial port, and the next step of this project is being able to receive commands from other computers through networks and the internet. This comes from the last project I will mention that I worked on while at MIT Media Lab, which is Introduction to computer networks for artists \cite{website-intro-to-computer-networks-for-artists}, a collection of tutorials for remote peer-to-peer collaboration between artists. This project is inspired by the amazing research on remote collaboration, sensors, peer-to-peer protocols, by friend Lisa Jamhoury, including the app Kinectron.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.35\textheight,keepaspectratio]{images/intro-to-computer-networks-for-artists.jpg}
-  \caption{Introduction to computer networks for artists project}
-  \caption*{Picture by myself}
-  \label{fig:intro-to-computer-networks-for-artists}
-\end{figure}
-
-\section{Computational media arts instruments}
-
-There is a rich ecosystem of personal computers, operating systems and software for making art, and it is common nowadays for artists to rely on their computer for making all of their art, on the go, wherever they are. In the 1990s, musicians stopped having to rely on analog hardware, and started replacing their tools for recording and mixing with software on their computers.
-
-Apart from the proliferation of laptop computers and software for arts, I will share my research in devices that I like to call computational media arts instruments. They are computational because they are digital and crunch numbers, and they are instruments that allow us to process different media in creative ways.
-
-I will focus on the instruments that can be programmed, and that promote open source hardware or software. Many of these instruments often sit at my desk for inspiration, or I spend hours playing with them for my art and learning from them and the communities around them.
-
-The tables \ref{table:media-arts-instruments-technical} and \ref{table:media-arts-instruments-influence} are respectively summaries of techniques and influences of the instruments that I reference in this section.
+The TinyTrainable library is flexible, since it allows one to combine any of the three available inputs with any of the 7 possible outputs, for a total of 21 possibilities summarized on \ref{tiny-trainable-instruments-inputs-outputs-matrix}:
 
 \begin{table}[ht]
     \centering
-    \begin{tabular}{ | l |  l | l | l | l |}
+    \begin{tabular}{ | l | l | l | l | l | l | l | l |}
         \hline
-        Company             & Instrument    & Year  & Basis & Software            \\
+        \textbf{\backslashbox{Input}{Output}}  & Buzzer & \acrshort{LED} & \acrshort{MIDI} & Printer & Screen & Serial & Servo \\
         \hline
-        Bastl Instruments   & Illuminati    & 2019  & MCU       & None                \\
-        Bastl Instruments   & Kastle Drum   & 2020  & MCU       & Arduino, C++        \\
-        Bastl Instruments   & Kastle v1.5   & 2017  & MCU       & Arduino, C++        \\
-        Bastl Instruments   & OMSynth       & 2016  & IC        & None                \\
-        Bastl Instruments   & microGranny 2 & 2016  & MCU       & Arduino, C++        \\
-        Bastl Instruments   & Servo         & 2016  & MCU       & Arduino, C          \\
-        Critter \& Guitari  & Organelle     & 2016  & Linux     & Pure Data           \\
-        Critter \& Guitari  & EYESY         & 2020  & Linux     & Python, Pygame      \\
-        monome              & aleph         & 2013  & Linux     & C                   \\
-        monome              & norns         & 2018  & Linux     & Lua, SuperCollider  \\
-        Shbobo              & Shnth         & 2013  & MCU       & Shlisp              \\
-        Shbobo              & Shtar         & 2017  & MCU       & Shlisp              \\
+        Color & & & & & & & \\
+        \hline
+        Gesture & & & & & & & \\
+        \hline
+        Speech & & & & & & & \\
         \hline
     \end{tabular}
-    \caption{Technical details of media arts instruments}
-    \label{table:media-arts-instruments-technical}
+    \caption{Matrix of inputs and outputs}
+    \label{tiny-trainable-instruments-inputs-outputs-matrix}
 \end{table}{}
+
+For the inputs I used the embedded sensors of the Arduino microcontroller with their corresponding open source libraries, and processed the input data with two recently released open source \acrshort{ML} libraries, summarized on \ref{software-dependencies-inputs}:
 
 \begin{table}[ht]
     \centering
-    \begin{tabular}{ | l |  l | l |}
+    \begin{tabular}{ | l | l | l |}
         \hline
-        Company             & Instrument    & Influence                             \\
+        \textbf{Input}  & \textbf{Sensor library} & \textbf{\acrshort{ML} library} \\
         \hline
-        Bastl Instruments   & Illuminati    & Output with LEDs                      \\
-        Bastl Instruments   & Kastle series & Use of breadboard and jumper wires    \\
-        Bastl Instruments   & OMSynth       & Distribution as tutorials + parts kit \\
-        Bastl Instruments   & microGranny 2 & Arduino as basis for instrument       \\
-        Bastl Instruments   & Servo         & Output with servo motor               \\
-        Critter \& Guitari  & Organelle     & Computer for sound                    \\
-        Critter \& Guitari  & EYESY         & Output with screen                    \\
-        monome              & aleph, norns  & Computer for sound                    \\
-        Shbobo              & Shnth, Shtar  & Input with multiple gestures          \\
+        Color &  Arduino{\_}APDS9960 & Arduino{\_}KNN \\
+        \hline
+        Gesture & Arduino{\_}LSM9DS1 & Arduino{\_}TensorFlowLite \\
+        \hline
+        Speech & PDM & Arduino{\_}TensorFlowLite \\
         \hline
     \end{tabular}
-    \caption{Influence of media arts instruments}
-    \label{table:media-arts-instruments-influence}
+    \caption{Software dependencies for inputs}
+    \label{software-dependencies-inputs}
 \end{table}{}
 
-\subsection{Bastl Instruments}
+The outputs are actuators that  rely on extra hardware, and in some cases, external libraries, which are summarized in \ref{software-dependencies-outputs}.
 
-Bastl Instruments is a Czech company of multimedia instruments, which has had a huge impact and influence on my research and practice. When I first started researching the Eurorack format some years ago, I visited the shop Control in Brooklyn, NY, and some modules by Bastl stood out to me, because of their wooden panels and interaction with classic physical computing educational materials, such as motors and solenoids, which was an inspiration for me to include servo motors as an output in Tiny Trainable Instruments.
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{ | l | l | }
+        \hline
+        \textbf{Output}  & \textbf{Actuator library} \\
+        \hline
+        Buzzer & - \\
+        \hline
+        \acrshort{LED} & - \\
+        \hline
+        \acrshort{MIDI} & - \\
+        \hline
+        Printer & Adafruit Thermal Printer Library\\
+        \hline
+        Screen & Adafruit{\_}SSD1306\\ 
+        \hline
+        Serial & - \\
+        \hline
+        Servo & Servo\\
+        \hline
+    \end{tabular}
+    \caption{Software dependencies for outputs}
+    \label{software-dependencies-outputs}
+\end{table}{}
+
+The behavior of the TinyTrainable library is already designed, and is explained in this chapter. The software implementation is in flux, and I do my best to publish new releases with notes on how the library has changed over time, including bug fixes, clearer language for the examples, and different ways of interfacing with the methods and variables of the TinyTrainable library.
+
+\subsubsection{Repository structure}
+
+The TinyTrainable library is a repository hosted at \url{https://github.com/montoyamoraga/TinyTrainable}, where one can review all the history and commits through time, and where anyone can see how the whole library or each file has evolved over time.
+
+The structure of the folders follows two simultaneous specifications: it includes the necessary file and folder names for being packaged and indexed as an Arduino Library, and on top of that it complies with GitHub guidelines for licensing libraries, and for automatic workflows for code testing.
+
+The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in the Arduino language. The examples are divided into four folders: one for each input, and one extra for checking the wiring of each output. In the assets/ folder, I included some C++ files with trained models for the examples.
+
+\subsubsection{Installation}
+
+The library can be downloaded from the Releases section of the repository at  \url{https://github.com/montoyamoraga/TinyTrainable/releases}, where you also have access to the complete history of releases over time. To install it, you need to uncompress the .zip into a folder, and then make it discoverable by the Arduino IDE.
+
+Since that method is not automatic and could be prone to errors, I made the effort to publish the TinyTrainable library, by complying with the latest Arduino Library Manager specifications, detailed on their repository \url{https://github.com/arduino/library-registry/}. With that, from the Arduino IDE you can open their Library Manager and do a 1-click installation of the library, or as an alternative use arduino-cli, the Arduino command line tool on your terminal.
+
+\subsubsection{Hardware basics}
+
+The TinyTrainable library at its current iteration has only one strict hardware requirement: it only runs on the Arduino Nano 33 \acrshort{BLE} Sense, a microcontroller released in 2019. For powering it you need a generic micro USB cable to provide the necessary input of 5V. To upload code to the microcontroller you can use the same USB cable to connect to a computer running the Arduino IDE.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-servo.jpg}
-  \caption{Bastl Instruments Servo module}
-  \caption*{Retrieved from \cite{website-bastl-instruments-current}}
-  \label{fig:bastl-servo}
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-micro-usb-cable.jpg}
+  \caption{Micro USB cable}
+  \caption*{Retrieved from \cite{website-materials-adafruit-micro-usb-cable}}
+  \label{fig:materials-adafruit-usb-cable}
 \end{figure}
 
-Another inspiration comes from their microgranny 2 granular sampler which is made with an Atmega microcontroller and its firmware is open source and available as a repository on their GitHub account, along with many other of their instruments.
+To build a Tiny Trainable Instrument, you also need a breadboard, where you can place the Arduino microcontroller, and some jumper wires to connect it to one of the many possible output devices that I will describe soon.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-microgranny-2.jpg}
-  \caption{Bastl Instruments microGranny 2}
-  \caption*{Retrieved from \cite{website-bastl-instruments-current}}
-  \label{fig:bastl-microgranny-2}
-\end{figure}
-
-Their Kastle synthesizers are also based on microcontrollers, and feature a patchbay for making connections with jumper wires, the same used for prototyping in electronic breadboards, which influenced me to make the Tiny Trainable Instruments built with breadboards and jumper wires, instead of custom printed circuit boards. Also, the Kastle synths are forgiving instruments, their inputs and outputs are robust enough to allow for mistakes in connections, in an electrical and mechanical way, which I think is perfect for safe experimentation. It would be a bummer if the instrument was easy to break, or if it demanded a huge effort in understanding electronics for using it.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-kastle-v15.jpg}
-  \caption{Bastl Instruments Kastle v1.5}
-  \caption*{Retrieved from \cite{website-bastl-instruments-current}}
-  \label{fig:bastl-kastle-v15}
-\end{figure}
-
-As of writing, two different units are in production, both retailing for around 100.00 USD: the Kastle v1.5 melodic / drone synthesizer, and the Kastle Drum, for rhythm. The only difference between these synthesizers is the firmware and the labels on the faceplate. The community is encouraged to write new firmware to modify their behavior. 
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-kastle-drum.jpg}
-  \caption{Bastl Instruments Kastle Drum}
-  \caption*{Retrieved from \cite{website-bastl-instruments-current}}
-  \label{fig:bastl-kastle-drum}
-\end{figure}
-
-Another instrument I want to highlight is the Illuminati, currently discontinued, a device that uses different inputs (audio, control voltage, \acrshort{MIDI} messages) to control the light intensity of connected USB lamps, which influenced the conception of Tiny Trainable Instruments as multimedia arts instruments, not only focusing on audio and music, but also printed text, light, and screen output.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-illuminati.jpg}
-  \caption{Bastl Instruments Illuminati}
-  \caption*{Retrieved from \cite{website-bastl-instruments-current}}
-  \label{fig:bastl-illuminati}
-\end{figure}
-
-The final instrument from this company that I want to highlight is the OMSynth, one of many collaborations with Casper Electronics. This device is an educational and maker circuit development tool for creating synthesizers. It includes basic fundamental blocks, such as battery power, audio input and output, potentiometers for attenuating and boosting signals, and a suite of parts kits for building devices including sequencers, oscillators, and samplers, on the included breadboard. Its release as a kit was also a direct influence in the release of Tiny Trainable Instruments as a kit with instructions.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/bastl-omsynth.jpg}
-  \caption{Bastl Instruments OMSynth}
-  \caption*{Retrieved from \cite{website-bastl-instruments-current}}
-  \label{fig:bastl-omsynth}
-\end{figure}
-
-Many BASTL standalone instruments are 200.00 USD or less, which is a huge contrast to the 1960s, when a Moog analog system II cost 6,200.00 USD, which was enough to buy a small house \cite{analog-days}. Also, many of their instruments are sold as kits for building and soldering them yourself, for the cheaper cost and the added educational aspect of having hands-on experience.
-
-\subsection{Critter \& Guitari}
-
-Critter \& Guitari is an American company based in Brooklyn NY, which has released in the past computational microcontroller-based audiovisual instruments, from which my favorite is the Kaleidoloop, currently discontinued. It is a sampler with an internal mic and speaker, that allows you to record audio and then control its output with 2 knobs for volume and playback rate. It is designed to be portable for doing field recordings, and it was an influence on the design of the Tiny Trainable Instruments library, which allows the construction of standalone instruments, that with a USB power bank or a battery, you can take for a walk or place anywhere you want.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/critter-and-guitari-kaleidoloop.jpg}
-  \caption{Critter \& Guitari Kaleidoloop}
-  \caption*{Retrieved from \cite{website-critter-and-guitari-kaleidoloop}}
-  \label{fig:critter-and-guitari-kaleidoloop}
-\end{figure}
-
-In 2015, Critter \& Guitari released the Organelle, a sound computer with the Linux operating system installed, and the software Pure Data as the programmable interface between the hardware and the sound engine. Every sound you can do on an Organelle you could do on your laptop using Pure Data too, and you could build your own interface to interact with the sound.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/critter-and-guitari-organelle-m.jpg}
-  \caption{Critter \& Guitari Organelle M}
-  \caption*{Retrieved from \cite{website-critter-and-guitari-current}}
-  \label{fig:critter-and-guitari-organelle-m}
-\end{figure}
-
-ETC and EYESY computers for visuals, scriptable, Linux operating system + Python / pygame environment or openFrameworks.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/critter-and-guitari-eyesy.jpg}
-  \caption{Critter \& Guitari EYESY}
-  \caption*{Retrieved from \cite{website-critter-and-guitari-current}}
-  \label{fig:critter-and-guitari-eyesy}
-\end{figure}
-
-They can run on power supplies, and are also portable by the use of batteries.
-
-\subsection{monome}
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/monome-grid.jpg}
-  \caption{monome grid}
-  \caption*{Retrieved from \cite{website-monome-current}}
-  \label{fig:monome-grid}
-\end{figure}
-
-Aleph: earlier sound computer.
-
-Norns: sound computer, currently on its second iteration, with expanded hard drive. Also there is a \acrshort{DIY} version which is cheaper and runs on a Raspberry Pi.
-Norns is a Linux machine, running SuperCollider for the sound engine, and Lua scripts. It has spawned a community that continually releases new scripts and software updates.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/monome-aleph.jpg}
-  \caption{monome aleph}
-  \caption*{Retrieved from \cite{website-monome-current}}
-  \label{fig:monome-aleph}
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-breadboard.jpg}
+  \caption{Breadboard}
+  \caption*{Retrieved from \cite{website-materials-adafruit-breadboard}}
+  \label{fig:materials-adafruit-breadboard}
 \end{figure}
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/monome-norns.jpg}
-  \caption{monome norns}
-  \caption*{Retrieved from \cite{website-monome-current}}
-  \label{fig:monome-norns}
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-jumper-wires.jpg}
+  \caption{Jumper wires}
+  \caption*{Retrieved from \cite{website-materials-adafruit-jumper-wires}}
+  \label{fig:materials-adafruit-jumper-wires}
 \end{figure}
 
-\subsection{Shbobo}
+\section{Inputs}
 
-In my first semester I was introduced by classmate Will Freudenheim to the Shbobo synthesizers by Peter Blasser. Peter Blasser has released several collections / companies of musical instruments, the most famous one being Ciat-Lonbarde.
+As I mentioned before, for the inputs no extra wiring is needed, since we are using the embedded sensors of the Arduino microcontroller to detect the three possible inputs: color, gesture, and speech. These inputs were designed to foster different behaviors with the library, which are detailed in the following sections.
+
+I decided that each different method will be able to detect three different categories, because I thought that more categories would make the instruments more cumbersome to train, needing larger databases, and longer training times. Hopefully in the future I can adapt the TinyTrainable library to make this a variable number of categories it can classify, but for now this is hardcoded in the library. Nonetheless, if you want to use the library for your own project with a different number of categories, the library is open source and documented, so that it should not be too difficult to adapt it to your needs.
+
+\subsection{Color input}
+
+The color input allows artists to build Tiny Trainable Instruments that can detect three different colors of objects near the microcontroller. I recommend that this is the first input that people try, since it is the easiest and fastest of the other inputs to learn and use. It is based on the examples included with the Arduino{\_}KNN library.
+
+When detecting color, the library acts as a wrapper of the Arduino{\_}APDS9960 library, needed to access the data of the embedded distance and color sensor of the microcontroller. This allows the instrument to detect nearby objects, and then when they are close to the microcontroller, it reads a one pixel \acrshort{RGB} value, detecting how red, how green, and how blue any object is.
+
+The \acrshort{RGB} data is stored in the microcontroller, to build a database that then is used to train a \acrshort{ML} algorithm, in particular a \acrfull{k-NN}, implemented with the Arduino{\_}KNN library. After the algorithm is trained, the instrument is able to detect between the three different colors.
+
+The main difference between this input and the other ones, is that both the data capture and the model training happen on the device, and it is not persistent: every time the Arduino microcontroller is turned on it needs to be trained again. This behavior has the upside of making the data input and the trained model never leave yor microcontroller, for enhanced privacy. The downside is that if you cannot preserve the data or the model, which are erased when the microcontroller is disconnected from power.
+
+\subsection{Gesture input}
+
+The gesture input allows artists to build Tiny Trainable instruments that can detect three different motion gestures, by moving the microcontroller in space. It is based on the magic wand example of the Arduino TensorFlow Lite library.
+
+When detecting gestures, the library acts as a wrapper of the Arduino{\_}LSM9DS1 library, needed to access the data of the embedded \acrfull{IMU}. The library includes an Arduino sketch to capture the data of the three gestures we want to recognize, which then needs to be saved on a computer. These files with the database are imported in a Jupyter notebook to train the \acrshort{ML} model with Google TensorFlow. The trained model is then used with the TinyTrainable library and uploaded to the Arduino microcontroller to detect the three different gestures.
+
+Even though for both the color input and the gesture input we use the Arduino to capture the data, for the gesture input we do need a computer to process the data; the drawback is that we still need a computer for training the model. A positive aspect is that the training is persistent: the Arduino microcontroller only needs to be trained once for the same database, and remembers the model every time it is turned on, unlike the color input which forgets the trained model.
+
+A contribution of this thesis is that previously existing examples rely on the cloud, in particular the freemium service Google Colaboratory \cite{website-google-colab} (or Colab for short) for training the model on the cloud. Training on the cloud has its own perks; for example, in my case the Google Colab resources are faster than training on my own computer, but I think this comes at the expense of losing privacy.
+
+The gesture database we are handling is not compromising and does not make you identifiable for governments or corporations, unlike your fingerprints or DNA. Since the gesture information is low-stakes, I don't discourage people from using Google Colab with this thesis, but I do want to stress that we can circumvent these corporate systems. For this reason I also included code for being able to train on your own computer, in a more private and secure way.
+
+\subsection{Speech input}
+
+The speech input allows artists to build Tiny Trainable instruments that can detect three different sounds or utterances, by emitting sound next to the microcontroller.  It is based on the micro$\_$speech example of the Arduino TensorFlow Lite library.
+
+When detecting speech, the library acts as a wrapper of the PDM library, needed to access the data of the embedded microphone. This input is the only one where we are not using the microcontroller to capture the data: the documentation includes instructions for building your own database with the microphone in your computer, in order to capture the data of the three different words we want to recognize. 
+
+In a similar fashion as the gesture input, the database files are then imported in a Jupyter notebook to train the \acrshort{ML} model with Google TensorFlow. The trained model is then used with the TinyTrainable library and uploaded to the Arduino microcontroller to detect the three different words.
+
+The speech input is the most complex and time-consuming one to implement, and we need a computer for both capturing the data and training the model. A positive aspect is that just like the gesture input, the training is persistent, the Arduino microcontroller only needs to be trained once for the same database, and remembers the model every time it is turned on, unlike the color input which forgets the trained model.
+
+Just like the gesture input, the speech input can be trained either on the cloud using Google Colab, or can be trained on your machine. Because of its complexity, I do advise that the time difference is significant: on my Macbook the model took between one and two days to train, in comparison with the gesture model which takes around two hours in my machine.
+
+The speech database we built is the most compromising one, since it is identifiable, and it could even be used for cloning our voice with deepfake techniques. So this is the one I encourage people to be more mindful about when publishing their custom databases.
+
+\section{Outputs}
+
+The 7 possible outputs of the TinyTrainable library were chosen to showcase many artistic mediums, with the hope that this library can be incorporated into the practice of artists working with light, visuals, sound, sculpture, dance, and poetry, among others.
+
+The TinyTrainable library includes four examples for each one of the seven outputs: one for checking that the wiring is correct on the breadboard, and combinations with each one of the three inputs. Each example is an homage to the classic \emph{hello world} examples of computer science education; that is, they are introductory building blocks, intended to teach artists the basics of each output so then they can continue on their own.
+
+All the materials for the outputs are illustrated by the corresponding image of the product page on the website Adafruit, which I recommend for beginners and artists interested in building their own Tiny Trainable Instruments.
+
+\subsection{Buzzer output}
+
+The buzzer is a device that can vibrate and that emits sound. The TinyTrainable library allows you to output a different sound for each of the three different input classifications, by controlling two fundamentals of the sound: frequency and duration.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/shbobo-shnth.jpg}
-  \caption{Shbobo Shnth}
-  \caption*{Retrieved from \cite{website-shbobo-current}}
-  \label{fig:shbobo-shnth}
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-buzzer.jpg}
+  \caption{Buzzer}
+  \caption*{Retrieved from \cite{website-materials-adafruit-buzzer}}
+  \label{fig:materials-adafruit-buzzer}
 \end{figure}
+
+I wanted to include the buzzer because of its low cost and low fidelity sound. I think these specifications make a great contrast with the high complexity of the technology involved in doing tiny \acrshort{ML}. I think of Tiny Trainable Instruments with a buzzer output, to be cutting-edge technology driving a cheap buzzing sound. This is an inviting and playful combination that I also want to convey in the other outputs of this project.
+
+This output requires no additional libraries, the Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the buzzer.
+
+\subsection{LED output}
+
+The \acrfull{LED} is a cheap and fundamental element for making art with lights. The TinyTrainable library allows you to toggle on and off three different LEDs, depending on which of the three possible inputs was detected by the \acrshort{ML} algorithm.
 
 \begin{figure}[ht]
   \centering
-    \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/shbobo-shtar.jpg}
-  \caption{Shbobo Shtar}
-  \caption*{Retrieved from \cite{website-shbobo-current}}
-  \label{fig:shbobo-shtar}
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-led.jpg}
+  \caption{LED}
+  \caption*{Retrieved from \cite{website-materials-adafruit-led}}
+  \label{fig:materials-adafruit-led}
 \end{figure}
 
-Both run on microcontrollers, and they use a new proposed language called Shlisp, based on Lisp, and also they can be programmed using the Fish IDE.
+This output requires no additional libraries, the Arduino microcontroller by itself is able to provide enough power to light up most hobby LEDs.
 
-As of 2021, their firmware and editor became open source, and it is available at \url{https://github.com/pblasser/shbobo}.
+\subsection{MIDI output}
 
-COMMENT ON OPEN SOURCE: something being open source doesn't necessarily mean it is accessible to a wider audience. Is one of the goals of your work to create instruments that are accessible to a wider audience?
-
-They promote computer-centric approaches to making sound, such as the use of integers and metaphors of finite state machines, and also allow for different ways of playing and sensing, such as the use of antennas for detecting hand distance, a microphone for detecting speech and whistling, and wooden bars with piezos for detecting pressure.
-
-TODO: write how this inspired the new interactions i am inventing or appropriating for Tiny Trainable Instruments, such as a drum machine you can talk to, Alexa spinoff.
-
-\section{Education}
-
-This thesis is inspired by the work of the research group Lifelong Kindergarten at MIT Media Lab, led by professor Mitchel Resnick. In the book with the same title, he builds on Seymour Papert’s work, and proposes that educational projects should have “Low floor, wide walls, high ceilings”, and that learners thrive when they engage in the 4 Ps: “Peers, projects, passion, play”.
-
-In terms of peers, I have been lucky to have been supported by the MIT UROP office and MIT Media Lab, and had the opportunity to work with MIT undergrad researchers Peter Tone and Maxwell Wang. Also, this project was taught in collaborative workshops where people could discuss their ideas with their peers.
-
-In terms of projects, this thesis includes the release of a software library, so that people can make the software their own, and spin-off their own projects. It is also open source so that people can learn from my mistakes and also fork to adapt to their needs.
-
-In terms of passion, this thesis is 
-
-In terms of play, this thesis project is not about correct answers, or even excellent classification with \acrshort{ML}, it's all about finding innovative ways to interact with multimedia material, celebrate the small victories and the big glitches, and iterate over and over again.
-
-\section{Creative ML}
-
-COMMENT: what is the main argument of the whole piece and how does each independent part connect to that? you should start with a story from previous experiences that is particularly relevant as to why you were inspired to do this work. think "papert and the gears"
-
-While being a graduate student and research resident at \acrshort{NYU} \acrshort{ITP} I saw how quick things changed in terms of \acrshort{ML}. I saw how the project deeplearn.js allowed for people to train and deploy \acrshort{ML} on their browsers, and how this library was acquired by Google and repurposed as TensorFlow.js, a JavaScript version of their \acrshort{ML} framework TensorFlow.
-
-In turn, at \acrshort{NYU} \acrshort{ITP} a team of artists and programmers built the library and community of ml5.js, with the 5 being an homage to p5.js. Technically, ml5.js is a wrapper for TensorFlow.js, in the same spirit that p5.js is a wrapper for HTML5 elements such as the canvas.
+\acrfull{MIDI} is a protocol invented in the 1980s to allow musical instruments to be interconnected and share information, including musical notes, control parameters, and timing. Traditionally, MIDI instruments have a 5 pin  \acrshort{DIN} connector, (from the German \acrlong{DIN}), like the one pictured here for use on a breadboard.
 
 \begin{figure}[ht]
   \centering
-    \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/sam-lavigne-training-poses.jpg}
-  \caption{Sam Lavigne, Training Poses, 2018}
-  \caption*{Retrieved from \cite{website-sam-lavigne-training-poses}}
-  \label{fig:sam-lavigne-training-poses}
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-midi-jack.jpg}
+  \caption{MIDI DIN connector}
+  \caption*{Retrieved from \cite{website-materials-adafruit-midi-jack}}
+  \label{fig:materials-adafruit-midi-jack}
 \end{figure}
 
-The last spark that led me to this thesis was the release of 2 libraries for \acrshort{ML} on the Arduino platform: The currently beta version Arduino KNN, which allows for on-device training and resembles my earlier studies with Wekinator, in a more portable and private way, no data leaves the microcontroller, and the whole neural network can be wiped with one click of a button.
+MIDI can be used for transmitting all sorts of data, and thesis examples how to use MIDI to control different aspects of MIDI-enabled instruments, including synthesizers and drum machines. As a bonus, I wrote examples to interface with three synthesizers from the volca series by Korg: volca bass (analog bass machine), volca beats (drum machine), and volca keys (polyphonic synthesizer). I picked these synthesizers to have both melodic and percussive musical elements, because of their huge popularity, their relatively low price of 150.00 USD, their extensive MIDI capabilities, and because I am a huge fan of the instrument designs by Tatsuya Takahashi \cite{website-tatsuya-takahashi}.
 
-At a more complex level, I am also working with the TensorFlow Lite Micro, which I learned from Arduino blogs, and which currently is supported by the hardware Arduino Nano 33 \acrshort{BLE} Sense.
+This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baud rate.
 
-COMMENT TO THE ABOVE PARAGRAPH: you may not even need to include the specific details here, but just highlight in larger overviews the types of projects you've worked on or the educational fields that influence your work
+\subsection{Printer output}
 
-In late 2020 and early 2021 I completed the just released series of 3 courses of the TinyML Professional Certificate by Harvard at the online platform edx.org
+I used to associate printing with expensive toners and ink cartridges, and mostly frustration. This radically changed when I took a physical computing class, where I learned about thermal printers and how I could use Arduino microcontrollers to drive them! I find these thermal printers amazing because they are mostly a one-time investment and they don't need anything besides paper and power, so I have used them for interactive art installations since then. That is why I decided to include support for them on this project.
 
-Newer books and references that this thesis was inspired by include the books “You Look Like a Thing and I Love You: How Artificial Intelligence Works and Why It's Making the World a Weirder Place” by Janelle Shane (2019), and the book “Making Pictures with Generative Adversarial Networks” by Casey Reas (2019).
+The thermal printer kit I recommend on the bill of materials is around 60.00 USD, and includes the power supply and paper roll. I picked this one because it is sold and supported by Adafruit, and I am a huge fan of their software libraries and tutorials. 
 
-Also Yining Shi created a new class at \acrshort{NYU} \acrshort{ITP} in 2020, at the intersection of \acrshort{ML} and physical computing.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-thermal-printer.jpg}
+  \caption{Thermal printer kit}
+  \caption*{Retrieved from \cite{website-materials-adafruit-thermal-printer}}
+  \label{fig:materials-adafruit-thermal-printer}
+\end{figure}
 
-\section{Digital rights}
+With this output, you can create a Tiny Trainable Instrument that can print different texts and in various fonts and formatting, depending on the classification of the input. I hope this inspires a new generation of computer poets and interactive literature!
 
-\acrshort{ML} algorithms need data to be trained on. I think it’s a human right to not be surveilled, and I hope my thesis can put a positive spin on the gathering of data, by letting users perform auto surveillance, like the Ai Weiwei piece WeiweiCam, a 2021 project where the artist installed cameras for self surveillance as a protest against the Chinese government.
+This output requires 1 additional library, the Adafruit Thermal Printer library, which is open source and includes several examples for expanding the functionality of it. If you want to use an alternative hardware or software for thermal printing, I recommend you modify the TinyTrainable library, and include any other additional software you want.
 
-A huge inspiration for my thesis has been the Guardian Project by the Electronic Frontier Foundation, and the research and activism work by Sasha Sasha Costanza-Chock.
+\subsection{Screen output}
 
-\section{Digital rights}
+In contrast to the static nature of the output of the thermal printer, which prints a fixed message on a piece of paper, I included support for using a screen for dynamic messages on a surface. 
 
-Electronic Frontier Foundation
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-screen.jpg}
+  \caption{Screen}
+  \caption*{Retrieved from \cite{website-materials-adafruit-screen}}
+  \label{fig:materials-adafruit-screen}
+\end{figure}
 
-Edward Snowden
+This output requires 1 additional library, the Adafruit{\_}SSD1306 library (and its own dependencies), for the particular screen I recommend on the bill of materials. The same vendor Adafruit offers many alternatives in different sizes, technologies, and color support. I encourage people to use different screens from different vendors, and fork and adapt the TinyTrainable library to accomplish it.
 
-Design Justice Network
+\subsection{Serial output}
 
-\section{Opera of the Future projects}
+This output uses the same USB cable we mentioned earlier, for delivering the power and uploading code to the Arduino microcontroller. We can use the same cable to send messages over the serial protocol, and receive them on the Arduino IDE, or in any other software that reads from the serial port.
+\begin{figure}[ht]
 
-During the development of this thesis, I have been fortunate to collaborate on different capacities with other thesis projects by classmates at Opera of the Future, which has directly inspired my work.
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/output-serial.jpg}
+  \caption{Tiny Trainable Instrument with serial output}
+  \caption*{Picture taken by myself}
+  \label{fig:output-serial}
+\end{figure}
 
-\subsection{Squishies, by Hannah Lienhard}
+This output is useful for proofs of concept, for quick testing of the input classification before wiring a more complex output, and also for doing low-level communication with other serial software on your computer. 
 
-Squishies is Hannah Lienhard's Master's thesis, and consists of novel squishable interfaces for musical expression. We shared discussions about low-level sound design, code reusability, sound art education, and digital instruments. We were part of a Master's thesis working group, facilitated by Roya Moussapour with two other Media Lab classmates, where we workshopped drafts of our thesis. This practice and feedback has been critical in shaping the language and discourse of this thesis document.
+This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baud rate.
 
-\subsection{Fluid Music, by Charles Holbrow}
+\subsection{Servo output}
 
-Fluid Music is Charles Holbrow's PhD thesis. It is a library for library design, documentation for contributors. The design of the interface, documentation, and scope of the thesis were a direct influence on the documentation and API coding style of this project.
+This final output is one of the cheapest ones, along with the buzzer, and that is why both were included in the thesis workshop. This is another example taken from the tradition of learning how to use servo motors in physical computing classes when learning how to program Arduino microcontrollers. That is why I included support for them in the library.
 
-TODO: mention the impact of the documentary Coded Bias, and how these researchers impacted my desire to make my thesis. Also mention how right before pandemic I had started a pottery class, with the intention of making clay-based instruments for thesis, as a metaphor of making code and hardware and software feel fluid and not static, I want to empower people to program, in particular \acrshort{ML} because of its dangerous implementations by oppressive governments and corporations, and in particular for arts, for making artists dream come true.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/materials-adafruit-servo.jpg}
+  \caption{Micro servo motor}
+  \caption*{Retrieved from \cite{website-materials-adafruit-servo}}
+  \label{fig:materials-adafruit-servo}
+\end{figure}
+
+I see the servo motor as a very versatile output, which can be thought of as a generator of movement. So our Tiny Trainable Instrument can dance in space, or point at different places. For this library, I programmed support for moving the servo at different tempos, even with some random noise for hiccupy movement, so that the servo motor can be thought of as a robotic arm for drumming or tapping on different surfaces for music. In this image, you can see an example of this with some tape and wire for extending the arm of the servo motor.
+
+This output requires no additional libraries. The Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the servo.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/output-servo.jpg}
+  \caption{Tiny Trainable Instrument with servo output}
+  \caption*{Picture taken by myself}
+  \label{fig:output-servo}
+\end{figure}
+
+\section{Code to build databases and train ML models}
+
+One of the biggest challenges I have encountered when working with \acrshort{ML} is to find a suitable database, that I am comfortable to work with, and that I know how to use. Often, the solution to my artistic project is building my own databases, which I have done in the past by scraping the web, or doing very tedious manual work. I do these experiments on my computer and do not publish them because I don't want to infringe on anyone's copyright.
+
+This project does not include techniques for web scraping, since I don't want anyone to run into legal trouble, and also because I enjoyed using the Arduino microcontroller and my computer in the privacy of my room, to build the necessary databases for gesture and speech recognition, and I want to share that with artists.
+
+In the repository that holds this thesis, available at \url{https://github.com/montoyamoraga/tiny-trainable-instruments}, I included a folder called \emph{notebooks/}, with Jupyter notebooks written in Python 3 and using the Google TensorFlow library for training.
+
+\section{Workshop and educational material}
+
+A big part of my practice is teaching computation to artists and beginners, so I included as much documentation as I could think of during the making of this thesis. I also hope the fact that this thesis was built in small increments, which were saved and published in the repositories that make up this project, can be considered as having  educational and scholarly value. Many of the favorite things I have learned have been thanks to other artists' generosity of sharing not only the output of their work, but also their process.
+
+This thesis includes documentation all through it: the source code is commented, there are README files for helping navigate each repository and folder, the library includes examples with each section commented and explained, and the library complies with the Doxygen standard for generating automatic documentation.
+
+I also designed, wrote, and taught a remote workshop for beginners with the TinyTrainable library. This workshop was four hours long, spread over two sessions of two hours each, and they were attended by 6 or 7 people each time. I taught the workshop three times at the end of June 2021, twice in English for people based in the U.S.A., and once in Spanish for people based in Chile, to a total of 20 participants. All the materials were funded by a generous grant from the Council for the Arts at MIT.
+
+\section{Design principles}
+
+Here is a summary of the main design principles I followed when making decisions and building this thesis project.
+
+\subsection{Affordable}
+
+The software library is virtually free, and it can be downloaded from the internet at no monetary cost; only bandwidth and time and hard drive costs.
+
+The materials picked were the cheapest ones I could think of, and they are often used in similar educational contexts because they can be reusable and are forgiving to mistakes. The microcontroller is a one-time investment, and the outputs range from 2.00 USD to 60.00 USD. 
+
+The materials for the workshop for building Tiny Trainable Instruments with buzzer, serial, and servo outputs had a cost of only 60.00 USD, including shipping.
+
+\subsection{Open}
+
+All examples included with this library were written with the aim of showing the fundamentals of how to build the instruments and different \acrshort{ML}-enabled manipulation of multimedia material, so that people could build on top of it and make it their own, by changing the values of variables and adding more functionalities.
+
+\subsection{Remixable}
+
+All the process and the code is open, and I wish that the TinyTrainable library can be used as a dependency on other people's projects. I also hope that people modify this project and make it their own, building their own spin-offs. 
+
+\subsection{Private}
+
+A huge emphasis I wanted to stress is to make people feel safe while handling the data. Maybe nowadays we are used to being surrounded by surveillance cameras when we are in public, or even at our homes with devices that listen to us and are connected to the cloud. I hope that this thesis can provide a computational experience that feels safe, respects your privacy, and makes you critical and aware of the issues of modern industrial machine learning applications.
+
+\section{Development}
+
+This thesis has been developed in collaboration with MIT undergrad researchers Peter Tone and Maxwell Wang, and funded by the MIT UROP office and the MIT Media Lab. Peter Tone helped with research in data structures, library writing, and programming different sections of the library, from the most experimental features to the most polished ones, and also helped with the design of the user-facing methods and variables. Maxwell Wang helped with proofreading the code, making sure the language of the examples and documentation were appropriate for beginners, and helped with the planning and conceptualization of the workshop. 
+
+This collaboration was remote, and made possible over issues and pull requests in repositories, and notes in shared Google Drive documents.
+
+The most difficult bottlenecks that I faced while programming this library were solved by office hours with Chilean artist and programmer Roy Macdonald \cite{website-roy-macdonald}.
+
+\section{Code details}
+
+This thesis is distributed as a repository, hosted on the GitHub platform, and available at https://github.com/montoyamoraga/tiny-trainable-instruments.
+
+The auxiliary files, such as the LaTeX project for this document, and the auxiliary Jupyter notebooks, and documentation and tutorials are included in this repository.
+
+The main software component of this project is the TinyTrainable library, available at https://github.com/montoyamoraga/TinyTrainable and also through the Arduino IDE.
+
+The code included in this library is distributed through the folders:
+
+\begin{enumerate}
+  \item examples/
+  \item src/
+\end{enumerate}
+
+\subsection{src/}
+
+This folder contains the C++ files for the TinyTrainable library. It includes the base files TinyTrainable.h and TinyTrainable.cpp , with all the basic functionality of the library. Additional files live on specific subfolders, and are explained below.
+
+\subsubsection{inputs/}
+
+This folder contains the C++ files for the output base class, and the files for each of the 3 inputs that inherit from the base class. Each input file imports the necessary library dependencies and acts as a wrapper for them.
+
+\subsubsection{outputs/}
+
+This folder contains the C++ files for the output base class, and the files for each of the 7 outputs that inherit from the base class. Each output file imports the necessary library dependencies and acts as a wrapper for them.
+
+\subsubsection{tensorflow{\_}speech/}
+
+This folder contains auxiliary files for the speech input, copied from the examples from the Arduino TensorFlow Lite library. Unless otherwise noted, these files are included without modifications and distributed through the Apache License included on each file's headers.
+
+\section{Auxiliary tools}
+
+This is a summary of some auxiliary tools I used for making this project.
+
+\subsection{clang-format}
+
+Tool for automation of formatting to source code. More information at \url{https://clang.llvm.org/docs/.ClangFormat.html}.
+
+\subsection{Doxygen}
+
+Tool for generating documentation from the source code. More information at \url{https://www.doxygen.nl/}.
+
+\subsection{GitHub Actions}
+
+Every time we push code to the TinyTrainable repositories, a GitHub action creates a virtual machine, and runs a script to generate the Doxygen documentation and push it to the gh-pages branch, hosted at \url{https://montoyamoraga.github.io/TinyTrainable}.
+
+\subsection{Jupyter}
+
+Jupyter is a free, open-source browser application that allows users to easily read and write code in a clean, accessible environment. Code is segmented into cells, which users can run individually by clicking into and selecting the triangle "play" button at the top. Subsequent code runs based on operations done in previous cells. Basically, Jupyter notebooks allow programmers to create clean, step-by-step interactive walkthroughs for their code. More information at \url{https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html}.
+
+\subsection{Markdown}
+
+Markdown is a lightweight markup language with simple, intuitive syntax. Aside from a few key differences, it is largely the same as plaintext. The documentation of this project is written using Markdown, including this document! More info at \url{https://guides.github.com/features/mastering-markdown/}
