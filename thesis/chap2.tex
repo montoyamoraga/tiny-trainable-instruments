@@ -291,7 +291,7 @@ This output requires no additional libraries, the Arduino microcontroller by its
   \label{fig:materials-adafruit-midi-jack}
 \end{figure}
 
-MIDI can be used for transmitting all sorts of data, and thesis examples how to use MIDI to control different aspects of MIDI-enabled instruments, including synthesizers and drum machines. As a bonus, I wrote examples to interface with three synthesizers from the volca series by Korg: volca bass (analog bass machine), volca beats (drum machine), and volca keys (polyphonic synthesizer). I picked these synthesizers to have both melodic and percussive musical elements, because of their huge popularity, their relatively low price of 150.00 USD, their extensive MIDI capabilities, and because I am a huge fan of the instrument designs by Tatsuya Takahashi.
+MIDI can be used for transmitting all sorts of data, and thesis examples how to use MIDI to control different aspects of MIDI-enabled instruments, including synthesizers and drum machines. As a bonus, I wrote examples to interface with three synthesizers from the volca series by Korg: volca bass (analog bass machine), volca beats (drum machine), and volca keys (polyphonic synthesizer). I picked these synthesizers to have both melodic and percussive musical elements, because of their huge popularity, their relatively low price of 150.00 USD, their extensive MIDI capabilities, and because I am a huge fan of the instrument designs by Tatsuya Takahashi \cite{website-tatsuya-takahashi}.
 
 This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular baud rate.
 
@@ -311,7 +311,7 @@ The thermal printer kit I recommend on the bill of materials is around 60.00 USD
 
 With this output, you can create a Tiny Trainable Instrument that can print different texts and in various fonts and formatting, depending on the classification of the input. I hope this inspires a new generation of computer poets and interactive literature!
 
-This output requires 1 additional library, the Adafruit Thermal Printer library, which is open source and includes several examples for expanding the functionality of it. If you want to use an alternative hardware or software for thermal printing, you can fork the TinyTrainable library and make it your own way.
+This output requires 1 additional library, the Adafruit Thermal Printer library, which is open source and includes several examples for expanding the functionality of it. If you want to use an alternative hardware or software for thermal printing, I recommend you modify the TinyTrainable library, and include any other additional software you want.
 
 \subsection{Screen output}
 
@@ -413,7 +413,7 @@ This thesis has been developed in collaboration with MIT undergrad researchers P
 
 This collaboration was remote, and made possible over issues and pull requests in repositories, and notes in shared Google Drive documents.
 
-The most difficult bottlenecks that I faced while programming this library were solved by office hours with Chilean artist and programmer Roy Macdonald.
+The most difficult bottlenecks that I faced while programming this library were solved by office hours with Chilean artist and programmer Roy Macdonald \cite{website-roy-macdonald}.
 
 \section{Code details}
 
@@ -432,7 +432,7 @@ The code included in this library is distributed through the folders:
 
 \subsection{src/}
 
-The source code for where there is a TinyTrainable.h and TinyTrainable.cpp file where we included all the basic functionality of the library. Additional subfolders include
+This folder contains the C++ files for the TinyTrainable library. It includes the base files TinyTrainable.h and TinyTrainable.cpp , with all the basic functionality of the library. Additional files live on specific subfolders, and are explained below.
 
 \subsubsection{inputs/}
 
@@ -444,7 +444,7 @@ This folder contains the C++ files for the output base class, and the files for 
 
 \subsubsection{tensorflow{\_}speech/}
 
-This folder contains auxiliary files for the speech input, copied from the examples from the Arduino TensorFlow Lite library. Unless otherwise noted, are included without modifications and distributed through the Apache License included on each file's headers.
+This folder contains auxiliary files for the speech input, copied from the examples from the Arduino TensorFlow Lite library. Unless otherwise noted, these files are included without modifications and distributed through the Apache License included on each file's headers.
 
 \section{Auxiliary tools}
 
