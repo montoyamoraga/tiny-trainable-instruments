@@ -41,15 +41,11 @@ In the class Learning Creative Learning, I was introduced to the Lifelong Kinder
 
 \section{Research projects at MIT}
 
-Some other projects I created during this master's include:
+Another aspect of my research that I want to highlight is other research projects I worked while at the MIT Media Lab, because they follow my same interests and passions, and I hope they help inform the process behind my thesis.
 
-\begin{enumerate}
-  \item SiguesAhi \cite{website-library-siguesahi}: an instrument to detect when oppressive institutions have ceased to exist. It is achieved with microcontrollers with internet connectivity.
-  \item Open Drawing Machine \cite{website-open-drawing-machine}, with Gaurav Patekar: an open source low cost programmable drawing machine.
-  \item Introduction to networks for artists \cite{website-intro-to-computer-networks-for-artists}: a series of tutorials for beginners, to learn how to set up their own networks and collaborate in peer-to-peer ways for making art.
-\end{enumerate}
+\subsection{SiguesAhi}
 
-SiguesAhi is a sibling project to Tiny Trainable Instruments. It is based on a microcontroller from the same series and format but different architecture and capabilities, the Arduino Nano 33 IoT.
+SiguesAhi \cite{website-library-siguesahi} (from the Spanish "Are you still there?")is an instrument to detect when oppressive institutions have ceased to exist. It is achieved with microcontrollers with internet connectivity.  I built it using a microcontroller from the same series and format but different architecture and capabilities, the Arduino Nano 33 IoT.
 
 \begin{figure}[ht]
   \centering
@@ -59,7 +55,7 @@ SiguesAhi is a sibling project to Tiny Trainable Instruments. It is based on a m
   \label{}
 \end{figure}
 
-For this project, I am writing a software library for making digital instruments that can detect if institutions still exist. This is accomplished by connecting the microcontroller to the internet, and making it periodically download the first paragraph of the institution's Wikipedia article. Then the microcontroller checks if the first sentence is written in either present or past tense, and determines the existence of the institution. As an example of the library, I am using the National Rifle Association, which sadly still exists.
+SiguesAhi's functionality is accomplished by connecting the microcontroller to the internet, and making it periodically download the first paragraph of the institution's Wikipedia article. Then the microcontroller checks if the first sentence is written in either present or past tense, and determines the existence of the institution. In the examples published in the alpha version of the software library \cite{website-library-siguesahi}., I am monitoring the National Rifle Association, which sadly still exists. 
 
 \begin{figure}[ht]
   \centering
@@ -69,7 +65,13 @@ For this project, I am writing a software library for making digital instruments
   \label{fig:siguesahi}
 \end{figure}
 
-The Open Drawing Machine \cite{website-open-drawing-machine} is a collaborative project with Gaurav Patekar for the research group Future Sketches at the MIT Media Lab. It is a low cost open source machine, consisting of an Arduino microcontroller and hardware for drawing computationally. We have done the research together; Gaurav designed and 3D-printed the hardware, and I have packaged the results as a still unfinished openFrameworks add-on.
+As a feature, I am adding support for Wikipedia articles in different languages, with the hope that people can use this library to make their own instruments to track the downfall of oppresive institutions wherever they are. I am building one for myself to track the existence the Chilean Constitution, written in 1980 by the military dictatorship.
+
+SiguesAhi has been developed in parallel to Tiny Trainable Instruments, and has been possible thanks to the techniques and strategies I have learned about instrument making and publishing software libraries for arts.
+
+\subsection{Open Drawing Machine}
+
+The Open Drawing Machine \cite{website-open-drawing-machine} is a collaborative project with Gaurav Patekar for the research group Future Sketches at the MIT Media Lab. It is a low cost open source machine, consisting of an Arduino microcontroller and hardware for drawing computationally.
 
 \begin{figure}[ht]
   \centering
@@ -79,7 +81,13 @@ The Open Drawing Machine \cite{website-open-drawing-machine} is a collaborative 
   \label{fig:open-drawing-machine}
 \end{figure}
 
-Currently the Open Drawing Machine can receive drawing commands from a computer through a serial port, and the next step of this project is being able to receive commands from other computers through networks and the internet. This comes from the last project I will mention that I worked on while at the MIT Media Lab, which is Introduction to computer networks for artists \cite{website-intro-to-computer-networks-for-artists}, a collection of tutorials for remote peer-to-peer collaboration between artists. This project is inspired by the amazing research on remote collaboration, sensors, peer-to-peer protocols, by friend Lisa Jamhoury, including the app Kinectron.
+Gaurav Patekar designed and 3D-printed the hardware, and I have packaged the results an published a library add-on for openFrameworks. The research was done 
+
+Currently the Open Drawing Machine can receive drawing commands from a computer through a serial port, and the next step of this project is being able to receive commands from other computers through networks and the internet.
+
+\subsection{Introduction to networks for artists}
+
+Introduction to networks for artists \cite{website-intro-to-computer-networks-for-artists} is a series of tutorials for beginners, to learn how to set up their own networks and collaborate remotely in peer-to-peer ways for making art, featuring several open source software tools for arts. This project is inspired by the amazing research on remote collaboration, body sensors, peer-to-peer protocols, by movement artist and programmer Lisa Jamhoury \cite{website-lisa-jamhoury}, including the app Kinectron \cite{website-repository-kinectron}, which I am a contributor to.
 
 \begin{figure}[ht]
   \centering
