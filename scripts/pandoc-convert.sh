@@ -14,5 +14,4 @@ do
 done
 
 # do all the files manually, and with bibliography
-pandoc -o "$PWD/docx/aaron-thesis.docx" "$PWD/chap1.tex" "$PWD/chap2.tex" "$PWD/chap3.tex" "$PWD/chap4.tex" "$PWD/chap5.tex" "$PWD/chap6.tex" "$PWD/appa.tex" "$PWD/appb.tex" "$PWD/appc.tex" "$PWD/appd.tex" "$PWD/appe.tex" --bibliography "$PWD/main.bib"
- 
+pandoc -o "$PWD/docx/aaron-thesis.docx" "$PWD/cover.tex" "$PWD/chap1.tex" "$PWD/chap2.tex" "$PWD/chap3.tex" "$PWD/chap4.tex" "$PWD/chap5.tex" "$PWD/chap6.tex" "$PWD/appa.tex" "$PWD/appb.tex" "$PWD/appc.tex" "$PWD/appd.tex" "$PWD/appe.tex" --bibliography "$PWD/main.bib"
