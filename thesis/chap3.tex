@@ -99,11 +99,11 @@ Introduction to networks for artists \cite{website-intro-to-computer-networks-fo
 
 \section{Computational media arts instruments}
 
-There is a rich ecosystem of personal computers, operating systems and software for making art, and it is common nowadays for artists to rely on their computer for making all of their art, on the go, wherever they are. In the 1990s, musicians stopped having to rely on analog hardware, and started replacing their tools for recording and mixing with software on their computers.
+A big concentration of my research at the MIT Media Lab is computational media arts instruments. I define them as devices that convert the data from an input like human gesture, to process and output different media (audio, video, text, light, etc), using digital operations.
 
-Apart from the proliferation of laptop computers and software for arts, I will share my research in devices that I like to call computational media arts instruments. They are computational because they are digital and crunch numbers, and they are instruments that allow us to process different media in creative ways.
+Nowadays artists have access to a rich ecosystem of computers, operating systems and software for making art, and it is common for them to rely on their personal computer for making all of their art, on the go, wherever they are. In the 1990s, musicians stopped having to rely on analog hardware for recording and mixing, and broadly embraced digital technology, with a huge reduction on costs and maintenance.
 
-I will focus on the instruments that can be programmed, and that promote open source hardware or software. Many of these instruments often sit at my desk for inspiration, or I spend hours playing with them for my art and learning from them and the communities around them.
+In this section of my thesis I will share my research on companies making some of my favorite recent computational media arts instruments, with a strong focus on the ones that can be programmed, and that promote open source hardware or software. Many of these instruments often sit at my desk for inspiration, or I spend hours playing with them for my art and learning from them and the communities around them.
 
 The tables \ref{table:media-arts-instruments-technical} and \ref{table:media-arts-instruments-influence} are respectively summaries of techniques and influences of the instruments that I reference in this section.
 
@@ -111,19 +111,30 @@ The tables \ref{table:media-arts-instruments-technical} and \ref{table:media-art
     \centering
     \begin{tabular}{ | l |  l | l | l | l |}
         \hline
-        Company             & Instrument    & Year  & Basis & Software            \\
+        \textbf{Company} & \textbf{Instrument} & \textbf{Year} & \textbf{Basis} & \textbf{Software} \\
         \hline
         Bastl Instruments   & Illuminati    & 2019  & MCU       & None                \\
+        \hline
         Bastl Instruments   & Kastle Drum   & 2020  & MCU       & Arduino, C++        \\
+        \hline
         Bastl Instruments   & Kastle v1.5   & 2017  & MCU       & Arduino, C++        \\
+        \hline
         Bastl Instruments   & OMSynth       & 2016  & IC        & None                \\
+        \hline
         Bastl Instruments   & microGranny 2 & 2016  & MCU       & Arduino, C++        \\
+        \hline
         Bastl Instruments   & Servo         & 2016  & MCU       & Arduino, C          \\
+        \hline
         Critter \& Guitari  & Organelle     & 2016  & Linux     & Pure Data           \\
+        \hline
         Critter \& Guitari  & EYESY         & 2020  & Linux     & Python, Pygame      \\
+        \hline
         monome              & aleph         & 2013  & Linux     & C                   \\
+        \hline
         monome              & norns         & 2018  & Linux     & Lua, SuperCollider  \\
+        \hline
         Shbobo              & Shnth         & 2013  & MCU       & Shlisp              \\
+        \hline
         Shbobo              & Shtar         & 2017  & MCU       & Shlisp              \\
         \hline
     \end{tabular}
@@ -135,17 +146,25 @@ The tables \ref{table:media-arts-instruments-technical} and \ref{table:media-art
     \centering
     \begin{tabular}{ | l |  l | l |}
         \hline
-        Company             & Instrument    & Influence                             \\
+        \textbf{Company}    & \textbf{Instrument} & \textbf{Influence}              \\
         \hline
         Bastl Instruments   & Illuminati    & Output with LEDs                      \\
+        \hline
         Bastl Instruments   & Kastle series & Use of breadboard and jumper wires    \\
+        \hline
         Bastl Instruments   & OMSynth       & Distribution as tutorials + parts kit \\
+        \hline
         Bastl Instruments   & microGranny 2 & Arduino as basis for instrument       \\
+        \hline
         Bastl Instruments   & Servo         & Output with servo motor               \\
-        Critter \& Guitari  & Organelle     & Computer for sound                    \\
-        Critter \& Guitari  & EYESY         & Output with screen                    \\
-        monome              & aleph, norns  & Computer for sound                    \\
-        Shbobo              & Shnth, Shtar  & Input with multiple gestures          \\
+        \hline
+        Critter \& Guitari  & Organelle     & Scriptable audio computer             \\
+        \hline
+        Critter \& Guitari  & ETC, EYESY    & Scriptable visuals computer, screen output\\
+        \hline
+        monome              & aleph, norns  & Scriptable audio computer            \\
+        \hline
+        Shbobo              & Shnth, Shtar  & Multiple input sensors, scripting     \\
         \hline
     \end{tabular}
     \caption{Influence of media arts instruments}
@@ -154,7 +173,7 @@ The tables \ref{table:media-arts-instruments-technical} and \ref{table:media-art
 
 \subsection{Bastl Instruments}
 
-Bastl Instruments is a Czech company of multimedia instruments, which has had a huge impact and influence on my research and practice. When I first started researching the Eurorack format some years ago, I visited the shop Control in Brooklyn, NY, and some modules by Bastl stood out to me, because of their wooden panels and interaction with classic physical computing educational materials, such as motors and solenoids, which was an inspiration for me to include servo motors as an output in Tiny Trainable Instruments.
+Bastl Instruments is a Czech company of multimedia instruments, which has had a huge impact and influence on my research and practice. When I first started researching the Eurorack format some years ago, I visited the shop Control in Brooklyn, NY, and some modules by Bastl stood out to me, because of their wooden panels and interaction with classic physical computing educational materials, such as motors and solenoids, which was an inspiration for me to include servo motors as an output option in the Tiny Trainable Instruments.
 
 \begin{figure}[ht]
   \centering
@@ -164,7 +183,7 @@ Bastl Instruments is a Czech company of multimedia instruments, which has had a 
   \label{fig:bastl-servo}
 \end{figure}
 
-Another inspiration comes from their microgranny 2 granular sampler which is made with an Atmega microcontroller and its firmware is open source and available as a repository on their GitHub account, along with many other of their instruments.
+Another inspiration comes from their microGranny 2 granular sampler which is made with an Atmega microcontroller and its firmware is open source and available as a repository on their GitHub account \cite{github-bastl-instruments}, along with many other of their instruments.
 
 \begin{figure}[ht]
   \centering
@@ -174,7 +193,7 @@ Another inspiration comes from their microgranny 2 granular sampler which is mad
   \label{fig:bastl-microgranny-2}
 \end{figure}
 
-Their Kastle synthesizers are also based on microcontrollers, and feature a patchbay for making connections with jumper wires, the same used for prototyping in electronic breadboards, which influenced me to make the Tiny Trainable Instruments built with breadboards and jumper wires, instead of custom printed circuit boards. Also, the Kastle synths are forgiving instruments, their inputs and outputs are robust enough to allow for mistakes in connections, in an electrical and mechanical way, which I think is perfect for safe experimentation. It would be a bummer if the instrument was easy to break, or if it demanded a huge effort in understanding electronics for using it.
+Their Kastle synthesizers are also based on microcontrollers, and feature a patchbay for making connections with jumper wires, the same used for prototyping in electronic breadboards. This influenced me to build the Tiny Trainable Instruments with breadboards and jumper wires, instead of custom \acrshortpl{PCB}.
 
 \begin{figure}[ht]
   \centering
@@ -183,6 +202,8 @@ Their Kastle synthesizers are also based on microcontrollers, and feature a patc
   \caption*{Retrieved from \cite{website-bastl-instruments-current}}
   \label{fig:bastl-kastle-v15}
 \end{figure}
+
+Also, the Kastle synths are forgiving instruments, their inputs and outputs are robust enough to allow for mistakes in connections, in an electrical and mechanical way, which I think is perfect for safe experimentation. It would be a bummer if the instrument was easy to break, or if it demanded a huge effort in understanding electronics for using it. 
 
 As of writing, two different units are in production, both retailing for around 100.00 USD: the Kastle v1.5 melodic / drone synthesizer, and the Kastle Drum, for rhythm. The only difference between these synthesizers is the firmware and the labels on the faceplate. The community is encouraged to write new firmware to modify their behavior. 
 
@@ -204,7 +225,7 @@ Another instrument I want to highlight is the Illuminati, currently discontinued
   \label{fig:bastl-illuminati}
 \end{figure}
 
-The final instrument from this company that I want to highlight is the OMSynth, one of many collaborations with Casper Electronics. This device is an educational and maker circuit development tool for creating synthesizers. It includes basic fundamental blocks, such as battery power, audio input and output, potentiometers for attenuating and boosting signals, and a suite of parts kits for building devices including sequencers, oscillators, and samplers, on the included breadboard. Its release as a kit was also a direct influence in the release of Tiny Trainable Instruments as a kit with instructions.
+The final instrument from this company that I want to highlight is the OMSynth, one of Bastl Instruments' many collaborations with Casper Electronics. This device is an educational and maker circuit development tool for creating synthesizers. It includes basic fundamental blocks, such as battery power, audio input and output, potentiometers for attenuating and boosting signals, and a suite of parts kits for building devices including sequencers, oscillators, and samplers, on the included breadboard. Its release as a kit was also a direct influence in the kits I designed for the workshops I taught with the Tiny Trainable Instruments.
 
 \begin{figure}[ht]
   \centering
@@ -214,11 +235,11 @@ The final instrument from this company that I want to highlight is the OMSynth, 
   \label{fig:bastl-omsynth}
 \end{figure}
 
-Many BASTL standalone instruments are 200.00 USD or less, which is a huge contrast to the 1960s, when a Moog analog system II cost 6,200.00 USD, which was enough to buy a small house \cite{analog-days}. Also, many of their instruments are sold as kits for building and soldering them yourself, for the cheaper cost and the added educational aspect of having hands-on experience.
+Many Bastl standalone instruments are 200.00 USD or less, which is a huge contrast to the 1960s, when a Moog analog system II cost 6,200.00 USD, which was enough to buy a small house \cite{analog-days}. Also, many of their instruments are sold as kits for building and soldering them yourself, for the cheaper cost and the added educational aspect of having hands-on experience.
 
 \subsection{Critter \& Guitari}
 
-Critter \& Guitari is an American company based in Brooklyn NY, which has released in the past computational microcontroller-based audiovisual instruments, from which my favorite is the Kaleidoloop, currently discontinued. It is a sampler with an internal mic and speaker, that allows you to record audio and then control its output with 2 knobs for volume and playback rate. It is designed to be portable for doing field recordings, and it was an influence on the design of the Tiny Trainable Instruments library, which allows the construction of standalone instruments, that with a USB power bank or a battery, you can take for a walk or place anywhere you want.
+Critter \& Guitari is an American company based in Brooklyn, NY, which has released several computational microcontroller-based audiovisual instruments, from which my favorite is the currently discontinued Kaleidoloop. It is a sampler with an internal speaker and an included microphone, thats allows you to record and playback audio. The instrument features two knobs for controlling the volume and playback rate of audio loops from your recordings. I really admire its portability, in terms of its size, weight, and being battery-powered, encouraging the recording and making of music while walking or in the park. This was a major influence on the design of the Tiny Trainable Instruments; the materials I picked are intended for building standalone instruments that you can power with a USB power bank or a battery, so that you can take them for a walk too.
 
 \begin{figure}[ht]
   \centering
@@ -228,8 +249,7 @@ Critter \& Guitari is an American company based in Brooklyn NY, which has releas
   \label{fig:critter-and-guitari-kaleidoloop}
 \end{figure}
 
-In 2015, Critter \& Guitari released the Organelle, a sound computer running the Linux operating system and the Pure Data software as the programmable interface between the hardware and the sound engine. Even though aany sound you can do on an Organelle you could do on your laptop using Pure Data, I think the focus on this computer on making sound it's amazing for musicians. You don't need to be a programmer to use it, it ships with presets, and there is a community of people sharing software for others to use, that you can easily install.
-
+In 2015, Critter \& Guitari released the Organelle, a sound computer running the Linux operating system, and the \acrfull{Pd} software for programming patches that reacts to the computer's interface (knobs, encoders, keys), and then generates sound. It is currently on its second iteration, called Organelle M, with added features, such as an embedded speaker and microphone.
 
 \begin{figure}[ht]
   \centering
@@ -239,8 +259,11 @@ In 2015, Critter \& Guitari released the Organelle, a sound computer running the
   \label{fig:critter-and-guitari-organelle-m}
 \end{figure}
 
-After the release of the Organelle, this company released the ETC computer for visuals. It also runs the Linux operating system, and it uses the pygame library for generating graphics. You can write your own scripts on Python to modify its behavior. The ETC was discontinued and replace with a compatible and similar instrument, the EYESY, which has a new mode for running openFrameworks.
+Since the sound generation is made with the software \acrshort{Pd}, you can achieve the same sonic results on an Organelle or on your personal computer. Despite this, I am convinced that the Organelle is a revolutionary instrument,  because it allows artists to use computation in a single-purpose and stable device for their sound, in heavy contrast with the overbloated personal computers we use from activities ranging from watching movies to paying taxes, and which constantly require updates and maintenance. The Organelle also replaces the keyboard and mouse in computers with an interface tailored for contemporary music production, including a musical keyboard for playing notes, knobs and encoders for changing parameters, and a screen for navigating menus.
 
+The final aspects I want to celebrate about the Organelle, are its ever growing capabilities, and the community behind it: Critter \& Guitari regularly pubslihes new \acrshort{Pd} patches, and the community also organizes in forums and repositories to share their creations. You don't need to be a programmer to enjoy the Organelle, you can download and use the new presets without ever having to open a code editor.
+
+After the release of the Organelle, this company released the ETC visuals copmuter. It also runs the Linux operating system, and it uses the pygame Python library for generating graphics which can then be projected on a screen.  The ETC was discontinued and replace with a compatible and improved instrument, the EYESY, with upgrades such as a new mode for running openFrameworks.
 
 \begin{figure}[ht]
   \centering
@@ -250,9 +273,11 @@ After the release of the Organelle, this company released the ETC computer for v
   \label{fig:critter-and-guitari-eyesy}
 \end{figure}
 
-They can run on power supplies, and are also portable by the use of batteries.
+The current lineup of the Organelle and EYESY computers for arts, make Critter \& Guitari a pioneering company in the creation of scriptable instruments that run open source software and foster communities around them. Tiny Trainable Instruments is heavily indebted to the work of this company, trying to promote scripting for microcontrollers for a new generation of artists.
 
 \subsection{monome}
+
+monome \cite{website-monome-current} is an American company based in upstate New York. Their first instrument was the grid, still in production. In its current iteration, it consists of 128 backlit silicone keys distributed in 8 rows and 16 columns. It has a USB port, through which it can be connected to all sorts of devices, including computers and Eurorack modules.
 
 \begin{figure}[ht]
   \centering
@@ -262,10 +287,9 @@ They can run on power supplies, and are also portable by the use of batteries.
   \label{fig:monome-grid}
 \end{figure}
 
-Aleph: earlier sound computer.
+The monome website features extensive tutorials for learning how to interface the grid with many popular open source hardware and software systems, including Arduino, Processing, \acrshort{Pd}, SuperCollider, Python, and Node.js. Over the years I have learned many important lessons about instrument making, software for arts, and live performance with my grid, and I am including what I learned on this thesis project.
 
-Norns: sound computer, currently on its second iteration, with expanded hard drive. Also there is a \acrshort{DIY} version which is cheaper and runs on a Raspberry Pi.
-Norns is a Linux machine, running SuperCollider for the sound engine, and Lua scripts. It has spawned a community that continually releases new scripts and software updates.
+Through the grid, I learned about the other instruments by monome, and I want to highlight the open source sound computers they have released over the years,  starting with the now discontinued aleph.
 
 \begin{figure}[ht]
   \centering
@@ -275,6 +299,8 @@ Norns is a Linux machine, running SuperCollider for the sound engine, and Lua sc
   \label{fig:monome-aleph}
 \end{figure}
 
+The aleph had a focus on community building by releasing the technical documentation and guides for enthusiasts to write and share their own extensions of the software, written in the C programming language. Even though monome only made 100 units of the aleph, it directly influenced their next sound computer, norns, currently available both as an instrument and a \acrshort{DIY} shield for the Raspberry Pi computer.
+
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth,height=0.25\textheight,keepaspectratio]{images/monome-norns.jpg}
@@ -283,9 +309,11 @@ Norns is a Linux machine, running SuperCollider for the sound engine, and Lua sc
   \label{fig:monome-norns}
 \end{figure}
 
+The norns runs the Linux operating system, uses SuperCollider for sound generation, and runs Lua scripts for other tasks, such as reading the data from the buttons and encoders, displaying visuals on the screen, and sharing variables with the sound engine. Users are encouraged to write their own software in these two languages, and there is a strong community, both at monome's forum \url{https://norns.community/} and at the norns wiki \url{https://norns.community/}.
+
 \subsection{Shbobo}
 
-In my first semester I was introduced by classmate Will Freudenheim to the Shbobo synthesizers by Peter Blasser. Peter Blasser has released several collections / companies of musical instruments, the most famous one being Ciat-Lonbarde.
+In my first semester at MIT I was introduced by classmate Will Freudenheim to the Shbobo Shnth synthesizer by Peter Blasser. The Shnth is a microcontroller-based scriptable instrument, with multiple input sensors, including flex sensors,  a microphone, and capacitive skin proximity.
 
 \begin{figure}[ht]
   \centering
@@ -294,6 +322,12 @@ In my first semester I was introduced by classmate Will Freudenheim to the Shbob
   \caption*{Retrieved from \cite{website-shbobo-current}}
   \label{fig:shbobo-shnth}
 \end{figure}
+
+Peter Blasser has created several companies of musical instruments, the most famous one being Ciat-Lonbarde, which features 
+
+The Shbobo Shnth is a digital response 
+
+Peter Blasser has released several collections / companies of musical instruments, the most famous one being Ciat-Lonbarde. For 
 
 \begin{figure}[ht]
   \centering
