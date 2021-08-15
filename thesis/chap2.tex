@@ -124,7 +124,7 @@ TinyTrainable is my first library for hardware, and this experience has led me t
 
 \section{ML for arts}
 
-My first project in \acrshort{ML} for arts was in 2016 with my \acrshort{NYU} \acrshort{ITP} classmate Corbin Ordel, who was a student at Gene Kogan \cite{website-gene-kogan}'s \acrshort{ML} for Artists class \cite{website-gene-kogan-machine-learning-for-artists}. Together we audited Rebecca Fiebrink\cite{website-rebecca-fiebrink}'s \acrshort{ML} for Musicians and Artists class \cite{kadenze-ml-for-musicians-and-artists}, available at the Kadenze platform, and learned the Wekinator \cite{website-wekinator} platform. As a final project for Gene's class, with Corbin we made the project Piano Die Hard, a digital sculpture consisting of a piano that is watching the trailer for the movie Die Hard, and every time it detects an explosion, it plays music as accompaniment.
+My first project in \acrshort{ML} for arts was in 2016 with my \acrshort{NYU} \acrshort{ITP} classmate Corbin Ordel, who was a student at Gene Kogan \cite{website-gene-kogan}'s \acrshort{ML} for Artists class \cite{website-gene-kogan-machine-learning-for-artists}. Together we audited Rebecca Fiebrink\cite{website-rebecca-fiebrink}'s \acrshort{ML} online ML class on the Kadenze platform \cite{kadenze-ml-for-musicians-and-artists}, and learned her Wekinator \cite{website-wekinator} platform. As a final project for Gene's class, with Corbin we made the project Piano Die Hard, a digital sculpture consisting of a piano that is watching the trailer for the movie Die Hard, and every time it detects an explosion, it plays music as accompaniment.
 
 \begin{figure}[ht]
   \centering
@@ -140,17 +140,9 @@ The training of the model was made beforehand with a selection of 1980's movies,
 
 After graduating from \acrshort{NYU} \acrshort{ITP} and working for one year as a research resident and graduate teaching assistant, I was exposed to many exciting developments in \acrshort{AI} and creativity, including witnessing the creation of the the ml5.js library, and the company RunwayML \cite{website-runwayml} founded by Cristóbal Valenzuela \cite{website-cristobal-valenzuela}, Alejandro Matamala \cite{website-alejandro-matamala}, and Anastasis Germanidis \cite{website-anastasis-germanidis}. Through this I became excited about the creative potential of \acrshort{ML}, so in 2018 I took a month-long intensive class at the School of Machines, Making \& Make-Believe \cite{website-school-of-machines} in Berlin, Germany, facilitated by Gene Kogan and Andreas Refsgaard \cite{website-andreas-refsgaard}, and organized by Rachel Uwa \cite{website-rachel-uwa}.
 
-During this workshop I learned many different tools for \acrshort{ML}, including my first experiments in creating my own custom databases. I got a mix of excitement for the graphic and plastic possibilities that \acrshort{AI} gives me, and frustration while working with databases. The algorithms I was trying to play with needed very specific requirements in terms of their data input, such as specific image resolution, file formats,  and file size. So even if I found an existing database, I had to do very tedious labor to adapt them. During this month my work focused on learning how to create custon databases with web \gls{scraping}, which you can find at this repository \url{https://github.com.montoyamoraga/scrapers}.
+During this workshop I got a mix of excitement for the graphic and plastic possibilities that \acrshort{AI} allowed me, and frustration while working with databases. The algorithms I was trying to play with needed very specific requirements in terms of their data input, such as specific image resolution, file formats,  and file size. So even if I found an existing database, I had to do very tedious labor to adapt them. During this class my work focused on writing scripts to create custom databases with web \gls{scraping}, which you can find at this repository \url{https://github.com.montoyamoraga/scrapers}.
 
-For Tiny Trainable Instruments, I was worried about including web scraping techniques, because I didn't want to infringe any copyrights or be involved in litigation. Right now I feel comfortable doing scraping in private, for academic purposes, but not for more public or commercial outlets. Because of this hesitation, I reached out to the Technology Law Clinic \cite{website-boston-university-technology-law-clinic} at Boston University's School of Law, to ask them to assess the potentical civil and criminal liabilities if I conducted web scraping on Youtube.com to train my machine learning algorithms, and then published my databases, my trained models, and the documentation for encouraging other people how to do the same.
-
-
-
-
-
- This inspired me to use the Arduino microcontroller as a source for data, that I could make myself at home, instead of relying of corporate or problematic databases. I hope my contributions in how to capture data, parse it, and how to use it to build your own databases is also helpful to others.
-
-I want to thank 
+I learned web scraping as a student of artist Sam Lavigne. Sam is one of my role models, because he uses computation and comedy to address complex civic issues, including late capitalism, government surveillance and mass incarceration. Not only he makes amazing artwork, he also creates open source tools and teaches classes so that other artists and activists can learn powerful computational techniques.
 
 \begin{figure}[ht]
   \centering
@@ -160,14 +152,9 @@ I want to thank
   \label{fig:sam-lavigne-training-poses}
 \end{figure}
 
-The last spark that led me to this thesis was the release of 2 libraries for \acrshort{ML} on the Arduino platform: The currently beta version Arduino KNN, which allows for on-device training and resembles my earlier studies with Wekinator, in a more portable and private way, no data leaves the microcontroller, and the whole neural network can be wiped with one click of a button.
+I want to highlight his piece Training Poses (2018) \cite{website-sam-lavigne-training-poses}, a satirical response to the popular OpenPose \cite{website-openpose} library for body detection. Both of these projects use as source material Microsoft's \acrfull{COCO} database, consisting of thousands of images from Flickr, and annotated by workers on Amazon Mechanical Turk. This piece made me aware and worried of the existence of these enormous databases, and of the potential issues of consent and exploitation. During this research the paper Large Datasets: A Phyrrhic win for computer vision? \cite{DBLP:journals/corr/abs-2006-16923} confirmed my worst suspicions. In this paper, researchers Vinay Uday Prabhu and Abeba Birhane point out that the widely used ImageNet dataset has no consensual images at all!
 
-In late 2020 and early 2021 I completed the just released series of 3 courses of the TinyML Professional Certificate by Harvard at the online platform edx.org
-
-Also Yining Shi created a new class at \acrshort{NYU} \acrshort{ITP} in 2020, at the intersection of \acrshort{ML} and physical computing.
-
-\cite{website-arpillera-mirror}
-
+These concerns have pushed away from creating art with these compromised datasets that don't respect consent. Instead I have opted for making small scale experiments that are educational and that are considered fair use. I have used ml5.js, to make artwork that only runs on the client computer, for privacy. One of such early experiments is Arpillera Mirror (2019) \cite{website-arpillera-mirror}, an homage to Chilean multimedia artist Violeta Parra. It consists of a desktop website, that applies the style of an arpillera to your computer's camera image, a technique known as style transfer.
 
 \begin{figure}[ht]
   \centering
@@ -177,4 +164,8 @@ Also Yining Shi created a new class at \acrshort{NYU} \acrshort{ITP} in 2020, at
   \label{fig:arpillera-mirror}
 \end{figure}
 
+ The source images for this project were obtained from the Violeta Parra museum's online collection. My original plan was to use this experiment to pitch two things to the Violeta Parra's museum: that they release their digital collection with permissive licenses, like the Digital Collections from the \acrfull{NYPL}, and to have a style transfer mirror with Violeta Parra's work included in their permanent collection. Since I haven't been able to visit Chile yet, this project is still unauthorized, and I haven't published the source code.
+
 For people who are interested in the rich field of image generation with \acrshort{ML}, I highly recommend the book Making Pictures with Generative Adversarial Networks \cite{making-pictures-with-gans} by Casey Reas, published by Anteism, as of 2021 on its second edition. It’s an arts-first book that contextualizes the use of \acrshort{ML} algorithms for the creation of images, and uses the metaphor of these algorithms as being similar to the development of the camera. Artists don’t necessarily need to understand all the physics or mechanics behind a camera in order to make art with it, but it can definitely help to understand it too. I think that \acrshort{ML} is a revolutionary strategy for instrument-making and the arts, while also introducing new civic complexities, and in this thesis I have tried to follow the example of Reas' book, to introduce the technology and contextualize for a new generation of artists and instrument makers.
+
+The last projects I want to mention in this section is the class Machine learning for physical computing \cite{repository-yining1023-machine-learning-for-physical-computing} written and taught in 2020 by software developer Yining Shi \cite{website-yining-shi} at \acrshort{NYU} \acrshort{ITP}. This class was the first time I saw a project building on top of the recently released library TensorFlow Lite for microcontrollers. This class inspired me to also use this library as a jumpstart for Tiny Trainable Instruments.
