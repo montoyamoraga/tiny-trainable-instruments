@@ -1,7 +1,5 @@
 \chapter{Tiny Trainable Instruments}
 
-TOD: what did you do, why did you do it, and how does it work
-
 This chapter describes the process of conceptualizing and developing this antidisciplinary thesis project, living at the interstitial spaces between the fields of \acrlong{AI}, electrical engineering, computer science, media arts, music, and pedagogy, among others.
 
 In the next section I explain my personal definitions of the words that make up the title of this project.
@@ -39,6 +37,8 @@ Training a device is particularly attractive for artists working with sensors. T
   \caption*{Screen capture by myself}
   \label{fig:arduino-data-stream}
 \end{figure}
+
+TOD: what did you do, why did you do it, and how does it work
 
 If we wanted to use this sensor at home to detect a red object, we would start by taking notes of the \acrshort{RGB} values of the sensor when the red object is close to it, and would then include this value as a threshold for detection on the software uploaded to the microcontroller. Since the \acrshort{RGB} sensor needs consistent lighting to work effectively, we need to be especially careful with the lighting conditions; if they change, we have to look at the stream of data to find the new value for red, and then update the code and reprogram the microcontroller.
 

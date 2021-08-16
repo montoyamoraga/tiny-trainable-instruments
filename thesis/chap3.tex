@@ -39,9 +39,11 @@ In the class Learning Creative Learning, I was introduced to the Lifelong Kinder
 
 \subsection{TinyML Professional Certificate}
 
-Apart from the MIT coursework, between November 2020 and March 2021 I completed the online Tiny Machine Learning Professional Certificate by Harvard University at the platform edx \cite{website-edx-harvardx-tinymlx-professional-certificate}. It is a series of three courses, where they teach responsible \acrshort{AI} strategies, theoretical \acrshort{ML}, and applied tiny \acrshort{ML} with the Arduino Nano 33 BLE Sense microcontroller. 
+Apart from the MIT coursework, between November 2020 and March 2021 I completed the online Tiny Machine Learning Professional Certificate by Harvard University at the platform edx \cite{website-edx-harvardx-tinymlx-professional-certificate}. It is a series of three courses, where they teach responsible \acrshort{AI} strategies, theoretical \acrshort{ML}, and applied tiny \acrshort{ML} with the Arduino Nano 33 BLE Sense microcontroller, wit a focus on industrial applications.
 
-The last spark that led me to this thesis was the release of 2 libraries for \acrshort{ML} on the Arduino platform: The currently beta version Arduino KNN, which allows for on-device training and resembles my earlier studies with Wekinator, in a more portable and private way, no data leaves the microcontroller, and the whole neural network can be wiped with one click of a button.
+The academic team behind this certificate released the companion Harvard tinyMLx Arduino library \cite{repository-tinymlx-arduino-library}, which is based on the vanilla Arduino TensorFlowLite for microcontrollers. Through the example of this library, I learned how to build my own library for this thesis.
+
+During this coursework I researched other libraries for machine learning, and discovered the Arduino \acrshort{k-NN} library \cite{repository-arduino-knn}. I included this library as a dependency on my thesis because it allows on-device data capture and model training. This allows for the data never leaving the device, and to enhanced privacy, which is one of the driving concepts of this project.
 
 \section{Research projects at MIT}
 
