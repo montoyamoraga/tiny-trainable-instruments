@@ -71,7 +71,7 @@ In this section I will explain the process and the results of each component of 
 \begin{enumerate}
   \item TinyTrainable Arduino software library
   \item Code for training \acrshort{ML} with \acrshort{DIY} databases
-  \item Workshop and educational material
+  \item Educational material and workshop
 \end{enumerate}
 
 \section{TinyTrainable Arduino software library}
@@ -399,15 +399,13 @@ This project does not include techniques for web scraping, since I don't want an
 
 In the repository that holds this thesis document, available at \url{https://github.com/montoyamoraga/tiny-trainable-instruments}, I included a folder called \emph{notebooks/}, with Jupyter notebooks written in Python 3 and using the Google TensorFlow library for training.
 
-TODO: at least a paragraph here summing up what you built and explaining why this is interesting and significant. What is new about it? Why does this approach inspire you as an artist and a pedagogue? Your passion for the purpose of this project is not coming through clearly enough.
+\section{Educational material and workshop}
 
-\section{Workshop and educational material}
+In this thesis my aim is to acknowledge all the steps, dependencies, and labor needed to create the project. It has been built in small increments, which have been saved and published in the repositories that make up this project, because there is a great educational and scholarly value in documenting and reading the history of a project. This is also a a way to give back to the community of artists who generously sharing not only the output of their work, but also their process and their tools.
 
-A big part of my practice is teaching computation to artists and beginners, so I included as much documentation as I could think of during the making of this thesis. I also hope the fact that this thesis was built in small increments, which were saved and published in the repositories that make up this project, can be considered as having  educational and scholarly value. Many of the favorite things I have learned have been thanks to other artists' generosity of sharing not only the output of their work, but also their process.
+This educational aspect is present throughout the included documentation: the source code is commented, there are README files for helping navigate each repository and their folders, the TinyTrainable library includes examples with each section commented and explained, and the library complies with the Doxygen standard for generating automatic documentation.
 
-This thesis includes documentation all through it: the source code is commented, there are README files for helping navigate each repository and folder, the library includes examples with each section commented and explained, and the library complies with the Doxygen standard for generating automatic documentation.
-
-I also designed, wrote, and taught a remote workshop for beginners with the TinyTrainable library. This workshop was four hours long, spread over two sessions of two hours each, and they were attended by 6 or 7 people each time. I taught the workshop three times at the end of June 2021, twice in English for people based in the U.S.A., and once in Spanish for people based in Chile, to a total of 20 participants. All the materials were funded by a generous grant from the Council for the Arts at MIT.
+I also designed, wrote, and taught a remote workshop for beginners with the TinyTrainable library, which is explained in detail in the next chapter.
 
 \section{Design principles}
 
@@ -456,7 +454,7 @@ The code included in this library is distributed through the folders:
   \item src/
 \end{enumerate}
 
-\subsection{Source code}
+\subsection{src/}
 
 This folder contains the C++ files for the TinyTrainable library. It includes the base files TinyTrainable.h and TinyTrainable.cpp , with all the basic functionality of the library. Additional files live on specific subfolders, and are explained below.
 
@@ -472,15 +470,17 @@ This folder contains the C++ files for the output base class, and the files for 
 
 This folder tensorflow{\_}speech/ contains auxiliary files for the speech input, copied from the examples from the Arduino TensorFlow Lite library. Unless otherwise noted, these files are included without modifications and distributed through the Apache License included on each file's headers.
 
-\subsection{Code examples}
+\subsection{examples/}
+
+This folder contains the code examples for the TinyTrainable library. They are organized in four subfolders, one for each input (color, gesture, speech), and one for checking the wiring of each output. Each subfolder has one example for each of the seven possible outputs. There is an additional example for creating the gesture database, for a total of twenty-nine cod examples.
 
 \subsubsection{Examples for checking connections}
 
-\subsubsection{Examples for color}
+The code examples on the check/ folder are written as an introduction for the different outputs, including comments for the functionalities written in the TinyTrainable library, and notes for wiring each output correctly.
 
-\subsubsection{Examples for gesture}
+\subsubsection{Examples for each }
 
-\subsubsection{Examples for speech}
+The code examples on the color/, gesture/, and speech/ folders are written to use each input, and use them to output multimedia art through the different supported outputs.
 
 \section{Auxiliary tools}
 
