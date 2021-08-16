@@ -1570,10 +1570,6 @@ INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesi
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap1.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap1.tex
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/chap1.tex
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/tiny-trainable-instruments-early-protoype.jpg
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/tiny-trainable-instruments-early-protoype.jpg
 INPUT /Users/montoyamoraga/github/montoyamoraga/tiny-trainable-instruments/thesis/images/tiny-trainable-instruments-early-protoype.jpg
@@ -2458,7 +2454,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb
