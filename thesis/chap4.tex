@@ -213,7 +213,7 @@ When detecting color, the library acts as a wrapper of the Arduino{\_}APDS9960 l
 
 This \acrshort{RGB} data is stored in the microcontroller, to build a database that then is used to train a \acrshort{ML} algorithm, in particular a \acrfull{k-NN}, implemented with the Arduino{\_}KNN library. After the algorithm is trained, the instrument is able to detect between the three different colors.
 
-The main difference between this input and the other ones, is that both the data capture and the model training happen on the device, and it is not persistent: every time the Arduino microcontroller is turned on it needs to be trained again. This behavior has the upside of making the data input and the trained model never leave yor microcontroller, for enhanced privacy. The downside is that if you cannot preserve the data or the model, which are erased when the microcontroller is disconnected from power.
+The main difference between this input and the other ones, is that both the data capture and the model training happen on the device, and it is not persistent: every time the Arduino microcontroller is turned on it needs to be trained again. This behavior has the upside of making the data input and the trained model never leave your microcontroller, for enhanced privacy. The downside is that you cannot preserve the data or the model, which are erased when the microcontroller is disconnected from power.
 
 \subsection{Gesture input}
 
@@ -237,7 +237,7 @@ Even though for both the color input and the gesture input we use the Arduino to
 
 A contribution of this thesis is that it expands existing examples that rely on the cloud, in particular the freemium service Google Colaboratory \cite{website-google-colab} (or Colab for short). Training on the cloud has some advantages; for example, in this case the Google Colab resources are faster than training on my own and most computers, but I think this comes at the expense of losing privacy.
 
-These gesture database we are creating is not compromising information, or makes you identifiable for governments or corporations, like your fingerprints or your DNA. Because of this low-stakes, I don't discourage people from using Google Colab with this thesis, but I do want to stress that we can circumvent these corporate systems. For this reason, a contribution in my thesis is that I am including code and strategies for people to be able to train the models on their own computers, in a more private way.
+These gesture databases we are creating do not include compromising information, or make you identifiable for governments or corporations, like your fingerprints or your DNA. Because of this low-stakes, I don't discourage people from using Google Colab with this thesis, but I do want to stress that we can circumvent these corporate systems. For this reason, a contribution in my thesis is that I am including code and strategies for people to be able to train the models on their own computers, in a more private way.
 
 \subsection{Speech input}
 
@@ -251,7 +251,7 @@ The speech input allows artists to build Tiny Trainable instruments that can det
   \label{fig:arduino-tensorflow-lite-micro-speech}
 \end{figure}
 
-This Micro Speech example example is able to detect speech utterances, and print the result over serial port. It is made up of several files, and to make modifications you have to replace code in various of these files. The TinyTrainable library acts as a wrapper for this complexity, only exposing to the user some variables and methods for setting up the instrument.
+This Micro Speech example is able to detect speech utterances, and print the result over serial port. It is made up of several files, and to make modifications you have to replace code in various of these files. The TinyTrainable library acts as a wrapper for this complexity, only exposing to the user some variables and methods for setting up the instrument.
 
 The equivalent example on the TinyTrainable library that has the same functionality as Micro Speech is called speech{\_}serial. Currently it is only 34 lines of code, most of them comments or space, plus a file with the trained model. The TinyTrainable library also expands the original functionality of outputting messages over serial port, to include the other six outputs supported.
 
@@ -401,7 +401,7 @@ In the repository that holds this thesis document, available at \url{https://git
 
 \section{Educational material and workshop}
 
-In this thesis my aim is to acknowledge all the steps, dependencies, and labor needed to create the project. It has been built in small increments, which have been saved and published in the repositories that make up this project, because there is a great educational and scholarly value in documenting and reading the history of a project. This is also a a way to give back to the community of artists who generously sharing not only the output of their work, but also their process and their tools.
+In this thesis my aim is to acknowledge all the steps, dependencies, and labor needed to create the project. It has been built in small increments, which have been saved and published in the repositories that make up this project, because there is a great educational and scholarly value in documenting and reading the history of a project. This is also a way to give back to the community of artists who generously share not only the output of their work, but also their process and their tools.
 
 This educational aspect is present throughout the included documentation: the source code is commented, there are README files for helping navigate each repository and their folders, the TinyTrainable library includes examples with each section commented and explained, and the library complies with the Doxygen standard for generating automatic documentation.
 
