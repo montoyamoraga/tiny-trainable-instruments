@@ -11,9 +11,9 @@ This thesis is also the basis for further research, including the creation of su
 Concrete contributions:
 
 \begin{enumerate}
-  \item Publishing TinyTrainable, a software library for \acrshort{ML} with microcontrollers for multimedia art.
+  \item Publishing TinyTrainable, a software library for creating instruments with  \acrshort{ML} and microcontrollers for multimedia art.
   \item Design, writing, and teaching a 4-hour workshop for beginners, enthusiasts, and artists to teach with the TinyTrainable software library.
-  \item Publishing code and tutorials for creating custom databases for gesture and speech recognition.
+  \item Publishing code and tutorials for creating custom databases for gesture and speech recognition, and for deleting metadata for privacy concerns.
   \item Publishing custom-trained \acrshort{ML} models for gesture and speech recognition.
   \item Publishing code and tutorials for training \acrshort{ML} algorithms on the cloud and on personal computers for privacy and agency.
   \item Publishing other related software libraries, such as MaquinitasParams for communication with other instruments, and MaquinitasRitmos for rhythmic data.
@@ -24,6 +24,7 @@ Abstract contributions:
 \begin{enumerate}
  \item Demonstrating how a broader range of people can use \acrshort{ML} to support their creative expression.
  \item Developing strategies for artistic reappropation of the inherent imperfections and shortcoming of \acrshort{ML}.
+ \item Sharing the step by step process of conceptualizing and implementing a software library for artists.
 \end{enumerate}
 
 \section{Lessons learned}
@@ -42,23 +43,21 @@ Abstract contributions:
 
 This thesis relies on an Arduino microcontroller because of their open source nature, commercial availability, software and community support, and detailed documentation.
 
-In particular I picked the Arduino Nano 33 \acrshort{BLE} Sense, because of two main reasons at the time this project started in late 2020: it is the only Arduino supported by TensorFlow Lite for microcontrollers and featured in the HarvardX certificate on Tiny Machine Learning, and also because of its convenience of having embedded sensors, which makes it simpler and cheaper to acquire data for live interaction and for building custom databases, eliminating barriers to instrument makers and prototypers.
+In particular I picked the Arduino Nano 33 \acrshort{BLE} Sense, because of two main reasons at the time this project started in late 2020: it is currently the only Arduino supported by Google's TensorFlow Lite for microcontrollers library and the HarvardX certificate on tiny \acrshort{ML}. Also, because of its convenience of having embedded sensors, which makes it simpler and cheaper to acquire data for live interaction and for building custom databases, eliminating barriers to instrument makers and prototypers.
 
-Microcontrollers come and go. Most probably this board will be discontinued, but the strategies and software can be forked and adapted to other microcontrollers and software architectures. I am particularly looking in this thesis project to other open source microcontrollers, including other Arduino boards, PJRC Teensy and Adafruit Circuit Playground, which would enable the adoption of other software stacks, such as Python instead of C++, and also to other communities building multimedia instruments and experiences.
+Microcontrollers come and go. Most probably this Arduino will be discontinued, but the strategies and software presented in this thesis can be adapted to other microcontrollers and software architectures. I am particularly looking forward to this thesis project being ported to other Arduinos, PJRC Teensy, and Adafruit Circuit Playground. They feature different software stacks, such as Python instead of C++, and through that cater to a wider community of people building multimedia instruments and artwork.
 
-In terms of the outputs of the Tiny Trainable Instruments, I focused on creating many parallel multimedia approaches, including making sounds with piezo buzzers and MIDI, manipulating light with LEDs, creating movement and rhythm with servo motors, and printing text with thermal printers and screens. This is to appeal to a larger audience of artists and learners, interested in different mediums, and I hope this thesis project inspires more complex artworks and interactive experiences that this library currently allows, and that people can contribute back to the library to share these new capabilities with everyone.
+In terms of the outputs of the Tiny Trainable Instruments, I focused on creating many parallel multimedia approaches, including making sounds with piezo buzzers and MIDI, manipulating light with LEDs, creating movement and rhythm with servo motors, and printing text with thermal printers and screens. This is to appeal to a large audience of artists and learners, interested in different mediums. I hope this thesis project inspires the addition of further outputs, and that people can contribute back to the library to share these new capabilities with everyone.
 
-The Tiny Trainable Instruments are built with prototyping electronic breadboards, to make explicit their open-endedness, and to promote experimentation and lower barriers. A further iteration of this project would include the creation of custom printed circuit boards with fixed wiring, and also enclosures and packaging.
+The Tiny Trainable Instruments are built with prototyping electronic breadboards, to make explicit their open-endedness, and to promote experimentation and lower barriers. A further iteration of this project that I wish to make is creating custom \acrshortpl{PCB} with fixed wiring, and also enclosures and packaging.
 
 \subsection{Software for new instruments}
 
-This thesis has been published as an open source software library for Arduino. It promotes modularity and adaptability, where a Tiny Trainable Instrument can be any combination of the multiple inputs and outputs.
+This thesis has been published as an open source software library for Arduino. It promotes modularity and adaptability: a Tiny Trainable Instrument can be any combination of the multiple inputs and outputs. The file structure of the source code and the software dependencies of this library were also written with flexibility in mind, to encourage the remix and adaptation of this library to further projects.
 
-The file structure of the source code and the software dependencies of this library were also built with flexibility in mind, to encourage the remix and adaptation of this library to future projects.
+A challenging aspect of this project is the breadth of the disciplines combined, and its novel application of \acrshort{ML} in microcontrollers. There is a community of makers creating open source standalone multimedia instruments, but the required skills are still hard to acquire. I hope this project helps fostering a new generation of instrument makers, who can learn from this project, like I have learned from my favorite makers.
 
-A challenging aspect of this project is the breadth of the disciplines combined, and its novel application of machine learning in microcontrollers. As discussed in previous chapters, there is a trend and new wave of builders and makers creating standalone multimedia instruments, based on open operating systems like Linux, and/or different microcontrollers. 
-
-Despite the existence of artists and makers building standalone computational instruments, these skills are still hard to acquire. Additionally, the principles of this project, including being as cheap as possible, and as open as possible, are designed to encourage experimentation and hacking, but also can pose additional challenges. I hope this project encourages people to learn how to make instruments, and also engages in discourse about the creation of new curricula for the next generation of instrument makers and artists.
+Additionally, the principles of this project, including being as cheap as possible, and as open as possible, are designed to encourage experimentation and hacking, but also can pose additional challenges. I hope this project encourages people to learn how to make instruments, and also engages in discourse about the creation of new curricula for the next generation of instrument makers and artists.
 
 Another challenging aspect of writing software for multimedia instruments is its licensing, both choosing a license and also respecting and understanding the license of other code and resources we are using. The dependencies of this software are mostly other libraries by Arduino, Google, Adafruit, and with different licenses including public domain, MIT, and Apache. I hope this document helps to navigate these legal complexities and that this project helps artists and enthusiasts to navigate this landscape and overcome these barriers.
 
