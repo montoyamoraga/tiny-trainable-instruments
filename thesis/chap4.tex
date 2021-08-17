@@ -38,8 +38,6 @@ Training a device is particularly attractive for artists working with sensors. T
   \label{fig:arduino-data-stream}
 \end{figure}
 
-TOD: what did you do, why did you do it, and how does it work
-
 If we wanted to use this sensor at home to detect a red object, we would start by taking notes of the \acrshort{RGB} values of the sensor when the red object is close to it, and would then include this value as a threshold for detection on the software uploaded to the microcontroller. Since the \acrshort{RGB} sensor needs consistent lighting to work effectively, we need to be especially careful with the lighting conditions; if they change, we have to look at the stream of data to find the new value for red, and then update the code and reprogram the microcontroller.
 
 This is a tedious process, and it inspired me to work on this thesis, so that I could help artists use \acrshort{ML} and microcontrollers to capture data, and then train a model, letting the algorithm figure out the correct answer without one having to write more code!
@@ -153,7 +151,7 @@ The outputs are actuators that  rely on extra hardware, and in some cases, exter
 
 The behavior of the TinyTrainable library is already designed, and is explained in this chapter. The software implementation is in flux, and I do my best to publish new releases with notes on how the library has changed over time, including bug fixes, clearer language for the examples, and different ways of interfacing with the methods and variables of the TinyTrainable library.
 
-This library is a repository hosted on GitHub, to foster collaboration via \glspl{issue} and \glspl{pull-request}. Each commit is documented \glspl{commit}, to show people the whole process and effort involved in writing this thesis project.
+This library is a repository hosted on GitHub, to foster collaboration via \glspl{issue} and \glspl{pull-request}. Each \glspl{commit} is annotated and commented, in order to show people the whole process and effort involved in writing this thesis project.
 
 \subsection{Repository structure}
 
