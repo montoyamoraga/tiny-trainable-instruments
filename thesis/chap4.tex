@@ -20,7 +20,7 @@ Here is an example of a yellow handheld sampler with an included microphone and 
   \label{fig:critter-and-guitari-kaleidoloop-battery}
 \end{figure}
 
-\emph{Tiny} is also a nod to the emerging field and community of tiny \acrshort{ML}, including - most importantly for me - the tinyMLx professional certificate\cite{website-edx-harvardx-tinymlx-professional-certificate} offered by HarvardX, that I completed while working on this project. I have high hopes that this field empowers people to make technology that is not dependent on the cloud, big data, or centralized servers.
+\emph{Tiny} is also a nod to the emerging field and community of tiny \acrshort{ML}, including - most importantly for me - the tinyMLx professional certificate\cite{website-edx-harvardx-tinymlx-professional-certificate} offered by HarvardX, that I completed while working on this project. I have high hopes that this field can empower people to make technology that is not dependent on the cloud, big data, or centralized servers.
 
 With that, the \emph{tiny} in \emph{Tiny Trainable Instruments} comes from them being handheld devices built on breadboards, from their being able to be powered from a generic USB power bank, and from their using tiny \acrshort{ML} processes for interpreting the data from their inputs and reacting via their outputs.
 
@@ -64,7 +64,7 @@ On top of that, my personal definition of \emph{instrument} includes having free
 
 The liberties that \emph{instruments} make me feel are a huge contrast to the computational tools I am using for crafting this thesis. I am typing on an Apple Macbook, and even though I like its keyboard and portability, I am aware that I face restrictions: Apple wants developers to pay to be certified developers, and if I update my operating system I won't be able to run 32 bits apps anymore. This thesis is hosted on GitHub, which is a service blocked for developers in certain countries due to U.S.A. sanctions \cite{website-github-trade-controls}. I am from a country recently affected by a dictatorship and human rights violations and some of my relatives have been exiled, so I am particularly sensitive to policies that limit people's freedom of speech and computing.
 
-This discomfort was also a catalyst for the creation of \textit{Tiny Trainable Instruments}, which are based on open source off-the-cloud microcontrollers, and nobody can censor me when I use them for arts, thus being \emph{instruments}, as gratifying as playing with my guitar and bicycle, and I hope you feel that joy too while spending time with this thesis.
+This discomfort was also a catalyst for the creation of \textit{Tiny Trainable Instruments}, which are based on open source off-the-cloud microcontrollers, and nobody can censor me when I use them for arts, thus being \emph{instruments}, as gratifying as playing with my guitar and bicycle. I hope you feel that joy too while spending time with this thesis.
 
 In this section I will explain the process and the results of each component of this thesis:
 
@@ -203,7 +203,7 @@ To build a Tiny Trainable Instrument, you also need a breadboard, where you can 
 
 As I mentioned before, for the inputs no extra wiring is needed, since we are using the embedded sensors of the Arduino microcontroller to detect the three possible inputs: color, gesture, and speech. These inputs were designed to foster different behaviors with the library, which are detailed in the following sections.
 
-I decided that each input will be able to detect three different categories, because I thought that more categories would make the instruments more cumbersome to train, needing larger databases, and longer training times. Hopefully in the future I can adapt the TinyTrainable library to make this a variable number of categories it can classify, but for now this is hardcoded in the library. Nonetheless, if you want to use the library for your own project with a different number of categories, since the library is open source and documented, it should be easy to adapt it to your needs.
+I decided that each input would be able to detect only three different categories, because I thought that more categories would make the instruments more cumbersome to train, needing larger databases, and longer training times. Hopefully in the future I can adapt the TinyTrainable library to make this a variable number of categories it can classify, but for now this is hardcoded in the library. Nonetheless, if you want to use the library for your own project with a different number of categories, since the library is open source and documented, it should be easy to adapt it to your needs.
 
 \subsection{Color input}
 
@@ -227,9 +227,9 @@ The gesture input allows artists to build Tiny Trainable instruments that can de
   \label{fig:arduino-tensorflow-lite-magic-wand}
 \end{figure}
 
-This Magic Wand example is able to detect gestures, and print the result over serial port. It is made up of several files, and to make modifications you have to replace code in various of these files. The TinyTrainable library acts as a wrapper for this complexity, only exposing to the user some variables and methods for setting up the instrument.
+This Magic Wand example is able to detect gestures, and print the result over a serial port. It is made up of several files, and to make modifications you have to replace code in various of these files. The TinyTrainable library acts as a wrapper for this complexity, only exposing to the user some variables and methods for setting up the instrument.
 
-The equivalent example on the TinyTrainable library that has the same functionality as Magic Wand is called gestures{\_}serial. Currently it is only 36 lines of code, most of them comments or space, plus a file with the trained model. The TinyTrainable library also expands the original functionality of outputting messages over serial port, to include the other six outputs supported.
+The equivalent example in the TinyTrainable library that has the same functionality as Magic Wand is called gestures{\_}serial. Currently it is only 36 lines of code, most of them comments or space, plus a file with the trained model. The TinyTrainable library also expands the original functionality of outputting messages over serial port, to include the other six outputs supported.
 
 When detecting gestures, the TinyTrainable library acts as a wrapper of the Arduino{\_}LSM9DS1 library \cite{repository-arduino-LSM9DS1} , needed to access the data of the embedded \acrfull{IMU}. The library includes an Arduino sketch to capture the data of the three gestures we want to recognize, which then needs to be saved on a computer. These files with the database are imported in a Jupyter notebook to train the \acrshort{ML} model with Google TensorFlow. The trained model is then used with the TinyTrainable library and uploaded to the Arduino microcontroller to detect the three different gestures.
 
@@ -237,7 +237,7 @@ Even though for both the color input and the gesture input we use the Arduino to
 
 A contribution of this thesis is that it expands existing examples that rely on the cloud, in particular the freemium service Google Colaboratory \cite{website-google-colab} (or Colab for short). Training on the cloud has some advantages; for example, in this case the Google Colab resources are faster than training on my own and most computers, but I think this comes at the expense of losing privacy.
 
-These gesture databases we are creating do not include compromising information, or make you identifiable for governments or corporations, like your fingerprints or your DNA. Because of this low-stakes, I don't discourage people from using Google Colab with this thesis, but I do want to stress that we can circumvent these corporate systems. For this reason, a contribution in my thesis is that I am including code and strategies for people to be able to train the models on their own computers, in a more private way.
+These gesture databases we are creating do not include compromising information, or make you identifiable for governments or corporations, like your fingerprints or your DNA. Because of these low-stakes, I don't discourage people from using Google Colab with this thesis, but I do want to stress that we can circumvent these corporate systems. For this reason, a contribution of my thesis is that I am including code and strategies for people to be able to train the models on their own computers, in a more private way.
 
 \subsection{Speech input}
 
@@ -251,7 +251,7 @@ The speech input allows artists to build Tiny Trainable instruments that can det
   \label{fig:arduino-tensorflow-lite-micro-speech}
 \end{figure}
 
-This Micro Speech example is able to detect speech utterances, and print the result over serial port. It is made up of several files, and to make modifications you have to replace code in various of these files. The TinyTrainable library acts as a wrapper for this complexity, only exposing to the user some variables and methods for setting up the instrument.
+This Micro Speech example is able to detect speech utterances, and print the result over a serial port. It is made up of several files, and to make modifications you have to replace code in various of these files. The TinyTrainable library acts as a wrapper for this complexity, only exposing to the user some variables and methods for setting up the instrument.
 
 The equivalent example on the TinyTrainable library that has the same functionality as Micro Speech is called speech{\_}serial. Currently it is only 34 lines of code, most of them comments or space, plus a file with the trained model. The TinyTrainable library also expands the original functionality of outputting messages over serial port, to include the other six outputs supported.
 
@@ -261,7 +261,7 @@ In a similar fashion as the gesture input, the database files are then imported 
 
 The speech input is the most complex and time-consuming one to implement, and we need a computer for both capturing the data and training the model. A positive aspect is that just like the gesture input, the training is persistent, the Arduino microcontroller only needs to be trained once for the same database, and remembers the model every time it is turned on, unlike the color input which forgets the trained model.
 
-Just like the gesture input, the speech input can be trained either on the cloud using Google Colab, or can be trained on your machine. Because of its complexity, I do advise that the time difference is significant: on my Macbook the model took between one and two days to train, in comparison with the gesture model which takes around two hours in my machine.
+Just like the gesture input, the speech input can be trained either on the cloud using Google Colab, or can be trained on your machine. Because of its complexity, I do advise that the time difference is significant: on my Macbook the model took between one and two days to train, in comparison with the gesture model which takes around two hours on my machine.
 
 The speech database we built is the most compromising one, since it is identifiable, and it could even be used for cloning our voice with deepfake techniques. So this is the one I encourage people to be more mindful about when publishing their custom databases.
 
@@ -285,9 +285,9 @@ The buzzer is a device that can vibrate and that emits sound. The TinyTrainable 
   \label{fig:materials-adafruit-buzzer}
 \end{figure}
 
-I included support for the buzzer because of its low cost and low fidelity sound. I think these specifications make a great contrast with the high complexity of the technology involved in doing tiny \acrshort{ML}. I think of Tiny Trainable Instruments with a buzzer output, to be cutting-edge technology driving a cheap buzzing sound. This is an inviting and playful combination that I also want to convey in the other outputs of this project.
+I included support for the buzzer because of its low cost and low fidelity sound. I think these specifications make a great contrast with the high complexity of the technology involved in doing tiny \acrshort{ML}. I consider Tiny Trainable Instruments with buzzer output to be cutting-edge technology driving a cheap buzzing sound. This is an inviting and playful combination that I also want to convey in the other outputs of this project.
 
-This output requires no additional libraries, the Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the buzzer.
+This output requires no additional libraries; the Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the buzzer.
 
 \subsection{LED output}
 
@@ -315,13 +315,13 @@ This output requires no additional libraries, the Arduino microcontroller by its
   \label{fig:materials-adafruit-midi-jack}
 \end{figure}
 
-MIDI can be used for transmitting all sorts of data, and thesis examples how to use MIDI to control different aspects of MIDI-enabled instruments, including synthesizers and drum machines. As a bonus, I wrote examples to interface with three synthesizers from the volca series by Korg: volca bass (analog bass machine), volca beats (drum machine), and volca keys (polyphonic synthesizer). I picked these synthesizers to have both melodic and percussive musical elements, because of their huge popularity, their relatively low price of 150.00 USD, their extensive MIDI capabilities, and because I am a huge fan of the instrument designs by Tatsuya Takahashi \cite{website-tatsuya-takahashi}.
+MIDI can be used for transmitting all sorts of data, and thesis examples show how to use MIDI to control different aspects of MIDI-enabled instruments, including synthesizers and drum machines. As a bonus, I wrote examples to interface with three synthesizers from the volca series by Korg: volca bass (analog bass machine), volca beats (drum machine), and volca keys (polyphonic synthesizer). I picked these synthesizers to have both melodic and percussive musical elements, because of their huge popularity, their relatively low price of 150.00 USD, their extensive MIDI capabilities, and because I am a huge fan of the instrument designs by Tatsuya Takahashi \cite{website-tatsuya-takahashi}.
 
 This output requires no additional libraries, since the Arduino microcontroller by itself is able to communicate via serial protocol, and the MIDI protocol is a subset of serial, at a particular \gls{baud} rate.
 
 \subsection{Printer output}
 
-I used to associate printing with expensive toners and ink cartridges, and mostly frustration. This radically changed when I took a physical computing class, where I learned about thermal printers and how I could use Arduino microcontrollers to drive them! I find these thermal printers amazing because they are mostly a one-time investment and they don't need anything besides paper and power, so I have used them for interactive art installations since then. That is why I decided to include support for them on this project.
+I used to associate printing with expensive toners and ink cartridges, and mostly with frustration. This radically changed when I took a physical computing class, where I learned about thermal printers and how I could use Arduino microcontrollers to drive them! I find these thermal printers amazing because they are mostly a one-time investment and they don't need anything besides paper and power, so I have used them for interactive art installations since then. That is why I decided to include support for them on this project.
 
 The thermal printer kit I recommend on the bill of materials is around 60.00 USD, and includes the power supply and paper roll. I picked this one because it is sold and supported by Adafruit, and I am a huge fan of their software libraries and tutorials. 
 
@@ -335,7 +335,7 @@ The thermal printer kit I recommend on the bill of materials is around 60.00 USD
 
 With this output, you can create a Tiny Trainable Instrument that can print different texts and in various fonts and formatting, depending on the classification of the input. I hope this inspires a new generation of computer poets and interactive literature!
 
-This output requires 1 additional library, the Adafruit Thermal Printer library, which is open source and includes several examples for expanding the functionality of it. If you want to use an alternative hardware or software for thermal printing, I recommend you modify the TinyTrainable library, and include any other additional software you want.
+This output requires one additional library, the Adafruit Thermal Printer library, which is open source and includes several examples for expanding the functionality of it. If you want to use an alternative hardware or software for thermal printing, I recommend you modify the TinyTrainable library, and include any other additional software you want.
 
 \subsection{Screen output}
 
