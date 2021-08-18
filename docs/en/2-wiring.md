@@ -63,9 +63,7 @@ You uploaded your first example to your Arduino, which is now busy sending the m
 
 ## Ground
 
-Notice that the 14th pin on the left side and the 12th pin on the right side are labelled with white paint; this marks ground, also identified on the pinout. Take a wire (preferably green by convention for ground) and connect it from I12 to anywhere on the top righthand negative rail (the upper 25 pins), like this:
-
-![Ground wire](../../docs/images/2-ground-wire.jpg "Ground wire")
+Notice that the 14th pin on the left side and the 12th pin on the right side are labelled with white paint; this marks ground, also identified on the pinout. Take a wire (preferably green by convention for ground) and connect it from I12 to anywhere on the top righthand negative rail (the upper 25 pins).
 
 ## Outputs
 
