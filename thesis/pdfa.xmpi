@@ -65,6 +65,7 @@
    <dc:title><rdf:Alt><rdf:li xml:lang="x-default">Tiny Trainable Instruments</rdf:li></rdf:Alt></dc:title>
    <dc:creator><rdf:Seq><rdf:li>Aarón Montoya-Moraga</rdf:li></rdf:Seq></dc:creator>
    <dc:rights><rdf:Alt><rdf:li xml:lang="x-default">Copyright © 2021 "Aarón Montoya-Moraga"</rdf:li></rdf:Alt></dc:rights>
+   <dc:description><rdf:Alt><rdf:li xml:lang="x-default">Media arts instruments made with machine learning and microcontrollers.</rdf:li></rdf:Alt></dc:description>
    <dc:subject><rdf:Bag><rdf:li>machine learning</rdf:li>
      <rdf:li>media arts</rdf:li>
      <rdf:li>instrument making</rdf:li></rdf:Bag></dc:subject>
@@ -79,9 +80,9 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> 
    <xmp:CreatorTool>LaTeX with hyperref</xmp:CreatorTool> 
-   <xmp:ModifyDate>2021-08-17T21:46:11-04:00</xmp:ModifyDate> 
-   <xmp:CreateDate>2021-08-17T21:46:11-04:00</xmp:CreateDate> 
-   <xmp:MetadataDate>2021-08-17T21:46:11-04:00</xmp:MetadataDate> 
+   <xmp:ModifyDate>2021-08-18T14:16:17-04:00</xmp:ModifyDate> 
+   <xmp:CreateDate>2021-08-18T14:16:17-04:00</xmp:CreateDate> 
+   <xmp:MetadataDate>2021-08-18T14:16:17-04:00</xmp:MetadataDate> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpRights = "http://ns.adobe.com/xap/1.0/rights/"> 
    <xmpRights:Marked>True</xmpRights:Marked>
@@ -89,7 +90,7 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"> 
    <xmpMM:DocumentID>uuid:DF005B57-2A06-8753-7167-92D8CE935460</xmpMM:DocumentID> 
-   <xmpMM:InstanceID>uuid:614F1194-E4DB-17EE-E1FA-26D3B314D5B6</xmpMM:InstanceID> 
+   <xmpMM:InstanceID>uuid:A8BAA9EB-92CB-4D95-DCEC-A63F2FB091F7</xmpMM:InstanceID> 
   </rdf:Description> 
  </rdf:RDF> 
 </x:xmpmeta> 
