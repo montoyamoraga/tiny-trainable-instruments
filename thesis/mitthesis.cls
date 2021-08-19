@@ -372,6 +372,8 @@
 
 \def\department#1{\gdef\@department{#1}}
 
+\def\school#1{\gdef\@school{#1}}
+
 % If you are getting two degrees, use \and between the names.
 \def\degree#1{\setbox0\hbox{#1}	 %for side effect of setting \@degreeword
   \gdef\@degree{#1}}
@@ -442,7 +444,9 @@ reserved.\par\permission}}
   \signature{Certified by}{#1 \\ #2 \\ Thesis Supervisor}}
   \setbox\@abstractsupervisor\vbox{\unvbox\@abstractsupervisor
   \vskip\baselineskip \def\baselinestretch{1}\@normalsize 
-  \par\noindent Thesis Supervisor: #1 \\ Title: #2}}
+  \par\noindent Thesis advisor: \\
+  #1 \\ 
+  #2}}
 
 % department chairman, not thesis committee chairman
 \def\chairman#1#2{\gdef\@chairmanname{#1}\gdef\@chairmantitle{#2}}
@@ -457,8 +461,7 @@ by\par
 \par
 \@prevdegrees
 \par
-\choosecase{Submitted to the} \choosecase{\@department} \\
-\choosecase{in partial fulfillment of the requirements for the}
+\choosecase{Submitted to the} \choosecase{\@department}, \choosecase{\@school}, \choosecase{in partial fulfillment of the requirements for the}
 \choosecase{\@degreeword} 
 \choosecase{of}
 \par
@@ -490,9 +493,10 @@ by \\
 \@author \\[\baselineskip]}
 \par
 \def\baselinestretch{1}\@normalsize
-Submitted to the \@department \\
-on \@thesisdate, in partial fulfillment of the \\
-requirements for the \@degreeword\ of \\
+Submitted to the \@department, \@school, on \@thesisdate, in partial fulfillment of the requirements for the \@degreeword\ of \\
+% Submitted to the \@department, \\
+% \@school, on \@thesisdate, \\
+% in partial fulfillment of the requirements for the \@degreeword\ of \\
 \@degree
 \end{center}
 \par
