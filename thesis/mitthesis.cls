@@ -261,6 +261,9 @@
 \newcommand{\dlmark}[1]{\renewcommand{\draftlmark}{#1}}
 \newcommand{\dmark}[1]{\drmark{#1}\dlmark{#1}}
 
+% recommendation by nikhil singh
+\newcommand{\theauthor}{Author Name}
+
 % Format for draft of thesis.  Define our own PageStyle -
 % Just like headings, but has foot lines with the date and warning
 
@@ -535,6 +538,7 @@ Submitted to the \@department, \@school, on \@thesisdate, in partial fulfillment
 
 \def\signature#1#2{\par\noindent#1\dotfill\null\\*
   {\raggedleft #2\par}}
+
 
 \def\abstract{\subsection*{Abstract}\small\def\baselinestretch{1}\@normalsize}
 \def\endabstract{\par}
