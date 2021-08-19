@@ -262,35 +262,33 @@
 \newcommand{\dmark}[1]{\drmark{#1}\dlmark{#1}}
 
 % recommendation by nikhil singh
-\newcommand{\theauthor}{Aarón Montoya-Moraga}
-
-%  nikhil singh suggests
 \newcommand{\signaturepage}{
 \newpage
 \pagestyle{plain}
 \begin{center}
-  \Large \@title \\ \vspace*{12pt}
+  \title{Tiny Trainable Instruments}
+  \Large {\bf \@title} \\
   by\\
   \vspace{12pt}
-  \theauthor\\
+  \@author\\
   \vspace{20pt}
   This thesis has been reviewed and approved by the following committee member\\
   \vfill
   \signature{Tod Machover}{Muriel R. Cooper Professor of Music and Media \\ MIT Media Lab}
   \newpage
-  \Large \@title \\ \vspace*{12pt}
+  \Large {\bf \@title} \\
   by\\
   \vspace{12pt}
-  \theauthor\\
+  \@author\\
   \vspace{20pt}
   This thesis has been reviewed and approved by the following committee member\\
   \vfill
   \signature{Zach Lieberman}{Adjunct Associate Professor of Media Arts and Sciences \\ MIT Media Lab}
   \newpage
-  \Large \@title \\ \vspace*{12pt}
+  \Large {\bf \@title} \\
   by\\
   \vspace{12pt}
-  \theauthor\\
+  \@author\\
   \vspace{20pt}
   This thesis has been reviewed and approved by the following committee member\\
   \vfill
