@@ -1,8 +1,47 @@
 \chapter{Tiny Trainable Instruments}
 
-This chapter describes the process of conceptualizing and developing this antidisciplinary thesis project, living at the interstitial spaces between the fields of \acrlong{AI}, electrical engineering, computer science, media arts, music, and pedagogy, among others.
+This chapter describes the process of conceptualizing and developing Tiny Trainable Instruments. It is an antidisciplinary thesis project living at the interstitial spaces between the fields of \acrlong{AI}, electrical engineering, computer science, media arts, music, and pedagogy, among others.
 
-TODO: start this section with a vivid description of you vision for Tiny Trainable Instruments, what they do, basically how they work, and why they are significant and interesting. Without that, this feels a bit too much like a user's manual, not enough like a thesis.
+The Tiny Trainable Instruments aims to be an inviting introduction to ethical \acrshort{ML} and instrument making with microcontrollers. I wish artists and educators are not discouraged by the 
+
+More so, I hope artists can use projects like this to have hands-on experience, expose the pitfalls of these technologies and techniques, and advance the discourse and regulations surrounding \acrshort{ML}. I consider it a violation and a scandal that police has access to technologies such as facial recognition technologies, that recruiter screen applicants with algorithms.
+
+I want to live in a world where there is no facial recognition technologies, no . As you learn in comedy, 
+
+I hope this project empowers artists to create and be critical of industrial \acrshort{ML}.
+
+This project is about respecting and understanding how to make our own databases and program our own \acrshort{ML} models for artistic purposes.
+
+your privacy, rely on small databases that you can build yourself, and after deploying, there are no backdoors, no outside intervention, no . They are built as a direct response against corporate and government data collection, face recognition technology.
+
+Up until working on this project, I had very mixed feelings about \acrshort{ML}: I enjoyed its creative potential, and using tools such as RunwayML and ml5.js, but also experienced discomfort about the increasing data collection by corporations, deployment of facial recognition technologies, and the 
+
+ facial recognition technologies, 
+
+
+
+ dabbled in creative \acrshort{ML}, and mostly felt uncomfortable with the developments in smart homes, facial recognition technologies, and data recollection by corporations.
+
+
+Up until starting this research, I thought \acrshort{ML} relied on expensive and restrictive hardware, and I feared for my privacy and agency, in the form of data leaks, and bias and lack of representation of bodies and voices like me on the existing databases and models.
+
+I think 
+
+Up until working o, I had used \acrshort{ML} on my computer and on the browser, mainly on my computer with tools such as ml5.js and RunwayML. After I became aware of the rising field of tiny \acrshort{ML}, I saw the creative potential of it, to not only port 
+leveraging microcontrollers to create databases, train models, and more importantly to this project, deploying \acrshort{ML}.
+
+
+With this thesis I hope that you train \acrshort{ML} models that not only react to your own custom database, and understand your accent, but also that make you feel safe, which I think is a requisite for being able to create.
+
+This project lays the basic infrastructure, for people 
+
+Up until working on this project, I had used \acrshort{ML} on my computer and on the browser, but never on slower microcontrollers. A the uptake of tiny \acrshort{ML}, 
+
+These instruments are powered by simple enough \acrshort{ML} algorithms and models, that can be uploaded to a microcontroller.
+
+This thesis intersects two big trends: use of \acrshort{ML} for arts, and  has recently seen a huge uptake of use by artists in their artwork, this field still face many barriers of entry, including high costs and specialized hardware.
+
+TODO: start this section with a vivid description of you vision for Tiny Trainable Instruments, what they do, basically how they work, and why they are significant and interesting. 
 
 In the next section I explain my personal definitions of the words that make up the title of this project.
 
@@ -86,7 +125,7 @@ This project's main contribution is the TinyTrainable Arduino software library, 
   \label{fig:materials-arduino-nano-33-ble-sense}
 \end{figure}
 
-The TinyTrainable library is flexible, since it allows one to combine any of the three available inputs with any of the seven possible outputs, for a total of twenty-one possibilities summarized on \ref{tiny-trainable-instruments-inputs-outputs-matrix}:
+The TinyTrainable library is flexible, since it allows one to combine any of the three available inputs with any of the seven possible outputs. Table \ref{tiny-trainable-instruments-inputs-outputs-matrix} shows the twenty-one different possibilities, to inspire a diverse crowd of artists working in different disciplines (poets, musicians, lighting designers) to learn the TinyTrainable library and include \acrshort{ML} to their practice.
 
 \begin{table}[ht]
     \centering
@@ -162,6 +201,10 @@ The TinyTrainable library is a repository hosted at \url{https://github.com/mont
 The structure of the folders follows two simultaneous specifications: it includes the necessary file and folder names for being packaged and indexed as an Arduino Library, and on top of that it complies with GitHub guidelines for licensing libraries, and for automatic workflows for code testing.
 
 The source code of the library is written in C++ and is located in the src/ folder. The examples live in the examples/ folder, and are written in the Arduino language. The examples are divided into four folders: one for each input, and one extra for checking the wiring of each output. In the assets/ folder, I included some C++ files with trained models for the examples.
+
+This organized structure is to encourage other artists and programmers to dive deep in this project, past the public-facing code examples. The invitation is to read the source code for each input, output, and \acrshort{ML} strategy, and their packaging to make it work as a cohesive software library that is published to be usable to others.
+
+I want to build a wider community of artists working with ethical \acrshort{ML}, and building software tools and hardware instruments. The modularity and open source nature of this project is so that this projects outlives itself, and that its different sections can be incorporated into further projects by myself and anyone interested in doing so.
 
 \subsection{Installation}
 
