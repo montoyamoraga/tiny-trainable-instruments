@@ -496,7 +496,10 @@ by \\
 \@author \\[\baselineskip]}
 \par
 \def\baselinestretch{1}\@normalsize
-Submitted to the \@department, \@school, on \@thesisdate, in partial fulfillment of the requirements for the \@degreeword\ of \\
+{\small Submitted to the \@department, \\
+\@school, on \@thesisdate, \\
+in partial fulfillment of the requirements for the \@degreeword\ of }
+\par
 % Submitted to the \@department, \\
 % \@school, on \@thesisdate, \\
 % in partial fulfillment of the requirements for the \@degreeword\ of \\
