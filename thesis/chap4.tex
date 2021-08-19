@@ -1,33 +1,38 @@
 \chapter{Tiny Trainable Instruments}
 
-This chapter describes the process of conceptualizing and developing Tiny Trainable Instruments. It is an antidisciplinary thesis project living at the interstitial spaces between the fields of \acrlong{AI}, electrical engineering, computer science, media arts, music, and pedagogy, among others.
+This chapter describes the process of conceptualizing and developing the project Tiny Trainable Instruments. It is an antidisciplinary thesis living at the interstitial spaces between the fields of \acrlong{AI}, electrical engineering, computer science, media arts, music, and pedagogy, among others.
 
-In contrast to the current state of industrial \acrshort{ML} with its harmful algorithmic bias and oppressive facial recognition technologies, Tiny Trainable Instruments hopes to be a platform for critical, safe, and artistic creation.
+This project is a hands-on invitation to ethical creative \acrshort{ML} and instrument making with microcontrollers. Also, a critical response to the current state of industrial \acrshort{ML} with its harmful algorithmic bias and oppressive facial recognition technologies.
 
-This project is a hands-on invitation to ethical creative \acrshort{ML} and instrument making with microcontrollers. 
+It is a wrapper that incorporates the recent developments of tiny \acrshort{ML} and adapts them for multimedia art, with the hope that artists and enthusiasts of different disciplines can create ethical and privacy-respecting instruments powered by \acrshort{AI}. 
 
-This project is about respecting and understanding how to make our own databases and program our own \acrshort{ML} models for artistic purposes.
+This project lays down the complete infastructure, for people to learn how to use microcontrollers and sensors, in order to create their own databases, and then train and deploy \acrshort{ML} algorithms that control multiple artistic actuators.
 
-your privacy, rely on small databases that you can build yourself, and after deploying, there are no backdoors, no outside intervention, no . They are built as a direct response against corporate and government data collection, face recognition technology.
+With the infrastructure laid by Tiny Trainable Instruments, they now can create devices that can recognize their voice and words, their movement and physical gestures in space, and colors.
 
-Up until working on this project, I had very mixed feelings about \acrshort{ML}: I enjoyed its creative potential, and using tools such as RunwayML and ml5.js, but also experienced discomfort about the increasing data collection by corporations, deployment of facial recognition technologies, and the 
+lays the basic infrastructure
 
-Up until starting this research, I thought \acrshort{ML} relied on expensive and restrictive hardware, and I feared for my privacy and agency, in the form of data leaks, and bias and lack of representation of bodies and voices like me on the existing databases and models.
+This framework of software and hardware 
 
-Up until working o, I had used \acrshort{ML} on my computer and on the browser, mainly on my computer with tools such as ml5.js and RunwayML. After I became aware of the rising field of tiny \acrshort{ML}, I saw the creative potential of it, to not only port 
-leveraging microcontrollers to create databases, train models, and more importantly to this project, deploying \acrshort{ML}.
+ foster artistic experimentation, 
 
-With this thesis I hope that you train \acrshort{ML} models that not only react to your own custom database, and understand your accent, but also that make you feel safe, which I think is a requisite for being able to create.
+In order to promote 
 
-This project lays the basic infrastructure, for people 
+this field still face many barriers of entry, including high costs and specialized hardware.
+
+This project is about respecting and understanding how to make your own databases and program your own \acrshort{ML} models for artistic purposes, while respecting your privacy, building your own small databases and deploying to ecosystems with no backdoors or restrictions by corporations or governments.
+
+but also that make you feel safe, which I think is a requisite for being able to create.
+
+Tiny Trainable Instruments is a platform for critical, safe, and artistic creation, by using microcontrollers as a low cost and low level alternative to other computational systems with more restrictive barriers, such as high costs, geographical regulations, required certifications for developers, among others.
+
+With this thesis I hope that you train \acrshort{ML} models that not only react to your own custom database, and understand your accent, 
 
 Up until working on this project, I had used \acrshort{ML} on my computer and on the browser, but never on slower microcontrollers. A the uptake of tiny \acrshort{ML}, 
 
-These instruments are powered by simple enough \acrshort{ML} algorithms and models, that can be uploaded to a microcontroller.
-
-This thesis intersects two big trends: use of \acrshort{ML} for arts, and  has recently seen a huge uptake of use by artists in their artwork, this field still face many barriers of entry, including high costs and specialized hardware.
-
 TODO: start this section with a vivid description of you vision for Tiny Trainable Instruments, what they do, basically how they work, and why they are significant and interesting. 
+
+EXPLAIN HOW THIS IS AN ART PROJECT, WHY THE POLITICAL CONTEXT MAKES SENSE FOR ME AND EVRYBODY, 
 
 In the next section I explain my personal definitions of the words that make up the title of this project.
 
@@ -292,7 +297,7 @@ The speech input is the most complex and time-consuming one to implement, and we
 
 Just like the gesture input, the speech input can be trained either on the cloud using Google Colab, or can be trained on your machine. Because of its complexity, I do advise that the time difference is significant: on my Macbook the model took between one and two days to train, in comparison with the gesture model which takes around two hours on my machine.
 
-The speech database we built is the most compromising one, since it is identifiable, and it could even be used for cloning our voice with deepfake techniques. So this is the one I encourage people to be more mindful about when publishing their custom databases.
+The speech database we built is the most compromising one, since it is identifiable, and it could even be used for cloning your voice with deepfake techniques. So this is the one I encourage people to be more mindful about when publishing their custom databases.
 
 \subsection{Outputs}
 
@@ -408,7 +413,7 @@ This final output is one of the cheapest ones, along with the buzzer, and that i
   \label{fig:materials-adafruit-servo}
 \end{figure}
 
-I see the servo motor as a very versatile output, which can be thought of as a generator of movement. So our Tiny Trainable Instrument can dance in space, or point at different places. For this library, I programmed support for moving the servo at different tempos, even with some random noise for hiccupy movement, so that the servo motor can be thought of as a robotic arm for drumming or tapping on different surfaces for music. In this image, you can see an example of this with some tape and wire for extending the arm of the servo motor.
+I see the servo motor as a very versatile output, which can be thought of as a generator of movement. So your Tiny Trainable Instrument can dance in space, or point at different places. For this library, I programmed support for moving the servo at different tempos, even with some random noise for hiccupy movement, so that the servo motor can be thought of as a robotic arm for drumming or tapping on different surfaces for music. In this image, you can see an example of this with some tape and wire for extending the arm of the servo motor.
 
 This output requires no additional libraries. The Arduino microcontroller by itself is able to generate the \acrfull{PWM} output required to drive the servo.
 
