@@ -1,10 +1,22 @@
 \chapter{Introduction}
 
+This thesis is the capstone project of my Master's program between the academic years 2019-2021 in the Media Arts and Sciences program at the MIT Media Lab, where I am a Research Assistant in the Opera of the Future and Future Sketches groups.
+
+In this 21st century, artists have unprecedented access to tools for making novel tools, and I intend this thesis to be a foundation for a new generation of instrument makers for manipulating audiovisual material, using \acrshort{ML}. This approach is really exciting because it allows beginners and artists to train their instruments instead of programming them, by inputting data for tuning instead of having to write lines of code, and then fixing thresholds for changing their behavior, working off-the-cloud in a decentralized manner.
+
 \section{Context}
 
-The final catalyst that led me to this thesis happened a year ago, when I watched a video \cite{website-talk-technology-and-public-art-rafael-lozano-hemmer} of a conversation between artists Rafael Lozano-Hemmer and Dorothy Santos. At 36:28 in the video, Rafael says "Face recognition needs to be banned in all applications except art."
+A year ago I watched a video \cite{website-talk-technology-and-public-art-rafael-lozano-hemmer} of a conversation between artists Rafael Lozano-Hemmer and Dorothy Santos. At 36:28 in the video, Rafael says "Face recognition needs to be banned in all applications except art."
 
-This thesis is the capstone project of my Master's program between the academic years 2019-2021 in the Media Arts and Sciences program at the MIT Media Lab, where I am a Research Assistant in the Opera of the Future and Future Sketches groups.
+This was the perfect spark for starting to work on this project, inspiring me to make more accessible these computational techniques to artists, beginners, enthusiasts, and educators. I think it's crucial for our civil rights and advancing the discourse, that artists experiment with \acrshort{ML} in a critical way. Despite the creative and artistic applications that I show in this thesis, and how \acrshort{ML} becomes cheaper and more pervasive, it is not the solution to all problems, and might not even be needed in many scenarios.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth,height=0.50\textheight,keepaspectratio]{images/meme-spider-man.jpg}
+  \caption{Meme about need of machine learning}
+  \caption*{Retrieved from \cite{website-twitter-dynamicwebpaige-meme}}
+  \label{fig:meme-spider-man}
+\end{figure}
 
 This thesis is a collection of media arts instruments made with microcontrollers and \acrfull{ML}, with a strong emphasis on \acrfull{AI} ethics and \acrfull{DIY} methods. Its primary audience - beyond academia - is beginners and artists, and it is my hope that this work can inspire a new generation of instrument makers, artists, designers, educators, programmers, policy makers, activists, and enthusiasts.
 
@@ -26,9 +38,9 @@ This thesis is a collection of media arts instruments made with microcontrollers
   \label{fig:surveillance-camera-tree}
 \end{figure}
 
-The release of the library Arduino TensorFlow Lite Micro in late 2019 \cite{google-tensorflow-lite-micro-arduino} introduced me to the \emph{tiny \acrshort{ML} field}, a subset of \acrshort{ML} that focuses on hardware and software able to run calculations both on-device and with low power, a stark contrast to many industrial \acrshort{ML} applications. The tutorials published by Arduino \cite{arduino-tensorflow-fruit-identification} showed how to build your own database to detect colors and gestures using a microcontroller, and this was an inspiration to include the same functionalities in this thesis, in order to make an artistic exploration of these emerging techniques.
+The release of the library Arduino TensorFlow Lite Micro in late 2019 \cite{google-tensorflow-lite-micro-arduino} introduced me to the \emph{tiny \acrshort{ML} field}, a subset of \acrshort{ML} that focuses on hardware and software able to run calculations both on-device and with low power, a stark contrast to many industrial \acrshort{ML} applications. The companion tutorials published by Arduino \cite{arduino-tensorflow-fruit-identification} showed how to build your own database to detect colors and gestures using a microcontroller, and this was an inspiration to include the same functionalities in this thesis, in order to make an artistic exploration of these emerging techniques.
 
-One aspect that deeply resonated with me was \textbf{agency}, in particular of our own data; its capture, storage, publication, and use. In this thesis I propose the microcontroller as a way of building our own databases and deploying our models to bypass corporate or government surveillance. During this year and more of pandemic lockdown context, I have found myself several times working alone in my room, capturing data of myself and my living environment, and then building databases for other people to use, in a way that is reminiscent of one of my favorite artists and activists, Ai Weiwei, who in 2012 - while facing government surveillance - decided to livestream from his house \cite{website-forbes-ai-weiwei-cam}. I also see this today as a way of reclaiming our agency of our own data.
+During this research, one aspect that deeply resonated with me was \textbf{agency}, in particular of our own data; its capture, storage and publication. In this thesis I propose the use of microcontrollers as a strategy of building our own databases and deploying our models to bypass corporate or government surveillance. During this year and a half of pandemic context, I have found myself several times working alone in my room, capturing data of myself and my living environment, and then building databases for other people to use, in a way that is reminiscent of one of my favorite artists and activists, Ai Weiwei, who in 2012 - while facing government surveillance - decided to livestream from his house \cite{website-forbes-ai-weiwei-cam}. I also see this as a way of reclaiming the agency of our own data.
 
 \begin{figure}[ht]
   \centering
@@ -76,21 +88,7 @@ Sadly, we often cannot turn off or opt out of these computational or \acrshort{A
 "In today’s world, AI systems are used to decide who gets hired, the quality of medical treatment we receive, and whether we become a suspect in a police investigation. While these tools show great promise, they can also harm vulnerable and marginalized people, and threaten civil rights. Unchecked, unregulated and, at times, unwanted, AI systems can amplify racism, sexism, ableism, and other forms of discrimination."
 \end{displayquote}
 
-I highly recommend watching the Coded Bias documentary \cite{website-coded-bias} currently available on Netflix, to inform oneself about the important and necessary digital advocacy of the Algorithmic Justice League, who have helped me learn the language for navigating these important topics of civil rights. A highlight of the first ten minutes of this documentary, is when author Cathy O'Neil argues that despite algorithms and \acrshort{AI} being promoted as objective truth, they are instead systems used to inflict algorithmic harm to people, by the more powerufl corporations and governments.
-
-
-
-This was the perfect spark for starting to work on this project, inspiring me to make more accessible these computational techniques to artists, beginners, enthusiasts, and educators. I think it's crucial for our civil rights and advancing the discourse, that artists experiment with \acrshort{ML} in a critical way. Despite the creative and artistic applications that I show in this thesis, and how \acrshort{ML} becomes cheaper and more pervasive, it is not the solution to all problems, and might not even be needed in many scenarios.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\linewidth,height=0.50\textheight,keepaspectratio]{images/meme-spider-man.jpg}
-  \caption{Meme about need of machine learning}
-  \caption*{Retrieved from \cite{website-twitter-dynamicwebpaige-meme}}
-  \label{fig:meme-spider-man}
-\end{figure}
-
-In this 21st century, artists have unprecedented access to tools for making more new tools and instruments, and I intend this thesis to be a foundation for a new generation of instrument makers for manipulating audiovisual material, using \acrshort{ML}. This approach is really exciting because it allows beginners and artists to train their instruments instead of programming them, by inputting data for tuning instead of having to write lines of code, and then fixing thresholds for changing their behavior, working off-the-cloud in a decentralized manner.
+I highly recommend watching the Coded Bias documentary \cite{website-coded-bias} currently available on Netflix, to inform oneself about the important and necessary digital advocacy of the Algorithmic Justice League, who have helped me learn the language for navigating these important topics of civil rights. A highlight of the first ten minutes of this documentary, is when author Cathy O'Neil argues that despite algorithms and \acrshort{AI} being promoted as objective truth, they are instead systems used to inflict algorithmic harm to people, by the more powerful corporations and governments.
 
 This thesis project main contribution is wrapping the recent advances of industrial \acrshort{ML} running on microcontrollers with the discourse on ethical \acrshort{AI}, into an user-friendly software and hardware packaging. Tiny Trainable Instruments is a holistic project, including all the steps to build your own \acrshort{ML}-enabled arts instruments: from using sensors to create your own custom databases to train your small-scale \acrshort{ML} models, to deploying them with privacy-preserving practices to your microcontrollers and different multimedia outputs.
 
@@ -100,9 +98,11 @@ Infrastructure and cooperation are key to society. I love how I can bike on road
 
 There is a significant educational value in creating your own databases, and in this thesis I propose techniques and software so that people can do this. By building databases with their own data, people will be able to train their own custom \acrshort{ML} models that are tailored to themselves, instead of using external databases and inheriting their biases. Also I hope this work will help people appreciate the craft involved in making databases, and raise awareness about the exploitation and problematic lack of consent behind them.
 
+The Tiny Trainable Instruments often fail on the classification of different inputs with \acrshort{ML}. This is explained because of the limited computational resources of the microcontrollers, and the small imperfect databases that are used to train the models. This thesis celebrates these errors, to educate that \acrshort{ML} is not suited for decision making, and to convert these errors as a source of unpredictability for creative purposes, like randomness and noise.
+
 Finally, I want to highlight all the legal documents and regulations that I navigate on a daily basis: as a non-U.S. citizen on a student visa I cannot freelance, as a software programmer I have to comply with various licenses, and as a musician I am still learning about the different ways to publish covers and to sample other artists. Some of the most pervasive documents that we encounter are the terms and conditions of the services we use. As an anecdote, in 2010, GameStation added a soul clause to theirs as an April Fool's prank, making them legal owners of thousands of customers' souls \cite{website-huffpost-gamestation-soul-clause}. A study in 2007, it was estimated that people would need around 250 hours every year to actually read the privacy policies shown to them \cite{article-cost-of-reading-privacy-policies}. That is why in this thesis I have tried my best to cite every work that I am either using as a building block, or that served as a direct or indirect inspiration.
 
-I hope this work can be adopted and iterated on by others, through building a new generation of private and smart devices, like one of my first goals, a drum machine I can talk to, and that would let me ask for different rhythms mid-performance, or let me use my body gestures to write poems.
+I hope that the public infrastructure that I built can be adopted and iterated on by others, through building a new generation of ethical, private and smart devices, to foster the art of digital instrument making, while 
 
 \section{Thesis outline}
 
